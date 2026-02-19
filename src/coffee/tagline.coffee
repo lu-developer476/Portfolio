@@ -1,5 +1,5 @@
-# CoffeeScript: porque a veces el cyberpunk también es nostalgia.
-# Este archivo se compila a src/generated/tagline.js en predev/prebuild.
+# CoffeeScript: Este archivo se compila a src/generated/tagline.js en predev/prebuild.
 
-exports.getTagline = ->
-  "Construyo UIs que se sienten rápidas, claras y con carácter (sin humo)."
+# Export ESM compatible
+export getTagline = ->
+  "Diseño y desarrollo interfaces escalables con React, priorizando claridad visual, rendimiento medible y experiencia de usuario orientada a resultados."
