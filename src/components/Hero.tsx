@@ -64,7 +64,9 @@ export default function Hero() {
         </h1>
 
         <p className="mt-4 max-w-2xl text-white/80 leading-relaxed">
-          {tagline} Portfolio con animación, 3D suave y backend en Firebase. Deploy listo para Vercel.
+          Desarrollo interfaces modernas con foco en claridad, rendimiento y experiencia real de usuario. 
+          Combino frontend sólido con sensibilidad UX/UI para crear productos que no solo funcionan, 
+          sino que se sienten correctos y escalan en el tiempo.
         </p>
 
         <div className="mt-8 grid gap-3 sm:grid-cols-3">
