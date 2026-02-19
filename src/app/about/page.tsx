@@ -6,8 +6,8 @@ export default function AboutPage() {
     <div className="space-y-14">
       <Section
         id="about"
-        title="Sobre mí"
-        subtitle="Frontend dev que disfruta construir experiencias claras, rápidas y con intención."
+        title="¿Quién soy?"
+        subtitle="Soy una persona curiosa y exigente conmigo mismo que, tras incursionar en éste mundo, encontró un espacio para canalizar las ideas y convertirlas en algo real, teniendo el desafío diario de resolver y mejorarse constantemente."
       >
         <div className="rounded-xl border border-white/10 bg-black/35 p-6">
           <p className="text-white/85 leading-relaxed">
@@ -32,7 +32,7 @@ export default function AboutPage() {
       <Section
         id="projects"
         title="Proyectos"
-        subtitle="Cosas que construí, probé, mejoré… y finalmente publiqué."
+        subtitle="El resultado de entender, realizar, adaptar y mejorar… finalmente publicados."
       >
         <ProjectsCarousel expanded />
       </Section>
