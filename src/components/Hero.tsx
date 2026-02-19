@@ -45,7 +45,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-black/35 px-6 py-4 md:px-12 md:py-6">
+    <section className="relative overflow-hidden bg-black/35">
       <ThreeBackground />
 
       {/* Glows más chicos */}
