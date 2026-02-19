@@ -1,9 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef } from "react";
-import CyberButton from "./CyberButton";
 import ThreeBackground from "./ThreeBackground";
-import { profile } from "@/config/profile";
 import { getTagline } from "@/generated/tagline";
 
 export default function Hero() {
@@ -26,7 +24,7 @@ export default function Hero() {
 
       anime({
         targets: titleRef.current,
-        translateY: [12, 0],
+        translateY: [16, 0],
         opacity: [0, 1],
         duration: 900,
         easing: "easeOutExpo"
@@ -42,52 +40,54 @@ export default function Hero() {
     })();
 
     return () => {
-      cancelled = true
+      cancelled = true;
     };
   }, []);
 
   return (
-    <section className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/35 px-6 py-6 md:px-12 md:py-8">
+    <section className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/35 px-6 py-5 md:px-12 md:py-8">
       <ThreeBackground />
 
       <div className="pointer-events-none absolute -left-40 -top-40 h-[520px] w-[520px] rounded-full bg-cyber-gold/15 blur-3xl hero-glow" />
       <div className="pointer-events-none absolute -right-40 top-0 h-[520px] w-[520px] rounded-full bg-cyber-violet/20 blur-3xl hero-glow" />
 
       <div className="relative">
-        <p className="text-sm text-cyber-gold font-medium mb-1">
-          Bienvenido a mi portfolio
+        <p className="text-xs tracking-[.25em] text-white/50 uppercase">
+          Frontend Engineering • UX/UI • Performance
         </p>
-        <p className="text-xs tracking-[.25em] text-white/50 mb-4">
-          FRONTEND ENGINEERING • UX/UI • PERFORMANCE
-        </p>
+
         <h1
           ref={titleRef}
-          className="mt-2 text-4xl font-extrabold tracking-tight opacity-0 md:text-6xl lg:text-7xl"
+          className="mt-2 text-4xl font-extrabold tracking-tight opacity-0 md:text-6xl lg:text-7xl leading-tight"
         >
-          <span className="text-cyber-gold">Cyber</span> UI,{" "}
-          <span className="text-white">real</span> shipping.
+          <span className="text-cyber-gold block">
+            Interfaces modernas
+          </span>
+          <span className="text-white block">
+            con foco en rendimiento.
+          </span>
         </h1>
 
-        <p className="mt-3 max-w-xl text-white/80 leading-snug text-base md:text-lg">
-          Desarrollo interfaces modernas con foco en claridad, rendimiento y experiencia real de usuario. 
-          Combino frontend sólido con sensibilidad UX/UI para crear productos sostenibles en el tiempo.
+        <p className="mt-4 max-w-lg text-white/80 leading-snug text-base md:text-lg">
+          Desarrollo productos digitales claros, rápidos y escalables.
+          Combino frontend sólido con criterio UX para crear experiencias que funcionan en producción.
         </p>
 
-        <div className="mt-8 grid gap-3 sm:grid-cols-3">
+        <div className="mt-6 grid gap-3 sm:grid-cols-3">
           <Stat
             label="Performance"
             value="⚙️ + 📈"
-            hint="Optimización en Core Web Vitals: carga rápida, interacción fluida y buen score en producción"
+            hint="Core Web Vitals optimizados y experiencia fluida en producción."
           />
           <Stat
             label="User Feedback"
-            value="🧭 + 🔎"
-            hint="Interacciones claras, respuestas inmediatas y cero ambigüedad para el usuario"
+            value="🧭 + ⚡"
+            hint="Validaciones precisas y respuestas inmediatas en cada interacción."
           />
           <Stat
             label="Backend"
             value="🔐 + 🛠️ + 🌐"
-            hint="Mensajes de contacto persistidos en Firestore vía API Routes (Vercel), listos para escalar y auditar"
+            hint="Persistencia en Firestore vía API Routes lista para escalar."
           />
         </div>
       </div>
@@ -99,10 +99,14 @@ function Stat({ label, value, hint }: { label: string; value: string; hint: stri
   return (
     <div className="rounded-xl border border-white/10 bg-black/40 p-4">
       <div className="flex items-center justify-between">
-        <div className="text-xs text-white/60">{label}</div>
+        <div className="text-xs text-white/60 uppercase tracking-wide">
+          {label}
+        </div>
         <div className="text-lg">{value}</div>
       </div>
-      <div className="mt-2 text-sm text-white/75">{hint}</div>
+      <div className="mt-2 text-sm text-white/75 leading-snug">
+        {hint}
+      </div>
     </div>
   );
 }
