@@ -4,11 +4,11 @@ import Section from "@/components/Section";
 export default function HomePage() {
   return (
     <div className="space-y-14">
-      <Hero />
+      <Hero>
       <Section
-        id="stack"
-        title="Stack"
-        subtitle="React + Next.js + Tailwind, con condimento cyberpunk."
+        id="method"
+        title="Metodología"
+        subtitle="Mi enfoque combina frontend sólido con sensibilidad UX/UI. Desarrollo interfaces claras, escalables y orientadas a experiencia real, no solo a implementación técnica."
       >
         <div className="grid gap-4 md:grid-cols-2">
           <div className="rounded-xl border border-white/10 bg-black/35 p-5">
