@@ -68,7 +68,7 @@ export default function Hero() {
           <span className="text-white">real</span> shipping.
         </h1>
 
-        <p className="mt-3 max-w-2xl text-white/80 leading-tight text-base md:text-lg">
+        <p className="mt-3 max-w-xl text-white/80 leading-snug text-base md:text-lg">
           Desarrollo interfaces modernas con foco en claridad, rendimiento y experiencia real de usuario. 
           Combino frontend sólido con sensibilidad UX/UI para crear productos sostenibles en el tiempo.
         </p>
