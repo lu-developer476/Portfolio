@@ -60,16 +60,16 @@ export default function Hero() {
           className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] opacity-0"
         >
           <span className="text-cyber-gold block">
-            Interfaces modernas
+           Interfaces que escalan
           </span>
           <span className="text-white block">
-            con foco en rendimiento
+           sin sacrificar experiencia.
           </span>
         </h1>
 
         <p className="mt-2 max-w-lg text-white/80 leading-snug text-base md:text-lg">
-          Desarrollo interfaces modernas con foco en claridad, rendimiento y experiencia real de usuario. 
-          Combino frontend sólido con sensibilidad UX/UI para crear productos sostenibles en el tiempo.
+          Construyo productos digitales rápidos, claros y bien estructurados. 
+          Frontend sólido con criterio UX para entregar soluciones exactas al usuario.
         </p>
 
         <div className="mt-4 grid gap-3 sm:grid-cols-3">
