@@ -55,10 +55,6 @@ export default function Hero() {
       <div className="pointer-events-none absolute -right-32 top-0 h-[380px] w-[380px] rounded-full bg-cyber-violet/20 blur-3xl hero-glow" />
 
       <div className="relative z-10">
-        <p className="text-xs tracking-[.25em] text-white/50 uppercase mb-1">
-          Frontend Engineering • UX/UI • Performance
-        </p>
-
         <h1
           ref={titleRef}
           className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] opacity-0"
@@ -67,13 +63,13 @@ export default function Hero() {
             Interfaces modernas
           </span>
           <span className="text-white block">
-            con foco en rendimiento.
+            con foco en rendimiento
           </span>
         </h1>
 
         <p className="mt-2 max-w-lg text-white/80 leading-snug text-base md:text-lg">
-          Desarrollo productos digitales claros, rápidos y escalables. 
-          Combino frontend sólido con criterio UX para crear experiencias que funcionan en producción.
+          Desarrollo interfaces modernas con foco en claridad, rendimiento y experiencia real de usuario. 
+          Combino frontend sólido con sensibilidad UX/UI para crear productos sostenibles en el tiempo.
         </p>
 
         <div className="mt-4 grid gap-3 sm:grid-cols-3">
