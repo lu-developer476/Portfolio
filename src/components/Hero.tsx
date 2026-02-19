@@ -47,26 +47,28 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/35 p-6 md:p-10">
+    <section className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/35 px-6 py-6 md:px-12 md:py-8">
       <ThreeBackground />
 
       <div className="pointer-events-none absolute -left-40 -top-40 h-[520px] w-[520px] rounded-full bg-cyber-gold/15 blur-3xl hero-glow" />
       <div className="pointer-events-none absolute -right-40 top-0 h-[520px] w-[520px] rounded-full bg-cyber-violet/20 blur-3xl hero-glow" />
 
       <div className="relative">
-        <p className="text-sm text-cyber-gold font-medium">
+        <p className="text-sm text-cyber-gold font-medium mb-1">
           Bienvenido a mi portfolio
         </p>
-        <p className="text-xs tracking-[.25em] text-white/60">FRONTEND ENGINEERING • UX/UI • PERFORMANCE</p>
+        <p className="text-xs tracking-[.25em] text-white/50 mb-4">
+          FRONTEND ENGINEERING • UX/UI • PERFORMANCE
+        </p>
         <h1
           ref={titleRef}
-          className="mt-4 text-3xl font-extrabold tracking-tight opacity-0 md:text-5xl"
+          className="mt-2 text-4xl font-extrabold tracking-tight opacity-0 md:text-6xl lg:text-7xl"
         >
           <span className="text-cyber-gold">Cyber</span> UI,{" "}
           <span className="text-white">real</span> shipping.
         </h1>
 
-        <p className="mt-4 max-w-2xl text-white/80 leading-relaxed">
+        <p className="mt-3 max-w-2xl text-white/80 leading-relaxed text-base md:text-lg">
           Desarrollo interfaces modernas con foco en claridad, rendimiento y experiencia real de usuario. 
           Combino frontend sólido con sensibilidad UX/UI para crear productos que no solo funcionan, 
           sino que se sienten correctos y escalan en el tiempo.
