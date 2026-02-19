@@ -67,12 +67,6 @@ export default function Hero() {
           {tagline} Portfolio con animación, 3D suave y backend en Firebase. Deploy listo para Vercel.
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-3">
-          <CyberButton href="/projects" variant="gold">Ver proyectos</CyberButton>
-          <CyberButton href={profile.github} external variant="green">GitHub</CyberButton>
-          <CyberButton href={profile.linkedin} external variant="red">LinkedIn</CyberButton>
-        </div>
-
         <div className="mt-8 grid gap-3 sm:grid-cols-3">
           <Stat label="Performance" value="🚀" hint="Optimizable, pero ya rápido." />
           <Stat label="UI feedback" value="⚡" hint="SweetAlert2 dark para estados." />
