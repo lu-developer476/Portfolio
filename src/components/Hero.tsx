@@ -67,7 +67,7 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="mt-2 max-w-3xl text-white/80 leading-relaxed text-base md:text-lg"">
+        <p className="mt-2 max-w-3xl text-white/80 leading-relaxed text-base md:text-lg">
           Construyo productos digitales rápidos, claros y bien estructurados. 
           Frontend sólido con criterio UX para entregar soluciones exactas al usuario
         </p>
