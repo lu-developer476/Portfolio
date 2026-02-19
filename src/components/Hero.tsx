@@ -79,9 +79,9 @@ export default function Hero() {
             hint="Optimización en Core Web Vitals: carga rápida, interacción fluida y buen score en producción."
           />
           <Stat
-            label="UI feedback"
+            label="Feedback"
             value="🧭 + 🔎"
-            hint="Estados claros y consistentes con modales dark, validaciones y microfeedback."
+            hint="Estados claros y consistentes, con validaciones precisas y microinteracciones que guían al usuario sin fricción."
           />
           <Stat
             label="Backend"
