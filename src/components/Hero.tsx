@@ -76,17 +76,17 @@ export default function Hero() {
           <Stat
             label="Performance"
             value="⚙️ + 📈"
-            hint="Optimización en Core Web Vitals: carga rápida, interacción fluida y buen score en producción."
+            hint="Optimización en Core Web Vitals: carga rápida, interacción fluida y buen score en producción"
           />
           <Stat
             label="Feedback"
             value="🧭 + 🔎"
-            hint="Estados claros y consistentes, con validaciones precisas y microinteracciones que guían al usuario sin fricción."
+            hint="Estados claros y consistentes, validaciones precisas y microinteracciones para guiar al usuario"
           />
           <Stat
             label="Backend"
             value="🔐 + 🛠️ + 🌐"
-            hint="Mensajes de contacto persistidos en Firestore vía API Routes (Vercel), listos para escalar y auditar."
+            hint="Mensajes de contacto persistidos en Firestore vía API Routes (Vercel), listos para escalar y auditar"
           />
         </div>
       </div>
