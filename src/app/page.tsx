@@ -4,7 +4,7 @@ import Section from "@/components/Section";
 export default function HomePage() {
   return (
     <div className="space-y-14">
-      <Hero>
+      <Hero />
       <Section
         id="method"
         title="Metodología"
