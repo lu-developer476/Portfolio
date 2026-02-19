@@ -16,7 +16,7 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  // Cerrar con tecla ESC
+  // Cerrar con ESC
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") setOpen(false);
@@ -27,55 +27,62 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/55 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <div className="flex items-center gap-3">
-          <button
-            onClick={() => setOpen(true)}
-            className="h-10 w-10 overflow-hidden rounded-lg border border-cyber-gold/40 bg-black/70 transition duration-300 hover:scale-105 hover:border-cyber-neonGreen/70"
-          >
-            <Image
-              src="/profile-new.png"
-              alt="Lucas Montenegro"
-              width={40}
-              height={40}
-              className="h-full w-full object-cover"
-            />
-          </button>
+    <>
+      <header className="sticky top-0 z-40 border-b border-white/10 bg-black/55 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+          <div className="flex items-center gap-3">
+            
+            {/* Avatar clickeable */}
+            <button
+              onClick={() => setOpen(true)}
+              className="relative h-10 w-10 overflow-hidden rounded-lg border border-cyber-gold/40 bg-black/70 transition duration-300 hover:scale-105 hover:border-cyber-neonGreen/70"
+            >
+              <Image
+                src="/profile-new.png"
+                alt="Lucas Montenegro"
+                fill
+                sizes="40px"
+                className="object-cover"
+                priority
+              />
+            </button>
 
-          <Link href="/" className="leading-tight">
-            <div className="text-sm font-semibold">Lucas Montenegro</div>
-            <div className="text-xs text-white/60">
-              Frontend Developer | UX-Driven Interfaces
-            </div>
-          </Link>
+            <Link href="/" className="leading-tight">
+              <div className="text-sm font-semibold">Lucas Montenegro</div>
+              <div className="text-xs text-white/60">
+                Frontend Developer | UX-Driven Interfaces
+              </div>
+            </Link>
+          </div>
+
+          <nav className="hidden items-center gap-6 md:flex">
+            <NavLink href="/about">Sobre mí</NavLink>
+            <NavLink href="/contact">Contacto</NavLink>
+          </nav>
         </div>
+      </header>
 
-        <nav className="hidden items-center gap-6 md:flex">
-          <NavLink href="/about">Sobre mí</NavLink>
-          <NavLink href="/contact">Contacto</NavLink>
-        </nav>
-      </div>
-
+      {/* Modal Imagen */}
       {open && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm animate-fadeIn"
           onClick={() => setOpen(false)}
         >
           <div
-            className="relative animate-[fadeIn_.25s_ease-out]"
+            className="relative w-[90vw] max-w-[500px] aspect-square animate-[scaleIn_.2s_ease-out]"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
               src="/profile-new.png"
               alt="Lucas Montenegro"
-              width={420}
-              height={420}
-              className="rounded-xl border border-cyber-gold/40 shadow-lg"
+              fill
+              sizes="500px"
+              className="object-cover rounded-xl border border-cyber-gold/40 shadow-2xl"
+              priority
             />
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }
