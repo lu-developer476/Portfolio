@@ -63,13 +63,13 @@ export default function Hero() {
            Interfaces que escalan
           </span>
           <span className="text-white block">
-           sin sacrificar experiencia.
+           sin sacrificar experiencia
           </span>
         </h1>
 
-        <p className="mt-2 max-w-lg text-white/80 leading-snug text-base md:text-lg">
+        <p className="mt-2 max-w-3xl text-white/80 leading-relaxed text-base md:text-lg"">
           Construyo productos digitales rápidos, claros y bien estructurados. 
-          Frontend sólido con criterio UX para entregar soluciones exactas al usuario.
+          Frontend sólido con criterio UX para entregar soluciones exactas al usuario
         </p>
 
         <div className="mt-4 grid gap-3 sm:grid-cols-3">
