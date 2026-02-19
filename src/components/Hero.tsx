@@ -76,7 +76,7 @@ export default function Hero() {
           <Stat
             label="Performance"
             value="⚙️ + 📈"
-            hint="Optimización orientada a Core Web Vitals: carga rápida, interacción fluida y buen score en producción."
+            hint="Optimización en Core Web Vitals: carga rápida, interacción fluida y buen score en producción."
           />
           <Stat
             label="UI feedback"
