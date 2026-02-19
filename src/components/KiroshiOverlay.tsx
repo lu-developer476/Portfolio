@@ -52,10 +52,10 @@ export default function KiroshiOverlay() {
 
       {/* Coordenadas */}
       <div className="absolute left-4 top-4 text-[10px] text-cyber-neonGreen/60 font-mono tracking-wider">
-        TARGET: FRONTEND_ENGINEER
+        SYSTEM: ONLINE
       </div>
 
-      <div className="absolute right-4 bottom-4 text-[10px] text-cyber-neonGreen/60 font-mono tracking-wider">
+      <div className="absolute right-4 bottom-2 md:bottom-4 text-[10px] text-cyber-neonGreen/60 font-mono tracking-wider">
         STATUS: DEPLOYED • SIGNAL: STABLE
       </div>
     </div>
