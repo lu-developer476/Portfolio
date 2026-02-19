@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  height: 100%;
+  background: #07070a;
+}
+
+::selection {
+  background: rgba(255,42,109,.35);
+}
+
+.cyber-grid {
+  background-image:
+    linear-gradient(rgba(245,158,11,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245,158,11,.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(circle at 50% 20%, black 0%, black 50%, transparent 70%);
+}
+
+.noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E");
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: .95; }
+  40% { opacity: .75; }
+  70% { opacity: .9; }
+  83% { opacity: .68; }
+}
+
+.flicker {
+  animation: flicker 2.8s infinite;
+}
+
