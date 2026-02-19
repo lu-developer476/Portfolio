@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Lucas Montenegro — Frontend Developer",
-  description: "Cyberpunk portfolio built with Next.js, Tailwind, Three.js, Anime.js, Swiper, Firebase & SweetAlert2."
+  description: "Portfolio profesional."
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
