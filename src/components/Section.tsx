@@ -9,7 +9,7 @@ export default function Section({ id, title, subtitle, children }: Props) {
   return (
     <section
       id={id}
-      className="scroll-mt-28 border-t border-white/5 pt-12 first:border-none first:pt-0"
+      className="scroll-mt-28 border-t border-white/5 pt-8 first:border-none first:pt-0"
     >
       <div className="mb-8 max-w-2xl">
         <h2 className="text-2xl font-semibold tracking-tight text-white">
