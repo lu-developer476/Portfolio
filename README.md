@@ -1,84 +1,130 @@
-# Cyberpunk Frontend Portfolio — Next.js + Tailwind + Firebase
+# Portfolio Frontend
 
-Portfolio profesional con estética cyberpunk (**violeta + dorado**, botones negros con acentos **rojo/verde**), animaciones y un formulario de contacto que guarda mensajes en **Firestore**.
+Portfolio profesional desarrollado con **Next.js**, **React** y **TypeScript**, diseñado con **Tailwind CSS** y una estética cyberpunk/futurista definida.
 
-## Stack incluido (según tu pedido)
+Este proyecto combina diseño visual sólido, animaciones controladas, integración 3D y backend real con Firebase.
 
-- **Next.js + React + TypeScript**
-- **Tailwind CSS**
-- **Anime.js** (animación del Hero)
-- **Three.js** (background 3D sutil)
-- **Swiper.js** (carousel de proyectos)
-- **SweetAlert2** (dark mode para feedback del formulario)
-- **CoffeeScript** (generación de contenido compilado)
-- **Firebase (Admin SDK)** (backend server-side, Firestore)
-- Deploy pensado para **Vercel**
+------------------------------------------------------------------------
 
----
+## Descripción General
 
-## 1) Instalación local
+Es una aplicación moderna lista para producción que demuestra:
 
-```bash
+-   Arquitectura clara con App Router
+-   Componentes reutilizables y desacoplados
+-   Feedback visual inmediato
+-   Integración real con backend
+-   Preparación directa para deploy en Vercel
+
+El formulario de contacto guarda los mensajes en **Cloud Firestore** mediante **Firebase Admin SDK** en entorno server-side.
+
+------------------------------------------------------------------------
+
+## Stack Tecnológico
+
+### Frontend
+
+-   Next.js (App Router)
+-   React
+-   TypeScript
+-   Tailwind CSS
+
+### Animación y Visual
+
+-   Anime.js (microinteracciones)
+-   Three.js (background 3D dinámico)
+-   Swiper.js (carrusel de proyectos)
+
+### Experiencia de Usuario
+
+-   SweetAlert2 en modo oscuro (feedback visual consistente)
+
+### Backend
+
+-   Firebase Admin SDK
+-   Cloud Firestore
+-   API Routes de Next.js
+
+### Complementos
+
+-   CoffeeScript (compilación automática previa al build)
+-   Configuración optimizada para Vercel
+
+------------------------------------------------------------------------
+
+## Instalación Local
+
+``` bash
 npm install
 cp .env.example .env.local
 npm run dev
 ```
 
-Abrí `http://localhost:3000`.
+Aplicación disponible en:
 
----
+    http://localhost:3000
 
-## 2) Personalización rápida (lo que vas a editar en GitHub)
+------------------------------------------------------------------------
 
-- Links LinkedIn/GitHub: `src/config/profile.ts`
-- Proyectos: `src/config/projects.ts`
-- Texto “Sobre mí”: `src/app/about/page.tsx`
-- Estilos globales: `src/app/globals.css` y `tailwind.config.ts`
+## Estructura Relevante
 
----
+-   `src/app` → Rutas y estructura principal
+-   `src/components` → Componentes reutilizables
+-   `src/config` → Configuración editable (perfil y proyectos)
+-   `src/app/api/contact` → Endpoint para Firestore
+-   `src/lib/firebaseAdmin.ts` → Inicialización segura de Firebase
 
-## 3) Firebase (Firestore) para el formulario
+------------------------------------------------------------------------
 
-### Crear proyecto + Firestore
-1. En Firebase Console, creá un proyecto.
-2. Activá **Cloud Firestore** (modo producción o test, según tu preferencia).
+## Configuración de Firebase
 
-### Service Account (Admin)
-1. Firebase Console → Project Settings → **Service accounts**
-2. Generate new private key (JSON)
+### 1. Crear Proyecto
 
-En Vercel/Local, seteá estas env vars (copiá de `.env.example`):
+-   Crear proyecto en Firebase Console
+-   Activar **Cloud Firestore**
 
-- `FIREBASE_PROJECT_ID`
-- `FIREBASE_CLIENT_EMAIL`
-- `FIREBASE_PRIVATE_KEY`
+### 2. Generar Service Account
 
-**Importante:** la private key debe ir con `\n` en los saltos de línea (ver `.env.example`).
+-   Project Settings → Service Accounts
+-   Generar nueva clave privada (JSON)
 
-### Dónde se guardan los mensajes
-Colección: `contact_messages`
+### 3. Variables de entorno
 
-Código: `src/app/api/contact/route.ts`
+Configurar en `.env.local` y en Vercel:
 
----
+    FIREBASE_PROJECT_ID=
+    FIREBASE_CLIENT_EMAIL=
+    FIREBASE_PRIVATE_KEY=
 
-## 4) Deploy en Vercel (pasos)
+Importante:\
+La clave privada debe mantener los saltos de línea usando `\n`.
 
-1. Subí este proyecto a un repo en GitHub.
-2. En Vercel: Import Project → elegí el repo.
-3. En “Environment Variables”: cargá las 3 variables de Firebase.
-4. Deploy.
+------------------------------------------------------------------------
 
----
+## Deploy en Vercel
 
-## 5) Notas técnicas
+1.  Subir el repositorio a GitHub
+2.  Importar proyecto en Vercel
+3.  Configurar variables de entorno
+4.  Deploy automático
 
-- CoffeeScript se compila automáticamente antes de `dev` y `build` (scripts `predev`/`prebuild`).
-- Three.js corre en un Client Component (`src/components/ThreeBackground.tsx`).
-- Swiper requiere CSS importado en el componente (`ProjectsCarousel.tsx`).
+No requiere servidor adicional.
 
----
+------------------------------------------------------------------------
+
+## Enfoque del Proyecto
+
+Este portfolio prioriza:
+
+-   Identidad visual coherente
+-   Código mantenible
+-   Integración real con backend
+-   Estructura escalable
+
+La base permite incorporar autenticación, panel administrativo, analytics o cualquier integración futura sin reestructurar el proyecto completo.
+
+------------------------------------------------------------------------
 
 ## Licencia
 
-Usalo libremente en tu portfolio. Si lo tuneás y queda mejor, buenísimo: eso es lo que queremos.
+Uso libre para portfolio personal o profesional.
