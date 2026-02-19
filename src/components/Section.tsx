@@ -11,7 +11,7 @@ export default function Section({ id, title, subtitle, children }: Props) {
       id={id}
       className="scroll-mt-28 border-t border-white/5 pt-16 first:border-none first:pt-0"
     >
-      <div className="mb-8 max-w-2xl">
+      <div className="mb-8 max-w-7xl">
         <h2 className="text-2xl font-semibold tracking-tight text-white">
           <span className="text-cyber-gold font-bold">
             {title}
