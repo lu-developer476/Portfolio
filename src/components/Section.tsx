@@ -24,7 +24,6 @@ export default function Section({ id, title, subtitle, children }: Props) {
           </p>
         )}
       </div>
-
       {children}
     </section>
   );
