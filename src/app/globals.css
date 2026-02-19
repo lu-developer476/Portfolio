@@ -6,39 +6,69 @@
   color-scheme: dark;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   background: #07070a;
 }
 
+/* Selección */
 ::selection {
-  background: rgba(255,42,109,.35);
+  background: rgba(255, 42, 109, 0.35);
 }
 
+/* Grid Cyberpunk */
 .cyber-grid {
   background-image:
-    linear-gradient(rgba(245,158,11,.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245,158,11,.06) 1px, transparent 1px);
+    linear-gradient(rgba(245, 158, 11, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 158, 11, 0.06) 1px, transparent 1px);
   background-size: 36px 36px;
   mask-image: radial-gradient(circle at 50% 20%, black 0%, black 50%, transparent 70%);
 }
 
+/* Noise overlay */
 .noise {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: .06;
+  opacity: 0.06;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E");
 }
 
+/* Flicker suave */
 @keyframes flicker {
-  0%, 100% { opacity: .95; }
-  40% { opacity: .75; }
-  70% { opacity: .9; }
-  83% { opacity: .68; }
+  0%, 100% { opacity: 0.95; }
+  40% { opacity: 0.75; }
+  70% { opacity: 0.9; }
+  83% { opacity: 0.68; }
 }
 
 .flicker {
   animation: flicker 2.8s infinite;
 }
 
+/* Fade In Modal */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out;
+}
+
+/* Scale In Imagen Modal */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.2s ease-out;
+}
