@@ -46,7 +46,7 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden px-6 py-4 md:px-12 md:py-6">
-      <ThreeBackground />
+    {/* <ThreeBackground /> */}
 
       {/* Glows más chicos */}
       <div className="pointer-events-none absolute -left-32 -top-32 h-[380px] w-[380px] rounded-full bg-cyber-gold/15 blur-3xl hero-glow" />
