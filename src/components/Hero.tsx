@@ -24,15 +24,15 @@ export default function Hero() {
 
       anime({
         targets: titleRef.current,
-        translateY: [16, 0],
+        translateY: [12, 0],
         opacity: [0, 1],
-        duration: 900,
+        duration: 800,
         easing: "easeOutExpo"
       });
 
       anime({
         targets: ".hero-glow",
-        opacity: [0.15, 0.35, 0.2],
+        opacity: [0.12, 0.28, 0.18],
         duration: 2400,
         loop: true,
         easing: "easeInOutSine"
@@ -45,20 +45,21 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/35 px-6 py-5 md:px-12 md:py-8">
+    <section className="relative overflow-hidden rounded-xl border border-white/10 bg-black/35 px-6 py-4 md:px-12 md:py-6">
       <ThreeBackground />
 
-      <div className="pointer-events-none absolute -left-40 -top-40 h-[520px] w-[520px] rounded-full bg-cyber-gold/15 blur-3xl hero-glow" />
-      <div className="pointer-events-none absolute -right-40 top-0 h-[520px] w-[520px] rounded-full bg-cyber-violet/20 blur-3xl hero-glow" />
+      {/* Glows más chicos */}
+      <div className="pointer-events-none absolute -left-32 -top-32 h-[380px] w-[380px] rounded-full bg-cyber-gold/15 blur-3xl hero-glow" />
+      <div className="pointer-events-none absolute -right-32 top-0 h-[380px] w-[380px] rounded-full bg-cyber-violet/20 blur-3xl hero-glow" />
 
       <div className="relative">
-        <p className="text-xs tracking-[.25em] text-white/50 uppercase">
+        <p className="text-xs tracking-[.25em] text-white/50 uppercase mb-1">
           Frontend Engineering • UX/UI • Performance
         </p>
 
         <h1
           ref={titleRef}
-          className="mt-2 text-4xl font-extrabold tracking-tight opacity-0 md:text-6xl lg:text-7xl leading-tight"
+          className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] opacity-0"
         >
           <span className="text-cyber-gold block">
             Interfaces modernas
@@ -68,11 +69,12 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="mt-4 max-w-lg text-white/80 leading-snug text-base md:text-lg">
-          Desarrollo productos digitales claros, rápidos y escalables. Combino frontend sólido con criterio UX para crear experiencias que funcionan en producción
+        <p className="mt-2 max-w-lg text-white/80 leading-snug text-base md:text-lg">
+          Desarrollo productos digitales claros, rápidos y escalables. 
+          Combino frontend sólido con criterio UX para crear experiencias que funcionan en producción.
         </p>
 
-        <div className="mt-6 grid gap-3 sm:grid-cols-3">
+        <div className="mt-4 grid gap-3 sm:grid-cols-3">
           <Stat
             label="Performance"
             value="⚙️ + 📈"
@@ -96,7 +98,7 @@ export default function Hero() {
 
 function Stat({ label, value, hint }: { label: string; value: string; hint: string }) {
   return (
-    <div className="rounded-xl border border-white/10 bg-black/40 p-4">
+    <div className="rounded-lg border border-white/10 bg-black/40 p-4">
       <div className="flex items-center justify-between">
         <div className="text-xs text-white/60 uppercase tracking-wide">
           {label}
