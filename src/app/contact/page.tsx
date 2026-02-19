@@ -6,7 +6,7 @@ export default function ContactPage() {
     <Section
       id="contact"
       title="Contacto"
-      subtitle="Si querés trabajar juntos o tenés una idea en mente, escribime."
+      subtitle="Si estás buscando trabajar conmigo o tenés una idea en mente, no dudes en escribirme."
     >
       <div className="grid gap-6 md:grid-cols-2">
         <div className="rounded-xl border border-white/10 bg-black/35 p-5">
