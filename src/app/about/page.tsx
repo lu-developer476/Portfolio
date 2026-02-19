@@ -3,7 +3,7 @@ import ProjectsCarousel from "@/components/ProjectsCarousel";
 
 export default function AboutPage() {
   return (
-    <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
+    <div className="space-y-14">
       <Section
         id="about"
         title="¿Quién soy?"
