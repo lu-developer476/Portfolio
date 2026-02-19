@@ -69,8 +69,7 @@ export default function Hero() {
         </h1>
 
         <p className="mt-4 max-w-lg text-white/80 leading-snug text-base md:text-lg">
-          Desarrollo productos digitales claros, rápidos y escalables.
-          Combino frontend sólido con criterio UX para crear experiencias que funcionan en producción.
+          Desarrollo productos digitales claros, rápidos y escalables. Combino frontend sólido con criterio UX para crear experiencias que funcionan en producción.
         </p>
 
         <div className="mt-6 grid gap-3 sm:grid-cols-3">
