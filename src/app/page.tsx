@@ -3,7 +3,7 @@ import Section from "@/components/Section";
 
 export default function HomePage() {
   return (
-    <div className="space-y-14">
+    <div className="space-y-8">
       <Hero />
       <Section
         id="method"
