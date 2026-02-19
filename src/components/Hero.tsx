@@ -82,7 +82,7 @@ export default function Hero() {
           />
           <Stat
             label="User Feedback"
-            value="🧭 + ⚡"
+            value="🧭 + 🔎"
             hint="Validaciones precisas y respuestas inmediatas en cada interacción"
           />
           <Stat
