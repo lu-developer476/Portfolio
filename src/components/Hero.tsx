@@ -57,7 +57,7 @@ export default function Hero() {
       <div className="relative z-10">
         <h1
           ref={titleRef}
-          className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight opacity-0""
+          className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight opacity-0"
         >
           <span className="text-cyber-gold block">
            Interfaces que escalan
