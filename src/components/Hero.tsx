@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef } from "react";
 import ThreeBackground from "./ThreeBackground";
+import KiroshiOverlay from "./KiroshiOverlay";
 import { getTagline } from "@/generated/tagline";
 
 export default function Hero() {
@@ -47,12 +48,13 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden px-6 py-4 md:px-12 md:py-6">
      <ThreeBackground />
+      <KiroshiOverlay />
 
       {/* Glows más chicos */}
       <div className="pointer-events-none absolute -left-32 -top-32 h-[380px] w-[380px] rounded-full bg-cyber-gold/15 blur-3xl hero-glow" />
       <div className="pointer-events-none absolute -right-32 top-0 h-[380px] w-[380px] rounded-full bg-cyber-violet/20 blur-3xl hero-glow" />
 
-      <div className="relative">
+      <div className="relative z-10">
         <p className="text-xs tracking-[.25em] text-white/50 uppercase mb-1">
           Frontend Engineering • UX/UI • Performance
         </p>
