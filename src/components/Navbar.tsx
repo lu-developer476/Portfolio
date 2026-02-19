@@ -21,7 +21,7 @@ export default function Navbar() {
           </span>
           <div className="leading-tight">
             <div className="text-sm font-semibold">Lucas Montenegro</div>
-            <div className="text-xs text-white/60">Frontend Developer</div>
+            <div className="text-xs text-white/60">Frontend Developer | UX-Driven Interfaces</div>
           </div>
         </Link>
 
