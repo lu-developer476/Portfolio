@@ -54,7 +54,10 @@ export default function Hero() {
       <div className="pointer-events-none absolute -right-40 top-0 h-[520px] w-[520px] rounded-full bg-cyber-violet/20 blur-3xl hero-glow" />
 
       <div className="relative">
-        <p className="text-xs tracking-[.25em] text-white/60">NEXT.JS • REACT • TYPESCRIPT • TAILWIND</p>
+        <p className="text-sm text-cyber-gold font-medium">
+          Bienvenido a mi portfolio
+        </p>
+        <p className="text-xs tracking-[.25em] text-white/60">FRONTEND ENGINEERING • UX/UI • PERFORMANCE</p>
         <h1
           ref={titleRef}
           className="mt-4 text-3xl font-extrabold tracking-tight opacity-0 md:text-5xl"
@@ -70,9 +73,21 @@ export default function Hero() {
         </p>
 
         <div className="mt-8 grid gap-3 sm:grid-cols-3">
-          <Stat label="Performance" value="🚀" hint="Optimizable, pero ya rápido." />
-          <Stat label="UI feedback" value="⚡" hint="SweetAlert2 dark para estados." />
-          <Stat label="Backend" value="☁️" hint="Firestore para mensajes." />
+          <Stat
+            label="Performance"
+            value="⚙️ + 📈"
+            hint="Optimización orientada a Core Web Vitals: carga rápida, interacción fluida y buen score en producción."
+          />
+          <Stat
+            label="UI feedback"
+            value="🧭 + 🔎"
+            hint="Estados claros y consistentes con modales dark, validaciones y microfeedback."
+          />
+          <Stat
+            label="Backend"
+            value="🔐 + 🛠️ + 🌐"
+            hint="Mensajes de contacto persistidos en Firestore vía API Routes (Vercel), listos para escalar y auditar."
+          />
         </div>
       </div>
     </section>
