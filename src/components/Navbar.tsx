@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-40 border-b border-white/10 bg-black/55 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 min-h-[72px]">
           <div className="flex items-center gap-3">
             
             {/* Avatar clickeable */}
@@ -69,7 +69,7 @@ export default function Navbar() {
           onClick={() => setOpen(false)}
         >
           <div
-            className="relative w-[90vw] max-w-[500px] aspect-square animate-[scaleIn_.2s_ease-out]"
+            className="relative w-[90vw] max-w-[500px] aspect-square animate-scaleIn"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
