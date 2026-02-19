@@ -1,18 +1,10 @@
 import Hero from "@/components/Hero";
-import ProjectsCarousel from "@/components/ProjectsCarousel";
 import Section from "@/components/Section";
 
 export default function HomePage() {
   return (
     <div className="space-y-14">
       <Hero />
-      <Section
-        id="projects"
-        title="Proyectos"
-        subtitle="Una selección. Lo importante: shipping, no excusas."
-      >
-        <ProjectsCarousel />
-      </Section>
       <Section
         id="stack"
         title="Stack"
@@ -22,25 +14,33 @@ export default function HomePage() {
           <div className="rounded-xl border border-white/10 bg-black/35 p-5">
             <h3 className="text-lg font-semibold text-cyber-gold">Frontend</h3>
             <p className="mt-2 text-white/80">
-              Next.js (App Router), React, TypeScript, Tailwind CSS, Swiper.js, Anime.js.
+              Construyo interfaces modernas con Next.js y React priorizando claridad visual, 
+              estructura escalable y experiencia consistente. Trabajo con TypeScript para 
+              garantizar mantenibilidad y previsibilidad en cada componente.
             </p>
           </div>
           <div className="rounded-xl border border-white/10 bg-black/35 p-5">
-            <h3 className="text-lg font-semibold text-cyber-gold">3D & Motion</h3>
+            <h3 className="text-lg font-semibold text-cyber-gold">UX / UI & Motion</h3>
             <p className="mt-2 text-white/80">
-              Three.js para atmósfera, animaciones sutiles para guiar la mirada (sin marearte).
+              Diseño experiencias enfocadas en usabilidad, jerarquía visual y feedback inmediato. 
+              Utilizo animaciones y microinteracciones estratégicas para guiar al usuario 
+              sin distraerlo ni sobrecargar la interfaz.
             </p>
           </div>
           <div className="rounded-xl border border-white/10 bg-black/35 p-5">
-            <h3 className="text-lg font-semibold text-cyber-gold">Backend ligero</h3>
+            <h3 className="text-lg font-semibold text-cyber-gold">Arquitectura</h3>
             <p className="mt-2 text-white/80">
-              Firebase (Firestore) desde API Routes en Vercel. Contacto que realmente guarda mensajes.
+              Integro soluciones backend ligeras con Firebase y API Routes en Vercel, 
+              optimizando tiempos de desarrollo y manteniendo una base sólida 
+              para escalar funcionalidades según necesidad del proyecto.
             </p>
           </div>
           <div className="rounded-xl border border-white/10 bg-black/35 p-5">
-            <h3 className="text-lg font-semibold text-cyber-gold">Extra</h3>
+            <h3 className="text-lg font-semibold text-cyber-gold">Mentalidad de Producto</h3>
             <p className="mt-2 text-white/80">
-              CoffeeScript (sí, existe) para generar contenido compilado automáticamente.
+              Soluciones orientadas a resultados. Exploro herramientas y lenguajes no convencionales 
+              cuando aportan valor real al flujo de trabajo, priorizando eficiencia y claridad sobre modas pasajeras.
+              Cada decisión técnica responde a claridad, rendimiento y experiencia del usuario final.
             </p>
           </div>
         </div>
