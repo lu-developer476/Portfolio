@@ -26,22 +26,9 @@ export default function Navbar() {
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
-          <NavLink href="/projects">Proyectos</NavLink>
           <NavLink href="/about">Sobre mí</NavLink>
           <NavLink href="/contact">Contacto</NavLink>
         </nav>
-
-        <div className="flex items-center gap-2">
-          <CyberButton href={profile.github} external variant="green" className="hidden sm:inline-flex">
-            GitHub
-          </CyberButton>
-          <CyberButton href={profile.linkedin} external variant="red" className="hidden sm:inline-flex">
-            LinkedIn
-          </CyberButton>
-          <CyberButton href="/contact" variant="gold">
-            Hablemos
-          </CyberButton>
-        </div>
       </div>
     </header>
   );
