@@ -20,7 +20,7 @@ export default function ContactPage() {
                 href="https://www.linkedin.com/in/lucas-montenegro-burgos/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-cyber-blue transition"
+                className="text-blue-500 hover:text-blue-700 transition"
               >
                 LinkedIn
               </a>
@@ -31,7 +31,7 @@ export default function ContactPage() {
                 href="https://github.com/lu-developer476"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-cyber-blue transition"
+                className="text-blue-500 hover:text-blue-700 transition"
               >
                 GitHub
               </a>
