@@ -100,7 +100,7 @@ export default function ContactForm() {
         disabled={loading}
         className="w-full rounded-lg border border-cyber-gold/70 bg-black/70 px-4 py-2 text-sm font-semibold transition hover:bg-cyber-gold/10 disabled:opacity-60"
       >
-        {loading ? "Enviando..." : "Enviar"}
+        {loading ? "Un momento por favor..." : "Enviar"}
       </button>
 
       <p className="text-xs text-white/55">
