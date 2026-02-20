@@ -11,7 +11,7 @@ export default function ContactPage() {
       <div className="grid gap-6 md:grid-cols-2">
         <div className="rounded-xl border border-white/10 bg-black/35 p-5">
           <h3 className="text-lg font-semibold text-cyber-gold">
-            También podés encontrarme en
+            Mis redes sociales
           </h3>
 
           <ul className="mt-4 space-y-3 text-white/85">
@@ -20,7 +20,7 @@ export default function ContactPage() {
                 href="https://www.linkedin.com/in/lucas-montenegro-burgos/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-cyber-gold transition"
+                className="hover:text-cyber-blue transition"
               >
                 LinkedIn
               </a>
@@ -31,7 +31,7 @@ export default function ContactPage() {
                 href="https://github.com/lu-developer476"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-cyber-gold transition"
+                className="hover:text-cyber-blue transition"
               >
                 GitHub
               </a>
