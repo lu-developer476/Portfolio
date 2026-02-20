@@ -9,7 +9,7 @@ export default function ContactPage() {
       subtitle="Si estás buscando trabajar conmigo o tenés una idea en mente, no dudes en escribirme."
     >
       <div className="grid gap-6 md:grid-cols-2">
-        <div className="rounded-xl border border-white/10 bg-black/35 p-5">
+        <div className="rounded-xl border border-white/50 bg-black/35 p-5">
           <h3 className="text-lg font-semibold text-cyber-gold">
             Mis redes sociales
           </h3>
