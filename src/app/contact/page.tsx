@@ -39,7 +39,7 @@ export default function ContactPage() {
           </ul>
 
           <p className="mt-6 text-sm text-white/60 leading-relaxed">
-            Siempre abierto a nuevos desafíos, colaboraciones o proyectos que busquen crecer y escalar con intención.
+            En constante búsqueda de nuevos desafíos y oportunidades de colaboración.
           </p>
         </div>
 
