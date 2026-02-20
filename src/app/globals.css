@@ -77,17 +77,15 @@ body {
 /* Swiper Pagination Custom     */
 /* ============================= */
 
+/* Blancos por defecto */
 .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.4);
-  opacity: 1;
-  transition: all 0.3s ease;
+  background: #ffffff !important;
+  opacity: 0.6;
 }
 
 .swiper-pagination-bullet-active {
-  background: #ffffff;
-  transform: scale(1.25);
+  background: #ffffff !important;
+  opacity: 1;
 }
 
 /* Hover solo en dispositivos con pointer fino (desktop) */
