@@ -56,11 +56,6 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-5xl">
 
-        {/* SYSTEM STATUS */}
-        <p className="mb-4 text-xs md:text-sm font-mono tracking-widest text-cyber-gold/80">
-          &gt; SYSTEM STATUS: ONLINE
-        </p>
-
         <h1
           ref={titleRef}
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight opacity-0"
