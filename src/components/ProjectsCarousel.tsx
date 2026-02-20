@@ -42,18 +42,6 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
             <p className="mt-4 text-sm leading-relaxed text-white/75">
               {p.description}
             </p>
-
-            {/* Tags */}
-            <div className="mt-5 flex flex-wrap gap-2">
-              {p.tags.map((t) => (
-                <span
-                  key={t}
-                  className="text-[11px] tracking-wide px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/70 transition hover:border-cyber-gold/40 hover:text-white"
-                >
-                  #{t}
-                </span>
-              ))}
-            </div>
           </article>
         </SwiperSlide>
       ))}
