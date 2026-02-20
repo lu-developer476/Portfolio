@@ -53,22 +53,6 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
                   #{t}
                 </span>
               ))}
-            </div>
-
-            {/* Buttons */}
-            <div className="mt-6 flex flex-wrap gap-3">
-              {p.github && (
-                <CyberButton href={p.github} external variant="green">
-                  Repo
-                </CyberButton>
-              )}
-
-              {p.demo && (
-                <CyberButton href={p.demo} external variant="red">
-                  Demo
-                </CyberButton>
-              )}
-            </div>
           </article>
         </SwiperSlide>
       ))}
