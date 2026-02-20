@@ -15,7 +15,7 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
     <Swiper
       modules={[Pagination]}
       pagination={{ clickable: true }}
-      spaceBetween={16}
+      spaceBetween={24}
       slidesPerView={1.05}
       breakpoints={{
         640: { slidesPerView: 2.05 },
@@ -25,32 +25,49 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
     >
       {list.map((p) => (
         <SwiperSlide key={p.slug}>
-          <article className="h-full rounded-xl border border-white/10 bg-black/35 p-5">
-            <div className="flex items-center justify-between">
-              <h3 className="text-lg font-semibold text-cyber-gold">{p.title}</h3>
-              <span className="text-xs text-white/60">{p.year}</span>
-            </div>
-            <p className="mt-3 text-sm leading-relaxed text-white/80">{p.description}</p>
+          <article className="group h-full rounded-2xl border border-white/10 bg-black/40 p-6 transition-all duration-300 hover:border-cyber-gold/40 hover:bg-black/50">
+            
+            {/* Header */}
+            <div className="flex items-start justify-between">
+              <h3 className="text-lg font-semibold text-cyber-gold group-hover:text-white transition">
+                {p.title}
+              </h3>
 
-            <div className="mt-4 flex flex-wrap gap-2">
+              <span className="text-[11px] tracking-wider text-white/50 border border-white/10 px-2 py-1 rounded-md">
+                {p.year}
+              </span>
+            </div>
+
+            {/* Description */}
+            <p className="mt-4 text-sm leading-relaxed text-white/75">
+              {p.description}
+            </p>
+
+            {/* Tags */}
+            <div className="mt-5 flex flex-wrap gap-2">
               {p.tags.map((t) => (
-                <span key={t} className="rounded-md border border-white/10 bg-black/40 px-2 py-1 text-xs text-white/75">
-                  {t}
+                <span
+                  key={t}
+                  className="text-[11px] tracking-wide px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/70 transition hover:border-cyber-gold/40 hover:text-white"
+                >
+                  #{t}
                 </span>
               ))}
             </div>
 
-            <div className="mt-5 flex flex-wrap gap-2">
-              {p.github ? (
+            {/* Buttons */}
+            <div className="mt-6 flex flex-wrap gap-3">
+              {p.github && (
                 <CyberButton href={p.github} external variant="green">
                   Repo
                 </CyberButton>
-              ) : null}
-              {p.demo ? (
+              )}
+
+              {p.demo && (
                 <CyberButton href={p.demo} external variant="red">
                   Demo
                 </CyberButton>
-              ) : null}
+              )}
             </div>
           </article>
         </SwiperSlide>
