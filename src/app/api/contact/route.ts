@@ -25,13 +25,15 @@ export async function POST(req: Request) {
       userAgent: req.headers.get("user-agent") ?? null
     });
 
+    // 2️⃣ Mail para vos (admin)
     await resend.emails.send({
       from: "Portfolio <onboarding@resend.dev>",
       to: "lucasmontenegroburgos@gmail.com",
-      subject: `Notificaciones del Portfolio — ${data.name}`,
+      reply_to: data.email,
+      subject: `Notificación`,
       html: `
         <div style="font-family: Arial, sans-serif; line-height:1.6;">
-          <h2>📩 Nuevo mensaje recibido</h2>
+          <h2>📩 Nuevo mensaje</h2>
           <hr />
           <p><strong>Nombre:</strong> ${data.name}</p>
           <p><strong>Email:</strong> ${data.email}</p>
@@ -41,13 +43,38 @@ export async function POST(req: Request) {
           </p>
           <hr />
           <p style="font-size:12px;color:#666;">
-            Enviado desde tu portfolio en producción.
+            Consignado desde tu 💼
           </p>
         </div>
       `
     });
 
-    // 3️⃣ Responder OK
+    // 3️⃣ Auto-respuesta al usuario
+    await resend.emails.send({
+      from: "Lucas Montenegro <onboarding@resend.dev>",
+      to: data.email,
+      subject: "¡Muchas gracias por tu mensaje!🦾",
+      html: `
+        <div style="font-family: Arial, sans-serif; line-height:1.6;">
+          <h2>Hola ${data.name},</h2>
+          <p>Me alegra que visitaras mi sitio personal. ¡Espero hayas disfrutado de mis trabajos!</p>
+          <p>⏱︎ En breve leeré tu consulta y te estaré contactando.</p>
+          <hr />
+          <p style="font-size:14px;">
+            <strong>Tu mensaje:</strong>
+          </p>
+          <p style="background:#f4f4f4;padding:12px;border-radius:6px;">
+            ${data.message}
+          </p>
+          <hr />
+          <p style="font-size:12px;color:#666;">
+            ✔️ Aviso automático de validación.
+          </p>
+        </div>
+      `
+    });
+
+    // 4️⃣ Respuesta OK
     return NextResponse.json({ ok: true });
 
   } catch (err: any) {
