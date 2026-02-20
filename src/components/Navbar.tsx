@@ -55,7 +55,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="flex items-center gap-4 md:gap-8">
             <NavLink href="/about">Sobre mí</NavLink>
             <NavLink href="/contact">Contacto</NavLink>
           </nav>
