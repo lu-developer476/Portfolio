@@ -62,7 +62,7 @@ export default function Navbar() {
               <div className="text-sm md:text-base font-semibold whitespace-nowrap">
                 Lucas Montenegro
               </div>
-              <div className="text-sm md:text-base font-semibold whitespace-nowrap">
+              <div className="absolute left-4 top-4 text-[10px] text-cyber-neonGreen/60 font-mono tracking-wider">
                 Freelancer Frontend Developer · UX Interfaces
               </div>
             </Link>
