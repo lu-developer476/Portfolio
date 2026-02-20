@@ -90,7 +90,7 @@ export default function ContactForm() {
           value={data.message}
           onChange={onChange("message")}
           className="min-h-28 w-full rounded-lg border border-white/10 bg-black/60 px-3 py-2 text-sm outline-none focus:border-cyber-neonGreen/60"
-          placeholder="Contame, ¿En qué te puedo ayudar?"
+          placeholder="Contame en qué te puedo ayudar..."
           required
         />
       </Field>
