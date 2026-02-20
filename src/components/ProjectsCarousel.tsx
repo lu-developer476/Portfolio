@@ -53,6 +53,7 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
                   #{t}
                 </span>
               ))}
+            </div>
           </article>
         </SwiperSlide>
       ))}
