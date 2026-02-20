@@ -50,7 +50,7 @@ export default function Navbar() {
             <Link href="/" className="leading-tight">
               <div className="text-base font-semibold">Lucas Montenegro</div>
               <div className="text-sm text-white/60">
-                Frontend Developer | UX-Driven Interfaces
+                Freelancer Frontend Developer | UX-Driven Interfaces
               </div>
             </Link>
           </div>
