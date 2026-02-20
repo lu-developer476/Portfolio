@@ -62,8 +62,8 @@ export default function Navbar() {
               <div className="text-sm md:text-base font-semibold whitespace-nowrap">
                 Lucas Montenegro
               </div>
-              <div className="hidden sm:block text-xs md:text-sm text-white/60">
-                Frontend Developer · UX Interfaces
+              <div className="text-sm md:text-base font-semibold whitespace-nowrap">
+                Freelancer Frontend Developer · UX Interfaces
               </div>
             </Link>
           </div>
