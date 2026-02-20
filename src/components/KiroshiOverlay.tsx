@@ -52,7 +52,7 @@ export default function KiroshiOverlay() {
 
       {/* Coordenadas */}
       <div className="absolute left-4 top-4 text-[10px] text-cyber-neonGreen/60 font-mono tracking-wider">
-        SYSTEM: ONLINE • STATUS: DEPLOYED • SIGNAL: STABLE
+        &gt; SYSTEM: ONLINE • STATUS: DEPLOYED • SIGNAL: STABLE
       </div>
     </div>
   );
