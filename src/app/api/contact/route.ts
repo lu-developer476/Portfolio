@@ -30,10 +30,10 @@ export async function POST(req: Request) {
       from: "Portfolio <onboarding@resend.dev>",
       to: "lucasmontenegroburgos@gmail.com",
       reply_to: data.email,
-      subject: `Notificación`,
+      subject: `📩 Notificación`,
       html: `
         <div style="font-family: Arial, sans-serif; line-height:1.6;">
-          <h2>📩 Nuevo mensaje</h2>
+          <h2>Nuevo mensaje</h2>
           <hr />
           <p><strong>Nombre:</strong> ${data.name}</p>
           <p><strong>Email:</strong> ${data.email}</p>
@@ -43,7 +43,7 @@ export async function POST(req: Request) {
           </p>
           <hr />
           <p style="font-size:12px;color:#666;">
-            Consignado desde tu 💼
+            Emitido desde tu 💼
           </p>
         </div>
       `
