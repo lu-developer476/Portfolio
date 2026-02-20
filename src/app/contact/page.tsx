@@ -38,12 +38,12 @@ export default function ContactPage() {
             </li>
           </ul>
 
-          <p className="mt-6 text-sm text-white/60 leading-relaxed">
+          <p className="mt-6 text-sm text-white/100 leading-relaxed">
             En constante búsqueda de nuevos desafíos y oportunidades de colaboración.
           </p>
         </div>
 
-        <div className="rounded-xl border border-white/10 bg-black/35 p-5">
+        <div className="rounded-xl border border-white/50 bg-black/35 p-5">
           <ContactForm />
         </div>
       </div>
