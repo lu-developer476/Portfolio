@@ -89,7 +89,7 @@ export default function Hero() {
           />
           <Stat
             label="Backend Ready"
-            value="🔐 + 🛠️"
+            value="🔐 + 🛠️ + 🌐"
             hint="Firestore + API Routes listos para escalar"
           />
         </div>
