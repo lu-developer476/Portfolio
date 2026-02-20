@@ -64,12 +64,12 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={submit} className="space-y-3">
-      <Field label="Nombre">
+      <Field label="Datos personales">
         <input
           value={data.name}
           onChange={onChange("name")}
           className="w-full rounded-lg border border-white/10 bg-black/60 px-3 py-2 text-sm outline-none focus:border-cyber-neonGreen/60"
-          placeholder="Tu nombre"
+          placeholder="Nombre y apellido"
           required
         />
       </Field>
@@ -80,17 +80,17 @@ export default function ContactForm() {
           onChange={onChange("email")}
           type="email"
           className="w-full rounded-lg border border-white/10 bg-black/60 px-3 py-2 text-sm outline-none focus:border-cyber-neonGreen/60"
-          placeholder="tu@mail.com"
+          placeholder="micorreo@mail.com"
           required
         />
       </Field>
 
-      <Field label="Mensaje">
+      <Field label="Motivo de tu consulta">
         <textarea
           value={data.message}
           onChange={onChange("message")}
           className="min-h-28 w-full rounded-lg border border-white/10 bg-black/60 px-3 py-2 text-sm outline-none focus:border-cyber-neonGreen/60"
-          placeholder="Contame qué necesitás..."
+          placeholder="Contame, ¿En qué te puedo ayudar?"
           required
         />
       </Field>
