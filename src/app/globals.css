@@ -10,6 +10,7 @@ html,
 body {
   height: 100%;
   background: #07070a;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /* Selección */
@@ -17,7 +18,10 @@ body {
   background: rgba(255, 42, 109, 0.35);
 }
 
-/* Grid Cyberpunk */
+/* ============================= */
+/* Cyber Grid                    */
+/* ============================= */
+
 .cyber-grid {
   background-image:
     linear-gradient(rgba(245, 158, 11, 0.06) 1px, transparent 1px),
@@ -26,7 +30,10 @@ body {
   mask-image: radial-gradient(circle at 50% 20%, black 0%, black 50%, transparent 70%);
 }
 
-/* Noise overlay */
+/* ============================= */
+/* Noise Overlay                 */
+/* ============================= */
+
 .noise {
   position: absolute;
   inset: 0;
@@ -35,7 +42,10 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E");
 }
 
-/* Flicker suave */
+/* ============================= */
+/* Flicker                       */
+/* ============================= */
+
 @keyframes flicker {
   0%, 100% { opacity: 0.95; }
   40% { opacity: 0.75; }
@@ -47,7 +57,10 @@ body {
   animation: flicker 2.8s infinite;
 }
 
-/* Fade In Modal */
+/* ============================= */
+/* Modal Animations              */
+/* ============================= */
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -57,7 +70,6 @@ body {
   animation: fadeIn 0.25s ease-out;
 }
 
-/* Scale In Imagen Modal */
 @keyframes scaleIn {
   from {
     transform: scale(0.9);
@@ -74,13 +86,13 @@ body {
 }
 
 /* ============================= */
-/* Swiper Pagination Custom     */
+/* Swiper Pagination Custom      */
 /* ============================= */
 
-/* Blancos por defecto */
 .swiper-pagination-bullet {
   background: #ffffff !important;
   opacity: 0.6;
+  transition: transform 0.2s ease;
 }
 
 .swiper-pagination-bullet-active {
@@ -88,7 +100,6 @@ body {
   opacity: 1;
 }
 
-/* Hover solo en dispositivos con pointer fino (desktop) */
 @media (hover: hover) {
   .swiper-pagination-bullet:hover {
     background: rgba(255, 255, 255, 0.8);
@@ -96,7 +107,6 @@ body {
   }
 }
 
-/* Ajuste mobile */
 @media (max-width: 640px) {
   .swiper-pagination-bullet {
     width: 6px;
