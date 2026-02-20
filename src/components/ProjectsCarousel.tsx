@@ -47,6 +47,20 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
               {p.description}
             </p>
 
+            {/* Tags */}
+            {p.tags && p.tags.length > 0 && (
+              <div className="mt-4 flex flex-wrap gap-2">
+                {p.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-[11px] px-2 py-1 rounded-md border border-white/10 bg-black/60 text-white/70 transition group-hover:border-white/20"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+
             {/* Live badge */}
             {p.demo && (
               <div className="mt-5 text-xs font-semibold text-cyber-neonGreen tracking-wider">
