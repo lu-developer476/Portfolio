@@ -46,8 +46,8 @@ export default function ContactForm() {
 
       await baseSwal.fire({
         icon: "success",
-        title: "Mensaje enviado",
-        text: "Quedó guardado. Si es urgente, avisame por LinkedIn."
+        title: "Transmisión exitosa 🛰️",
+        text: "Mensaje recibido. Pronto tendrás respuesta."
       });
 
       setData({ name: "", email: "", message: "" });
@@ -104,7 +104,7 @@ export default function ContactForm() {
       </button>
 
       <p className="text-xs text-white/55">
-        Nota: para que funcione en producción, configurá Firebase Admin en variables de entorno (ver README).
+        Tu información será tratada de forma confidencial y utilizada únicamente para responder tu mensaje.
       </p>
     </form>
   );
