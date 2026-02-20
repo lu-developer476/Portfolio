@@ -25,7 +25,7 @@ export async function POST(req: Request) {
       userAgent: req.headers.get("user-agent") ?? null
     });
 
-    // 2️⃣ Mail para vos (admin)
+    // 2️⃣ Mail informativo para administrador
     await resend.emails.send({
       from: "Portfolio <onboarding@resend.dev>",
       to: "lucasmontenegroburgos@gmail.com",
