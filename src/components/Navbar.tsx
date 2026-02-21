@@ -62,14 +62,14 @@ export default function Navbar() {
               <div className="text-sm md:text-base font-semibold whitespace-nowrap">
                 Lucas Montenegro
               </div>
-              <div className="text-xs text-cyber-neonGreen/60 font-mono tracking-wider">
+              <div className="text-xs font-mono tracking-wider text-cyber-neonGreen/60 overflow-hidden border-r-2 border-cyber-neonGreen/80 whitespace-nowrap animate-typing">
                 Freelancer Frontend Developer • UX Interfaces
               </div>
             </Link>
           </div>
 
           {/* DERECHA */}
-          <nav className="flex items-center gap-4 md:gap-8 text-xs md:text-base">
+          <nav className="text-xs font-mono tracking-wider text-cyber-neonGreen/60 overflow-hidden border-r-2 border-cyber-neonGreen/80 whitespace-nowrap animate-typing">
             <NavLink href="/about">Perfil</NavLink>
             <NavLink href="/contact">Contacto</NavLink>
           </nav>
