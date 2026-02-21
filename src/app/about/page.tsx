@@ -56,54 +56,37 @@ export default function AboutPage() {
             <h3 className="text-white/90 font-semibold mb-2">⚡ Habilidades Blandas</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white/75 text-sm">
               <span>Adaptación</span>
+              <span>Agentic Experience</span>
+              <span>Análisis y visualización de datos</span>
               <span>Colaboración en equipo</span>
               <span>Comunicación efectiva</span>
-              <span>Cooperación</span>
-              <span>Destreza</span>
-              <span>Liderazgo</span>
-              <span>Orden</span>
-              <span>Organización</span>
-              <span>Planificación</span>
-              <span>Proactividad</span>
-              <span>Productividad</span>
-              <span>Puntualidad</span>
-              <span>Redacción efectiva / persuasiva</span>
-              <span>Resiliencia</span>
-              <span>Resolución de conflictos</span>
-              <span>Solidaridad</span>
-              <span>Toma de decisiones en grupo</span>
-              <span>Trabajo colaborativo</span>
-              <span>Análisis y visualización de datos</span>
               <span>Creatividad</span>
               <span>Customer Experience</span>
+              <span>Proactividad</span>
+              <span>Resolución de conflictos</span>
+              <span>Trabajo colaborativo</span>
             </div>
           </div>
-
+          
           {/* Habilidades Técnicas / Hard Skills */}
           <div className="mt-6">
             <h3 className="text-white/90 font-semibold mb-2">🛠️ Habilidades Técnicas</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white/75 text-sm">
-              <span>Desarrollo Web</span>
-              <span>Diagramación de procesos</span>
+              <span>AI Automation</span>
+              <span>Customer Experience</span>
               <span>Diseño UI / UX</span>
-              <span>Finanzas</span>
+              <span>Flujo de procesos</span>
               <span>Gestión de bases de datos</span>
-              <span>Gestión de seguridad</span>
-              <span>Gestión documental</span>
-              <span>Gobernanza de datos</span>
               <span>Herramientas digitales</span>
-              <span>Marketing</span>
-              <span>Presentación de proyectos</span>
-              <span>Programación</span>
+              <span>Maquetación Web</span>
               <span>Prototipado</span>
-              <span>RCP, primeros auxilios y trauma</span>
               <span>Storytelling</span>
               <span>UI Editing</span>
-              <span>User Research</span>
               <span>UX Writing</span>
+              <span>User Research</span>
             </div>
           </div>
-
+          
         </div>
       </Section>
 
