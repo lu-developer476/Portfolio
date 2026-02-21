@@ -85,6 +85,23 @@ body {
   animation: scaleIn 0.2s ease-out;
 }
 
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #39ff14; } /* color verde neón */
+}
+
+/* Clase Tailwind extendida si querés usar animate-typing */
+.animate-typing {
+  width: 0;
+  animation: 
+    typing 4s steps(40, end) forwards, 
+    blink 0.75s step-end infinite;
+}
 /* ============================= */
 /* Swiper Pagination Custom      */
 /* ============================= */
