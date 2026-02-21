@@ -46,7 +46,7 @@ export default function AboutPage() {
           <p className="text-white/85 leading-7">
             • <strong>Frameworks y librerías:</strong>{" "}
             <span className="word delay-1">
-              Django, Next.js, React, Redux, TailwindCSS, Zustand
+              Bootstrap, Django, Less, Next.js, React, Redux, Sass, TailwindCSS, Zustand
             </span>
           </p>
       
@@ -60,14 +60,14 @@ export default function AboutPage() {
           <p className="text-white/85 leading-7">
             • <strong>Backend / Full Stack:</strong>{" "}
             <span className="word delay-3">
-              API Design, Firebase / Firestore, Email APIs, Web Storage
+              API Design, Email APIs, Firebase / Firestore, Web Storage
             </span>
           </p>
       
           <p className="text-white/85 leading-7">
-            • <strong>Tooling & Workflows:</strong>{" "}
+            • <strong>IA, Automation & Tooling:</strong>{" "}
             <span className="word delay-4">
-              Debugging, Figma, Git / GitHub, Gitlab, Dev & Prod, n8n
+              Debugging, Dev & Prod, Figma, Git / GitHub, GitLab, n8n, OpenAI, Gemini
             </span>
           </p>
       
