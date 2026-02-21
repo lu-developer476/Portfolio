@@ -107,11 +107,12 @@ body {
   }
 }
 
+/* Para pantallas móviles */
 @media (max-width: 640px) {
-  .swiper-pagination-bullet {
-    width: 6px;
-    height: 6px;
+  nav a {
+    font-size: 0.75rem; /* 12px aprox */
   }
+}
 
   .swiper-pagination-bullet-active {
     transform: scale(1.2);
