@@ -109,8 +109,9 @@ body {
 
 /* Para pantallas móviles */
 @media (max-width: 640px) {
-  nav a {
-    font-size: 0.75rem; /* 12px aprox */
+  .swiper-pagination-bullet {
+    width: 4px;
+    height: 4px;
   }
 
   .swiper-pagination-bullet-active {
