@@ -53,7 +53,7 @@ export async function POST(req: Request) {
     await resend.emails.send({
       from: "Lucas Montenegro <onboarding@resend.dev>",
       to: data.email,
-      subject: "¡Muchas gracias por tu mensaje!🦾",
+      subject: "¡Muchas gracias por tu mensaje! 🦾",
       html: `
         <div style="font-family: Arial, sans-serif; line-height:1.6;">
           <h2>Hola ${data.name},</h2>
