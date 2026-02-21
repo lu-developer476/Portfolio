@@ -186,15 +186,36 @@ body {
   opacity: 1;
 }
 
-@media (hover: hover) {
+/* ============================= */
+/*       MEDIA QUERIES           */
+/* ============================= */
+
+/* =============================
+   INTERACCIÓN (no depende del tamaño)
+============================= */
+
+/* Dispositivos con hover real (mouse, trackpad) */
+@media (hover: hover) and (pointer: fine) {
   .swiper-pagination-bullet:hover {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.85);
+    transform: scale(1.2);
+  }
+}
+
+/* Touch devices → sin hover fake */
+@media (hover: none) and (pointer: coarse) {
+  .swiper-pagination-bullet:active {
     transform: scale(1.15);
   }
 }
 
-/* Para pantallas móviles */
-@media (max-width: 640px) {
+
+/* =============================
+   TAMAÑOS DE PANTALLA
+============================= */
+
+/* 📱 Mobile pequeño */
+@media (max-width: 480px) {
   .swiper-pagination-bullet {
     width: 4px;
     height: 4px;
@@ -202,5 +223,41 @@ body {
 
   .swiper-pagination-bullet-active {
     transform: scale(1.2);
+  }
+}
+
+
+/* 📱 Mobile grande / phablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  .swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+
+/* 💻 Tablet / Laptop chico */
+@media (min-width: 769px) and (max-width: 1280px) {
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+
+/* 🖥 Desktop estándar */
+@media (min-width: 1281px) {
+  .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+
+/* 🖥 Ultra wide / monitores grandes */
+@media (min-width: 1920px) {
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
   }
 }
