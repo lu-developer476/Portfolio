@@ -34,7 +34,7 @@ export default function AboutPage() {
         title="Aptitudes y Conocimientos"
         subtitle="Herramientas, tecnologías y habilidades que he adquirido y aplicado en proyectos reales."
       >
-        <<div className="w-full max-w-full overflow-hidden rounded-xl border border-white/10 bg-black/35 p-4 sm:p-5 md:p-6 space-y-3">>
+        <div className="w-full max-w-full overflow-hidden rounded-xl border border-white/10 bg-black/35 p-4 sm:p-5 md:p-6 space-y-3">
       
           <p className="text-white/85 leading-7 break-words">
             • <strong>Lenguajes:</strong>{" "}
