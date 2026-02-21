@@ -42,10 +42,10 @@ export default function AboutPage() {
             • <strong>Frameworks y librerías:</strong> Django, Next.js, React, Redux, TailwindCSS, Zustand.
           </p>
           <p className="text-white/85 leading-relaxed">
-            • <strong>Frontend avanzado:</strong> Animaciones, Componentización, Efectos interactivos (Anime.js, Chart.js, Swiper.js, Three.js, overlays), Responsive design, Sliders/Carousels.
+            • <strong>Frontend avanzado:</strong> Animaciones, Componentización, Efectos interactivos (Anime.js, Chart.js, Swiper.js, Three.js, overlays), Responsive design, Sliders / Carousels.
           </p>
           <p className="text-white/85 leading-relaxed">
-            • <strong>Backend / full-stack:</strong> API Routes en Next.js, Firebase Admin / Firestore, integración con servicios de correo (Resend), Manejo de localStorage y Web Storage.
+            • <strong>Backend / Full Stack:</strong> API Routes en Next.js, Firebase Admin / Firestore, integración con servicios de correo (Resend), Manejo de localStorage y Web Storage.
           </p>
           <p className="text-white/85 leading-relaxed">
             • <strong>Herramientas y flujo de trabajo:</strong> Debugging avanzado, Figma, Git / GitHub, Gitlab, Manejo de entornos locales y producción (Netlify, Postman, Vercel).
