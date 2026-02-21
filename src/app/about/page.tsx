@@ -30,9 +30,87 @@ export default function AboutPage() {
       </Section>
 
       <Section
+        id="skills"
+        title="Aptitudes y Conocimientos"
+        subtitle="Herramientas, tecnologías y habilidades que he adquirido y aplicado en proyectos reales."
+      >
+        <div className="rounded-xl border border-white/10 bg-black/35 p-6 space-y-3">
+          <p className="text-white/85 leading-relaxed">
+            - <strong>Lenguajes:</strong> JavaScript (ES6+), TypeScript, HTML5, CSS3, Python, CoffeeScript.
+          </p>
+          <p className="text-white/85 leading-relaxed">
+            - <strong>Frameworks y librerías:</strong> React, Next.js, TailwindCSS, Redux, Zustand, Django.
+          </p>
+          <p className="text-white/85 leading-relaxed">
+            - <strong>Frontend avanzado:</strong> Componentización, responsive design, animaciones, sliders/carousels, efectos interactivos (Anime.js, Swiper.js, Three.js, overlays).
+          </p>
+          <p className="text-white/85 leading-relaxed">
+            - <strong>Backend / full-stack:</strong> Firebase Admin / Firestore, API Routes en Next.js, integración con servicios de correo (Resend), manejo de Web Storage y localStorage.
+          </p>
+          <p className="text-white/85 leading-relaxed">
+            - <strong>Herramientas y flujo de trabajo:</strong> Git/GitHub, Vercel, Figma, Postman, debugging avanzado, manejo de entornos locales y producción.
+          </p>
+
+          {/* Habilidades Blandas / Soft Skills */}
+          <div className="mt-6">
+            <h3 className="text-white/90 font-semibold mb-2">⚡ Habilidades Blandas</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white/75 text-sm">
+              <span>Adaptación</span>
+              <span>Colaboración en equipo</span>
+              <span>Comunicación efectiva</span>
+              <span>Cooperación</span>
+              <span>Destreza</span>
+              <span>Liderazgo</span>
+              <span>Orden</span>
+              <span>Organización</span>
+              <span>Planificación</span>
+              <span>Proactividad</span>
+              <span>Productividad</span>
+              <span>Puntualidad</span>
+              <span>Redacción efectiva / persuasiva</span>
+              <span>Resiliencia</span>
+              <span>Resolución de conflictos</span>
+              <span>Solidaridad</span>
+              <span>Toma de decisiones en grupo</span>
+              <span>Trabajo colaborativo</span>
+              <span>Análisis y visualización de datos</span>
+              <span>Creatividad</span>
+              <span>Customer Experience</span>
+            </div>
+          </div>
+
+          {/* Habilidades Técnicas / Hard Skills */}
+          <div className="mt-6">
+            <h3 className="text-white/90 font-semibold mb-2">🛠️ Habilidades Técnicas</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white/75 text-sm">
+              <span>Desarrollo Web</span>
+              <span>Diagramación de procesos</span>
+              <span>Diseño UI / UX</span>
+              <span>Finanzas</span>
+              <span>Gestión de bases de datos</span>
+              <span>Gestión de seguridad</span>
+              <span>Gestión documental</span>
+              <span>Gobernanza de datos</span>
+              <span>Herramientas digitales</span>
+              <span>Marketing</span>
+              <span>Presentación de proyectos</span>
+              <span>Programación</span>
+              <span>Prototipado</span>
+              <span>RCP, primeros auxilios y trauma</span>
+              <span>Storytelling</span>
+              <span>UI Editing</span>
+              <span>User Research</span>
+              <span>UX Writing</span>
+            </div>
+          </div>
+
+        </div>
+      </Section>
+
+      <Section
         id="projects"
-        title="Proyectos"
-        subtitle="El resultado de entender, realizar, adaptar y mejorar… finalmente publicados."
+        title="Trabajos realizados"
+        subtitle="El resultado de entender, crear, adaptar y perfeccionar… listo para ser explorado."
       >
         <ProjectsCarousel expanded />
       </Section>
