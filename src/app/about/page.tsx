@@ -52,21 +52,21 @@ export default function AboutPage() {
           <p className="text-white/85 leading-relaxed">
             • <strong>Frontend avanzado:</strong>{" "}
             <span className="animate-typing-no-cursor">
-              Animaciones, Componentización, Efectos Interactivos (Anime.js, Chart.js, Swiper.js, Three.js, overlays), Responsive Design, Sliders / Carousels
+              Animaciones, Componentización, Efectos Interactivos, Responsive Design, Sliders / Carousels
             </span>
           </p>
         
           <p className="text-white/85 leading-relaxed">
             • <strong>Backend / Full Stack:</strong>{" "}
             <span className="animate-typing-no-cursor">
-              API Routes en Next.js, Firebase Admin / Firestore, integración con servicios de correo (Resend), Manejo de localStorage y Web Storage
+              API Routes en Next.js, Firebase Admin / Firestore, integración con servicios de correo, localStorage y Web Storage
             </span>
           </p>
         
           <p className="text-white/85 leading-relaxed">
             • <strong>Herramientas y flujo de trabajo:</strong>{" "}
             <span className="animate-typing-no-cursor">
-              Debugging avanzado, Figma, Git / GitHub, Gitlab, Manejo de entornos locales y producción (Netlify, Postman, Vercel)
+              Debugging avanzado, Figma, Git / GitHub, Gitlab, entornos locales y producción
             </span>
           </p>
         </div>
