@@ -85,6 +85,8 @@ body {
   animation: scaleIn 0.2s ease-out;
 }
 
+/* Clase Tailwind extendida - animate-typing */
+/* Animación de tipeo con cursor */
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
@@ -98,19 +100,23 @@ body {
 .animate-typing {
   display: inline-block;
   width: 0;
-  animation: typing 2s steps(20, end) forwards, blink 0.75s step-end infinite;
+  border-right: 2px solid #39ff14; /* cursor */
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(40, end) forwards,
+             blink 0.75s step-end infinite;
 }
 
-/* Clase Tailwind extendida si querés usar animate-typing */
-.animate-typing {
+/* Animación de tipeo sin cursor */
+.animate-typing-no-cursor {
+  display: inline-block;
   width: 0;
-  animation: 
-    typing 4s steps(40, end) forwards, 
-    blink 0.75s step-end infinite;
+  color: #39ff14; /* verde neón */
+  animation: typing 2s steps(20, end) forwards;
 }
 
 .delay-500 {
-  animation-delay: 0.5s; /* hace que el segundo span tipeé después del primero */
+  animation-delay: 0.5s;
 }
 
 /* ============================= */
