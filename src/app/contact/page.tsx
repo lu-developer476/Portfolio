@@ -39,7 +39,7 @@ export default function ContactPage() {
           </ul>
 
           <p className="mt-6 text-sm text-white/100 leading-relaxed">
-            Transformando desafíos en oportunidades.
+            Transformando los desafíos en nuevas oportunidades de aprendizaje y experiencias valiosas.
           </p>
         </div>
 
