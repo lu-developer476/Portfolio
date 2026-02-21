@@ -42,7 +42,7 @@ export default function AboutPage() {
             - <strong>Frameworks y librerías:</strong> Django, Next.js, React, Redux, TailwindCSS, Zustand.
           </p>
           <p className="text-white/85 leading-relaxed">
-            - <strong>Frontend avanzado:</strong> Animaciones, Componentización, Efectos interactivos (Anime.js, Swiper.js, Three.js, overlays), Responsive design, Sliders/carousels.
+            - <strong>Frontend avanzado:</strong> Animaciones, Componentización, Efectos interactivos (Anime.js, Chart.js, Swiper.js, Three.js, overlays), Responsive design, Sliders/Carousels.
           </p>
           <p className="text-white/85 leading-relaxed">
             - <strong>Backend / full-stack:</strong> API Routes en Next.js, Firebase Admin / Firestore, integración con servicios de correo (Resend), Manejo de localStorage y Web Storage.
@@ -57,7 +57,7 @@ export default function AboutPage() {
       
         {/* Habilidades Blandas / Soft Skills */}
         <div className="mt-6">
-          <h3 className="text-white/90 font-semibold mb-2">⚡ Habilidades Blandas</h3>
+          <h3 className="text-white/90 font-semibold mb-2">💡 Habilidades Blandas</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white/75 text-sm">
             <span>Adaptación</span>
             <span>Análisis y visualización de datos</span>
@@ -75,7 +75,7 @@ export default function AboutPage() {
       
         {/* Habilidades Técnicas / Hard Skills */}
         <div className="mt-6">
-          <h3 className="text-white/90 font-semibold mb-2">🛠️ Habilidades Técnicas</h3>
+          <h3 className="text-white/90 font-semibold mb-2">💻 Habilidades Técnicas</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white/75 text-sm">
             <span>AI Automation</span>
             <span>Agentic Experience</span>
