@@ -53,21 +53,21 @@ export default function AboutPage() {
           <p className="text-white/85 leading-7">
             • <strong>Frontend avanzado:</strong>{" "}
             <span className="word delay-4">
-              Animaciones, Componentización, Efectos Interactivos, Responsive Design, Sliders / Carousels
+              Animaciones, Componentización, Efectos Interactivos, Responsive Design, Sliders/Carousels
             </span>
           </p>
       
           <p className="text-white/85 leading-7">
-            • <strong>Backend / Full Stack:</strong>{" "}
+            • <strong>Backend/Full Stack:</strong>{" "}
             <span className="word delay-6">
-              API Routes en Next.js, Firebase Admin / Firestore, Servicios de correo, localStorage y Web Storage
+              API Routes en Next.js, Firebase Admin/Firestore, Servicios de correo, localStorage y Web Storage
             </span>
           </p>
       
           <p className="text-white/85 leading-7">
             • <strong>Herramientas y flujo de trabajo:</strong>{" "}
             <span className="word delay-8">
-              Debugging avanzado, Figma, Git / GitHub, Gitlab, Entornos locales y Producción
+              Debugging avanzado, Figma, Git/GitHub, Gitlab, Entornos locales y Producción
             </span>
           </p>
       
@@ -103,7 +103,7 @@ export default function AboutPage() {
             <span className="word delay-18">AI Automation </span>
             <span className="word delay-19">Agentic Experience </span>
             <span className="word delay-20">Customer Experience </span>
-            <span className="word delay-21">UI / UX </span>
+            <span className="word delay-21">UI/UX </span>
             <span className="word delay-22">Flujo de procesos </span>
             <span className="word delay-23">Bases de datos </span>
             <span className="word delay-24">Herramientas digitales </span>
