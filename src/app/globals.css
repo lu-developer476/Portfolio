@@ -107,26 +107,6 @@ body {
              blink 0.75s step-end infinite;
 }
 
-/* Animación de tipeo sin cursor */
-@keyframes typing-no-cursor {
-  from { width: 0ch; }
-  to { width: 100%; } /* o ajustar con ch según la longitud máxima si querés más control */
-}
-
-.animate-typing-no-cursor {
-  display: inline-block;
-  width: 0ch;
-  overflow: hidden;
-  white-space: nowrap;
-  color: #39ff14; /* verde neón */
-  animation: typing-no-cursor 2.5s steps(50, end) forwards; /* steps = cantidad de caracteres aprox */
-}
-
-/* Delay para el segundo link */
-.delay-500 {
-  animation-delay: 0.5s;
-}
-
 @keyframes typingWord {
   from { clip-path: inset(0 100% 0 0); }
   to { clip-path: inset(0 0 0 0); }
