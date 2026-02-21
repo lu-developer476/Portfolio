@@ -110,7 +110,7 @@ body {
 /* Animación de tipeo sin cursor */
 @keyframes typing-no-cursor {
   from { width: 0ch; }
-  to { width: 16ch; } /* ajustar según cantidad de caracteres del título más largo */
+  to { width: 100%; } /* o ajustar con ch según la longitud máxima si querés más control */
 }
 
 .animate-typing-no-cursor {
@@ -119,7 +119,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
   color: #39ff14; /* verde neón */
-  animation: typing-no-cursor 2s steps(16, end) forwards;
+  animation: typing-no-cursor 2.5s steps(50, end) forwards; /* steps = cantidad de caracteres aprox */
 }
 
 /* Delay para el segundo link */
