@@ -112,7 +112,6 @@ body {
   nav a {
     font-size: 0.75rem; /* 12px aprox */
   }
-}
 
   .swiper-pagination-bullet-active {
     transform: scale(1.2);
