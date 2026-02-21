@@ -5,7 +5,7 @@ type Variant = "red" | "green" | "gold";
 const styles: Record<Variant, string> = {
   red: "border-cyber-neonRed/70 shadow-neonRed hover:bg-cyber-neonRed/10",
   green: "border-cyber-neonGreen/70 shadow-neonGreen hover:bg-cyber-neonGreen/10",
-  gold: "border-cyber-gold/70 hover:bg-cyber-gold/10"
+  gold: "border-cyber-gold/70 hover:bg-cyber-gold/25"
 };
 
 export default function CyberButton({
