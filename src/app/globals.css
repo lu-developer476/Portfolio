@@ -87,7 +87,7 @@ body {
 
 /* Clase Tailwind extendida - animate-typing */
 /* Animación de tipeo con cursor */
-@keyframes typing {
+@keyframes typing-cursor {
   from { width: 0; }
   to { width: 100%; }
 }
@@ -103,18 +103,26 @@ body {
   border-right: 2px solid #39ff14; /* cursor */
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 4s steps(40, end) forwards,
+  animation: typing-cursor 4s steps(40, end) forwards,
              blink 0.75s step-end infinite;
 }
 
 /* Animación de tipeo sin cursor */
-.animate-typing-no-cursor {
-  display: inline-block;
-  width: 0;
-  color: #39ff14; /* verde neón */
-  animation: typing 2s steps(20, end) forwards;
+@keyframes typing-no-cursor {
+  from { width: 0ch; }
+  to { width: 8ch; } /* ajustar según cantidad de caracteres del texto */
 }
 
+.animate-typing-no-cursor {
+  display: inline-block;
+  width: 0ch;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #39ff14; /* verde neón */
+  animation: typing-no-cursor 2s steps(8, end) forwards;
+}
+
+/* Delay para el segundo link */
 .delay-500 {
   animation-delay: 0.5s;
 }
