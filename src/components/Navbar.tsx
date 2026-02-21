@@ -73,7 +73,7 @@ export default function Navbar() {
           <span className="text-xs md:text-base font-mono tracking-wider text-cyber-neonGreen/60 overflow-hidden whitespace-nowrap animate-typing-no-cursor">
             <NavLink href="/about">Perfil</NavLink>
           </span>
-          <span className="text-xs md:text-base font-mono tracking-wider text-cyber-neonGreen/60 overflow-hidden whitespace-nowrap animate-typing-no-cursor">
+          <span className="text-xs md:text-base font-mono tracking-wider text-cyber-neonGreen/60 overflow-hidden whitespace-nowrap animate-typing-no-cursor delay-500">
             <NavLink href="/contact">Contacto</NavLink>
           </span>
         </nav>
