@@ -108,8 +108,12 @@ body {
 }
 
 @keyframes typingWord {
-  from { clip-path: inset(0 100% 0 0); }
-  to { clip-path: inset(0 0 0 0); }
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 .word {
@@ -117,17 +121,9 @@ body {
   white-space: nowrap;
   color: #39ff14;
 
-  /* 👇 achica visualmente las frases */
-  font-size: 0.85rem;
-  line-height: 1.2;
-
-  /* 👇 evita que ocupe toda la pantalla */
-  max-width: 90vw;
-
   clip-path: inset(0 100% 0 0);
 
-  /* 👇 más steps = mejor typing para frases largas */
-  animation: typingWord 1.2s steps(60, end) forwards;
+  animation: typingWord 1.2s steps(12, end) forwards;
 }
 
 /* delays progresivos */
