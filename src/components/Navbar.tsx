@@ -69,11 +69,15 @@ export default function Navbar() {
           </div>
 
           {/* DERECHA */}
-          <nav className="text-xs font-mono tracking-wider text-cyber-neonGreen/60 overflow-hidden border-r-2 border-cyber-neonGreen/80 whitespace-nowrap animate-typing">
+        <nav className="flex items-center gap-4 md:gap-8">
+          <span className="text-xs md:text-base font-mono tracking-wider text-cyber-neonGreen/60 overflow-hidden border-r-2 border-cyber-neonGreen/80 whitespace-nowrap animate-typing">
             <NavLink href="/about">Perfil</NavLink>
+          </span>
+          <span className="text-xs md:text-base font-mono tracking-wider text-cyber-neonGreen/60 overflow-hidden border-r-2 border-cyber-neonGreen/80 whitespace-nowrap animate-typing delay-500">
             <NavLink href="/contact">Contacto</NavLink>
-          </nav>
-
+          </span>
+        </nav>
+          
         </div>
       </header>
 
