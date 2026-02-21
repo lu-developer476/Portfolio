@@ -19,7 +19,7 @@ export default function Section({ id, title, subtitle, children }: Props) {
         </h2>
 
         {subtitle && (
-          <p className="mt-3 text-sm leading-relaxed text-white/70">
+          <p className="mt-3 text-sm leading-relaxed text-white/100">
             {subtitle}
           </p>
         )}
