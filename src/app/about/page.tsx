@@ -34,37 +34,37 @@ export default function AboutPage() {
         title="Aptitudes y Conocimientos"
         subtitle="Herramientas, tecnologías y habilidades que he adquirido y aplicado en proyectos reales."
       >
-        <div className="rounded-xl border border-white/10 bg-black/35 p-6 space-y-3">
+        <<div className="w-full max-w-full overflow-hidden rounded-xl border border-white/10 bg-black/35 p-4 sm:p-5 md:p-6 space-y-3">>
       
-          <p className="text-white/85 leading-7">
+          <p className="text-white/85 leading-7 break-words">
             • <strong>Lenguajes:</strong>{" "}
             <span className="word delay-0">
               CSS3, CoffeeScript, HTML5, JavaScript (ES6+), Python, TypeScript
             </span>
           </p>
       
-          <p className="text-white/85 leading-7">
+          <p className="text-white/85 leading-7 break-words">
             • <strong>Frameworks y librerías:</strong>{" "}
             <span className="word delay-1">
               Bootstrap, Django, Less, Next.js, React, Redux, Sass, TailwindCSS, Zustand
             </span>
           </p>
       
-          <p className="text-white/85 leading-7">
+          <p className="text-white/85 leading-7 break-words">
             • <strong>Frontend avanzado:</strong>{" "}
             <span className="word delay-2">
               Animaciones, Componentización, Efectos Interactivos, Responsive Design, Sliders / Carousels
             </span>
           </p>
       
-          <p className="text-white/85 leading-7">
+          <p className="text-white/85 leading-7 break-words">
             • <strong>Backend / Full Stack:</strong>{" "}
             <span className="word delay-3">
               API Design, Email APIs, Firebase / Firestore, Web Storage
             </span>
           </p>
       
-          <p className="text-white/85 leading-7">
+          <p className="text-white/85 leading-7 break-words">
             • <strong>IA, Automation & Tooling:</strong>{" "}
             <span className="word delay-4">
               Debugging, Dev & Prod, Figma, Git / GitHub, GitLab, n8n, OpenAI, Gemini
