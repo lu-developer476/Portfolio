@@ -107,6 +107,18 @@ body {
              blink 0.75s step-end infinite;
 }
 
+/* Animación de tipeo sin cursor */
+.animate-typing-no-cursor {
+  display: inline-block;
+  width: 0;
+  color: #39ff14; /* verde neón */
+  animation: typing 2s steps(20, end) forwards;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
 @keyframes typingWord {
   from {
     width: 0;
