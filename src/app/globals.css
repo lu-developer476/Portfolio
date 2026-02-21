@@ -118,10 +118,11 @@ body {
 
 .word {
   display: inline-block;
-  width: 0;
+  width: max-content;
   overflow: hidden;
   white-space: nowrap;
   color: #39ff14;
+  text-shadow: 0 0 6px #39ff14;
 
   animation: typingWord 0.6s steps(20, end) forwards;
 }
