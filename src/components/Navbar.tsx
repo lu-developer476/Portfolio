@@ -69,7 +69,7 @@ export default function Navbar() {
           </div>
 
           {/* DERECHA */}
-          <nav className="flex items-center gap-4 md:gap-8">
+          <nav className="flex items-center gap-4 md:gap-8 text-sm md:text-base">
             <NavLink href="/about">Sobre mí</NavLink>
             <NavLink href="/contact">Contacto</NavLink>
           </nav>
