@@ -135,11 +135,11 @@ body {
 
 .word {
   display: inline-block;
-  white-space: nowrap;
-  color: #0B9973;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 
   clip-path: inset(0 100% 0 0);
-
   animation: typingWord 1.4s ease-out forwards;
 }
 
