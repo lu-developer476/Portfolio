@@ -80,7 +80,7 @@ export default function AboutPage() {
             <span className="text-lg font-semibold text-cyber-gold">💡 Soft Skills</span>
           </h3>
       
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60">
             <span className="word delay-5">Adaptación </span>
             <span className="word delay-6">Análisis de datos </span>
             <span className="word delay-7">Colaboración </span>
@@ -99,7 +99,7 @@ export default function AboutPage() {
             <span className="text-lg font-semibold text-cyber-gold">💻 Hard Skills</span>
           </h3>
       
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60">
             <span className="word delay-13">AI Automation </span>
             <span className="word delay-14">Agentic Experience </span>
             <span className="word delay-15">Customer Experience </span>
