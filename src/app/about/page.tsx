@@ -36,59 +36,64 @@ export default function AboutPage() {
       >
         <div className="rounded-xl border border-white/10 bg-black/35 p-6 space-y-3">
           <p className="text-white/85 leading-relaxed">
-            - <strong>Lenguajes:</strong> JavaScript (ES6+), TypeScript, HTML5, CSS3, Python, CoffeeScript.
+            - <strong>Lenguajes:</strong> CSS3, CoffeeScript, HTML5, JavaScript (ES6+), Python, TypeScript.
           </p>
           <p className="text-white/85 leading-relaxed">
-            - <strong>Frameworks y librerías:</strong> React, Next.js, TailwindCSS, Redux, Zustand, Django.
+            - <strong>Frameworks y librerías:</strong> Django, Next.js, React, Redux, TailwindCSS, Zustand.
           </p>
           <p className="text-white/85 leading-relaxed">
-            - <strong>Frontend avanzado:</strong> Componentización, responsive design, animaciones, sliders/carousels, efectos interactivos (Anime.js, Swiper.js, Three.js, overlays).
+            - <strong>Frontend avanzado:</strong> Animaciones, Componentización, Efectos interactivos (Anime.js, Swiper.js, Three.js, overlays), Responsive design, Sliders/carousels.
           </p>
           <p className="text-white/85 leading-relaxed">
-            - <strong>Backend / full-stack:</strong> Firebase Admin / Firestore, API Routes en Next.js, integración con servicios de correo (Resend), manejo de Web Storage y localStorage.
+            - <strong>Backend / full-stack:</strong> API Routes en Next.js, Firebase Admin / Firestore, integración con servicios de correo (Resend), Manejo de localStorage y Web Storage.
           </p>
           <p className="text-white/85 leading-relaxed">
-            - <strong>Herramientas y flujo de trabajo:</strong> Git/GitHub, Vercel, Figma, Postman, debugging avanzado, manejo de entornos locales y producción.
+            - <strong>Herramientas y flujo de trabajo:</strong> Debugging avanzado, Figma, Git/GitHub, Gitlab, Manejo de entornos locales y producción, Netlify, Postman, Vercel.
           </p>
-
-          {/* Habilidades Blandas / Soft Skills */}
-          <div className="mt-6">
-            <h3 className="text-white/90 font-semibold mb-2">⚡ Habilidades Blandas</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white/75 text-sm">
-              <span>Adaptación</span>
-              <span>Análisis y visualización de datos</span>
-              <span>Colaboración en equipo</span>
-              <span>Comunicación efectiva</span>
-              <span>Creatividad</span>
-              <span>Mediación</span>
-              <span>Proactividad</span>
-              <span>Sinergia</span>
-            </div>
+        </div>
+      
+        {/* Línea separadora */}
+        <hr className="my-6 border-t border-white/20" />
+      
+        {/* Habilidades Blandas / Soft Skills */}
+        <div className="mt-6">
+          <h3 className="text-white/90 font-semibold mb-2">⚡ Habilidades Blandas</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white/75 text-sm">
+            <span>Adaptación</span>
+            <span>Análisis y visualización de datos</span>
+            <span>Colaboración en equipo</span>
+            <span>Comunicación efectiva</span>
+            <span>Creatividad</span>
+            <span>Mediación</span>
+            <span>Proactividad</span>
+            <span>Sinergia</span>
           </div>
-          
-          {/* Habilidades Técnicas / Hard Skills */}
-          <div className="mt-6">
-            <h3 className="text-white/90 font-semibold mb-2">🛠️ Habilidades Técnicas</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white/75 text-sm">
-              <span>AI Automation</span>
-              <span>Agentic Experience</span>
-              <span>Customer Experience</span>
-              <span>Diseño UI / UX</span>
-              <span>Flujo de procesos</span>
-              <span>Gestión de bases de datos</span>
-              <span>Herramientas digitales</span>
-              <span>Maquetación Web</span>
-              <span>Prototipado</span>
-              <span>Storytelling</span>
-              <span>UI Editing</span>
-              <span>UX Writing</span>
-              <span>User Research</span>
-            </div>
+        </div>
+      
+        {/* Línea separadora */}
+        <hr className="my-6 border-t border-white/20" />
+      
+        {/* Habilidades Técnicas / Hard Skills */}
+        <div className="mt-6">
+          <h3 className="text-white/90 font-semibold mb-2">🛠️ Habilidades Técnicas</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white/75 text-sm">
+            <span>AI Automation</span>
+            <span>Agentic Experience</span>
+            <span>Customer Experience</span>
+            <span>Diseño UI / UX</span>
+            <span>Flujo de procesos</span>
+            <span>Gestión de bases de datos</span>
+            <span>Herramientas digitales</span>
+            <span>Maquetación Web</span>
+            <span>Prototipado</span>
+            <span>Storytelling</span>
+            <span>UI Editing</span>
+            <span>UX Writing</span>
+            <span>User Research</span>
           </div>
-          
         </div>
       </Section>
-
+            
       <Section
         id="projects"
         title="Trabajos realizados"
