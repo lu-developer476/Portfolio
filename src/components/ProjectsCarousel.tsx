@@ -27,8 +27,8 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
             className={`group h-full rounded-2xl border bg-black/40 p-6 transition-all duration-300
             ${
               p.demo
-                ? "cursor-pointer border-white/10 hover:border-cyber-neonGreen/60 hover:shadow-neonGreen hover:bg-black/50"
-                : "border-white/10 hover:border-cyber-gold/40 hover:bg-black/50"
+                ? "cursor-pointer border-white/100 hover:border-cyber-neonGreen/60 hover:shadow-neonGreen hover:bg-black/50"
+                : "border-white/100 hover:border-cyber-gold/40 hover:bg-black/50"
             }`}
           >
             {/* Header */}
@@ -37,13 +37,13 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
                 {p.title}
               </h3>
 
-              <span className="text-[11px] tracking-wider text-white/50 border border-white/10 px-2 py-1 rounded-md">
+              <span className="text-[11px] tracking-wider text-white/100 border border-white/100 px-2 py-1 rounded-md">
                 {p.year}
               </span>
             </div>
 
             {/* Description */}
-            <p className="mt-4 text-sm leading-relaxed text-white/75">
+            <p className="mt-4 text-sm leading-relaxed text-white/100">
               {p.description}
             </p>
 
@@ -53,7 +53,7 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
                 {p.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[11px] px-2 py-1 rounded-md border border-white/10 bg-black/60 text-white/70 transition group-hover:border-white/20"
+                    className="text-[11px] px-2 py-1 rounded-md border border-white/100 bg-black/60 text-white/100 transition group-hover:border-white/100"
                   >
                     {tag}
                   </span>
