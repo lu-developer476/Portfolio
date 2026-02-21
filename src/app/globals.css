@@ -109,7 +109,7 @@ body {
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 10ch; }
+  to { width: 10ch; } /* Freelancer = 10 caracteres */
 }
 
 @keyframes hideCursor {
