@@ -7,7 +7,7 @@ export default {
       colors: {
         cyber: {
           violet: "#5b21b6",
-          gold: "#f59e0b",
+          gold: "#ffd700",
           ink: "#0b0b0f",
           neonRed: "#ff2a6d",
           neonGreen: "#05f7b7"
