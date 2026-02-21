@@ -77,9 +77,9 @@ export default function AboutPage() {
         {/* Habilidades Blandas / Soft Skills */}
         <div className="mt-6">
           <h3 className="text-white/90 font-semibold mb-2">
-            <span className="animate-typing-no-cursor">💡 Habilidades Blandas</span>
+            <span className="text-lg font-semibold text-cyber-gold">💡 Soft Skills</span>
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white/75 text-sm">
+          <div className="animate-typing-no-cursor">
             <span>Adaptación</span>
             <span>Análisis y visualización de datos</span>
             <span>Colaboración en equipo</span>
@@ -97,9 +97,9 @@ export default function AboutPage() {
         {/* Habilidades Técnicas / Hard Skills */}
         <div className="mt-6">
           <h3 className="text-white/90 font-semibold mb-2">
-            <span className="animate-typing-no-cursor">💻 Habilidades Técnicas</span>
+            <span className="ext-lg font-semibold text-cyber-gold">💻 Hard Skills</span>
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white/75 text-sm">
+          <div className="animate-typing-no-cursor">
             <span>AI Automation</span>
             <span>Agentic Experience</span>
             <span>Customer Experience</span>
