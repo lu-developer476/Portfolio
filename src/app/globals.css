@@ -107,13 +107,18 @@ body {
              blink 0.75s step-end infinite;
 }
 
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.animate-typing {
+  animation: typing 2s steps(20) forwards;
+}
+
 @keyframes typingWord {
-  from {
-    clip-path: inset(0 100% 0 0);
-  }
-  to {
-    clip-path: inset(0 0 0 0);
-  }
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
 }
 
 .word {
@@ -123,7 +128,7 @@ body {
 
   clip-path: inset(0 100% 0 0);
 
-  animation: typingWord 1.2s steps(12, end) forwards;
+  animation: typingWord 1.4s ease-out forwards;
 }
 
 /* delays progresivos */
