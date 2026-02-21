@@ -34,7 +34,7 @@ export default function AboutPage() {
         title="Aptitudes y Conocimientos"
         subtitle="Herramientas, tecnologías y habilidades que he adquirido y aplicado en proyectos reales."
       >
-        <div className="rounded-xl border border-white/10 bg-black/35 p-6 space-y-3">
+        <div className="text-xs font-mono tracking-wider text-cyber-neonGreen/60 overflow-hidden border-r-2 border-cyber-neonGreen/80 whitespace-nowrap animate-typing">
           <p className="text-white/85 leading-relaxed">
             • <strong>Lenguajes:</strong> CSS3, CoffeeScript, HTML5, JavaScript (ES6+), Python, TypeScript.
           </p>
@@ -58,7 +58,7 @@ export default function AboutPage() {
         {/* Habilidades Blandas / Soft Skills */}
         <div className="mt-6">
           <h3 className="text-white/90 font-semibold mb-2">💡 Habilidades Blandas</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white/75 text-sm">
+          <div className="text-xs font-mono tracking-wider text-cyber-neonGreen/60 overflow-hidden border-r-2 border-cyber-neonGreen/80 whitespace-nowrap animate-typing">
             <span>Adaptación</span>
             <span>Análisis y visualización de datos</span>
             <span>Colaboración en equipo</span>
@@ -76,7 +76,7 @@ export default function AboutPage() {
         {/* Habilidades Técnicas / Hard Skills */}
         <div className="mt-6">
           <h3 className="text-white/90 font-semibold mb-2">💻 Habilidades Técnicas</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white/75 text-sm">
+          <div className="text-xs font-mono tracking-wider text-cyber-neonGreen/60 overflow-hidden border-r-2 border-cyber-neonGreen/80 whitespace-nowrap animate-typing">
             <span>AI Automation</span>
             <span>Agentic Experience</span>
             <span>Customer Experience</span>
