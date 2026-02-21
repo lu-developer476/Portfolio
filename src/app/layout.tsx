@@ -3,8 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Lucas Montenegro — Frontend Developer",
-  description: "Portfolio profesional."
+  title: "Frontend Developer •  UX Interfaces",
+  description: "Portfolio digital."
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
