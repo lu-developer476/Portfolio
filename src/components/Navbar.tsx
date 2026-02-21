@@ -63,7 +63,7 @@ export default function Navbar() {
                 Lucas Montenegro
               </div>
               <div className="text-xs text-cyber-neonGreen/60 font-mono tracking-wider">
-                Freelancer Frontend Developer · UX Interfaces
+                Freelancer Frontend Developer • UX Interfaces
               </div>
             </Link>
           </div>
