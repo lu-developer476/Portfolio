@@ -139,6 +139,8 @@ body {
   overflow-wrap: anywhere;
   word-break: break-word;
 
+  color: #0B9973;
+
   clip-path: inset(0 100% 0 0);
   animation: typingWord 1.4s ease-out forwards;
 }
