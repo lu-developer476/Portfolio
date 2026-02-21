@@ -14,7 +14,7 @@ const baseSwal = Swal.mixin({
   color: "#ffffff",
   confirmButtonColor: "#111827",
   customClass: {
-    popup: "border border-white/10",
+    popup: "border border-white/100",
     confirmButton: "rounded-lg border border-cyber-gold/70 shadow-none"
   }
 });
@@ -46,7 +46,7 @@ export default function ContactForm() {
 
       await baseSwal.fire({
         icon: "success",
-        title: "Transmisión exitosa 🛰️",
+        title: "📡 Éxitoso 🖧",
         text: "Mensaje recibido. Pronto tendrás respuesta."
       });
 
@@ -68,7 +68,7 @@ export default function ContactForm() {
         <input
           value={data.name}
           onChange={onChange("name")}
-          className="w-full rounded-lg border border-white/10 bg-black/60 px-3 py-2 text-sm outline-none focus:border-cyber-neonGreen/60"
+          className="w-full rounded-lg border border-white/100 bg-black/60 px-3 py-2 text-sm outline-none focus:border-cyber-neonGreen/60"
           placeholder="Nombre y apellido"
           required
         />
@@ -79,7 +79,7 @@ export default function ContactForm() {
           value={data.email}
           onChange={onChange("email")}
           type="email"
-          className="w-full rounded-lg border border-white/10 bg-black/60 px-3 py-2 text-sm outline-none focus:border-cyber-neonGreen/60"
+          className="w-full rounded-lg border border-white/100 bg-black/60 px-3 py-2 text-sm outline-none focus:border-cyber-neonGreen/60"
           placeholder="micorreo@mail.com"
           required
         />
@@ -89,7 +89,7 @@ export default function ContactForm() {
         <textarea
           value={data.message}
           onChange={onChange("message")}
-          className="min-h-28 w-full rounded-lg border border-white/10 bg-black/60 px-3 py-2 text-sm outline-none focus:border-cyber-neonGreen/60"
+          className="min-h-28 w-full rounded-lg border border-white/100 bg-black/60 px-3 py-2 text-sm outline-none focus:border-cyber-neonGreen/60"
           placeholder="Contame en qué te puedo ayudar..."
           required
         />
@@ -104,7 +104,7 @@ export default function ContactForm() {
       </button>
 
       <p className="text-xs text-white/55">
-        Tu información será tratada de forma confidencial y utilizada únicamente para responder tu mensaje.
+        Tu información será tratada de forma confidencial para responder tu mensaje.
       </p>
     </form>
   );
