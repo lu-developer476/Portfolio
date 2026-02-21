@@ -46,7 +46,7 @@ export default function ContactForm() {
 
       await baseSwal.fire({
         icon: "success",
-        title: "📡 Éxitoso 🖧",
+        title: "Éxito",
         text: "Mensaje recibido. Pronto tendrás respuesta."
       });
 
@@ -54,7 +54,7 @@ export default function ContactForm() {
     } catch (err: any) {
       await baseSwal.fire({
         icon: "error",
-        title: "No se pudo enviar",
+        title: "Fallo al enviar",
         text: err?.message ?? "Probá de nuevo en un minuto."
       });
     } finally {
