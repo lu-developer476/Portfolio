@@ -70,7 +70,7 @@ export default function Navbar() {
 
           {/* DERECHA */}
           <nav className="flex items-center gap-4 md:gap-8 text-xs md:text-base">
-            <NavLink href="/about">Sobre mí</NavLink>
+            <NavLink href="/about">Perfil</NavLink>
             <NavLink href="/contact">Contacto</NavLink>
           </nav>
 
