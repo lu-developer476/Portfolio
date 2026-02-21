@@ -227,8 +227,7 @@ body {
   }
 }
 
-
-/* 📱 Mobile grande / phablet */
+/* 📱 Mobile / phablet */
 @media (min-width: 481px) and (max-width: 768px) {
   .swiper-pagination-bullet {
     width: 5px;
@@ -236,15 +235,26 @@ body {
   }
 }
 
-
-/* 💻 Tablet / Laptop chico */
-@media (min-width: 769px) and (max-width: 1280px) {
+/* 💻 Tablet chica / Netbook */
+@media (min-width: 769px) and (max-width: 1024px) {
   .swiper-pagination-bullet {
     width: 6px;
     height: 6px;
   }
 }
 
+/* 💻 Tablet mediana / Notebook / Laptop */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .swiper-pagination-bullet {
+    width: 6.5px; /* un poco más grande que tablet chico */
+    height: 6.5px;
+  }
+
+  /* Ajustes de Navbar / links si hacen wrap */
+  nav {
+    gap: 3rem; /* espacio entre Perfil y Contacto */
+  }
+}
 
 /* 🖥 Desktop estándar */
 @media (min-width: 1281px) {
@@ -253,7 +263,6 @@ body {
     height: 7px;
   }
 }
-
 
 /* 🖥 Ultra wide / monitores grandes */
 @media (min-width: 1920px) {
