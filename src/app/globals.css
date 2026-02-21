@@ -133,6 +133,7 @@ body {
 }
 
 .word {
+  min-width: fit-content;
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
