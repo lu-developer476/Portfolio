@@ -34,42 +34,42 @@ export default function AboutPage() {
         title="Aptitudes y Conocimientos"
         subtitle="Herramientas, tecnologías y habilidades que he adquirido y aplicado en proyectos reales."
       >
-      <div className="rounded-xl border border-white/10 bg-black/35 p-6 space-y-3">
-        <p className="text-white/85 leading-relaxed">
-          • <strong>Lenguajes:</strong>{" "}
-          <span className="animate-typing-no-cursor">
-            CSS3, CoffeeScript, HTML5, JavaScript (ES6+), Python, TypeScript.
-          </span>
-        </p>
-      
-        <p className="text-white/85 leading-relaxed">
-          • <strong>Frameworks y librerías:</strong>{" "}
-          <span className="animate-typing-no-cursor">
-            Django, Next.js, React, Redux, TailwindCSS, Zustand.
-          </span>
-        </p>
-      
-        <p className="text-white/85 leading-relaxed">
-          • <strong>Frontend avanzado:</strong>{" "}
-          <span className="animate-typing-no-cursor">
-            Animaciones, Componentización, Efectos Interactivos (Anime.js, Chart.js, Swiper.js, Three.js, overlays), Responsive Design, Sliders / Carousels.
-          </span>
-        </p>
-      
-        <p className="text-white/85 leading-relaxed">
-          • <strong>Backend / Full Stack:</strong>{" "}
-          <span className="animate-typing-no-cursor">
-            API Routes en Next.js, Firebase Admin / Firestore, integración con servicios de correo (Resend), Manejo de localStorage y Web Storage.
-          </span>
-        </p>
-      
-        <p className="text-white/85 leading-relaxed">
-          • <strong>Herramientas y flujo de trabajo:</strong>{" "}
-          <span className="animate-typing-no-cursor">
-            Debugging avanzado, Figma, Git / GitHub, Gitlab, Manejo de entornos locales y producción (Netlify, Postman, Vercel).
-          </span>
-        </p>
-      </div>
+        <div className="rounded-xl border border-white/10 bg-black/35 p-6 space-y-3">
+          <p className="text-white/85 leading-relaxed">
+            • <strong>Lenguajes:</strong>{" "}
+            <span className="animate-typing-no-cursor">
+              CSS3, CoffeeScript, HTML5, JavaScript (ES6+), Python, TypeScript.
+            </span>
+          </p>
+        
+          <p className="text-white/85 leading-relaxed">
+            • <strong>Frameworks y librerías:</strong>{" "}
+            <span className="animate-typing-no-cursor">
+              Django, Next.js, React, Redux, TailwindCSS, Zustand.
+            </span>
+          </p>
+        
+          <p className="text-white/85 leading-relaxed">
+            • <strong>Frontend avanzado:</strong>{" "}
+            <span className="animate-typing-no-cursor">
+              Animaciones, Componentización, Efectos Interactivos (Anime.js, Chart.js, Swiper.js, Three.js, overlays), Responsive Design, Sliders / Carousels.
+            </span>
+          </p>
+        
+          <p className="text-white/85 leading-relaxed">
+            • <strong>Backend / Full Stack:</strong>{" "}
+            <span className="animate-typing-no-cursor">
+              API Routes en Next.js, Firebase Admin / Firestore, integración con servicios de correo (Resend), Manejo de localStorage y Web Storage.
+            </span>
+          </p>
+        
+          <p className="text-white/85 leading-relaxed">
+            • <strong>Herramientas y flujo de trabajo:</strong>{" "}
+            <span className="animate-typing-no-cursor">
+              Debugging avanzado, Figma, Git / GitHub, Gitlab, Manejo de entornos locales y producción (Netlify, Postman, Vercel).
+            </span>
+          </p>
+        </div>
       
         {/* Línea separadora */}
         <hr className="my-6 border-t border-white/20" />
