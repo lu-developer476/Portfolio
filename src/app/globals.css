@@ -127,6 +127,34 @@ body {
   animation-delay: 0.5s;
 }
 
+@keyframes typingWord {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.word {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #39ff14;
+  animation: typingWord 0.6s steps(20, end) forwards;
+}
+
+/* delays progresivos */
+.delay-0 { animation-delay: 0s }
+.delay-1 { animation-delay: .25s }
+.delay-2 { animation-delay: .5s }
+.delay-3 { animation-delay: .75s }
+.delay-4 { animation-delay: 1s }
+.delay-5 { animation-delay: 1.25s }
+.delay-6 { animation-delay: 1.5s }
+.delay-7 { animation-delay: 1.75s }
+.delay-8 { animation-delay: 2s }
+.delay-9 { animation-delay: 2.25s }
+.delay-10 { animation-delay: 2.5s }
+.delay-11 { animation-delay: 2.75s }
+.delay-12 { animation-delay: 3s }
+
 /* ============================= */
 /* Swiper Pagination Custom      */
 /* ============================= */
