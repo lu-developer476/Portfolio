@@ -92,7 +92,13 @@ body {
 
 @keyframes blink {
   0%, 100% { border-color: transparent; }
-  50% { border-color: #39ff14; } /* color verde neón */
+  50% { border-color: #39ff14; } /* verde neón */
+}
+
+.animate-typing {
+  display: inline-block;
+  width: 0;
+  animation: typing 2s steps(20, end) forwards, blink 0.75s step-end infinite;
 }
 
 /* Clase Tailwind extendida si querés usar animate-typing */
@@ -102,6 +108,11 @@ body {
     typing 4s steps(40, end) forwards, 
     blink 0.75s step-end infinite;
 }
+
+.delay-500 {
+  animation-delay: 0.5s; /* hace que el segundo span tipeé después del primero */
+}
+
 /* ============================= */
 /* Swiper Pagination Custom      */
 /* ============================= */
