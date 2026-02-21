@@ -60,14 +60,14 @@ export default function AboutPage() {
           <p className="text-white/85 leading-7">
             • <strong>Backend/Full Stack:</strong>{" "}
             <span className="word delay-6">
-              API Routes en Next.js, Firebase Admin/Firestore, Servicios de correo, localStorage y Web Storage
+              API Routes en Next.js, Firebase Admin/Firestore, Servicios de correo, localStorage, Web Storage
             </span>
           </p>
       
           <p className="text-white/85 leading-7">
             • <strong>Herramientas y flujo de trabajo:</strong>{" "}
             <span className="word delay-8">
-              Debugging avanzado, Figma, Git/GitHub, Gitlab, Entornos locales y Producción
+              Debugging avanzado, Figma, Git/GitHub, Gitlab, Entornos locales, Producción
             </span>
           </p>
       
