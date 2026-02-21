@@ -65,9 +65,9 @@ export default function AboutPage() {
           </p>
       
           <p className="text-white/85 leading-7">
-            • <strong>Herramientas y Workflows:</strong>{" "}
+            • <strong>Tooling & Workflows:</strong>{" "}
             <span className="word delay-4">
-              Debugging, Figma, Git / GitHub, Gitlab, Dev & Prod
+              Debugging, Figma, Git / GitHub, Gitlab, Dev & Prod, n8n
             </span>
           </p>
       
