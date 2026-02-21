@@ -56,15 +56,13 @@ export default function AboutPage() {
             <h3 className="text-white/90 font-semibold mb-2">⚡ Habilidades Blandas</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white/75 text-sm">
               <span>Adaptación</span>
-              <span>Agentic Experience</span>
               <span>Análisis y visualización de datos</span>
               <span>Colaboración en equipo</span>
               <span>Comunicación efectiva</span>
               <span>Creatividad</span>
-              <span>Customer Experience</span>
+              <span>Mediación</span>
               <span>Proactividad</span>
-              <span>Resolución de conflictos</span>
-              <span>Trabajo colaborativo</span>
+              <span>Sinergia</span>
             </div>
           </div>
           
@@ -73,6 +71,7 @@ export default function AboutPage() {
             <h3 className="text-white/90 font-semibold mb-2">🛠️ Habilidades Técnicas</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white/75 text-sm">
               <span>AI Automation</span>
+              <span>Agentic Experience</span>
               <span>Customer Experience</span>
               <span>Diseño UI / UX</span>
               <span>Flujo de procesos</span>
