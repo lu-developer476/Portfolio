@@ -76,7 +76,7 @@ export default function Hero() {
         </p>
 
         {/* Stats responsive */}
-        <div className="text-white mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="text-white/75 mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <Stat
             label="Performance"
             value="⚙️ + 📈"
