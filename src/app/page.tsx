@@ -30,7 +30,7 @@ export default function HomePage() {
           <div className="rounded-xl border border-white/10 bg-black/35 p-5">
             <h3 className="text-lg font-semibold text-cyber-gold">Arquitectura</h3>
             <p className="mt-2 text-white/80">
-              Integro backend ligeras con Firebase y API Routes en Vercel, 
+              Integro backend ligeras con Firebase y API Routes en Netlify / Vercel, 
               optimizando tiempos de desarrollo y manteniendo una base sólida 
               para escalar funcionalidades según necesidad del proyecto
             </p>
