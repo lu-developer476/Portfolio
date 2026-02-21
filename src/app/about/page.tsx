@@ -45,29 +45,29 @@ export default function AboutPage() {
       
           <p className="text-white/85 leading-7">
             • <strong>Frameworks y librerías:</strong>{" "}
-            <span className="word delay-2">
+            <span className="word delay-1">
               Django, Next.js, React, Redux, TailwindCSS, Zustand
             </span>
           </p>
       
           <p className="text-white/85 leading-7">
             • <strong>Frontend avanzado:</strong>{" "}
+            <span className="word delay-2">
+              Animaciones, Componentización, Efectos Interactivos, Responsive Design, Sliders / Carousels
+            </span>
+          </p>
+      
+          <p className="text-white/85 leading-7">
+            • <strong>Backend / Full Stack:</strong>{" "}
+            <span className="word delay-3">
+              API Routes en Next.js, Firebase Admin / Firestore, Servicios de correo, localStorage, Web Storage
+            </span>
+          </p>
+      
+          <p className="text-white/85 leading-7">
+            • <strong>Herramientas y Workflows:</strong>{" "}
             <span className="word delay-4">
-              Animaciones, Componentización, Efectos Interactivos, Responsive Design, Sliders/Carousels
-            </span>
-          </p>
-      
-          <p className="text-white/85 leading-7">
-            • <strong>Backend/Full Stack:</strong>{" "}
-            <span className="word delay-6">
-              API Routes en Next.js, Firebase Admin/Firestore, Servicios de correo, localStorage, Web Storage
-            </span>
-          </p>
-      
-          <p className="text-white/85 leading-7">
-            • <strong>Herramientas y flujo de trabajo:</strong>{" "}
-            <span className="word delay-8">
-              Debugging avanzado, Figma, Git/GitHub, Gitlab, Entornos locales, Producción
+              Debugging avanzado, Figma, Git / GitHub, Gitlab, Entornos locales, Producción
             </span>
           </p>
       
@@ -81,14 +81,14 @@ export default function AboutPage() {
           </h3>
       
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
-            <span className="word delay-10">Adaptación </span>
-            <span className="word delay-11">Análisis de datos </span>
-            <span className="word delay-12">Colaboración </span>
-            <span className="word delay-13">Comunicación </span>
-            <span className="word delay-14">Creatividad </span>
-            <span className="word delay-15">Mediación </span>
-            <span className="word delay-16">Proactividad </span>
-            <span className="word delay-17">Sinergia </span>
+            <span className="word delay-5">Adaptación </span>
+            <span className="word delay-6">Análisis de datos </span>
+            <span className="word delay-7">Colaboración </span>
+            <span className="word delay-8">Comunicación </span>
+            <span className="word delay-9">Creatividad </span>
+            <span className="word delay-10">Mediación </span>
+            <span className="word delay-11">Proactividad </span>
+            <span className="word delay-12">Sinergia </span>
           </div>
         </div>
       
@@ -100,19 +100,19 @@ export default function AboutPage() {
           </h3>
       
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
-            <span className="word delay-18">AI Automation </span>
-            <span className="word delay-19">Agentic Experience </span>
-            <span className="word delay-20">Customer Experience </span>
-            <span className="word delay-21">UI/UX </span>
-            <span className="word delay-22">Flujo de procesos </span>
-            <span className="word delay-23">Bases de datos </span>
-            <span className="word delay-24">Herramientas digitales </span>
-            <span className="word delay-25">Maquetación Web </span>
-            <span className="word delay-26">Prototipado </span>
-            <span className="word delay-27">Storytelling </span>
-            <span className="word delay-28">UI Editing </span>
-            <span className="word delay-29">UX Writing </span>
-            <span className="word delay-30">User Research </span>
+            <span className="word delay-13">AI Automation </span>
+            <span className="word delay-14">Agentic Experience </span>
+            <span className="word delay-15">Customer Experience </span>
+            <span className="word delay-16">UI/UX </span>
+            <span className="word delay-17">Flujo de procesos </span>
+            <span className="word delay-18">Bases de datos </span>
+            <span className="word delay-19">Herramientas digitales </span>
+            <span className="word delay-20">Maquetación Web </span>
+            <span className="word delay-21">Prototipado </span>
+            <span className="word delay-22">Storytelling </span>
+            <span className="word delay-23">UI Editing </span>
+            <span className="word delay-24">UX Writing </span>
+            <span className="word delay-25">User Research </span>
           </div>
         </div>
       </Section>
