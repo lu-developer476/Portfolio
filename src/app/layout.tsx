@@ -4,7 +4,10 @@ import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Frontend Developer •  UX Interfaces",
-  description: "Portfolio digital."
+  description: "Portfolio digital"
+  icons: {
+    icon: "/favicon.ico?v=2",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
