@@ -1,4 +1,4 @@
-# Portfolio Frontend
+# Portfolio
 
 Portfolio profesional desarrollado con **Next.js**, **React** y **TypeScript**, diseñado con **Tailwind CSS** y una estética cyberpunk/futurista definida.
 
@@ -52,6 +52,7 @@ Todo mediante entorno server-side seguro.
 * Cloud Firestore
 * API Routes de Next.js
 * Resend (envío de emails transaccionales)
+* Nodemailer (auto-respuestas al usuario)
 
 ### Complementos
 
