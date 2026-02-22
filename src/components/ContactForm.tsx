@@ -47,7 +47,7 @@ export default function ContactForm() {
       await baseSwal.fire({
         icon: "success",
         title: "Éxito",
-        text: "Mensaje recibido. Pronto tendrás respuesta."
+        text: "Mensaje recibido. Revisa tu casilla principal y/o Spam."
       });
 
       setData({ name: "", email: "", message: "" });
