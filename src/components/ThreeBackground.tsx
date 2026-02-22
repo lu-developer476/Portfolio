@@ -10,15 +10,33 @@ export default function ThreeBackground() {
     const el = mountRef.current;
     if (!el) return;
 
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    if (!window.WebGLRenderingContext) return;
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 100);
     camera.position.z = 5.5;
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    const renderer = new THREE.WebGLRenderer({
+      antialias: !isMobile,
+      alpha: true,
+      powerPreference: "low-power"
+    });
+
+    renderer.setPixelRatio(
+      isMobile ? 1 : Math.min(window.devicePixelRatio, 2)
+    );
+
     el.appendChild(renderer.domElement);
 
-    const geometry = new THREE.TorusKnotGeometry(1.2, 0.34, 130, 18);
+    const geometry = new THREE.TorusKnotGeometry(
+      1.2,
+      0.34,
+      isMobile ? 60 : 130,
+      isMobile ? 10 : 18
+    );
+
     const material = new THREE.MeshStandardMaterial({
       color: new THREE.Color("#f59e0b"),
       metalness: 0.7,
@@ -26,6 +44,7 @@ export default function ThreeBackground() {
       emissive: new THREE.Color("#5b21b6"),
       emissiveIntensity: 0.35
     });
+
     const mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(2.1, 0.3, 0);
     scene.add(mesh);
@@ -42,13 +61,16 @@ export default function ThreeBackground() {
     scene.add(ambient);
 
     let raf = 0;
+
     const onResize = () => {
       const { width, height } = el.getBoundingClientRect();
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
       renderer.setSize(width, height, false);
     };
+
     onResize();
+
     const ro = new ResizeObserver(onResize);
     ro.observe(el);
 
@@ -59,6 +81,7 @@ export default function ThreeBackground() {
       renderer.render(scene, camera);
       raf = requestAnimationFrame(tick);
     };
+
     tick();
 
     return () => {
