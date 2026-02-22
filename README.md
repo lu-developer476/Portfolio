@@ -140,6 +140,98 @@ Todo el envío se realiza desde el entorno server-side usando API Routes.
 
 ---
 
+## Configuración de Nodemailer (Auto-Respuesta vía SMTP)
+
+### 1. ¿Qué es Nodemailer?
+
+Nodemailer es una librería de Node.js que permite enviar emails usando protocolos SMTP tradicionales. A diferencia de servicios API como Resend, Nodemailer permite conectarse directamente a proveedores de correo como Gmail, Outlook u otros servidores SMTP.
+
+En este proyecto se utiliza Nodemailer para enviar el email automático de confirmación al usuario que completa el formulario de contacto.
+
+---
+
+### 2. Instalación
+
+Agregar la dependencia al proyecto:
+
+```
+npm install nodemailer
+```
+
+---
+
+### 3. Variables de entorno necesarias
+
+Agregar en `.env.local` y en Vercel:
+
+```
+GMAIL_USER=tu_email@gmail.com
+GMAIL_APP_PASSWORD=tu_app_password
+```
+
+**Importante:**
+La `GMAIL_APP_PASSWORD` es una contraseña de aplicación generada desde la cuenta de Google (requiere 2FA activado).
+
+---
+
+### 4. Configuración del transporter
+
+Ejemplo en `/src/lib/mailer.ts`:
+
+```ts
+import nodemailer from "nodemailer";
+
+export const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_APP_PASSWORD,
+  },
+});
+```
+
+---
+
+### 5. Funcionamiento dentro del proyecto
+
+El flujo completo del formulario es:
+
+1. Guardado seguro del mensaje en Firestore.
+2. Envío de notificación al administrador usando Resend.
+3. Envío de email automático de confirmación al usuario usando Nodemailer + Gmail SMTP.
+
+---
+
+### 6. ¿Por qué usar Resend + Nodemailer juntos?
+
+**Resend**
+
+* Ideal para emails transaccionales
+* Alta entregabilidad
+* Fácil integración con API
+
+**Nodemailer + Gmail**
+
+* Permite enviar auto-respuestas sin necesidad de dominio propio
+* Útil para proyectos personales y portfolios
+* Control directo del envío SMTP
+
+---
+
+### 7. Seguridad
+
+* Nunca exponer credenciales en el repositorio.
+* Usar siempre variables de entorno.
+* Mantener activado 2FA en la cuenta de Gmail utilizada.
+
+---
+
+### 8. Ejecución
+
+Todo el envío de emails se ejecuta server-side mediante API Routes de Next.js, evitando exponer credenciales en el frontend.
+
+---
+
 ## Deploy en Vercel
 
 1. Subir el repositorio a GitHub.
