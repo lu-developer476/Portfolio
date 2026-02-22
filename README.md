@@ -241,6 +241,7 @@ Todo el envío de emails se ejecuta server-side mediante API Routes de Next.js, 
 
    * Firebase
    * Resend
+   * Nodemailer
 
 4. Deploy automático.
 
