@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { getAdminDb } from "@/lib/firebaseAdmin";
 import { Resend } from "resend";
+import { transporter } from "@/lib/mailer";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -50,11 +51,12 @@ export async function POST(req: Request) {
     });
 
     // 3️⃣ Auto-respuesta al usuario
-    await resend.emails.send({
-      from: "Lucas Montenegro <onboarding@resend.dev>",
-      to: data.email,
-      subject: "¡Muchas gracias por tu mensaje! 🦾",
-      html: `
+try {
+  const mailResponse = await transporter.sendMail({
+    from: `"Lucas Montenegro" <${process.env.GMAIL_USER}>`,
+    to: data.email,
+    subject: "¡Muchas gracias por tu mensaje! 🦾",
+     html: `
         <div style="font-family: Arial, sans-serif; line-height:1.6;">
           <h2>Hola ${data.name},</h2>
           <p>Me alegra que visitaras mi sitio personal. ¡Espero hayas disfrutado de mis trabajos!</p>
@@ -74,6 +76,12 @@ export async function POST(req: Request) {
       `
     });
 
+  console.log("Auto reply sent:", mailResponse.messageId);
+
+} catch (mailErr) {
+  console.error("Auto reply failed:", mailErr);
+}
+    
     // 4️⃣ Respuesta OK
     return NextResponse.json({ ok: true });
 
