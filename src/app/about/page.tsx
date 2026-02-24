@@ -38,7 +38,7 @@ export default function AboutPage() {
         <div className="w-full max-w-full overflow-hidden rounded-xl border border-white/10 bg-black/35 p-4 sm:p-5 md:p-6 space-y-4 text-white/85 leading-7">
           {/* Languages */}
           <div className="flex items-center gap-6">
-            <strong className="w-48 shrink-0">
+            <strong className="w-45 shrink-0">
               Languages:
             </strong>
         
@@ -54,7 +54,7 @@ export default function AboutPage() {
         
           {/* Frameworks */}
           <div className="flex items-center gap-6">
-            <strong className="w-48 shrink-0">
+            <strong className="w-45 shrink-0">
               Frameworks & libs:
             </strong>
         
@@ -69,18 +69,18 @@ export default function AboutPage() {
         
           {/* Frontend */}
           <div className="flex items-start gap-6">
-            <strong className="w-48 shrink-0">
+            <strong className="w-45 shrink-0">
               Frontend:
             </strong>
         
             <span className="word delay-11">
-              Animaciones, Componentes, Interactividad, Responsive, Carousels
+              Animaciones, Componentes, Interactive, Responsive, Carousels
             </span>
           </div>
         
           {/* Backend */}
           <div className="flex items-start gap-6">
-            <strong className="w-48 shrink-0">
+            <strong className="w-45 shrink-0">
               Backend:
             </strong>
         
@@ -91,7 +91,7 @@ export default function AboutPage() {
         
           {/* IA */}
           <div className="flex items-center gap-6">
-            <strong className="w-48 shrink-0">
+            <strong className="w-45 shrink-0">
               IA & Tooling:
             </strong>
         
