@@ -37,9 +37,13 @@ export default function AboutPage() {
       >
         <div className="w-full max-w-full overflow-hidden rounded-xl border border-white/10 bg-black/35 p-4 sm:p-5 md:p-6 space-y-4 text-white/85 leading-7">
         
-          <div className="flex flex-wrap items-start gap-2">
-            <strong className="shrink-0">Languages:</strong>
-            <div className="flex flex-wrap items-center gap-3 word delay-0">
+          {/* Languages */}
+          <div className="flex items-center gap-4">
+            <strong className="min-w-[180px] whitespace-nowrap">
+              Languages:
+            </strong>
+        
+            <div className="flex items-center gap-3">
               <CSS3Icon className="w-5 h-5" />
               <CoffeeScriptIcon className="w-5 h-5" />
               <HTML5Icon className="w-5 h-5" />
@@ -49,9 +53,13 @@ export default function AboutPage() {
             </div>
           </div>
         
-          <div className="flex flex-wrap items-start gap-2">
-            <strong className="shrink-0">Frameworks y librerías:</strong>
-            <div className="flex flex-wrap items-center gap-3 word delay-1">
+          {/* Frameworks */}
+          <div className="flex items-center gap-4">
+            <strong className="min-w-[180px] whitespace-nowrap">
+              Frameworks y librerías:
+            </strong>
+        
+            <div className="flex items-center gap-3">
               <BootstrapIcon className="w-5 h-5" />
               <DjangoIcon className="w-5 h-5" />
               <NextJSIcon className="w-5 h-5" />
@@ -60,23 +68,35 @@ export default function AboutPage() {
             </div>
           </div>
         
-          <div className="flex flex-wrap items-start gap-2">
-            <strong className="shrink-0">Frontend avanzado:</strong>
-            <span className="word delay-2">
+          {/* Frontend */}
+          <div className="flex items-start gap-4">
+            <strong className="min-w-[180px] whitespace-nowrap">
+              Frontend avanzado:
+            </strong>
+        
+            <span>
               Animaciones, Componentización, Efectos Interactivos, Responsive Design, Sliders / Carousels
             </span>
           </div>
         
-          <div className="flex flex-wrap items-start gap-2">
-            <strong className="shrink-0">Backend / Full Stack:</strong>
-            <span className="word delay-3">
+          {/* Backend */}
+          <div className="flex items-start gap-4">
+            <strong className="min-w-[180px] whitespace-nowrap">
+              Backend / Full Stack:
+            </strong>
+        
+            <span>
               API Design, Debugging, Dev & Prod, Email APIs, Web Storage
             </span>
           </div>
         
-          <div className="flex flex-wrap items-start gap-2">
-            <strong className="shrink-0">IA, Automation & Tooling:</strong>
-            <div className="flex flex-wrap items-center gap-3 word delay-4">
+          {/* IA */}
+          <div className="flex items-center gap-4">
+            <strong className="min-w-[180px] whitespace-nowrap">
+              IA, Automation & Tooling:
+            </strong>
+        
+            <div className="flex items-center gap-3">
               <FirebaseIcon className="w-5 h-5" />
               <GitHubIcon className="w-5 h-5" />
               <N8nIcon className="w-5 h-5" />
