@@ -70,7 +70,7 @@ export default function AboutPage() {
           {/* Frontend */}
           <div className="flex items-start gap-6">
             <strong className="w-48 shrink-0">
-              Frontend avanzado:
+              Frontend:
             </strong>
         
             <span className="word delay-11">
@@ -92,7 +92,7 @@ export default function AboutPage() {
           {/* IA */}
           <div className="flex items-center gap-6">
             <strong className="w-48 shrink-0">
-              IA, Automation & Tooling:
+              IA Automation & Tooling:
             </strong>
         
             <div className="flex items-center gap-4">
