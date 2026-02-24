@@ -39,7 +39,7 @@ export default function AboutPage() {
           {/* Languages */}
           <div className="flex items-center gap-6">
             <strong className="w-42 shrink-0">
-              Languages:
+              Languages
             </strong>
         
             <div className="flex items-center gap-4">
@@ -55,7 +55,7 @@ export default function AboutPage() {
           {/* Frameworks */}
           <div className="flex items-center gap-6">
             <strong className="w-42 shrink-0">
-              Framework & libs:
+              Framework & libs
             </strong>
         
             <div className="flex items-center gap-4">
@@ -70,7 +70,7 @@ export default function AboutPage() {
           {/* Frontend */}
           <div className="flex items-start gap-6">
             <strong className="w-42 shrink-0">
-              Frontend:
+              Frontend
             </strong>
         
             <span className="word delay-11">
@@ -81,7 +81,7 @@ export default function AboutPage() {
           {/* Backend */}
           <div className="flex items-start gap-6">
             <strong className="w-42 shrink-0">
-              Backend:
+              Backend
             </strong>
         
             <span className="word delay-12">
@@ -92,7 +92,7 @@ export default function AboutPage() {
           {/* IA */}
           <div className="flex items-center gap-6">
             <strong className="w-42 shrink-0">
-              IA & Tooling:
+              IA & Tooling
             </strong>
         
             <div className="flex items-center gap-4">
