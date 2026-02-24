@@ -1,5 +1,6 @@
 import Section from "@/components/Section";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
+import { CSS3Icon, CoffeeScriptIcon, HTML5Icon, JavaScriptIcon, PythonIcon, TypeScriptIcon, BootstrapIcon, DjangoIcon, NextJSIcon, ReactIcon, TailwindIcon, FirebaseIcon, GitHubIcon, N8nIcon, OpenAIIcon, GeminiIcon, } from "@/icons";
 
 export default function AboutPage() {
   return (
@@ -37,37 +38,50 @@ export default function AboutPage() {
         <div className="w-full max-w-full overflow-hidden rounded-xl border border-white/10 bg-black/35 p-4 sm:p-5 md:p-6 space-y-3">
       
           <p className="text-white/85 leading-7 break-words">
-            • <strong>Lenguajes:</strong>{" "}
-            <span className="word delay-0">
-              CSS3, CoffeeScript, HTML5, JavaScript (ES6+), Python, TypeScript
+            <strong>Languages:</strong>{" "}
+            <span className="flex flex-wrap items-center gap-3 word delay-0">
+              <CSS3Icon className="w-5 h-5" />
+              <CoffeeScriptIcon className="w-5 h-5" />
+              <HTML5Icon className="w-5 h-5" />
+              <JavaScriptIcon className="w-5 h-5" />
+              <PythonIcon className="w-5 h-5" />
+              <TypeScriptIcon className="w-5 h-5" />
             </span>
           </p>
       
           <p className="text-white/85 leading-7 break-words">
-            • <strong>Frameworks y librerías:</strong>{" "}
-            <span className="word delay-1">
-              Bootstrap, Django, Less, Next.js, React, Redux, Sass, TailwindCSS, Zustand
+            <strong>Frameworks y librerías:</strong>{" "}
+            <span className="flex flex-wrap items-center gap-3 word delay-1">
+              <BootstrapIcon className="w-5 h-5" />
+              <DjangoIcon className="w-5 h-5" />
+              <NextJSIcon className="w-5 h-5" />
+              <ReactIcon className="w-5 h-5" />
+              <TailwindIcon className="w-5 h-5" />
             </span>
           </p>
       
           <p className="text-white/85 leading-7 break-words">
-            • <strong>Frontend avanzado:</strong>{" "}
+            <strong>Frontend avanzado:</strong>{" "}
             <span className="word delay-2">
               Animaciones, Componentización, Efectos Interactivos, Responsive Design, Sliders / Carousels
             </span>
           </p>
       
           <p className="text-white/85 leading-7 break-words">
-            • <strong>Backend / Full Stack:</strong>{" "}
+            <strong>Backend / Full Stack:</strong>{" "}
             <span className="word delay-3">
-              API Design, Email APIs, Firebase / Firestore, Web Storage
+              API Design, Debugging, Dev & Prod, Email APIs, Web Storage
             </span>
           </p>
-      
+
           <p className="text-white/85 leading-7 break-words">
-            • <strong>IA, Automation & Tooling:</strong>{" "}
-            <span className="word delay-4">
-              Debugging, Dev & Prod, Figma, Git / GitHub, GitLab, n8n, OpenAI, Gemini
+            <strong>IA, Automation & Tooling:</strong>{" "}
+            <span className="flex flex-wrap items-center gap-3 word delay-4">
+              <FirebaseIcon className="w-5 h-5" />
+              <GitHubIcon className="w-5 h-5" />
+              <N8nIcon className="w-5 h-5" />
+              <OpenAIIcon className="w-5 h-5" />
+              <GeminiIcon className="w-5 h-5" />
             </span>
           </p>
       
