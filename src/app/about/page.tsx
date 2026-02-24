@@ -92,7 +92,7 @@ export default function AboutPage() {
           {/* IA */}
           <div className="flex items-center gap-6">
             <strong className="w-42 shrink-0">
-              IA & Tooling
+              IA/Tooling
             </strong>
         
             <div className="flex items-center gap-4">
