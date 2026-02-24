@@ -55,7 +55,7 @@ export default function AboutPage() {
           {/* Frameworks */}
           <div className="flex items-center gap-6">
             <strong className="w-48 shrink-0">
-              Frameworks y librerías:
+              Frameworks & libs:
             </strong>
         
             <div className="flex items-center gap-4">
@@ -74,7 +74,7 @@ export default function AboutPage() {
             </strong>
         
             <span className="word delay-11">
-              Animaciones, Componentización, Efectos Interactivos, Responsive Design, Sliders / Carousels
+              Animaciones, Componentes, Interactividad, Responsive, Carousels
             </span>
           </div>
         
