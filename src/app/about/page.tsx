@@ -55,7 +55,7 @@ export default function AboutPage() {
           {/* Frameworks */}
           <div className="flex items-center gap-6">
             <strong className="w-42 shrink-0">
-              Framework & libs
+              Framework/libs
             </strong>
         
             <div className="flex items-center gap-4">
