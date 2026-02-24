@@ -81,7 +81,7 @@ export default function AboutPage() {
           {/* Backend */}
           <div className="flex items-start gap-6">
             <strong className="w-48 shrink-0">
-              Backend / Full Stack:
+              Backend:
             </strong>
         
             <span className="word delay-12">
@@ -92,7 +92,7 @@ export default function AboutPage() {
           {/* IA */}
           <div className="flex items-center gap-6">
             <strong className="w-48 shrink-0">
-              IA Automation & Tooling:
+              IA & Tooling:
             </strong>
         
             <div className="flex items-center gap-4">
