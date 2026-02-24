@@ -36,75 +36,76 @@ export default function AboutPage() {
         subtitle="Herramientas, tecnologías y habilidades que he adquirido y aplicado en proyectos reales."
       >
         <div className="w-full max-w-full overflow-hidden rounded-xl border border-white/10 bg-black/35 p-4 sm:p-5 md:p-6 space-y-4 text-white/85 leading-7">
-        
           {/* Languages */}
-          <div className="flex items-center gap-4">
-            <strong className="min-w-[180px] whitespace-nowrap">
+          <div className="flex items-center gap-6">
+            <strong className="w-48 shrink-0">
               Languages:
             </strong>
         
-            <div className="flex items-center gap-3">
-              <CSS3Icon className="w-5 h-5" />
-              <CoffeeScriptIcon className="w-5 h-5" />
-              <HTML5Icon className="w-5 h-5" />
-              <JavaScriptIcon className="w-5 h-5" />
-              <PythonIcon className="w-5 h-5" />
-              <TypeScriptIcon className="w-5 h-5" />
+            <div className="flex items-center gap-4">
+              <CSS3Icon className="w-5 h-5 word delay-0" />
+              <CoffeeScriptIcon className="w-5 h-5 word delay-1" />
+              <HTML5Icon className="w-5 h-5 word delay-2" />
+              <JavaScriptIcon className="w-5 h-5 word delay-3" />
+              <PythonIcon className="w-5 h-5 word delay-4" />
+              <TypeScriptIcon className="w-5 h-5 word delay-5" />
             </div>
           </div>
         
           {/* Frameworks */}
-          <div className="flex items-center gap-4">
-            <strong className="min-w-[180px] whitespace-nowrap">
+          <div className="flex items-center gap-6">
+            <strong className="w-48 shrink-0">
               Frameworks y librerías:
             </strong>
         
-            <div className="flex items-center gap-3">
-              <BootstrapIcon className="w-5 h-5" />
-              <DjangoIcon className="w-5 h-5" />
-              <NextJSIcon className="w-5 h-5" />
-              <ReactIcon className="w-5 h-5" />
-              <TailwindIcon className="w-5 h-5" />
+            <div className="flex items-center gap-4">
+              <BootstrapIcon className="w-5 h-5 word delay-6" />
+              <DjangoIcon className="w-5 h-5 word delay-7" />
+              <NextJSIcon className="w-5 h-5 word delay-8" />
+              <ReactIcon className="w-5 h-5 word delay-9" />
+              <TailwindIcon className="w-5 h-5 word delay-10" />
             </div>
           </div>
         
           {/* Frontend */}
-          <div className="flex items-start gap-4">
-            <strong className="min-w-[180px] whitespace-nowrap">
+          <div className="flex items-start gap-6">
+            <strong className="w-48 shrink-0">
               Frontend avanzado:
             </strong>
         
-            <span>
+            <span className="word delay-11">
               Animaciones, Componentización, Efectos Interactivos, Responsive Design, Sliders / Carousels
             </span>
           </div>
         
           {/* Backend */}
-          <div className="flex items-start gap-4">
-            <strong className="min-w-[180px] whitespace-nowrap">
+          <div className="flex items-start gap-6">
+            <strong className="w-48 shrink-0">
               Backend / Full Stack:
             </strong>
         
-            <span>
+            <span className="word delay-12">
               API Design, Debugging, Dev & Prod, Email APIs, Web Storage
             </span>
           </div>
         
           {/* IA */}
-          <div className="flex items-center gap-4">
-            <strong className="min-w-[180px] whitespace-nowrap">
+          <div className="flex items-center gap-6">
+            <strong className="w-48 shrink-0">
               IA, Automation & Tooling:
             </strong>
         
-            <div className="flex items-center gap-3">
-              <FirebaseIcon className="w-5 h-5" />
-              <GitHubIcon className="w-5 h-5" />
-              <N8nIcon className="w-5 h-5" />
-              <OpenAIIcon className="w-5 h-5" />
-              <GeminiIcon className="w-5 h-5" />
+            <div className="flex items-center gap-4">
+              <FirebaseIcon className="w-5 h-5 word delay-13" />
+              <GitHubIcon className="w-5 h-5 word delay-14" />
+              <N8nIcon className="w-5 h-5 word delay-15" />
+              <OpenAIIcon className="w-5 h-5 word delay-16" />
+              <GeminiIcon className="w-5 h-5 word delay-17" />
             </div>
           </div>
         
+        </div>
+     
         </div>
 
         <hr className="my-6 border-t border-white/20" />
