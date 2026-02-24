@@ -116,12 +116,20 @@ La clave privada debe mantener los saltos de línea usando `\n`.
 
 ## Configuración de Resend
 
-### 1. Crear cuenta
+### 1. ¿Qué es Resend?
+
+**Resend** es un servicio moderno de envío de correos electrónicos transaccionales diseñado para aplicaciones web.
+
+En este proyecto se utiliza para gestionar el envío de mensajes desde el formulario de contacto, permitiendo notificaciones inmediatas y confiables sin necesidad de configurar manualmente un servidor SMTP.
+
+Esta arquitectura permite una comunicación robusta, escalable y alineada con prácticas modernas de desarrollo.
+
+### 2. Creación de cuenta
 
 * Registrarse en [https://resend.com](https://resend.com)
 * Generar una API Key
 
-### 2. Variable de entorno
+### 3. Variable de entorno necesarias
 
 Agregar en `.env.local` y en Vercel:
 
@@ -129,7 +137,7 @@ Agregar en `.env.local` y en Vercel:
 RESEND_API_KEY=
 ```
 
-### 3. Funcionamiento
+### 4. Funcionamiento dentro del proyecto
 
 Cada envío del formulario ejecuta:
 
@@ -147,6 +155,10 @@ Todos los envíos se realizan desde el entorno server-side usando API Routes.
 Nodemailer es una librería de Node.js que permite enviar emails usando protocolos SMTP tradicionales. A diferencia de servicios API como Resend, Nodemailer permite conectarse directamente a proveedores de correo como Gmail, Outlook u otros servidores SMTP.
 
 En este proyecto se utiliza Nodemailer para enviar el email automático de confirmación al usuario que completa el formulario de contacto.
+
+Esta implementación permite el envío programático de correos electrónicos mediante SMTP, ofreciendo control total sobre la configuración y el proveedor de envío.
+
+Su uso resulta adecuado para entornos donde se requiere personalización avanzada o integración con servidores propios.
 
 ---
 
