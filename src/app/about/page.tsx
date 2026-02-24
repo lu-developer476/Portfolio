@@ -43,12 +43,12 @@ export default function AboutPage() {
             </strong>
         
             <div className="flex items-center gap-4">
-              <CSS3Icon className="w-5 h-5 word delay-0" />
-              <CoffeeScriptIcon className="w-5 h-5 word delay-1" />
-              <HTML5Icon className="w-5 h-5 word delay-2" />
-              <JavaScriptIcon className="w-5 h-5 word delay-3" />
-              <PythonIcon className="w-5 h-5 word delay-4" />
-              <TypeScriptIcon className="w-5 h-5 word delay-5" />
+              <CSS3Icon className="w-7 h-7 word delay-0" />
+              <CoffeeScriptIcon className="w-7 h-7 word delay-1" />
+              <HTML5Icon className="w-7 h-7 word delay-2" />
+              <JavaScriptIcon className="w-7 h-7 word delay-3" />
+              <PythonIcon className="w-7 h-7 word delay-4" />
+              <TypeScriptIcon className="w-7 h-7 word delay-5" />
             </div>
           </div>
         
@@ -59,11 +59,11 @@ export default function AboutPage() {
             </strong>
         
             <div className="flex items-center gap-4">
-              <BootstrapIcon className="w-5 h-5 word delay-6" />
-              <DjangoIcon className="w-5 h-5 word delay-7" />
-              <NextJSIcon className="w-5 h-5 word delay-8" />
-              <ReactIcon className="w-5 h-5 word delay-9" />
-              <TailwindIcon className="w-5 h-5 word delay-10" />
+              <BootstrapIcon className="w-7 h-7 word delay-6" />
+              <DjangoIcon className="w-7 h-7 word delay-7" />
+              <NextJSIcon className="w-7 h-7 word delay-8" />
+              <ReactIcon className="w-7 h-7 word delay-9" />
+              <TailwindIcon className="w-7 h-7 word delay-10" />
             </div>
           </div>
         
@@ -96,11 +96,11 @@ export default function AboutPage() {
             </strong>
         
             <div className="flex items-center gap-4">
-              <FirebaseIcon className="w-5 h-5 word delay-13" />
-              <GitHubIcon className="w-5 h-5 word delay-14" />
-              <N8nIcon className="w-5 h-5 word delay-15" />
-              <OpenAIIcon className="w-5 h-5 word delay-16" />
-              <GeminiIcon className="w-5 h-5 word delay-17" />
+              <FirebaseIcon className="w-7 h-7 word delay-13" />
+              <GitHubIcon className="w-7 h-7 word delay-14" />
+              <N8nIcon className="w-7 h-7 word delay-15" />
+              <OpenAIIcon className="w-7 h-7 word delay-16" />
+              <GeminiIcon className="w-7 h-7 word delay-17" />
             </div>
           </div>
         
