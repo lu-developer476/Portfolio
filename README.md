@@ -114,7 +114,7 @@ La clave privada debe mantener los saltos de línea usando `\n`.
 
 ---
 
-## Configuración de Resend (Email Transaccional)
+## Configuración de Resend
 
 ### 1. Crear cuenta
 
@@ -134,14 +134,13 @@ RESEND_API_KEY=
 Cada envío del formulario ejecuta:
 
 1. Guardado seguro en Firestore.
-2. Email de notificación al administrador.
-3. Email automático de confirmación al usuario.
+2. Email transaccional de notificación al administrador.
 
-Todo el envío se realiza desde el entorno server-side usando API Routes.
+Todos los envíos se realizan desde el entorno server-side usando API Routes.
 
 ---
 
-## Configuración de Nodemailer (Auto-Respuesta vía SMTP)
+## Configuración de Nodemailer
 
 ### 1. ¿Qué es Nodemailer?
 
@@ -284,7 +283,3 @@ La base permite incorporar:
 Sin necesidad de reestructurar el proyecto.
 
 ---
-
-## Licencia
-
-Uso libre para portfolio personal o profesional.
