@@ -35,58 +35,58 @@ export default function AboutPage() {
         title="Aptitudes y Conocimientos"
         subtitle="Herramientas, tecnologías y habilidades que he adquirido y aplicado en proyectos reales."
       >
-        <div className="w-full max-w-full overflow-hidden rounded-xl border border-white/10 bg-black/35 p-4 sm:p-5 md:p-6 space-y-3">
-      
-          <p className="text-white/85 leading-7 break-words">
-            <strong>Languages:</strong>{" "}
-            <span className="flex flex-wrap items-center gap-3 word delay-0">
+        <div className="w-full max-w-full overflow-hidden rounded-xl border border-white/10 bg-black/35 p-4 sm:p-5 md:p-6 space-y-4 text-white/85 leading-7">
+        
+          <div className="flex flex-wrap items-start gap-2">
+            <strong className="shrink-0">Languages:</strong>
+            <div className="flex flex-wrap items-center gap-3 word delay-0">
               <CSS3Icon className="w-5 h-5" />
               <CoffeeScriptIcon className="w-5 h-5" />
               <HTML5Icon className="w-5 h-5" />
               <JavaScriptIcon className="w-5 h-5" />
               <PythonIcon className="w-5 h-5" />
               <TypeScriptIcon className="w-5 h-5" />
-            </span>
-          </p>
-      
-          <p className="text-white/85 leading-7 break-words">
-            <strong>Frameworks y librerías:</strong>{" "}
-            <span className="flex flex-wrap items-center gap-3 word delay-1">
+            </div>
+          </div>
+        
+          <div className="flex flex-wrap items-start gap-2">
+            <strong className="shrink-0">Frameworks y librerías:</strong>
+            <div className="flex flex-wrap items-center gap-3 word delay-1">
               <BootstrapIcon className="w-5 h-5" />
               <DjangoIcon className="w-5 h-5" />
               <NextJSIcon className="w-5 h-5" />
               <ReactIcon className="w-5 h-5" />
               <TailwindIcon className="w-5 h-5" />
-            </span>
-          </p>
-      
-          <p className="text-white/85 leading-7 break-words">
-            <strong>Frontend avanzado:</strong>{" "}
+            </div>
+          </div>
+        
+          <div className="flex flex-wrap items-start gap-2">
+            <strong className="shrink-0">Frontend avanzado:</strong>
             <span className="word delay-2">
               Animaciones, Componentización, Efectos Interactivos, Responsive Design, Sliders / Carousels
             </span>
-          </p>
-      
-          <p className="text-white/85 leading-7 break-words">
-            <strong>Backend / Full Stack:</strong>{" "}
+          </div>
+        
+          <div className="flex flex-wrap items-start gap-2">
+            <strong className="shrink-0">Backend / Full Stack:</strong>
             <span className="word delay-3">
               API Design, Debugging, Dev & Prod, Email APIs, Web Storage
             </span>
-          </p>
-
-          <p className="text-white/85 leading-7 break-words">
-            <strong>IA, Automation & Tooling:</strong>{" "}
-            <span className="flex flex-wrap items-center gap-3 word delay-4">
+          </div>
+        
+          <div className="flex flex-wrap items-start gap-2">
+            <strong className="shrink-0">IA, Automation & Tooling:</strong>
+            <div className="flex flex-wrap items-center gap-3 word delay-4">
               <FirebaseIcon className="w-5 h-5" />
               <GitHubIcon className="w-5 h-5" />
               <N8nIcon className="w-5 h-5" />
               <OpenAIIcon className="w-5 h-5" />
               <GeminiIcon className="w-5 h-5" />
-            </span>
-          </p>
-      
+            </div>
+          </div>
+        
         </div>
-      
+
         <hr className="my-6 border-t border-white/20" />
       
         <div className="mt-6">
