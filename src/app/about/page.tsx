@@ -3,6 +3,7 @@
 import Section from "@/components/Section";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 import { 
+  AlpineJSIcon,
   CSS3Icon,
   CoffeeScriptIcon,
   HTML5Icon,
