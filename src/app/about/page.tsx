@@ -165,8 +165,6 @@ export default function AboutPage() {
             </div>
           </div>
         </div> 
-
-        </div>
      
         <hr className="my-6 border-t border-white/20" />
       
