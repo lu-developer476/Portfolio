@@ -39,7 +39,7 @@ import {
   NetlifyIcon,
   RenderIcon,
   VercelIcon,
-} from "@/assets/svg";
+} from "@/icons";
 
 export default function AboutPage() {
   return (
