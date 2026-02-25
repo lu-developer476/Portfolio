@@ -1,6 +1,43 @@
 import Section from "@/components/Section";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
-import { CSS3Icon, CoffeeScriptIcon, HTML5Icon, JavaScriptIcon, PythonIcon, TypeScriptIcon, BootstrapIcon, DjangoIcon, NextJSIcon, ReactIcon, TailwindIcon, FirebaseIcon, GitHubIcon, N8nIcon, OpenAIIcon, GeminiIcon, } from "@/icons";
+import { 
+  // Languages
+  CSS3Icon,
+  CoffeeScriptIcon,
+  HTML5Icon,
+  JavaScriptIcon,
+  NodeJSIcon,
+  PythonIcon,
+  TypeScriptIcon,
+
+  // Frameworks
+  BootstrapIcon,
+  DjangoIcon,
+  NextJSIcon,
+  SwiperJSIcon,
+
+  // Libraries
+  AnimeJSIcon,
+  ChartJSIcon,
+  HowlerJSIcon,
+  ReactIcon,
+  SweetAlert2Icon,
+  TailwindIcon,
+  ThreeJSIcon,
+  ToneJSIcon,
+
+  // AI
+  OpenAIIcon,
+  GeminiIcon,
+
+  // Hosting & Tools
+  FirebaseIcon,
+  GitHubIcon,
+  N8nIcon,
+  NetlifyIcon,
+  RenderIcon,
+  VercelIcon,
+} from "@/icons";
 
 export default function AboutPage() {
   return (
@@ -49,61 +86,93 @@ export default function AboutPage() {
               <JavaScriptIcon className="w-7 h-7 word delay-3" />
               <PythonIcon className="w-7 h-7 word delay-4" />
               <TypeScriptIcon className="w-7 h-7 word delay-5" />
+              <NodeJSIcon className="w-7 h-7 word delay-6" />
             </div>
           </div>
         
           {/* Frameworks */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-6 mt-4">
             <strong className="w-42 shrink-0">
-              Framework/libs
+              Frameworks
             </strong>
         
             <div className="flex items-center gap-4">
-              <BootstrapIcon className="w-7 h-7 word delay-6" />
-              <DjangoIcon className="w-7 h-7 word delay-7" />
-              <NextJSIcon className="w-7 h-7 word delay-8" />
-              <ReactIcon className="w-7 h-7 word delay-9" />
-              <TailwindIcon className="w-7 h-7 word delay-10" />
+              <BootstrapIcon className="w-7 h-7 word delay-7" />
+              <DjangoIcon className="w-7 h-7 word delay-8" />
+              <NextJSIcon className="w-7 h-7 word delay-9" />
+              <SwiperJSIcon className="w-7 h-7 word delay-10" />
+            </div>
+          </div>
+        
+          {/* Libraries */}
+          <div className="flex items-center gap-6 mt-4">
+            <strong className="w-42 shrink-0">
+              Libraries
+            </strong>
+        
+            <div className="flex items-center gap-4">
+              <ReactIcon className="w-7 h-7 word delay-11" />
+              <TailwindIcon className="w-7 h-7 word delay-12" />
+              <AnimeJSIcon className="w-7 h-7 word delay-13" />
+              <ChartJSIcon className="w-7 h-7 word delay-14" />
+              <HowlerJSIcon className="w-7 h-7 word delay-15" />
+              <SweetAlert2Icon className="w-7 h-7 word delay-16" />
+              <ThreeJSIcon className="w-7 h-7 word delay-17" />
+              <ToneJSIcon className="w-7 h-7 word delay-18" />
             </div>
           </div>
         
           {/* Frontend */}
-          <div className="flex items-start gap-6">
+          <div className="flex items-start gap-6 mt-4">
             <strong className="w-42 shrink-0">
               Frontend
             </strong>
         
-            <span className="word delay-11">
+            <span className="word delay-19">
               Animaciones, Componentes, Interactive, Responsive, Carousels
             </span>
           </div>
         
           {/* Backend */}
-          <div className="flex items-start gap-6">
+          <div className="flex items-start gap-6 mt-4">
             <strong className="w-42 shrink-0">
               Backend
             </strong>
         
-            <span className="word delay-12">
+            <span className="word delay-20">
               API Design, Debugging, Dev & Prod, Email APIs, Web Storage
             </span>
           </div>
         
-          {/* IA */}
-          <div className="flex items-center gap-6">
+          {/* AI */}
+          <div className="flex items-center gap-6 mt-4">
             <strong className="w-42 shrink-0">
-              IA/Tooling
+              AI
             </strong>
         
             <div className="flex items-center gap-4">
-              <FirebaseIcon className="w-7 h-7 word delay-13" />
-              <GitHubIcon className="w-7 h-7 word delay-14" />
-              <N8nIcon className="w-7 h-7 word delay-15" />
-              <OpenAIIcon className="w-7 h-7 word delay-16" />
-              <GeminiIcon className="w-7 h-7 word delay-17" />
+              <OpenAIIcon className="w-7 h-7 word delay-21" />
+              <GeminiIcon className="w-7 h-7 word delay-22" />
             </div>
           </div>
         
+          {/* Hosting & Tools */}
+          <div className="flex items-center gap-6 mt-4">
+            <strong className="w-42 shrink-0">
+              Hosting & Tools
+            </strong>
+        
+            <div className="flex items-center gap-4">
+              <FirebaseIcon className="w-7 h-7 word delay-23" />
+              <GitHubIcon className="w-7 h-7 word delay-24" />
+              <N8nIcon className="w-7 h-7 word delay-25" />
+              <NetlifyIcon className="w-7 h-7 word delay-26" />
+              <RenderIcon className="w-7 h-7 word delay-27" />
+              <VercelIcon className="w-7 h-7 word delay-28" />
+            </div>
+          </div>
+        </div> 
+
         </div>
      
         <hr className="my-6 border-t border-white/20" />
