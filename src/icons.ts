@@ -16,3 +16,16 @@ export { default as GitHubIcon } from "@/assets/svg/github.svg";
 export { default as N8nIcon } from "@/assets/svg/n8n.svg";
 export { default as OpenAIIcon } from "@/assets/svg/openai.svg";
 export { default as GeminiIcon } from "@/assets/svg/gemini.svg";
+
+export { default as AnimeJSIcon } from "@/assets/svg/animejs.svg";
+export { default as ChartJSIcon } from "@/assets/svg/chartjs.svg";
+export { default as HowlerJSIcon } from "@/assets/svg/howlerjs.svg";
+export { default as NetlifyIcon } from "@/assets/svg/netlifyhosting.svg";
+export { default as NodeJSIcon } from "@/assets/svg/nodejs.svg";
+export { default as RenderIcon } from "@/assets/svg/renderhosting.svg";
+
+export { default as SweetAlert2Icon } from "@/assets/svg/sweetalert2.svg";
+export { default as SwiperJSIcon } from "@/assets/svg/swiperjs.svg";
+export { default as ThreeJSIcon } from "@/assets/svg/threejs.svg";
+export { default as ToneJSIcon } from "@/assets/svg/tonejs.svg";
+export { default as VercelIcon } from "@/assets/svg/vercelhosting.svg";
