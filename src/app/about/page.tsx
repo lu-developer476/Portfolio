@@ -106,7 +106,7 @@ export default function AboutPage() {
               Libraries
             </strong>
         
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="grid grid-cols-5 gap-4 sm:flex sm:flex-wrap sm:items-center">
               <AnimeJSIcon className="w-7 h-7 word delay-0" />
               <ChartJSIcon className="w-7 h-7 word delay-0" />
               <CropperJSIcon className="w-7 h-7 word delay-0" />
