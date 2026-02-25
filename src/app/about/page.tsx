@@ -101,12 +101,12 @@ export default function AboutPage() {
           </div>
         
           {/* Libraries */}
-          <div className="flex items-center gap-6 mt-4">
-            <strong className="w-42 shrink-0">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 mt-4">
+            <strong className="sm:w-42 shrink-0">
               Libraries
             </strong>
         
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-4">
               <AnimeJSIcon className="w-7 h-7 word delay-0" />
               <ChartJSIcon className="w-7 h-7 word delay-0" />
               <CropperJSIcon className="w-7 h-7 word delay-0" />
@@ -154,12 +154,12 @@ export default function AboutPage() {
           </div>
         
           {/* Hosting & Tools */}
-          <div className="flex items-center gap-6 mt-4">
-            <strong className="w-42 shrink-0">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 mt-4">
+            <strong className="sm:w-42 shrink-0">
               Hosting & Tools
             </strong>
         
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-4">
               <FirebaseIcon className="w-7 h-7 word delay-4" />
               <GitHubIcon className="w-7 h-7 word delay-4" />
               <N8nIcon className="w-7 h-7 word delay-4" />
