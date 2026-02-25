@@ -17,6 +17,7 @@ export { default as N8nIcon } from "@/assets/svg/n8n.svg";
 export { default as OpenAIIcon } from "@/assets/svg/openai.svg";
 export { default as GeminiIcon } from "@/assets/svg/gemini.svg";
 
+export { default as AlpineJSIcon } from "@/assets/svg/alpinejs.svg";
 export { default as AnimeJSIcon } from "@/assets/svg/animejs.svg";
 export { default as ChartJSIcon } from "@/assets/svg/chartjs.svg";
 export { default as HowlerJSIcon } from "@/assets/svg/howlerjs.svg";
