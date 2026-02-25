@@ -69,7 +69,7 @@ export default function AboutPage() {
       >
         <div className="w-full max-w-full overflow-hidden rounded-xl border border-white/10 bg-black/35 p-4 sm:p-5 md:p-6 space-y-4 text-white/85 leading-7">
           {/* Languages */}
-          <div className="flex items-center sm:flex-row sm:items-center gap-3 sm:gap-6 mt-4">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
             <strong className="sm:w-42 shrink-0">
               Languages
             </strong>
@@ -86,7 +86,7 @@ export default function AboutPage() {
           </div>
         
           {/* Frameworks */}
-          <div className="flex items-center gap-6 mt-4">
+          <div className="flex items-center gap-6">
             <strong className="w-42 shrink-0">
               Frameworks
             </strong>
@@ -101,7 +101,7 @@ export default function AboutPage() {
           </div>
         
           {/* Libraries */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
             <strong className="sm:w-42 shrink-0">
               Libraries
             </strong>
@@ -120,7 +120,7 @@ export default function AboutPage() {
           </div>
         
           {/* Frontend */}
-          <div className="flex items-start gap-6 mt-4">
+          <div className="flex items-start gap-6">
             <strong className="w-42 shrink-0">
               Frontend
             </strong>
@@ -131,7 +131,7 @@ export default function AboutPage() {
           </div>
         
           {/* Backend */}
-          <div className="flex items-start gap-6 mt-4">
+          <div className="flex items-start gap-6">
             <strong className="w-42 shrink-0">
               Backend
             </strong>
@@ -142,7 +142,7 @@ export default function AboutPage() {
           </div>
         
           {/* AI */}
-          <div className="flex items-center gap-6 mt-4">
+          <div className="flex items-center gap-6">
             <strong className="w-42 shrink-0">
               AI
             </strong>
@@ -154,7 +154,7 @@ export default function AboutPage() {
           </div>
         
           {/* Hosting & Tools */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
             <strong className="sm:w-42 shrink-0">
               Hosting & Tools
             </strong>
