@@ -101,7 +101,7 @@ export default function AboutPage() {
           </div>
         
           {/* Libraries */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 mt-4">
+          <div className="flex flex-col gap-6">
             <strong className="sm:w-42 shrink-0">
               Libraries
             </strong>
@@ -154,7 +154,7 @@ export default function AboutPage() {
           </div>
         
           {/* Hosting & Tools */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 mt-4">
+          <div className="flex flex-col gap-6">
             <strong className="sm:w-42 shrink-0">
               Hosting & Tools
             </strong>
