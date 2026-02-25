@@ -3,7 +3,6 @@
 import Section from "@/components/Section";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 import { 
-  // Languages
   CSS3Icon,
   CoffeeScriptIcon,
   HTML5Icon,
@@ -11,14 +10,10 @@ import {
   NodeJSIcon,
   PythonIcon,
   TypeScriptIcon,
-
-  // Frameworks
   BootstrapIcon,
   DjangoIcon,
   NextJSIcon,
   SwiperJSIcon,
-
-  // Libraries
   AnimeJSIcon,
   ChartJSIcon,
   HowlerJSIcon,
@@ -27,12 +22,8 @@ import {
   TailwindIcon,
   ThreeJSIcon,
   ToneJSIcon,
-
-  // AI
   OpenAIIcon,
   GeminiIcon,
-
-  // Hosting & Tools
   FirebaseIcon,
   GitHubIcon,
   N8nIcon,
