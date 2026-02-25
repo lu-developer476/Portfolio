@@ -4,32 +4,32 @@ import Section from "@/components/Section";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 import { 
   AlpineJSIcon,
+  AnimeJSIcon,
+  BootstrapIcon,
+  ChartJSIcon,
   CSS3Icon,
   CoffeeScriptIcon,
+  DjangoIcon,
+  FirebaseIcon,
+  GeminiIcon,
+  GitHubIcon,
+  HowlerJSIcon,
   HTML5Icon,
   JavaScriptIcon,
-  NodeJSIcon,
-  PythonIcon,
-  TypeScriptIcon,
-  BootstrapIcon,
-  DjangoIcon,
+  N8nIcon,
+  NetlifyIcon,
   NextJSIcon,
-  SwiperJSIcon,
-  AnimeJSIcon,
-  ChartJSIcon,
-  HowlerJSIcon,
+  NodeJSIcon,
+  OpenAIIcon,
+  PythonIcon,
   ReactIcon,
+  RenderIcon,
+  SwiperJSIcon,
   SweetAlert2Icon,
   TailwindIcon,
   ThreeJSIcon,
   ToneJSIcon,
-  OpenAIIcon,
-  GeminiIcon,
-  FirebaseIcon,
-  GitHubIcon,
-  N8nIcon,
-  NetlifyIcon,
-  RenderIcon,
+  TypeScriptIcon,
   VercelIcon,
 } from "@/icons";
 
@@ -78,9 +78,9 @@ export default function AboutPage() {
               <CoffeeScriptIcon className="w-7 h-7 word delay-0" />
               <HTML5Icon className="w-7 h-7 word delay-0" />
               <JavaScriptIcon className="w-7 h-7 word delay-0" />
+              <NodeJSIcon className="w-7 h-7 word delay-0" />
               <PythonIcon className="w-7 h-7 word delay-0" />
               <TypeScriptIcon className="w-7 h-7 word delay-0" />
-              <NodeJSIcon className="w-7 h-7 word delay-0" />
             </div>
           </div>
         
@@ -106,12 +106,12 @@ export default function AboutPage() {
             </strong>
         
             <div className="flex items-center gap-4">
-              <ReactIcon className="w-7 h-7 word delay-0" />
-              <TailwindIcon className="w-7 h-7 word delay-0" />
               <AnimeJSIcon className="w-7 h-7 word delay-0" />
               <ChartJSIcon className="w-7 h-7 word delay-0" />
               <HowlerJSIcon className="w-7 h-7 word delay-0" />
+              <ReactIcon className="w-7 h-7 word delay-0" />
               <SweetAlert2Icon className="w-7 h-7 word delay-0" />
+              <TailwindIcon className="w-7 h-7 word delay-0" />
               <ThreeJSIcon className="w-7 h-7 word delay-0" />
               <ToneJSIcon className="w-7 h-7 word delay-0" />
             </div>
@@ -146,8 +146,8 @@ export default function AboutPage() {
             </strong>
         
             <div className="flex items-center gap-4">
-              <OpenAIIcon className="w-7 h-7 word delay-3" />
               <GeminiIcon className="w-7 h-7 word delay-3" />
+              <OpenAIIcon className="w-7 h-7 word delay-3" />
             </div>
           </div>
         
