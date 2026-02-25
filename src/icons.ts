@@ -20,6 +20,7 @@ export { default as GeminiIcon } from "@/assets/svg/gemini.svg";
 export { default as AlpineJSIcon } from "@/assets/svg/alpinejs.svg";
 export { default as AnimeJSIcon } from "@/assets/svg/animejs.svg";
 export { default as ChartJSIcon } from "@/assets/svg/chartjs.svg";
+export { default as CropperJSIcon } from "@/assets/svg/cropperjs.svg";
 export { default as HowlerJSIcon } from "@/assets/svg/howlerjs.svg";
 export { default as NetlifyIcon } from "@/assets/svg/netlifyhosting.svg";
 export { default as NodeJSIcon } from "@/assets/svg/nodejs.svg";
