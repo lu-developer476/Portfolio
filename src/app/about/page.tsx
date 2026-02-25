@@ -9,6 +9,7 @@ import {
   ChartJSIcon,
   CSS3Icon,
   CoffeeScriptIcon,
+  CropperJSIcon,
   DjangoIcon,
   FirebaseIcon,
   GeminiIcon,
@@ -108,6 +109,7 @@ export default function AboutPage() {
             <div className="flex items-center gap-4">
               <AnimeJSIcon className="w-7 h-7 word delay-0" />
               <ChartJSIcon className="w-7 h-7 word delay-0" />
+              <CropperJSIcon className="w-7 h-7 word delay-0" />
               <HowlerJSIcon className="w-7 h-7 word delay-0" />
               <ReactIcon className="w-7 h-7 word delay-0" />
               <SweetAlert2Icon className="w-7 h-7 word delay-0" />
