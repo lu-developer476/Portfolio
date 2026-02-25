@@ -74,12 +74,12 @@ export default function AboutPage() {
         
             <div className="flex items-center gap-4">
               <CSS3Icon className="w-7 h-7 word delay-0" />
-              <CoffeeScriptIcon className="w-7 h-7 word delay-1" />
-              <HTML5Icon className="w-7 h-7 word delay-2" />
-              <JavaScriptIcon className="w-7 h-7 word delay-3" />
-              <PythonIcon className="w-7 h-7 word delay-4" />
-              <TypeScriptIcon className="w-7 h-7 word delay-5" />
-              <NodeJSIcon className="w-7 h-7 word delay-6" />
+              <CoffeeScriptIcon className="w-7 h-7 word delay-0" />
+              <HTML5Icon className="w-7 h-7 word delay-0" />
+              <JavaScriptIcon className="w-7 h-7 word delay-0" />
+              <PythonIcon className="w-7 h-7 word delay-0" />
+              <TypeScriptIcon className="w-7 h-7 word delay-0" />
+              <NodeJSIcon className="w-7 h-7 word delay-0" />
             </div>
           </div>
         
@@ -90,10 +90,11 @@ export default function AboutPage() {
             </strong>
         
             <div className="flex items-center gap-4">
-              <BootstrapIcon className="w-7 h-7 word delay-7" />
-              <DjangoIcon className="w-7 h-7 word delay-8" />
-              <NextJSIcon className="w-7 h-7 word delay-9" />
-              <SwiperJSIcon className="w-7 h-7 word delay-10" />
+              <AlpineJSIcon className="w-7 h-7 word delay-0" />
+              <BootstrapIcon className="w-7 h-7 word delay-0" />
+              <DjangoIcon className="w-7 h-7 word delay-0" />
+              <NextJSIcon className="w-7 h-7 word delay-0" />
+              <SwiperJSIcon className="w-7 h-7 word delay-0" />
             </div>
           </div>
         
@@ -104,14 +105,14 @@ export default function AboutPage() {
             </strong>
         
             <div className="flex items-center gap-4">
-              <ReactIcon className="w-7 h-7 word delay-11" />
-              <TailwindIcon className="w-7 h-7 word delay-12" />
-              <AnimeJSIcon className="w-7 h-7 word delay-13" />
-              <ChartJSIcon className="w-7 h-7 word delay-14" />
-              <HowlerJSIcon className="w-7 h-7 word delay-15" />
-              <SweetAlert2Icon className="w-7 h-7 word delay-16" />
-              <ThreeJSIcon className="w-7 h-7 word delay-17" />
-              <ToneJSIcon className="w-7 h-7 word delay-18" />
+              <ReactIcon className="w-7 h-7 word delay-0" />
+              <TailwindIcon className="w-7 h-7 word delay-0" />
+              <AnimeJSIcon className="w-7 h-7 word delay-0" />
+              <ChartJSIcon className="w-7 h-7 word delay-0" />
+              <HowlerJSIcon className="w-7 h-7 word delay-0" />
+              <SweetAlert2Icon className="w-7 h-7 word delay-0" />
+              <ThreeJSIcon className="w-7 h-7 word delay-0" />
+              <ToneJSIcon className="w-7 h-7 word delay-0" />
             </div>
           </div>
         
@@ -121,7 +122,7 @@ export default function AboutPage() {
               Frontend
             </strong>
         
-            <span className="word delay-19">
+            <span className="word delay-1">
               Animaciones, Componentes, Interactive, Responsive, Carousels
             </span>
           </div>
@@ -132,7 +133,7 @@ export default function AboutPage() {
               Backend
             </strong>
         
-            <span className="word delay-20">
+            <span className="word delay-2">
               API Design, Debugging, Dev & Prod, Email APIs, Web Storage
             </span>
           </div>
@@ -144,8 +145,8 @@ export default function AboutPage() {
             </strong>
         
             <div className="flex items-center gap-4">
-              <OpenAIIcon className="w-7 h-7 word delay-21" />
-              <GeminiIcon className="w-7 h-7 word delay-22" />
+              <OpenAIIcon className="w-7 h-7 word delay-3" />
+              <GeminiIcon className="w-7 h-7 word delay-3" />
             </div>
           </div>
         
@@ -156,12 +157,12 @@ export default function AboutPage() {
             </strong>
         
             <div className="flex items-center gap-4">
-              <FirebaseIcon className="w-7 h-7 word delay-23" />
-              <GitHubIcon className="w-7 h-7 word delay-24" />
-              <N8nIcon className="w-7 h-7 word delay-25" />
-              <NetlifyIcon className="w-7 h-7 word delay-26" />
-              <RenderIcon className="w-7 h-7 word delay-27" />
-              <VercelIcon className="w-7 h-7 word delay-28" />
+              <FirebaseIcon className="w-7 h-7 word delay-4" />
+              <GitHubIcon className="w-7 h-7 word delay-4" />
+              <N8nIcon className="w-7 h-7 word delay-4" />
+              <NetlifyIcon className="w-7 h-7 word delay-4" />
+              <RenderIcon className="w-7 h-7 word delay-4" />
+              <VercelIcon className="w-7 h-7 word delay-4" />
             </div>
           </div>
         </div> 
