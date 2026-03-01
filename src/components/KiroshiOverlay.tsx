@@ -30,15 +30,33 @@ export default function KiroshiOverlay() {
         easing: "linear"
       });
 
-      // TTS
-      if (!cancelled) {
-        const mensaje = new SpeechSynthesisUtterance(
-          "System online. Status deployed. Signal stable."
-        );
-        mensaje.lang = "en-US";
-        mensaje.rate = 0.9;
-        mensaje.pitch = 0.8;
-        window.speechSynthesis.speak(mensaje);
+      // TTS estilo cyberpunk femenino
+      if (!cancelled && "speechSynthesis" in window) {
+        const speakCyberpunk = (text: string) => {
+          const voices = window.speechSynthesis.getVoices();
+          // Buscar voz femenina inglesa
+          const voice = voices.find(v =>
+            v.lang.startsWith("en") && v.name.toLowerCase().includes("female")
+          ) || voices[0]; // fallback si no encuentra
+
+          // Creamos varias instancias para efecto glitch
+          for (let i = 0; i < 2; i++) {
+            const mensaje = new SpeechSynthesisUtterance(text);
+            mensaje.voice = voice;
+            mensaje.lang = "en-US";
+            mensaje.rate = 0.85 + i * 0.05; // leve variación
+            mensaje.pitch = 1.2 - i * 0.1;  // tono más agudo y robótico
+            mensaje.volume = 1;
+
+            // delay pequeño para efecto eco/glitch
+            setTimeout(() => {
+              if (!cancelled) window.speechSynthesis.speak(mensaje);
+            }, i * 120);
+          }
+        };
+
+        // disparar TTS
+        speakCyberpunk("> SYSTEM: ONLINE • STATUS: DEPLOYED • SIGNAL: STABLE");
       }
 
     })();
