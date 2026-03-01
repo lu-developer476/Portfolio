@@ -56,7 +56,7 @@ export default function KiroshiOverlay() {
         };
 
         // disparar TTS
-        speakCyberpunk("> SYSTEM: ONLINE • STATUS: DEPLOYED • SIGNAL: STABLE");
+        speakCyberpunk("SYSTEM: ONLINE. STATUS: DEPLOYED. SIGNAL: STABLE.");
       }
 
     })();
