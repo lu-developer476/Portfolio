@@ -3,19 +3,23 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useHoverSound } from "@/lib/useHoverSound";
 
 const NavLink = ({
   href,
   children,
-  onClick
+  onClick,
+  onHover
 }: {
   href: string;
   children: React.ReactNode;
   onClick?: () => void;
+  onHover?: () => void;
 }) => (
   <Link
     href={href}
     onClick={onClick}
+    onMouseEnter={onHover}
     className="text-xs md:text-sm text-white/70 hover:text-white transition underline decoration-white/10 underline-offset-8 hover:decoration-cyber-gold/60"
   >
     {children}
@@ -24,6 +28,7 @@ const NavLink = ({
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const { play } = useHoverSound("bleep");
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -71,10 +76,10 @@ export default function Navbar() {
           {/* DERECHA */}
         <nav className="flex items-center gap-4 md:gap-8">
           <span className="">
-            <NavLink href="/about">Perfil</NavLink>
+            <NavLink href="/about" onHover={play}>Perfil</NavLink>
           </span>
           <span className="">
-            <NavLink href="/contact">Contacto</NavLink>
+            <NavLink href="/contact" onHover={play}>Contacto</NavLink>
           </span>
         </nav>
           
