@@ -13,6 +13,7 @@ export default function KiroshiOverlay() {
       const anime = (await import("animejs")).default;
       if (cancelled) return;
 
+      // Animaciones
       anime({
         targets: circleRef.current,
         scale: [0.8, 1],
@@ -28,10 +29,23 @@ export default function KiroshiOverlay() {
         loop: true,
         easing: "linear"
       });
+
+      // TTS
+      if (!cancelled) {
+        const mensaje = new SpeechSynthesisUtterance(
+          "System online. Status deployed. Signal stable."
+        );
+        mensaje.lang = "en-US";
+        mensaje.rate = 0.9;
+        mensaje.pitch = 0.8;
+        window.speechSynthesis.speak(mensaje);
+      }
+
     })();
 
     return () => {
       cancelled = true;
+      window.speechSynthesis.cancel(); // corta la voz si desmonta el componente
     };
   }, []);
 
