@@ -1,7 +1,11 @@
+"use client";
+
 import ContactForm from "@/components/ContactForm";
 import Section from "@/components/Section";
+import { useHoverSound } from "@/lib/useHoverSound";
 
 export default function ContactPage() {
+  const { play } = useHoverSound("zoom");
   return (
     <Section
       id="contact"
@@ -20,6 +24,7 @@ export default function ContactPage() {
                 href="https://www.linkedin.com/in/lucas-montenegro-burgos/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onMouseEnter={play}
                 className="text-blue-500 hover:text-blue-700 transition"
               >
                 LinkedIn
@@ -31,6 +36,7 @@ export default function ContactPage() {
                 href="https://github.com/lu-developer476"
                 target="_blank"
                 rel="noopener noreferrer"
+                onMouseEnter={play}
                 className="text-blue-500 hover:text-blue-700 transition"
               >
                 GitHub
