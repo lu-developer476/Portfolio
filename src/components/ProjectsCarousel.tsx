@@ -9,7 +9,7 @@ import { useHoverSound } from "@/lib/useHoverSound";
 
 export default function ProjectsCarousel({ expanded = false }: { expanded?: boolean }) {
   const list = expanded ? projects : projects.slice(0, 6);
-  const { play } = useHoverSound("bleep");
+  const { play } = useHoverSound("zoom");
 
   return (
     <Swiper
