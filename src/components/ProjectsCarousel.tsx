@@ -5,9 +5,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import { useHoverSound } from "@/lib/useHoverSound";
 
 export default function ProjectsCarousel({ expanded = false }: { expanded?: boolean }) {
   const list = expanded ? projects : projects.slice(0, 6);
+  const { play } = useHoverSound("bleep");
 
   return (
     <Swiper
@@ -73,7 +75,13 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
         return (
           <SwiperSlide key={p.slug}>
             {p.demo ? (
-              <a href={p.demo} target="_blank" rel="noreferrer" className="block h-full">
+              <a
+                href={p.demo}
+                target="_blank"
+                rel="noreferrer"
+                className="block h-full"
+                onMouseEnter={play}
+              >
                 {CardContent}
               </a>
             ) : (
