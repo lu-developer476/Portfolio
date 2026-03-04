@@ -94,7 +94,7 @@ export const projects: Project[] = [
     tags: ["Bootstrap", "Python", "Django", "UX/UI", "Render"],
     demo: "https://labuenamesa.onrender.com",
   },
-    {
+  {
     slug: "gran-milla",
     title: "Gran Milla",
     year: "2026",
