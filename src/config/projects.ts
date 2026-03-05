@@ -20,7 +20,7 @@ export const projects: Project[] = [
     slug: "irbis-supplies",
     title: "Irbis Supplies",
     year: "2024",
-    description: "Tienda online ficticia refactorizada desde JavaScript vanilla con arquitectura modular. Desplegado en Netlify.",
+    description: "Tienda online ficticia refactorizada desde JavaScript vanilla a arquitectura modular. Desplegado en Netlify.",
     tags: ["HTML", "CSS", "JavaScript", "TypeScript", "CoffeeScript", "UX/UI", "Netlify"],
     demo: "https://irbis-supplies.netlify.app/",
   },
