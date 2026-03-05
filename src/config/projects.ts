@@ -36,7 +36,7 @@ export const projects: Project[] = [
     slug: "dinosauria",
     title: "Dinosauria",
     year: "2026",
-    description: "Enciclopedia con información de los dinosaurios ficticios más populares de la cultura moderna. Desplegado en Vercel.",
+    description: "Enciclopedia de los dinosaurios ficticios más populares de la cultura moderna. Desplegado en Vercel.",
     tags: ["HTML", "CSS", "JavaScript", "TypeScript", "CoffeeScript", "React", "UX/UI", "Vercel"],
     demo: "https://dinosauria.vercel.app/",
   },
