@@ -91,15 +91,15 @@ export const projects: Project[] = [
     title: "La Buena Mesa",
     year: "2026",
     description: "Aplicación web gastronómica desarrollada con React y Typescript, con arquitectura profesional y templates reutilizables. Desplegado en Vercel.",
-    tags: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "UX/UI", "Vercel"],
+    tags: ["HTML", "CSS", "TypeScript", "React", "UX/UI", "Vercel"],
     demo: "https://labuenamesa.vercel.app/",
   },
   {
     slug: "gran-milla",
     title: "Gran Milla",
     year: "2026",
-    description: "Simuladora de agencia de viajes argentino desarrollada con React y Typescript integrando sistema de gestión, panel de administración, formulario y Mercado Pago. Desplegado con Vercel.",
-    tags: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "UX/UI", "Vercel"],
+    description: "Simuladora de agencia de viajes minimalista desarrollada con React y Typescript con formulario integrado. Desplegado con Vercel.",
+    tags: ["HTML", "CSS", "TypeScript", "React", "UX/UI", "Vercel"],
     demo: "https://granmilla.vercel.app",
   },
   {
