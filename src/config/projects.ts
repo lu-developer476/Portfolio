@@ -98,7 +98,7 @@ export const projects: Project[] = [
     slug: "gran-milla",
     title: "Gran Milla",
     year: "2026",
-    description: "Simuladora de agencia de viajes minimalista desarrollada con React y Typescript con formulario integrado. Desplegado con Vercel.",
+    description: "Single Page Application de agencia de viajes minimalista desarrollada con React y Typescript con formulario integrado. Desplegado con Vercel.",
     tags: ["HTML", "CSS", "TypeScript", "React", "UX/UI", "Vercel"],
     demo: "https://granmilla.vercel.app",
   },
