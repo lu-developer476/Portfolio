@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </main>
           <footer className="relative border-t border-white/10 py-10">
             <div className="mx-auto max-w-6xl px-4 text-sm text-white/70">
-                <span className="text-cyber-gold">©</span> {new Date().getFullYear()} Todos los derechos reservados • Built with React.js, Next.js, TypeScript & Tailwind CSS • Database powered by Firebase • Deployed on Vercel ®
+                <span className="text-cyber-gold">©</span> {new Date().getFullYear()} Todos los derechos reservados • Built with React.js, Next.js, TypeScript & Tailwind CSS • UX/UI Interface • Database powered by Firebase • Deployed on Vercel ®
             </div>
           </footer>
         </div>
