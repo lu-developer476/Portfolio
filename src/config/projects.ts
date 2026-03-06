@@ -28,7 +28,7 @@ export const projects: Project[] = [
     slug: "art-syntex",
     title: "Art-Syntex",
     year: "2024",
-    description: "Tienda online ficticia con base de datos integrada. Desplegado en Firebase.",
+    description: "Tienda online ficticia reconstruida con base de datos integrada. Desplegado en Firebase.",
     tags: ["HTML", "CSS", "JavaScript", "React", "Firebase", "UX/UI", "Vercel"],
     demo: "https://art-synt.vercel.app/",
   },
