@@ -53,7 +53,7 @@ export const projects: Project[] = [
     title: "Calcu-lenD",
     year: "2026",
     description: "Convertidor no oficial de monedas. Desplegado en Vercel.",
-    tags: ["CSS", "JavaScript", "Python", "Django", "FastAPI", "UX/UI", "Vercel"],
+    tags: ["HTML", "CSS", "JavaScript", "Python", "Django", "FastAPI", "UX/UI", "Vercel"],
     demo: "https://calcu-len-d.vercel.app/",
   },
   {
