@@ -43,6 +43,10 @@ Todo mediante entorno server-side seguro.
 ![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
 ![Swiper](https://img.shields.io/badge/Swiper-6332F6?style=for-the-badge&logo=swiper&logoColor=white)
 
+### Sonidos
+
+![Howler.js](https://img.shields.io/badge/Howler.js-000000?style=for-the-badge&logo=javascript&logoColor=white)
+
 ### Experiencia de Usuario
 
 ![SweetAlert2](https://img.shields.io/badge/SweetAlert2-FF5A5F?style=for-the-badge&logo=sweetalert2&logoColor=white)
