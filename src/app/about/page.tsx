@@ -25,6 +25,7 @@ import {
   PythonIcon,
   ReactIcon,
   RenderIcon,
+  SupabaseIcon,
   SwiperJSIcon,
   SweetAlert2Icon,
   TailwindIcon,
