@@ -89,6 +89,23 @@ export const projects: Project[] = [
     demo: "https://granmilla.vercel.app",
   },
   {
+    slug: "2048",
+    title: "2048",
+    year: "2026",
+    description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
+    tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
+    demo: "https://two-0-4-8-game.onrender.com/",
+  },
+  {
+    slug: "datacrawl",
+    title: "DATACRAWL",
+    year: "2026",
+    description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
+    tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
+    demo: "datacrawlsnake.onrender.com",
+  },
+
+  {
     slug: "coming-soon",
     title: "PRÓXIMAMENTE",
     year: "❔",
