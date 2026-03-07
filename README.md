@@ -31,33 +31,38 @@ Todo mediante entorno server-side seguro.
 
 ### Frontend
 
-* Next.js (App Router)
-* React
-* TypeScript
-* Tailwind CSS
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![PostCSS](https://img.shields.io/badge/PostCSS-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
 ### Animación y Visual
 
-* Anime.js (microinteracciones)
-* Three.js (background 3D dinámico)
-* Swiper.js (carrusel de proyectos)
+![Anime.js](https://img.shields.io/badge/Anime.js-FE4A49?style=for-the-badge&logo=javascript&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
+![Swiper](https://img.shields.io/badge/Swiper-6332F6?style=for-the-badge&logo=swiper&logoColor=white)
 
 ### Experiencia de Usuario
 
-* SweetAlert2 en modo oscuro (feedback visual consistente)
+![SweetAlert2](https://img.shields.io/badge/SweetAlert2-FF5A5F?style=for-the-badge&logo=sweetalert2&logoColor=white)
 
 ### Backend
 
-* Firebase Admin SDK
-* Cloud Firestore
-* API Routes de Next.js
-* Resend (envío de emails transaccionales)
-* Nodemailer (auto-respuestas al usuario)
+![Firebase](https://img.shields.io/badge/Firebase_Admin-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![Resend](https://img.shields.io/badge/Resend-000000?style=for-the-badge&logo=maildotru&logoColor=white)
+![Nodemailer](https://img.shields.io/badge/Nodemailer-009688?style=for-the-badge&logo=gmail&logoColor=white)
+![Zod](https://img.shields.io/badge/Zod-3E67B1?style=for-the-badge&logo=typescript&logoColor=white)
 
 ### Complementos
 
-* CoffeeScript (compilación automática previa al build)
-* Configuración optimizada para Vercel
+![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
+![CoffeeScript](https://img.shields.io/badge/CoffeeScript-2F2625?style=for-the-badge&logo=coffeescript&logoColor=white)
+![SVGR](https://img.shields.io/badge/SVGR-FFB13B?style=for-the-badge&logo=svg&logoColor=black)
+
+### Despliegue
+
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ---
 
