@@ -165,6 +165,7 @@ export default function AboutPage() {
               <N8nIcon className="w-7 h-7 word delay-4" />
               <NetlifyIcon className="w-7 h-7 word delay-4" />
               <RenderIcon className="w-7 h-7 word delay-4" />
+              <SupabaseIcon className="w-7 h-7 word delay-4" />
               <VercelIcon className="w-7 h-7 word delay-4" />
             </div>
           </div>
