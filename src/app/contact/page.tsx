@@ -21,6 +21,18 @@ export default function ContactPage() {
           <ul className="mt-4 space-y-3 text-white/85">
             <li>
               <a
+                href="https://www.freelancer.com.ar/u/Lucasmontenegro5"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={play}
+                className="text-blue-500 hover:text-blue-700 transition"
+              >
+                Freelancer
+              </a>
+            </li>
+
+            <li>
+              <a
                 href="https://www.linkedin.com/in/lucas-montenegro-burgos/"
                 target="_blank"
                 rel="noopener noreferrer"
