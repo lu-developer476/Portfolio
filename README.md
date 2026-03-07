@@ -86,7 +86,7 @@ http://localhost:3000
 
 ---
 
-## Estructura Relevante
+## Estructura relevante
 
 * `src/app` → Rutas y estructura principal
 * `src/components` → Componentes reutilizables
@@ -103,7 +103,7 @@ http://localhost:3000
 * Crear proyecto en Firebase Console
 * Activar **Cloud Firestore**
 
-### 2. Generar Service Account
+### 2. Generar cuenta de servicio
 
 * Project Settings → Service Accounts
 * Generar nueva clave privada (JSON)
@@ -269,7 +269,7 @@ No requiere servidor adicional.
 
 ---
 
-## Flujo del Sistema de Contacto
+## Flujo del sistema
 
 1. Usuario envía mensaje.
 2. Validación con Zod.
@@ -282,7 +282,7 @@ Sistema completamente serverless.
 
 ---
 
-## Enfoque del Proyecto
+## Enfoque
 
 Este portfolio prioriza:
 
@@ -301,6 +301,6 @@ La base permite incorporar:
 * Monitorización
 * Integración con CRM
 
-Sin necesidad de reestructurar el proyecto.
+Sin necesidad de reestructuración.
 
 ---
