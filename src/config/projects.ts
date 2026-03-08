@@ -94,15 +94,15 @@ export const projects: Project[] = [
     year: "2026",
     description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
-    demo: "https://two-0-4-8-game.onrender.com/",
+    demo: "https://twothousandfortyeight.onrender.com",
   },
   {
-    slug: "datacrawl",
-    title: "DATACRAWL",
+    slug: "boaworm",
+    title: "Boaworm",
     year: "2026",
     description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
-    demo: "https://datacrawlsnake.onrender.com",
+    demo: "https://boaworm.onrender.com",
   },
 
   {
