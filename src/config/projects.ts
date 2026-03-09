@@ -109,7 +109,7 @@ export const projects: Project[] = [
     title: "Ajedrez",
     year: "2026",
     description: "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
-    tags: ["CSS", "JavaScript", "Python", "Django", "Supabase" "UX/UI", "Render"],
+    tags: ["CSS", "JavaScript", "Python", "Django", "Supabase", "UX/UI", "Render"],
     demo: "https://technochessgame.onrender.com/",
   },
   {
