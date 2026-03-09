@@ -104,7 +104,14 @@ export const projects: Project[] = [
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
     demo: "https://boaworm.onrender.com",
   },
-
+  {
+    slug: "Ajedrez",
+    title: "Ajedrez",
+    year: "2026",
+    description: "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
+    tags: ["CSS", "JavaScript", "Python", "Django", "Supabase" "UX/UI", "Render"],
+    demo: "https://technochessgame.onrender.com/",
+  },
   {
     slug: "coming-soon",
     title: "PRÓXIMAMENTE",
