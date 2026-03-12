@@ -6,6 +6,7 @@ import { useHoverSound } from "@/lib/useHoverSound";
 
 export default function ContactPage() {
   const { play } = useHoverSound("zoom");
+
   return (
     <Section
       id="contact"
@@ -30,8 +31,7 @@ export default function ContactPage() {
                 Behance Pro
               </a>
             </li>
-          
-          <ul className="mt-4 space-y-3 text-white/85">
+
             <li>
               <a
                 href="https://www.freelancer.com.ar/u/Lucasmontenegro5"
