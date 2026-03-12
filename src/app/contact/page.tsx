@@ -16,7 +16,7 @@ export default function ContactPage() {
       <div className="grid gap-6 md:grid-cols-2">
         <div className="rounded-xl border border-white/50 bg-black/35 p-5">
           <h3 className="text-lg font-semibold text-cyber-gold">
-            Seguime en:
+            Te invito a conocer:
           </h3>
 
           <ul className="mt-4 space-y-3 text-white/85">
@@ -29,6 +29,18 @@ export default function ContactPage() {
                 className="text-blue-500 hover:text-blue-700 transition"
               >
                 Behance Pro
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://lumontenegro-lifepath.framer.website/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={play}
+                className="text-blue-500 hover:text-blue-700 transition"
+              >
+                Curriculum
               </a>
             </li>
 
