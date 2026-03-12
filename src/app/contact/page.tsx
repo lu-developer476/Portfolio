@@ -34,7 +34,7 @@ export default function ContactPage() {
 
             <li>
               <a
-                href="https://lumontenegro-lifepath.framer.website/"
+                href="https://lucasmontenegro-lifepath.framer.website/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={play}
