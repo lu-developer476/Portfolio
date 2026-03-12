@@ -21,6 +21,19 @@ export default function ContactPage() {
           <ul className="mt-4 space-y-3 text-white/85">
             <li>
               <a
+                href="https://www.behance.net/lucasmontenegrob"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={play}
+                className="text-blue-500 hover:text-blue-700 transition"
+              >
+                Behance Pro
+              </a>
+            </li>
+          
+          <ul className="mt-4 space-y-3 text-white/85">
+            <li>
+              <a
                 href="https://www.freelancer.com.ar/u/Lucasmontenegro5"
                 target="_blank"
                 rel="noopener noreferrer"
