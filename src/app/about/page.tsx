@@ -165,7 +165,7 @@ export default function AboutPage() {
             <div className="flex flex-wrap items-center gap-4">
               <ElevenLabsIcon className="w-7 h-7 word delay-3" />
               <GeminiIcon className="w-7 h-7 word delay-3" />
-              <N8nIcon className="w-7 h-7 word delay-4" />
+              <N8nIcon className="w-7 h-7 word delay-3" />
               <OpenAIIcon className="w-7 h-7 word delay-3" />
               <V0Icon className="w-7 h-7 word delay-3" />
             </div>
