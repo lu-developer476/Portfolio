@@ -1,40 +1,25 @@
-<svg
-  width="360"
-  height="248"
-  viewBox="0 0 360 248"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <!-- Fondo degradado -->
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4F46E5"/>
-      <stop offset="100%" stop-color="#D946EF"/>
+    <linearGradient id="bg" x1="0" y1="256" x2="512" y2="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B4DFF"/>
+      <stop offset="100%" stop-color="#F270D8"/>
     </linearGradient>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
   </defs>
 
-  <rect width="360" height="248" fill="url(#bgGradient)" />
+  <rect width="512" height="512" rx="0" fill="url(#bg)"/>
 
-  <!-- Figura trasera (contorno) -->
-  <rect
-    x="130"
-    y="74"
-    width="90"
-    height="90"
-    rx="8"
-    transform="rotate(45 175 119)"
-    fill="none"
-    stroke="#FFFFFF"
-    stroke-width="10"
-  />
+  <!-- Back card -->
+  <g transform="translate(192 256) rotate(-45)" filter="url(#shadow)">
+    <rect x="-76" y="-76" width="152" height="152" rx="12" fill="none" stroke="#FFFFFF" stroke-width="22"/>
+  </g>
 
-  <!-- Figura frontal (rellena) -->
-  <rect
-    x="155"
-    y="74"
-    width="90"
-    height="90"
-    rx="8"
-    transform="rotate(45 200 119)"
-    fill="#FFFFFF"
-  />
+  <!-- Front card -->
+  <g transform="translate(278 254) rotate(-45)" filter="url(#shadow)">
+    <rect x="-76" y="-76" width="152" height="152" rx="12" fill="#FFFFFF"/>
+  </g>
 </svg>
