@@ -1,25 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+
   <defs>
-    <linearGradient id="bg" x1="0" y1="256" x2="512" y2="256" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="0" y1="0" x2="512" y2="0">
       <stop offset="0%" stop-color="#3B4DFF"/>
       <stop offset="100%" stop-color="#F270D8"/>
     </linearGradient>
 
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.18"/>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-opacity="0.18"/>
     </filter>
   </defs>
 
-  <rect width="512" height="512" rx="0" fill="url(#bg)"/>
+  <!-- Background -->
+  <rect width="512" height="512" fill="url(#bg)"/>
 
   <!-- Back card -->
-  <g transform="translate(192 256) rotate(-45)" filter="url(#shadow)">
-    <rect x="-76" y="-76" width="152" height="152" rx="12" fill="none" stroke="#FFFFFF" stroke-width="22"/>
+  <g transform="translate(192 256) rotate(-45 0 0)" filter="url(#shadow)">
+    <rect x="-76" y="-76" width="152" height="152" rx="12"
+          fill="none" stroke="#FFFFFF" stroke-width="22"/>
   </g>
 
   <!-- Front card -->
-  <g transform="translate(278 254) rotate(-45)" filter="url(#shadow)">
-    <rect x="-76" y="-76" width="152" height="152" rx="12" fill="#FFFFFF"/>
+  <g transform="translate(278 256) rotate(-45 0 0)" filter="url(#shadow)">
+    <rect x="-76" y="-76" width="152" height="152" rx="12"
+          fill="#FFFFFF"/>
   </g>
+
 </svg>
