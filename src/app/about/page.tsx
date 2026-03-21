@@ -14,6 +14,7 @@ import {
   DjangoIcon,
   DrawIoIcon,
   ElevenLabsIcon,
+  FigmaIcon,
   FirebaseIcon,
   FramerIcon,
   GeminiIcon,
@@ -44,6 +45,7 @@ import {
   TypeScriptIcon,
   V0Icon,
   VercelIcon,
+  WhimsicalIcon,
 } from "@/icons";
 
 export default function AboutPage() {
@@ -177,6 +179,7 @@ export default function AboutPage() {
             <div className="flex flex-wrap items-center gap-4">
               <CanvaIcon className="w-7 h-7 word delay-4" />
               <DrawIoIcon className="w-7 h-7 word delay-4" />
+              <FigmaIcon className="w-7 h-7 word delay-4" />
               <FirebaseIcon className="w-7 h-7 word delay-4" />
               <FramerIcon className="w-7 h-7 word delay-4" />
               <GitHubIcon className="w-7 h-7 word delay-4" />
@@ -190,6 +193,7 @@ export default function AboutPage() {
               <StackBlitzIcon className="w-7 h-7 word delay-4" />
               <SupabaseIcon className="w-7 h-7 word delay-4" />
               <VercelIcon className="w-7 h-7 word delay-4" />
+              <WhimsicalIcon className="w-7 h-7 word delay-4" />
             </div>
           </div>
         </div>
