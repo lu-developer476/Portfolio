@@ -165,6 +165,7 @@ export default function AboutPage() {
             <div className="flex flex-wrap items-center gap-4">
               <ElevenLabsIcon className="w-7 h-7 word delay-3" />
               <GeminiIcon className="w-7 h-7 word delay-3" />
+              <N8nIcon className="w-7 h-7 word delay-4" />
               <OpenAIIcon className="w-7 h-7 word delay-3" />
               <V0Icon className="w-7 h-7 word delay-3" />
             </div>
@@ -184,7 +185,6 @@ export default function AboutPage() {
               <FramerIcon className="w-7 h-7 word delay-4" />
               <GitHubIcon className="w-7 h-7 word delay-4" />
               <GitlabIcon className="w-7 h-7 word delay-4" />
-              <N8nIcon className="w-7 h-7 word delay-4" />
               <NetlifyIcon className="w-7 h-7 word delay-4" />
               <PhotoshopIcon className="w-7 h-7 word delay-4" />
               <PowerBiIcon className="w-7 h-7 word delay-4" />
