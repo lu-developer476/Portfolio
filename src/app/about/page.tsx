@@ -2,18 +2,23 @@
 
 import Section from "@/components/Section";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
-import { 
+import {
   AlpineJSIcon,
   AnimeJSIcon,
   BootstrapIcon,
+  CanvaIcon,
   ChartJSIcon,
   CSS3Icon,
   CoffeeScriptIcon,
   CropperJSIcon,
   DjangoIcon,
+  DrawIoIcon,
+  ElevenLabsIcon,
   FirebaseIcon,
+  FramerIcon,
   GeminiIcon,
   GitHubIcon,
+  GitlabIcon,
   HowlerJSIcon,
   HTML5Icon,
   JavaScriptIcon,
@@ -22,16 +27,22 @@ import {
   NextJSIcon,
   NodeJSIcon,
   OpenAIIcon,
+  PowerBiIcon,
+  PhotoshopIcon,
   PythonIcon,
   ReactIcon,
   RenderIcon,
+  ResendIcon,
+  StackBlitzIcon,
   SupabaseIcon,
+  SQLIcon,
   SwiperJSIcon,
   SweetAlert2Icon,
   TailwindIcon,
   ThreeJSIcon,
   ToneJSIcon,
   TypeScriptIcon,
+  V0Icon,
   VercelIcon,
 } from "@/icons";
 
@@ -51,8 +62,8 @@ export default function AboutPage() {
           </p>
 
           <p className="mt-4 text-white/85 leading-7">
-            Más allá de mi especialización en frontend, me adapto a las necesidades de cada proyecto y a los objetivos del cliente. 
-            Me interesa entender el contexto, proponer mejoras cuando hace falta y aportar soluciones que realmente sumen valor. 
+            Más allá de mi especialización en frontend, me adapto a las necesidades de cada proyecto y a los objetivos del cliente.
+            Me interesa entender el contexto, proponer mejoras cuando hace falta y aportar soluciones que realmente sumen valor.
             Trabajo de forma proactiva, buscando que cada decisión técnica esté alineada con el resultado que se quiere lograr.
           </p>
 
@@ -74,7 +85,7 @@ export default function AboutPage() {
             <strong className="sm:w-42 shrink-0">
               Languages
             </strong>
-        
+
             <div className="flex flex-wrap items-center gap-4">
               <CSS3Icon className="w-7 h-7 word delay-0" />
               <CoffeeScriptIcon className="w-7 h-7 word delay-0" />
@@ -82,17 +93,18 @@ export default function AboutPage() {
               <JavaScriptIcon className="w-7 h-7 word delay-0" />
               <NodeJSIcon className="w-7 h-7 word delay-0" />
               <PythonIcon className="w-7 h-7 word delay-0" />
+              <SQLIcon className="w-7 h-7 word delay-0" />
               <TypeScriptIcon className="w-7 h-7 word delay-0" />
             </div>
           </div>
-        
+
           {/* Frameworks */}
-          <div className="flex items-center gap-6">
-            <strong className="w-42 shrink-0">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+            <strong className="sm:w-42 shrink-0">
               Frameworks
             </strong>
-        
-            <div className="flex items-center gap-4">
+
+            <div className="flex flex-wrap items-center gap-4">
               <AlpineJSIcon className="w-7 h-7 word delay-0" />
               <BootstrapIcon className="w-7 h-7 word delay-0" />
               <DjangoIcon className="w-7 h-7 word delay-0" />
@@ -100,13 +112,13 @@ export default function AboutPage() {
               <SwiperJSIcon className="w-7 h-7 word delay-0" />
             </div>
           </div>
-        
+
           {/* Libraries */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
             <strong className="sm:w-42 shrink-0">
               Libraries
             </strong>
-        
+
             <div className="grid grid-cols-5 gap-4 sm:flex sm:flex-wrap sm:items-center">
               <AnimeJSIcon className="w-7 h-7 word delay-0" />
               <ChartJSIcon className="w-7 h-7 word delay-0" />
@@ -119,103 +131,113 @@ export default function AboutPage() {
               <ToneJSIcon className="w-7 h-7 word delay-0" />
             </div>
           </div>
-        
+
           {/* Frontend */}
           <div className="flex items-start gap-6">
             <strong className="w-42 shrink-0">
               Frontend
             </strong>
-        
+
             <span className="word delay-1">
               Animaciones, Componentes, Interactive, Responsive, Carousels
             </span>
           </div>
-        
+
           {/* Backend */}
           <div className="flex items-start gap-6">
             <strong className="w-42 shrink-0">
               Backend
             </strong>
-        
+
             <span className="word delay-2">
               API Design, Debugging, Dev & Prod, Email APIs, Web Storage
             </span>
           </div>
-        
+
           {/* AI */}
-          <div className="flex items-center gap-6">
-            <strong className="w-42 shrink-0">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+            <strong className="sm:w-42 shrink-0">
               AI
             </strong>
-        
-            <div className="flex items-center gap-4">
+
+            <div className="flex flex-wrap items-center gap-4">
+              <ElevenLabsIcon className="w-7 h-7 word delay-3" />
               <GeminiIcon className="w-7 h-7 word delay-3" />
               <OpenAIIcon className="w-7 h-7 word delay-3" />
+              <V0Icon className="w-7 h-7 word delay-3" />
             </div>
           </div>
-        
+
           {/* Hosting & Tools */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
             <strong className="sm:w-42 shrink-0">
               Hosting & Tools
             </strong>
-        
+
             <div className="flex flex-wrap items-center gap-4">
+              <CanvaIcon className="w-7 h-7 word delay-4" />
+              <DrawIoIcon className="w-7 h-7 word delay-4" />
               <FirebaseIcon className="w-7 h-7 word delay-4" />
+              <FramerIcon className="w-7 h-7 word delay-4" />
               <GitHubIcon className="w-7 h-7 word delay-4" />
+              <GitlabIcon className="w-7 h-7 word delay-4" />
               <N8nIcon className="w-7 h-7 word delay-4" />
               <NetlifyIcon className="w-7 h-7 word delay-4" />
+              <PhotoshopIcon className="w-7 h-7 word delay-4" />
+              <PowerBiIcon className="w-7 h-7 word delay-4" />
               <RenderIcon className="w-7 h-7 word delay-4" />
+              <ResendIcon className="w-7 h-7 word delay-4" />
+              <StackBlitzIcon className="w-7 h-7 word delay-4" />
               <SupabaseIcon className="w-7 h-7 word delay-4" />
               <VercelIcon className="w-7 h-7 word delay-4" />
             </div>
           </div>
-        </div> 
-     
+        </div>
+
         <hr className="my-6 border-t border-white/20" />
-      
+
         <div className="mt-6">
           <h3 className="text-white/90 font-semibold mb-2">
             <span className="text-lg font-semibold text-cyber-gold">💡 Soft Skills</span>
           </h3>
-      
+
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60">
-            <span className="word delay-5">Adaptación </span>
-            <span className="word delay-6">Análisis de datos </span>
-            <span className="word delay-7">Colaboración </span>
-            <span className="word delay-8">Comunicación </span>
-            <span className="word delay-9">Creatividad </span>
-            <span className="word delay-10">Mediación </span>
-            <span className="word delay-11">Proactividad </span>
-            <span className="word delay-12">Sinergia </span>
+            <span className="word delay-5">Adaptación</span>
+            <span className="word delay-6">Análisis de datos</span>
+            <span className="word delay-7">Colaboración</span>
+            <span className="word delay-8">Comunicación</span>
+            <span className="word delay-9">Creatividad</span>
+            <span className="word delay-10">Mediación</span>
+            <span className="word delay-11">Proactividad</span>
+            <span className="word delay-12">Sinergia</span>
           </div>
         </div>
-      
+
         <hr className="my-6 border-t border-white/25" />
-      
+
         <div className="mt-6">
           <h3 className="text-white/90 font-semibold mb-2">
             <span className="text-lg font-semibold text-cyber-gold">💻 Hard Skills</span>
           </h3>
-      
+
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60">
-            <span className="word delay-13">AI Automation </span>
-            <span className="word delay-14">Agentic Experience </span>
-            <span className="word delay-15">Customer Experience </span>
-            <span className="word delay-16">UI/UX </span>
-            <span className="word delay-17">Flujo de procesos </span>
-            <span className="word delay-18">Bases de datos </span>
-            <span className="word delay-19">Herramientas digitales </span>
-            <span className="word delay-20">Maquetación Web </span>
-            <span className="word delay-21">Prototipado </span>
-            <span className="word delay-22">Storytelling </span>
-            <span className="word delay-23">UI Editing </span>
-            <span className="word delay-24">UX Writing </span>
-            <span className="word delay-25">User Research </span>
+            <span className="word delay-13">AI Automation</span>
+            <span className="word delay-14">Agentic Experience</span>
+            <span className="word delay-15">Customer Experience</span>
+            <span className="word delay-16">UI/UX</span>
+            <span className="word delay-17">Flujo de procesos</span>
+            <span className="word delay-18">Bases de datos</span>
+            <span className="word delay-19">Herramientas digitales</span>
+            <span className="word delay-20">Maquetación Web</span>
+            <span className="word delay-21">Prototipado</span>
+            <span className="word delay-22">Storytelling</span>
+            <span className="word delay-23">UI Editing</span>
+            <span className="word delay-24">UX Writing</span>
+            <span className="word delay-25">User Research</span>
           </div>
         </div>
       </Section>
-      
+
       <Section
         id="projects"
         title="Trabajos realizados"
