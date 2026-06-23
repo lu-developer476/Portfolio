@@ -113,12 +113,20 @@ export const projects: Project[] = [
     demo: "https://technochessgame.onrender.com",
   },
     {
-    slug: "Do-Fu-Ióh",
-    title: "Do-Fu-Ióh",
+    slug: "hangman",
+    title: "El Ahorcado",
     year: "2026",
     description: "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
     tags: ["CSS", "JavaScript", "Python", "Django", "Supabase", "PostgreSQL", "UX/UI", "Render"],
-    demo: "https://do-fu-ioh.onrender.com",
+    demo: "https://hangman-thegame.onrender.com/",
+  },
+    {
+    slug: "frogger",
+    title: "Frogger",
+    year: "2026",
+    description: "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
+    tags: ["CSS", "JavaScript", "Python", "Django", "Supabase", "PostgreSQL", "UX/UI", "Render"],
+    demo: "https://jumpingfrogger-thegame.onrender.com/",
   },
   {
     slug: "coming-soon",
