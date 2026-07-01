@@ -140,7 +140,7 @@ export default function Navbar() {
             aria-label={t.nav.toggle}
             className="rounded-full border border-cyber-gold/70 bg-black/60 px-3 py-1.5 text-xs font-semibold tracking-widest text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen"
           >
-            {language === "es" ? "ES/EN" : "EN/ES"}
+            {language === "es" ? "🇪🇸/🇺🇸" : "🇺🇸/🇪🇸"}
           </button>
         </nav>
           
