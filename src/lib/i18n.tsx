@@ -81,12 +81,12 @@ const translations = {
         "gran-milla": "SPA turística realizada con React y Typescript. Desplegado con Vercel.",
         "2048": "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
         boaworm: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
-        Ajedrez: "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
+        ajedrez: "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
         hangman: "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
-        frogger: "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
+        "frogger-rally": "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
         "coming-soon": "☑️ Nuevos proyectos en proceso."
       },
-      titles: { Ajedrez: "Ajedrez", hangman: "El Ahorcado", "coming-soon": "PRÓXIMAMENTE" }
+      titles: { ajedrez: "Ajedrez", hangman: "El Ahorcado", "coming-soon": "PRÓXIMAMENTE" }
     }
   },
   en: {
@@ -165,12 +165,12 @@ const translations = {
         "gran-milla": "Tourism SPA built with React and TypeScript. Deployed on Vercel.",
         "2048": "Web video game developed with Python and Django. Deployed on Render.",
         boaworm: "Web video game developed with Python and Django. Deployed on Render.",
-        Ajedrez: "Web video game developed with Python and Django with an integrated database. Deployed on Render.",
+        ajedrez: "Web video game developed with Python and Django with an integrated database. Deployed on Render.",
         hangman: "Web video game developed with Python and Django with an integrated database. Deployed on Render.",
-        frogger: "Web video game developed with Python and Django with an integrated database. Deployed on Render.",
+        "frogger-rally": "Web video game developed with Python and Django with an integrated database. Deployed on Render.",
         "coming-soon": "☑️ New projects in progress."
       },
-      titles: { Ajedrez: "Chess", hangman: "Hangman", "coming-soon": "COMING SOON" }
+      titles: { ajedrez: "Chess", hangman: "Hangman", "coming-soon": "COMING SOON" }
     }
   }
 } as const;
