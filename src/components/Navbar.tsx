@@ -75,7 +75,7 @@ export default function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-40 border-b border-white/10 bg-black/70 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 md:px-6 py-4 md:py-5 min-h-[72px] md:min-h-[88px] gap-4">
+        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-3 px-4 py-4 md:px-6 md:py-5 lg:min-h-[88px] lg:flex-row lg:items-center lg:gap-4">
 
           {/* IZQUIERDA */}
           <div className="flex items-center gap-3 md:gap-4">
@@ -107,42 +107,46 @@ export default function Navbar() {
           </div>
 
           {/* DERECHA */}
-        <nav className="flex flex-wrap items-center justify-end gap-3 md:gap-5">
-          <span className="">
-            <NavLink href="/about" onHover={play}>{t.nav.about}</NavLink>
-          </span>
-          <span className="">
-            <NavLink href="/contact" onHover={play}>{t.nav.contact}</NavLink>
-          </span>
-          <div className="theme-toggle flex rounded-full border border-cyber-gold/70 bg-black/60 p-1" aria-label="Selector de tema">
-            {themes.map(({ mode, icon, title }) => (
+          <nav className="flex flex-col items-start gap-2 pl-[60px] md:pl-[80px] lg:flex-row lg:items-center lg:justify-end lg:gap-5 lg:pl-0">
+            <div className="flex items-center gap-3 md:gap-5">
+              <span>
+                <NavLink href="/about" onHover={play}>{t.nav.about}</NavLink>
+              </span>
+              <span>
+                <NavLink href="/contact" onHover={play}>{t.nav.contact}</NavLink>
+              </span>
+            </div>
+            <div className="flex items-center gap-2 md:gap-3">
+              <div className="theme-toggle flex rounded-full border border-cyber-gold/70 bg-black/60 p-1" aria-label="Selector de tema">
+                {themes.map(({ mode, icon, title }) => (
+                  <button
+                    key={mode}
+                    type="button"
+                    onClick={() => changeTheme(mode)}
+                    title={title}
+                    aria-label={title}
+                    aria-pressed={theme === mode}
+                    className={`rounded-full px-2 py-1 text-xs transition ${
+                      theme === mode
+                        ? "bg-cyber-gold text-black shadow-sm"
+                        : "text-cyber-gold hover:text-cyber-neonGreen"
+                    }`}
+                  >
+                    <span aria-hidden>{icon}</span>
+                  </button>
+                ))}
+              </div>
               <button
-                key={mode}
                 type="button"
-                onClick={() => changeTheme(mode)}
-                title={title}
-                aria-label={title}
-                aria-pressed={theme === mode}
-                className={`rounded-full px-2 py-1 text-xs transition ${
-                  theme === mode
-                    ? "bg-cyber-gold text-black shadow-sm"
-                    : "text-cyber-gold hover:text-cyber-neonGreen"
-                }`}
+                onClick={toggleLanguage}
+                onMouseEnter={play}
+                aria-label={t.nav.toggle}
+                className="rounded-full border border-cyber-gold/70 bg-black/60 px-3 py-1.5 text-xs font-semibold tracking-widest text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen"
               >
-                <span aria-hidden>{icon}</span>
+                {language === "es" ? "🇪🇸/🇺🇸" : "🇺🇸/🇪🇸"}
               </button>
-            ))}
-          </div>
-          <button
-            type="button"
-            onClick={toggleLanguage}
-            onMouseEnter={play}
-            aria-label={t.nav.toggle}
-            className="rounded-full border border-cyber-gold/70 bg-black/60 px-3 py-1.5 text-xs font-semibold tracking-widest text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen"
-          >
-            {language === "es" ? "🇪🇸/🇺🇸" : "🇺🇸/🇪🇸"}
-          </button>
-        </nav>
+            </div>
+          </nav>
           
         </div>
       </header>
