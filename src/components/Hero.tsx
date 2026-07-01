@@ -4,17 +4,19 @@ import { useEffect, useMemo, useRef } from "react";
 import ThreeBackground from "./ThreeBackground";
 import KiroshiOverlay from "./KiroshiOverlay";
 import { getTagline } from "@/generated/tagline";
+import { useLanguage } from "@/lib/i18n";
 
 export default function Hero() {
   const titleRef = useRef<HTMLHeadingElement | null>(null);
+  const { language, t } = useLanguage();
 
   const tagline = useMemo(() => {
     try {
       return getTagline();
     } catch {
-      return "Interfaces precisas. Arquitectura limpia. Experiencia sin fricción.";
+      return t.hero.fallbackTagline;
     }
-  }, []);
+  }, [t.hero.fallbackTagline]);
 
   useEffect(() => {
     let cancelled = false;
@@ -61,18 +63,15 @@ export default function Hero() {
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight opacity-0"
         >
           <span className="text-cyber-gold block">
-            Interfaces que escalan
+            {t.hero.titleGold}
           </span>
           <span className="text-white block">
-            sin romper la experiencia
+            {t.hero.titleWhite}
           </span>
         </h1>
 
         <p className="mt-6 max-w-2xl text-white/75 leading-relaxed text-sm sm:text-base md:text-lg">
-          Desarrollo productos digitales con foco en rendimiento,
-          claridad estructural y criterio UX.
-          Código mantenible. Feedback inmediato.
-          Backend real listo para producción.
+{t.hero.description}
         </p>
 
         {/* Stats responsive */}
@@ -80,23 +79,23 @@ export default function Hero() {
           <Stat
             label="Performance"
             value="⚙️ + 📈"
-            hint="Core Web Vitals optimizados y render eficiente"
+            hint={t.hero.stats.performance}
           />
           <Stat
             label="User Experience"
             value="🧭 + 🔎"
-            hint="Interacciones claras con validaciones en tiempo real"
+            hint={t.hero.stats.ux}
           />
           <Stat
             label="Backend Ready"
             value="🔐 + 🛠️ + 🌐"
-            hint="Firestore + API Routes listos para escalar"
+            hint={t.hero.stats.backend}
           />
         </div>
 
         {/* Tagline dinámico */}
         <p className="mt-10 text-xs md:text-sm text-white/40 font-mono">
-          {tagline}
+          {language === "es" ? tagline : t.hero.fallbackTagline}
         </p>
 
       </div>

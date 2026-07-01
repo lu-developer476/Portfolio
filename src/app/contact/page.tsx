@@ -3,20 +3,22 @@
 import ContactForm from "@/components/ContactForm";
 import Section from "@/components/Section";
 import { useHoverSound } from "@/lib/useHoverSound";
+import { useLanguage } from "@/lib/i18n";
 
 export default function ContactPage() {
   const { play } = useHoverSound("zoom");
+  const { t } = useLanguage();
 
   return (
     <Section
       id="contact"
-      title="Contacto"
-      subtitle="Si estás buscando trabajar conmigo o tenés una idea en mente, no dudes en escribirme."
+      title={t.contact.title}
+      subtitle={t.contact.subtitle}
     >
       <div className="grid gap-6 md:grid-cols-2">
         <div className="rounded-xl border border-white/50 bg-black/35 p-5">
           <h3 className="text-lg font-semibold text-cyber-gold">
-            Te invito a conocer:
+            {t.contact.invite}
           </h3>
 
           <ul className="mt-4 space-y-3 text-white/85">
@@ -82,7 +84,7 @@ export default function ContactPage() {
           </ul>
 
           <p className="mt-6 text-sm text-white/100 leading-relaxed">
-            Transformando los desafíos en nuevas oportunidades de aprendizaje y experiencias valiosas.
+            {t.contact.note}
           </p>
         </div>
 
