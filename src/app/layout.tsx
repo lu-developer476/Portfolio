@@ -19,7 +19,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LanguageProvider>
           <div className="relative min-h-screen bg-cyber-gradient">
             <div className="noise" />
-            <div className="cyber-grid absolute inset-0" />
             <Navbar />
             <main className="relative mx-auto w-full max-w-6xl px-4 pb-20 pt-8">
               {children}

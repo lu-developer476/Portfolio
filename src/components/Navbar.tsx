@@ -10,7 +10,7 @@ type ThemeMode = "dark" | "light" | "beige";
 
 const themes: Array<{ mode: ThemeMode; label: string; icon: string; title: string }> = [
   { mode: "dark", label: "Oscuro", icon: "🌙", title: "Modo oscuro" },
-  { mode: "light", label: "Claro", icon: "🌊", title: "Modo claro verde azulado" },
+  { mode: "light", label: "Claro", icon: "🌊", title: "Modo claro" },
   { mode: "beige", label: "Beige", icon: "🏜️", title: "Modo beige" }
 ];
 
@@ -100,7 +100,7 @@ export default function Navbar() {
               <div className="text-sm md:text-base font-semibold whitespace-nowrap">
                 Lucas Montenegro
               </div>
-              <div className="text-xs font-mono tracking-wider text-cyber-neonGreen/60 overflow-hidden border-r-2 border-cyber-neonGreen/80 whitespace-nowrap animate-typing w-[10ch]">
+              <div className="freelancer-role text-xs font-mono tracking-wider text-cyber-neonGreen/60 overflow-hidden border-r-2 border-cyber-neonGreen/80 whitespace-nowrap animate-typing w-[10ch]">
                 Freelancer
               </div>
             </Link>

@@ -19,18 +19,6 @@ body {
 }
 
 /* ============================= */
-/* Cyber Grid                    */
-/* ============================= */
-
-.cyber-grid {
-  background-image:
-    linear-gradient(rgba(245, 158, 11, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245, 158, 11, 0.06) 1px, transparent 1px);
-  background-size: 36px 36px;
-  mask-image: radial-gradient(circle at 50% 20%, black 0%, black 50%, transparent 70%);
-}
-
-/* ============================= */
 /* Noise Overlay                 */
 /* ============================= */
 
@@ -282,8 +270,8 @@ html[data-theme="light"] {
   --theme-surface: rgba(224, 250, 247, 0.82);
   --theme-surface-strong: rgba(190, 240, 235, 0.92);
   --theme-header: rgba(11, 77, 90, 0.86);
-  --theme-text: #062f35;
-  --theme-text-soft: rgba(6, 47, 53, 0.78);
+  --theme-text: #000000;
+  --theme-text-soft: rgba(0, 0, 0, 0.78);
   --theme-border: rgba(14, 116, 144, 0.35);
   --theme-accent: #0f766e;
   --theme-accent-2: #0369a1;
@@ -297,8 +285,8 @@ html[data-theme="beige"] {
   --theme-surface: rgba(239, 225, 196, 0.84);
   --theme-surface-strong: rgba(214, 186, 145, 0.92);
   --theme-header: rgba(56, 36, 20, 0.88);
-  --theme-text: #1c130b;
-  --theme-text-soft: rgba(28, 19, 11, 0.76);
+  --theme-text: #000000;
+  --theme-text-soft: rgba(0, 0, 0, 0.76);
   --theme-border: rgba(120, 74, 35, 0.36);
   --theme-accent: #8b5e34;
   --theme-accent-2: #3b2413;
@@ -356,6 +344,28 @@ html:not([data-theme="dark"]) .word {
   color: var(--theme-accent) !important;
 }
 
+html[data-theme="light"] .skills-list .word {
+  color: #9a3412 !important;
+}
+
+html[data-theme="beige"] .skills-list .word {
+  color: #ffffff !important;
+}
+
+html[data-theme="light"] .freelancer-role {
+  color: #ffffff !important;
+}
+
+html[data-theme="beige"] .freelancer-role {
+  color: #facc15 !important;
+}
+
+html:not([data-theme="dark"]) footer,
+html:not([data-theme="dark"]) footer .text-white\/70,
+html:not([data-theme="dark"]) footer .text-cyber-gold {
+  color: #000000 !important;
+}
+
 html:not([data-theme="dark"]) .border-white\/5,
 html:not([data-theme="dark"]) .border-white\/10,
 html:not([data-theme="dark"]) .border-white\/20,
@@ -369,12 +379,6 @@ html:not([data-theme="dark"]) .border-cyber-neonGreen\/60,
 html:not([data-theme="dark"]) .border-cyber-neonGreen\/70,
 html:not([data-theme="dark"]) .border-cyber-neonGreen\/80 {
   border-color: var(--theme-border) !important;
-}
-
-html:not([data-theme="dark"]) .cyber-grid {
-  background-image:
-    linear-gradient(color-mix(in srgb, var(--theme-accent) 18%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in srgb, var(--theme-accent-2) 16%, transparent) 1px, transparent 1px);
 }
 
 html:not([data-theme="dark"]) .noise {
