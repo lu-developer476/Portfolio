@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useHoverSound } from "@/lib/useHoverSound";
+import { useLanguage } from "@/lib/i18n";
 
 const NavLink = ({
   href,
@@ -29,6 +30,7 @@ const NavLink = ({
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { play } = useHoverSound("bleep");
+  const { language, toggleLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -76,11 +78,20 @@ export default function Navbar() {
           {/* DERECHA */}
         <nav className="flex items-center gap-4 md:gap-8">
           <span className="">
-            <NavLink href="/about" onHover={play}>Perfil</NavLink>
+            <NavLink href="/about" onHover={play}>{t.nav.about}</NavLink>
           </span>
           <span className="">
-            <NavLink href="/contact" onHover={play}>Contacto</NavLink>
+            <NavLink href="/contact" onHover={play}>{t.nav.contact}</NavLink>
           </span>
+          <button
+            type="button"
+            onClick={toggleLanguage}
+            onMouseEnter={play}
+            aria-label={t.nav.toggle}
+            className="rounded-full border border-cyber-gold/70 bg-black/60 px-3 py-1.5 text-xs font-semibold tracking-widest text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen"
+          >
+            {language === "es" ? "ES/EN" : "EN/ES"}
+          </button>
         </nav>
           
         </div>

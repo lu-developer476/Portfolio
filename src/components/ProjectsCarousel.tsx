@@ -6,10 +6,12 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { useHoverSound } from "@/lib/useHoverSound";
+import { useLanguage } from "@/lib/i18n";
 
 export default function ProjectsCarousel({ expanded = false }: { expanded?: boolean }) {
   const list = expanded ? projects : projects.slice(0, 6);
   const { play } = useHoverSound("zoom");
+  const { t } = useLanguage();
 
   return (
     <Swiper
@@ -36,7 +38,7 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
             {/* Header */}
             <div className="flex items-start justify-between">
               <h3 className="text-lg font-semibold text-cyber-gold transition group-hover:text-white">
-                {p.title}
+                {t.projects.titles[p.slug as keyof typeof t.projects.titles] ?? p.title}
               </h3>
 
               <span className="text-[11px] tracking-wider text-white/100 border border-white/100 px-2 py-1 rounded-md">
@@ -46,7 +48,7 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
 
             {/* Description */}
             <p className="mt-4 text-sm leading-relaxed text-white/100">
-              {p.description}
+              {t.projects.descriptions[p.slug as keyof typeof t.projects.descriptions] ?? p.description}
             </p>
 
             {/* Tags */}
@@ -66,7 +68,7 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
             {/* Live badge */}
             {p.demo && (
               <div className="mt-5 text-xs font-semibold text-cyber-neonGreen tracking-wider">
-                ● LIVE
+                {t.projects.live}
               </div>
             )}
           </article>

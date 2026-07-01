@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Swal from "sweetalert2";
+import { useLanguage } from "@/lib/i18n";
 
 type FormState = {
   name: string;
@@ -20,6 +21,7 @@ const baseSwal = Swal.mixin({
 });
 
 export default function ContactForm() {
+  const { t } = useLanguage();
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<FormState>({ name: "", email: "", message: "" });
 
@@ -41,21 +43,21 @@ export default function ContactForm() {
       const body = (await res.json()) as { ok: boolean; error?: string };
 
       if (!res.ok || !body.ok) {
-        throw new Error(body.error || "Error desconocido");
+        throw new Error(body.error || t.contact.form.unknownError);
       }
 
       await baseSwal.fire({
         icon: "success",
-        title: "Éxito",
-        text: "Mensaje recibido. Revisa tu casilla principal y/o Spam."
+        title: t.contact.form.successTitle,
+        text: t.contact.form.successText
       });
 
       setData({ name: "", email: "", message: "" });
     } catch (err: any) {
       await baseSwal.fire({
         icon: "error",
-        title: "Fallo al enviar",
-        text: err?.message ?? "Probá de nuevo en un minuto."
+        title: t.contact.form.errorTitle,
+        text: err?.message ?? t.contact.form.retry
       });
     } finally {
       setLoading(false);
@@ -64,12 +66,12 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={submit} className="space-y-3">
-      <Field label="Datos personales">
+      <Field label={t.contact.form.personal}>
         <input
           value={data.name}
           onChange={onChange("name")}
           className="w-full rounded-lg border border-white/100 bg-black/60 px-3 py-2 text-sm outline-none focus:border-cyber-neonGreen/60"
-          placeholder="Nombre y apellido"
+          placeholder={t.contact.form.namePlaceholder}
           required
         />
       </Field>
@@ -85,12 +87,12 @@ export default function ContactForm() {
         />
       </Field>
 
-      <Field label="¿Motivo de tu consulta?">
+      <Field label={t.contact.form.reason}>
         <textarea
           value={data.message}
           onChange={onChange("message")}
           className="min-h-28 w-full rounded-lg border border-white/100 bg-black/60 px-3 py-2 text-sm outline-none focus:border-cyber-neonGreen/60"
-          placeholder="Contame en qué te puedo ayudar..."
+          placeholder={t.contact.form.messagePlaceholder}
           required
         />
       </Field>
@@ -100,11 +102,11 @@ export default function ContactForm() {
         disabled={loading}
         className="w-full rounded-lg border border-cyber-gold/70 bg-black/70 px-4 py-2 text-sm font-semibold transition hover:bg-cyber-gold/10 disabled:opacity-60"
       >
-        {loading ? "Un momento por favor..." : "Enviar"}
+        {loading ? t.contact.form.sending : t.contact.form.submit}
       </button>
 
       <p className="text-xs text-white/55">
-        Tu información será tratada de forma confidencial para responder tu mensaje.
+        {t.contact.form.privacy}
       </p>
     </form>
   );
