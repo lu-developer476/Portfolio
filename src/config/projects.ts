@@ -105,7 +105,7 @@ export const projects: Project[] = [
     demo: "https://boaworm.onrender.com",
   },
   {
-    slug: "Ajedrez",
+    slug: "ajedrez",
     title: "Ajedrez",
     year: "2026",
     description: "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
@@ -121,8 +121,8 @@ export const projects: Project[] = [
     demo: "https://hangman-thegame.onrender.com/",
   },
     {
-    slug: "frogger",
-    title: "Frogger",
+    slug: "frogger-rally",
+    title: "Frogger Rally",
     year: "2026",
     description: "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
     tags: ["CSS", "JavaScript", "Python", "Django", "Supabase", "PostgreSQL", "UX/UI", "Render"],
