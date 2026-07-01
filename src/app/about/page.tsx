@@ -203,7 +203,7 @@ export default function AboutPage() {
             <span className="text-lg font-semibold text-cyber-gold">💡 Soft Skills</span>
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60">
+          <div className="skills-list grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60">
             {t.about.softSkills.map((skill, index) => (
               <span key={skill} className={`word delay-${index + 5}`}>{skill}</span>
             ))}
@@ -217,7 +217,7 @@ export default function AboutPage() {
             <span className="text-lg font-semibold text-cyber-gold">💻 Hard Skills</span>
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60">
+          <div className="skills-list grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60">
             {t.about.hardSkills.map((skill, index) => (
               <span key={skill} className={`word delay-${index + 13}`}>{skill}</span>
             ))}
