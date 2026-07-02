@@ -75,7 +75,7 @@ export default function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-40 border-b border-white/10 bg-black/70 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-3 px-4 py-4 md:px-6 md:py-5 lg:min-h-[88px] lg:flex-row lg:items-center lg:gap-4">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-3 px-4 py-4 md:px-6 md:py-5 lg:min-h-[88px]">
 
           {/* IZQUIERDA */}
           <div className="flex items-center gap-3 md:gap-4">
@@ -107,7 +107,7 @@ export default function Navbar() {
           </div>
 
           {/* DERECHA */}
-          <nav className="flex flex-col items-start gap-2 pl-[60px] md:pl-[80px] lg:flex-row lg:items-center lg:justify-end lg:gap-5 lg:pl-0">
+          <nav className="ml-auto flex flex-col items-end gap-2 sm:flex-row sm:items-center sm:justify-end sm:gap-5">
             <div className="flex items-center gap-3 md:gap-5">
               <span>
                 <NavLink href="/about" onHover={play}>{t.nav.about}</NavLink>
@@ -116,8 +116,8 @@ export default function Navbar() {
                 <NavLink href="/contact" onHover={play}>{t.nav.contact}</NavLink>
               </span>
             </div>
-            <div className="flex items-center gap-2 md:gap-3">
-              <div className="theme-toggle flex rounded-full border border-cyber-gold/70 bg-black/60 p-1" aria-label="Selector de tema">
+            <div className="flex items-center gap-1 rounded-full border border-cyber-gold/70 bg-black/60 p-1 shadow-[0_0_18px_rgba(250,204,21,0.16)]">
+              <div className="theme-toggle flex items-center gap-1" aria-label="Selector de tema">
                 {themes.map(({ mode, icon, title }) => (
                   <button
                     key={mode}
@@ -126,7 +126,7 @@ export default function Navbar() {
                     title={title}
                     aria-label={title}
                     aria-pressed={theme === mode}
-                    className={`rounded-full px-2 py-1 text-xs transition ${
+                    className={`flex h-8 w-8 items-center justify-center rounded-full text-sm transition ${
                       theme === mode
                         ? "bg-cyber-gold text-black shadow-sm"
                         : "text-cyber-gold hover:text-cyber-neonGreen"
@@ -136,12 +136,13 @@ export default function Navbar() {
                   </button>
                 ))}
               </div>
+              <span className="h-6 w-px bg-cyber-gold/40" aria-hidden />
               <button
                 type="button"
                 onClick={toggleLanguage}
                 onMouseEnter={play}
                 aria-label={t.nav.toggle}
-                className="rounded-full border border-cyber-gold/70 bg-black/60 px-3 py-1.5 text-xs font-semibold tracking-widest text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen"
+                className="rounded-full px-2.5 py-1.5 text-xs font-semibold tracking-widest text-cyber-gold transition hover:bg-cyber-gold/10 hover:text-cyber-neonGreen"
               >
                 {language === "es" ? "🇪🇸/🇺🇸" : "🇺🇸/🇪🇸"}
               </button>
