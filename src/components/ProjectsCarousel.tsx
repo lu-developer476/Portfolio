@@ -11,7 +11,7 @@ import { useLanguage } from "@/lib/i18n";
 export default function ProjectsCarousel({ expanded = false }: { expanded?: boolean }) {
   const list = expanded ? projects : projects.slice(0, 6);
   const { play } = useHoverSound("zoom");
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <Swiper
@@ -38,7 +38,9 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
             {/* Header */}
             <div className="flex items-start justify-between">
               <h3 className="text-lg font-semibold text-cyber-gold transition group-hover:text-white">
-                {t.projects.titles[p.slug as keyof typeof t.projects.titles] ?? p.title}
+                {language === "en"
+                  ? t.projects.titles[p.slug as keyof typeof t.projects.titles] ?? p.title
+                  : p.title}
               </h3>
 
               <span className="text-[11px] tracking-wider text-white/100 border border-white/100 px-2 py-1 rounded-md">
@@ -48,7 +50,9 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
 
             {/* Description */}
             <p className="light-electric-blue mt-4 text-sm leading-relaxed text-white/100">
-              {t.projects.descriptions[p.slug as keyof typeof t.projects.descriptions] ?? p.description}
+              {language === "en"
+                ? t.projects.descriptions[p.slug as keyof typeof t.projects.descriptions] ?? p.description
+                : p.description}
             </p>
 
             {/* Tags */}
