@@ -148,6 +148,6 @@ export const projects: Project[] = [
     slug: "coming-soon",
     title: "PRÓXIMAMENTE",
     year: "❔",
-    description: "☑️ Nuevos proyectos en proceso."
+    description: "☑️ Nuevos proyectos en fase de desarrollo."
   }
 ];

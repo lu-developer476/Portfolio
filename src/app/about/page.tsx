@@ -138,7 +138,7 @@ export default function AboutPage() {
               Frontend
             </strong>
 
-            <span className="word delay-1">
+            <span className="light-electric-blue word delay-1">
               {t.about.frontend}
             </span>
           </div>
@@ -149,7 +149,7 @@ export default function AboutPage() {
               Backend
             </strong>
 
-            <span className="word delay-2">
+            <span className="light-electric-blue word delay-2">
               API Design, Debugging, Dev & Prod, Email APIs, Web Storage
             </span>
           </div>

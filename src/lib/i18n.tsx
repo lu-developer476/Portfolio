@@ -18,7 +18,9 @@ const translations = {
         ux: "Interacciones claras con validaciones en tiempo real",
         backend: "Firestore + API Routes listos para escalar"
       },
-      fallbackTagline: "Interfaces precisas. Arquitectura limpia. Experiencia sin fricción."
+      fallbackTagline: "Interfaces precisas. Arquitectura limpia. Experiencia sin fricción.",
+      systemStatus: "> SISTEMA: EN LÍNEA • ESTADO: DESPLEGADO • SEÑAL: ESTABLE",
+      systemVoice: "Sistema en línea. Estado desplegado. Señal estable."
     },
     home: {
       methodTitle: "Metodología",
@@ -84,7 +86,9 @@ const translations = {
         ajedrez: "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
         hangman: "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
         "frogger-rally": "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
-        "coming-soon": "☑️ Nuevos proyectos en proceso."
+        "do-fu-ioh": "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
+        "2042": "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
+        "coming-soon": "☑️ Nuevos proyectos en fase de desarrollo."
       },
       titles: { ajedrez: "Ajedrez", hangman: "El Ahorcado", "coming-soon": "PRÓXIMAMENTE" }
     }
@@ -102,7 +106,9 @@ const translations = {
         ux: "Clear interactions with real-time validations",
         backend: "Firestore + API Routes ready to scale"
       },
-      fallbackTagline: "Precise interfaces. Clean architecture. Frictionless experience."
+      fallbackTagline: "Precise interfaces. Clean architecture. Frictionless experience.",
+      systemStatus: "> SYSTEM: ONLINE • STATUS: DEPLOYED • SIGNAL: STABLE",
+      systemVoice: "System online. Status deployed. Signal stable."
     },
     home: {
       methodTitle: "Methodology",
@@ -168,7 +174,9 @@ const translations = {
         ajedrez: "Web video game developed with Python and Django with an integrated database. Deployed on Render.",
         hangman: "Web video game developed with Python and Django with an integrated database. Deployed on Render.",
         "frogger-rally": "Web video game developed with Python and Django with an integrated database. Deployed on Render.",
-        "coming-soon": "☑️ New projects in progress."
+        "do-fu-ioh": "Web video game developed with Python and Django with an integrated database. Deployed on Render.",
+        "2042": "Web video game developed with Python and Django. Deployed on Render.",
+        "coming-soon": "☑️ New projects in development phase."
       },
       titles: { ajedrez: "Chess", hangman: "Hangman", "coming-soon": "COMING SOON" }
     }

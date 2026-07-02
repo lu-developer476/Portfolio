@@ -402,3 +402,8 @@ html:not([data-theme="dark"]) .theme-toggle button[aria-pressed="true"] {
   background-color: var(--theme-accent-3) !important;
   color: var(--theme-text) !important;
 }
+
+html[data-theme="light"] .light-electric-blue,
+html[data-theme="light"] .skills-list .word {
+  color: #0077ff !important;
+}
