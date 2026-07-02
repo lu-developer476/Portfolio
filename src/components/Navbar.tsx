@@ -119,38 +119,6 @@ export default function Navbar() {
               ☰
             </button>
 
-            <div className="hidden items-center gap-1 rounded-full border border-cyber-gold/70 bg-black/60 p-1 shadow-[0_0_18px_rgba(250,204,21,0.16)] lg:flex">
-              <div className="theme-toggle flex items-center gap-1" aria-label={language === "es" ? "Selector de tema" : "Theme selector"}>
-                {themes.map(({ mode, icon, title }) => (
-                  <button
-                    key={mode}
-                    type="button"
-                    onClick={() => changeTheme(mode)}
-                    title={title}
-                    aria-label={title}
-                    aria-pressed={theme === mode}
-                    className={`flex h-8 w-8 items-center justify-center rounded-full text-sm transition ${
-                      theme === mode
-                        ? "bg-cyber-gold text-black shadow-sm"
-                        : "text-cyber-gold hover:text-cyber-neonGreen"
-                    }`}
-                  >
-                    <span aria-hidden>{icon}</span>
-                  </button>
-                ))}
-              </div>
-              <span className="h-6 w-px bg-cyber-gold/40" aria-hidden />
-              <button
-                type="button"
-                onClick={handleLanguageToggle}
-                onMouseEnter={play}
-                aria-label={t.nav.toggle}
-                className="rounded-full px-2.5 py-1.5 text-xs font-semibold tracking-widest text-cyber-gold transition hover:bg-cyber-gold/10 hover:text-cyber-neonGreen"
-              >
-                {language === "es" ? "🇪🇸/🇺🇸" : "🇺🇸/🇪🇸"}
-              </button>
-            </div>
-
             {menuOpen && (
               <div className="absolute right-0 top-12 z-50 w-64 rounded-2xl border border-cyber-gold/60 bg-black/95 p-4 shadow-[0_0_28px_rgba(250,204,21,0.22)] backdrop-blur">
                 <div className="space-y-4">
