@@ -113,6 +113,14 @@ export const projects: Project[] = [
     demo: "https://technochessgame.onrender.com",
   },
   {
+    slug: "do-fu-ioh",
+    title: "Do-Fu-Ioh",
+    year: "2026",
+    description: "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
+    tags: ["CSS", "JavaScript", "Python", "Django", "Supabase", "PostgreSQL", "UX/UI", "Render"],
+    demo: "https://do-fu-ioh.onrender.com",
+  },
+  {
     slug: "2042",
     title: "2042",
     year: "2026",
