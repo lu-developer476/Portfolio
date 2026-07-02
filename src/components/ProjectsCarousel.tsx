@@ -67,7 +67,7 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
 
             {/* Live badge */}
             {p.demo && (
-              <div className="mt-5 text-xs font-semibold text-cyber-neonGreen tracking-wider">
+              <div className="live-badge mt-5 text-xs font-semibold text-cyber-neonGreen tracking-wider">
                 {t.projects.live}
               </div>
             )}

@@ -360,6 +360,14 @@ html[data-theme="beige"] .freelancer-role {
   color: #facc15 !important;
 }
 
+html[data-theme="light"] .live-badge {
+  color: #0077ff !important;
+}
+
+html[data-theme="beige"] .live-badge {
+  color: #facc15 !important;
+}
+
 html:not([data-theme="dark"]) footer,
 html:not([data-theme="dark"]) footer .text-white\/70,
 html:not([data-theme="dark"]) footer .text-cyber-gold {
