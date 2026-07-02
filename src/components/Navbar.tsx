@@ -23,27 +23,6 @@ const getInitialTheme = (): ThemeMode => {
     : "dark";
 };
 
-const NavLink = ({
-  href,
-  children,
-  onClick,
-  onHover
-}: {
-  href: string;
-  children: React.ReactNode;
-  onClick?: () => void;
-  onHover?: () => void;
-}) => (
-  <Link
-    href={href}
-    onClick={onClick}
-    onMouseEnter={onHover}
-    className="text-xs md:text-sm text-white/70 hover:text-white transition underline decoration-white/10 underline-offset-8 hover:decoration-cyber-gold/60"
-  >
-    {children}
-  </Link>
-);
-
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -117,15 +96,6 @@ export default function Navbar() {
 
           {/* DERECHA */}
           <nav className="relative ml-auto flex items-center justify-end gap-3 md:gap-5">
-            <div className="flex items-center gap-3 md:gap-5">
-              <span>
-                <NavLink href="/about" onHover={play}>{t.nav.about}</NavLink>
-              </span>
-              <span>
-                <NavLink href="/contact" onHover={play}>{t.nav.contact}</NavLink>
-              </span>
-            </div>
-
             <button
               type="button"
               onClick={() => {
@@ -135,7 +105,7 @@ export default function Navbar() {
               onMouseEnter={play}
               aria-label="Abrir selector de idioma y tema"
               aria-expanded={menuOpen}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-cyber-gold/70 bg-black/70 text-xl leading-none text-cyber-gold shadow-[0_0_18px_rgba(250,204,21,0.16)] transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen lg:hidden"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-cyber-gold/70 bg-black/70 text-xl leading-none text-cyber-gold shadow-[0_0_18px_rgba(250,204,21,0.16)] transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen"
             >
               ☰
             </button>
@@ -173,8 +143,30 @@ export default function Navbar() {
             </div>
 
             {menuOpen && (
-              <div className="absolute right-0 top-12 z-50 w-64 rounded-2xl border border-cyber-gold/60 bg-black/95 p-4 shadow-[0_0_28px_rgba(250,204,21,0.22)] backdrop-blur lg:hidden">
+              <div className="absolute right-0 top-12 z-50 w-64 rounded-2xl border border-cyber-gold/60 bg-black/95 p-4 shadow-[0_0_28px_rgba(250,204,21,0.22)] backdrop-blur">
                 <div className="space-y-4">
+                  <div>
+                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/45">Navegación</p>
+                    <div className="grid gap-2">
+                      <Link
+                        href="/about"
+                        onClick={() => setMenuOpen(false)}
+                        onMouseEnter={play}
+                        className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold tracking-widest text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen"
+                      >
+                        {t.nav.about}
+                      </Link>
+                      <Link
+                        href="/contact"
+                        onClick={() => setMenuOpen(false)}
+                        onMouseEnter={play}
+                        className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold tracking-widest text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen"
+                      >
+                        {t.nav.contact}
+                      </Link>
+                    </div>
+                  </div>
+
                   <div>
                     <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/45">Idiomas</p>
                     <button

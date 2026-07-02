@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useLanguage } from "@/lib/i18n";
 
 export default function KiroshiOverlay() {
+  const { t } = useLanguage();
   const circleRef = useRef<HTMLDivElement | null>(null);
   const scanRef = useRef<HTMLDivElement | null>(null);
 
@@ -56,7 +58,7 @@ export default function KiroshiOverlay() {
         };
 
         // disparar TTS
-        speakCyberpunk("SYSTEM: ONLINE. STATUS: DEPLOYED. SIGNAL: STABLE.");
+        speakCyberpunk(t.hero.systemVoice);
       }
 
     })();
@@ -65,7 +67,7 @@ export default function KiroshiOverlay() {
       cancelled = true;
       window.speechSynthesis.cancel(); // corta la voz si desmonta el componente
     };
-  }, []);
+  }, [t.hero.systemVoice]);
 
   return (
     <div className="pointer-events-none absolute inset-0 z-20 overflow-hidden">
@@ -84,7 +86,7 @@ export default function KiroshiOverlay() {
 
       {/* Coordenadas */}
       <div className="absolute left-4 top-4 text-[10px] text-cyber-neonGreen/60 font-mono tracking-wider">
-        &gt; SYSTEM: ONLINE • STATUS: DEPLOYED • SIGNAL: STABLE
+        {t.hero.systemStatus}
       </div>
     </div>
   );
