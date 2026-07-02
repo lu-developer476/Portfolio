@@ -115,7 +115,7 @@ function Stat({
   return (
     <div className="rounded-lg border border-white/10 bg-black/40 backdrop-blur-sm p-4 transition hover:border-cyber-gold/40">
       <div className="flex items-center justify-between">
-        <div className="light-electric-blue text-[10px] md:text-xs text-white/50 uppercase tracking-widest">
+        <div className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest">
           {label}
         </div>
         <div className="text-base md:text-lg">{value}</div>
