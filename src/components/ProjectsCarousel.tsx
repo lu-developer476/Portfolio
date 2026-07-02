@@ -47,7 +47,7 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
             </div>
 
             {/* Description */}
-            <p className="mt-4 text-sm leading-relaxed text-white/100">
+            <p className="light-electric-blue mt-4 text-sm leading-relaxed text-white/100">
               {t.projects.descriptions[p.slug as keyof typeof t.projects.descriptions] ?? p.description}
             </p>
 

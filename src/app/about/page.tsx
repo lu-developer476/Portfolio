@@ -60,15 +60,15 @@ export default function AboutPage() {
         subtitle={t.about.subtitle}
       >
         <div className="rounded-xl border border-white/10 bg-black/35 p-6">
-          <p className="text-white/85 leading-7">
+          <p className="light-electric-blue text-white/85 leading-7">
             {t.about.paragraphs[0]}
           </p>
 
-          <p className="mt-4 text-white/85 leading-7">
+          <p className="light-electric-blue mt-4 text-white/85 leading-7">
             {t.about.paragraphs[1]}
           </p>
 
-          <p className="mt-4 text-white/85 leading-7">
+          <p className="light-electric-blue mt-4 text-white/85 leading-7">
             {t.about.paragraphs[2]}
           </p>
         </div>

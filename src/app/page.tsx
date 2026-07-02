@@ -14,8 +14,8 @@ export default function HomePage() {
         <div className="grid gap-4 md:grid-cols-2">
           {t.home.cards.map(([title, description]) => (
             <div key={title} className="rounded-xl border border-white/10 bg-black/35 p-5">
-              <h3 className="text-lg font-semibold text-cyber-gold">{title}</h3>
-              <p className="mt-2 text-white/80">{description}</p>
+              <h3 className="light-electric-blue text-lg font-semibold text-cyber-gold">{title}</h3>
+              <p className="light-electric-blue mt-2 text-white/80">{description}</p>
             </div>
           ))}
         </div>

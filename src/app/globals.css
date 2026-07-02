@@ -365,7 +365,7 @@ html[data-theme="light"] .live-badge {
 }
 
 html[data-theme="beige"] .live-badge {
-  color: #facc15 !important;
+  color: #c2410c !important;
 }
 
 html:not([data-theme="dark"]) footer,
