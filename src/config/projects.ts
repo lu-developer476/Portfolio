@@ -112,6 +112,14 @@ export const projects: Project[] = [
     tags: ["CSS", "JavaScript", "Python", "Django", "Supabase", "PostgreSQL", "UX/UI", "Render"],
     demo: "https://technochessgame.onrender.com",
   },
+  {
+    slug: "2042",
+    title: "2042",
+    year: "2026",
+    description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
+    tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
+    demo: "https://twothousandfortytwo.onrender.com",
+  },
     {
     slug: "hangman",
     title: "El Ahorcado",
