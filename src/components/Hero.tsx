@@ -120,7 +120,7 @@ function Stat({
         </div>
         <div className="text-base md:text-lg">{value}</div>
       </div>
-      <div className="mt-2 text-xs md:text-sm text-white/70 leading-snug">
+      <div className="light-electric-blue mt-2 text-xs md:text-sm text-white/70 leading-snug">
         {hint}
       </div>
     </div>
