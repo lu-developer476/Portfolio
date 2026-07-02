@@ -8,12 +8,6 @@ import { useLanguage } from "@/lib/i18n";
 
 type ThemeMode = "dark" | "light" | "beige";
 
-const themes: Array<{ mode: ThemeMode; label: string; icon: string; title: string }> = [
-  { mode: "dark", label: "Oscuro", icon: "🌙", title: "Modo oscuro" },
-  { mode: "light", label: "Claro", icon: "🌊", title: "Modo claro" },
-  { mode: "beige", label: "Beige", icon: "🏜️", title: "Modo beige" }
-];
-
 const getInitialTheme = (): ThemeMode => {
   if (typeof window === "undefined") return "dark";
 
@@ -29,6 +23,21 @@ export default function Navbar() {
   const [theme, setTheme] = useState<ThemeMode>("dark");
   const { play } = useHoverSound("bleep");
   const { language, toggleLanguage, t } = useLanguage();
+  const themes: Array<{ mode: ThemeMode; label: string; icon: string; title: string }> = [
+    {
+      mode: "dark",
+      label: language === "es" ? "Oscuro" : "Dark",
+      icon: "🌙",
+      title: language === "es" ? "Modo oscuro" : "Dark mode"
+    },
+    {
+      mode: "light",
+      label: language === "es" ? "Claro" : "Light",
+      icon: "🌊",
+      title: language === "es" ? "Modo claro" : "Light mode"
+    },
+    { mode: "beige", label: "Beige", icon: "🏜️", title: language === "es" ? "Modo beige" : "Beige mode" }
+  ];
 
   useEffect(() => {
     const initialTheme = getInitialTheme();
@@ -103,7 +112,7 @@ export default function Navbar() {
                 play();
               }}
               onMouseEnter={play}
-              aria-label="Abrir selector de idioma y tema"
+              aria-label={language === "es" ? "Abrir selector de idioma y tema" : "Open language and theme selector"}
               aria-expanded={menuOpen}
               className="flex h-10 w-10 items-center justify-center rounded-full border border-cyber-gold/70 bg-black/70 text-xl leading-none text-cyber-gold shadow-[0_0_18px_rgba(250,204,21,0.16)] transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen"
             >
@@ -111,7 +120,7 @@ export default function Navbar() {
             </button>
 
             <div className="hidden items-center gap-1 rounded-full border border-cyber-gold/70 bg-black/60 p-1 shadow-[0_0_18px_rgba(250,204,21,0.16)] lg:flex">
-              <div className="theme-toggle flex items-center gap-1" aria-label="Selector de tema">
+              <div className="theme-toggle flex items-center gap-1" aria-label={language === "es" ? "Selector de tema" : "Theme selector"}>
                 {themes.map(({ mode, icon, title }) => (
                   <button
                     key={mode}
@@ -146,7 +155,7 @@ export default function Navbar() {
               <div className="absolute right-0 top-12 z-50 w-64 rounded-2xl border border-cyber-gold/60 bg-black/95 p-4 shadow-[0_0_28px_rgba(250,204,21,0.22)] backdrop-blur">
                 <div className="space-y-4">
                   <div>
-                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/45">Navegación</p>
+                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/45">{t.nav.navigation}</p>
                     <div className="grid gap-2">
                       <Link
                         href="/about"
@@ -168,21 +177,21 @@ export default function Navbar() {
                   </div>
 
                   <div>
-                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/45">Idiomas</p>
+                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/45">{t.nav.languages}</p>
                     <button
                       type="button"
                       onClick={handleLanguageToggle}
                       aria-label={t.nav.toggle}
                       className="flex w-full items-center justify-between rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold tracking-widest text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen"
                     >
-                      <span>{language === "es" ? "Español" : "English"}</span>
+                      <span>{t.languageName}</span>
                       <span aria-hidden>{language === "es" ? "🇪🇸 → 🇺🇸" : "🇺🇸 → 🇪🇸"}</span>
                     </button>
                   </div>
 
                   <div>
-                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/45">Modos</p>
-                    <div className="grid grid-cols-3 gap-2" aria-label="Selector de tema">
+                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/45">{t.nav.modes}</p>
+                    <div className="grid grid-cols-3 gap-2" aria-label={language === "es" ? "Selector de tema" : "Theme selector"}>
                       {themes.map(({ mode, label, icon, title }) => (
                         <button
                           key={mode}

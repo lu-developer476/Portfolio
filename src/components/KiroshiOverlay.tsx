@@ -3,10 +3,32 @@
 import { useEffect, useRef } from "react";
 import { useLanguage } from "@/lib/i18n";
 
+const ROBOTIC_FEMALE_VOICE_HINTS = [
+  "zira",
+  "samantha",
+  "victoria",
+  "karen",
+  "moira",
+  "susan",
+  "female",
+  "woman"
+];
+
+const getRoboticFemaleVoice = (voices: SpeechSynthesisVoice[]) => {
+  const englishVoices = voices.filter((voice) => voice.lang.toLowerCase().startsWith("en"));
+  const preferredVoice = englishVoices.find((voice) => {
+    const voiceName = voice.name.toLowerCase();
+    return ROBOTIC_FEMALE_VOICE_HINTS.some((hint) => voiceName.includes(hint));
+  });
+
+  return preferredVoice ?? englishVoices[0] ?? voices[0] ?? null;
+};
+
 export default function KiroshiOverlay() {
   const { t } = useLanguage();
   const circleRef = useRef<HTMLDivElement | null>(null);
   const scanRef = useRef<HTMLDivElement | null>(null);
+  const hasSpokenRef = useRef(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -31,41 +53,46 @@ export default function KiroshiOverlay() {
         loop: true,
         easing: "linear"
       });
-
-      // TTS estilo cyberpunk femenino
-      if (!cancelled && "speechSynthesis" in window) {
-        const speakCyberpunk = (text: string) => {
-          const voices = window.speechSynthesis.getVoices();
-          // Buscar voz femenina inglesa
-          const voice = voices.find(v =>
-            v.lang.startsWith("en") && v.name.toLowerCase().includes("female")
-          ) || voices[0]; // fallback si no encuentra
-
-          // Creamos varias instancias para efecto glitch
-          for (let i = 0; i < 2; i++) {
-            const mensaje = new SpeechSynthesisUtterance(text);
-            mensaje.voice = voice;
-            mensaje.lang = "en-US";
-            mensaje.rate = 0.85 + i * 0.05; // leve variación
-            mensaje.pitch = 1.2 - i * 0.1;  // tono más agudo y robótico
-            mensaje.volume = 1;
-
-            // delay pequeño para efecto eco/glitch
-            setTimeout(() => {
-              if (!cancelled) window.speechSynthesis.speak(mensaje);
-            }, i * 120);
-          }
-        };
-
-        // disparar TTS
-        speakCyberpunk(t.hero.systemVoice);
-      }
-
     })();
 
     return () => {
       cancelled = true;
-      window.speechSynthesis.cancel(); // corta la voz si desmonta el componente
+    };
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    const speechSynthesis = window.speechSynthesis;
+
+    if (hasSpokenRef.current || !("speechSynthesis" in window)) {
+      return undefined;
+    }
+
+    const speakCyberpunk = () => {
+      if (cancelled || hasSpokenRef.current) return;
+
+      const message = new SpeechSynthesisUtterance(t.hero.systemVoice);
+      message.voice = getRoboticFemaleVoice(speechSynthesis.getVoices());
+      message.lang = "en-US";
+      message.rate = 0.78;
+      message.pitch = 1.45;
+      message.volume = 1;
+
+      hasSpokenRef.current = true;
+      speechSynthesis.cancel();
+      speechSynthesis.speak(message);
+    };
+
+    if (speechSynthesis.getVoices().length > 0) {
+      speakCyberpunk();
+    } else {
+      speechSynthesis.addEventListener("voiceschanged", speakCyberpunk, { once: true });
+    }
+
+    return () => {
+      cancelled = true;
+      speechSynthesis.removeEventListener("voiceschanged", speakCyberpunk);
+      speechSynthesis.cancel();
     };
   }, [t.hero.systemVoice]);
 

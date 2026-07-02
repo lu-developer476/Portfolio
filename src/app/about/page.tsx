@@ -205,7 +205,7 @@ export default function AboutPage() {
 
           <div className="skills-list grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60">
             {t.about.softSkills.map((skill, index) => (
-              <span key={skill} className={`word delay-${index + 5}`}>{skill}</span>
+              <span key={skill} className="word delay-4">{skill}</span>
             ))}
           </div>
         </div>
@@ -219,7 +219,7 @@ export default function AboutPage() {
 
           <div className="skills-list grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60">
             {t.about.hardSkills.map((skill, index) => (
-              <span key={skill} className={`word delay-${index + 13}`}>{skill}</span>
+              <span key={skill} className="word delay-4">{skill}</span>
             ))}
           </div>
         </div>
