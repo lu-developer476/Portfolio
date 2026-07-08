@@ -61,7 +61,7 @@ export const projects: Project[] = [
     title: "Tick Tack Toe",
     year: "2026",
     description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
-    tags: ["CSS", "JavaScript", "Python", "Django", "FastAPI", "UX/UI", "Render"],
+    tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
     demo: "https://tick-tack-toe-kwpo.onrender.com",
   },
   {
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     title: "Minesweeper",
     year: "2026",
     description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
-    tags: ["CSS", "JavaScript", "Python", "Django", "FastAPI", "UX/UI", "Render"],
+    tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
     demo: "https://minesweeper-slet.onrender.com",
   },
   {
@@ -108,8 +108,8 @@ export const projects: Project[] = [
     slug: "ajedrez",
     title: "Ajedrez",
     year: "2026",
-    description: "Videojuego web desarrollado con Python y Django con base de datos integrada. Desplegado en Render.",
-    tags: ["CSS", "JavaScript", "Python", "Django", "Supabase", "PostgreSQL", "UX/UI", "Render"],
+    description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
+    tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
     demo: "https://technochessgame.onrender.com",
   },
   {
