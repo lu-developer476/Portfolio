@@ -45,7 +45,7 @@ const translations = {
       frontend: "Animaciones, Componentes, Interactive, Responsive, Carousels",
       hardSkills: ["AI Automation", "Agentic Experience", "Customer Experience", "UI/UX", "Flujo de procesos", "Bases de datos", "Herramientas digitales", "Maquetación Web", "Prototipado", "Storytelling", "UI Editing", "UX Writing", "User Research"],
       softSkills: ["Adaptación", "Análisis de datos", "Colaboración", "Comunicación", "Creatividad", "Mediación", "Proactividad", "Sinergia"],
-      projectsTitle: "Trabajos realizados",
+      projectsTitle: "Proyectos desplegados",
       projectsSubtitle: ""
     },
     contact: {
