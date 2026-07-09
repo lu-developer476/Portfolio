@@ -19,8 +19,8 @@ const translations = {
         backend: "Firestore + API Routes listos para escalar"
       },
       fallbackTagline: "Interfaces precisas. Arquitectura limpia. Experiencia sin fricción.",
-      systemStatus: "> SISTEMA: EN LÍNEA • ESTADO: DESPLEGADO • SEÑAL: ESTABLE",
-      systemVoice: "Sistema en línea. Estado desplegado. Señal estable."
+      systemStatus: "> SISTEMA: EN LINEA • ESTADO: ACTIVO • SEÑAL: ESTABLE",
+      systemVoice: "Sistema en línea. Estado activo. Señal estable."
     },
     home: {
       methodTitle: "Metodología",
@@ -40,13 +40,13 @@ const translations = {
         "Más allá de mi especialización en frontend, me adapto a las necesidades de cada proyecto y a los objetivos del cliente. Me interesa entender el contexto, proponer mejoras cuando hace falta y aportar soluciones que realmente sumen valor. Trabajo de forma proactiva, buscando que cada decisión técnica esté alineada con el resultado que se quiere lograr.",
         "Disfruto el proceso completo: desde la idea hasta el deploy. La satisfacción está en transformar una idea en algo concreto que realmente funciona."
       ],
-      skillsTitle: "Aptitudes y Conocimientos",
-      skillsSubtitle: "Herramientas, tecnologías y habilidades que he adquirido y aplicado en proyectos reales.",
+      skillsTitle: "Stack tecnológico",
+      skillsSubtitle: "",
       frontend: "Animaciones, Componentes, Interactive, Responsive, Carousels",
       hardSkills: ["AI Automation", "Agentic Experience", "Customer Experience", "UI/UX", "Flujo de procesos", "Bases de datos", "Herramientas digitales", "Maquetación Web", "Prototipado", "Storytelling", "UI Editing", "UX Writing", "User Research"],
       softSkills: ["Adaptación", "Análisis de datos", "Colaboración", "Comunicación", "Creatividad", "Mediación", "Proactividad", "Sinergia"],
       projectsTitle: "Trabajos realizados",
-      projectsSubtitle: "El resultado de entender, crear, adaptar y perfeccionar… listo para ser explorado."
+      projectsSubtitle: ""
     },
     contact: {
       title: "Contacto",

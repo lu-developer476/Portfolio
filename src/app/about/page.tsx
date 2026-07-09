@@ -49,6 +49,20 @@ import {
 } from "@/icons";
 import { useLanguage } from "@/lib/i18n";
 
+type TechIconProps = {
+  label: string;
+  icon: React.ReactNode;
+};
+
+function TechIcon({ label, icon }: TechIconProps) {
+  return (
+    <span className="flex w-16 flex-col items-center gap-1 text-center text-[0.65rem] leading-tight text-white/70">
+      {icon}
+      <span>{label}</span>
+    </span>
+  );
+}
+
 export default function AboutPage() {
   const { t } = useLanguage();
 
@@ -86,15 +100,15 @@ export default function AboutPage() {
               Languages
             </strong>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <CSS3Icon className="w-7 h-7 word delay-0" />
-              <CoffeeScriptIcon className="w-7 h-7 word delay-0" />
-              <HTML5Icon className="w-7 h-7 word delay-0" />
-              <JavaScriptIcon className="w-7 h-7 word delay-0" />
-              <NodeJSIcon className="w-7 h-7 word delay-0" />
-              <PythonIcon className="w-7 h-7 word delay-0" />
-              <SQLIcon className="w-7 h-7 word delay-0" />
-              <TypeScriptIcon className="w-7 h-7 word delay-0" />
+            <div className="flex flex-wrap items-start gap-4">
+              <TechIcon label="CSS3" icon={<CSS3Icon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="CoffeeScript" icon={<CoffeeScriptIcon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="HTML5" icon={<HTML5Icon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="JavaScript" icon={<JavaScriptIcon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="Node.js" icon={<NodeJSIcon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="Python" icon={<PythonIcon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="SQL Server" icon={<SQLIcon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="TypeScript" icon={<TypeScriptIcon className="w-7 h-7 word delay-0" />} />
             </div>
           </div>
 
@@ -104,12 +118,12 @@ export default function AboutPage() {
               Frameworks
             </strong>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <AlpineJSIcon className="w-7 h-7 word delay-0" />
-              <BootstrapIcon className="w-7 h-7 word delay-0" />
-              <DjangoIcon className="w-7 h-7 word delay-0" />
-              <NextJSIcon className="w-7 h-7 word delay-0" />
-              <SwiperJSIcon className="w-7 h-7 word delay-0" />
+            <div className="flex flex-wrap items-start gap-4">
+              <TechIcon label="Alpine.js" icon={<AlpineJSIcon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="Bootstrap" icon={<BootstrapIcon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="Django" icon={<DjangoIcon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="Next.js" icon={<NextJSIcon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="Swiper" icon={<SwiperJSIcon className="w-7 h-7 word delay-0" />} />
             </div>
           </div>
 
@@ -119,16 +133,16 @@ export default function AboutPage() {
               Libraries
             </strong>
 
-            <div className="grid grid-cols-5 gap-4 sm:flex sm:flex-wrap sm:items-center">
-              <AnimeJSIcon className="w-7 h-7 word delay-0" />
-              <ChartJSIcon className="w-7 h-7 word delay-0" />
-              <CropperJSIcon className="w-7 h-7 word delay-0" />
-              <HowlerJSIcon className="w-7 h-7 word delay-0" />
-              <ReactIcon className="w-7 h-7 word delay-0" />
-              <SweetAlert2Icon className="w-7 h-7 word delay-0" />
-              <TailwindIcon className="w-7 h-7 word delay-0" />
-              <ThreeJSIcon className="w-7 h-7 word delay-0" />
-              <ToneJSIcon className="w-7 h-7 word delay-0" />
+            <div className="flex flex-wrap items-start gap-4">
+              <TechIcon label="Anime.js" icon={<AnimeJSIcon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="Chart.js" icon={<ChartJSIcon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="Cropper.js" icon={<CropperJSIcon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="Howler.js" icon={<HowlerJSIcon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="React" icon={<ReactIcon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="SweetAlert2" icon={<SweetAlert2Icon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="Tailwind" icon={<TailwindIcon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="Three.js" icon={<ThreeJSIcon className="w-7 h-7 word delay-0" />} />
+              <TechIcon label="Tone.js" icon={<ToneJSIcon className="w-7 h-7 word delay-0" />} />
             </div>
           </div>
 
@@ -160,12 +174,12 @@ export default function AboutPage() {
               AI
             </strong>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <ElevenLabsIcon className="w-7 h-7 word delay-3" />
-              <GeminiIcon className="w-7 h-7 word delay-3" />
-              <N8nIcon className="w-7 h-7 word delay-3" />
-              <OpenAIIcon className="w-7 h-7 word delay-3" />
-              <V0Icon className="w-7 h-7 word delay-3" />
+            <div className="flex flex-wrap items-start gap-4">
+              <TechIcon label="ElevenLabs" icon={<ElevenLabsIcon className="w-7 h-7 word delay-3" />} />
+              <TechIcon label="Gemini" icon={<GeminiIcon className="w-7 h-7 word delay-3" />} />
+              <TechIcon label="n8n" icon={<N8nIcon className="w-7 h-7 word delay-3" />} />
+              <TechIcon label="OpenAI" icon={<OpenAIIcon className="w-7 h-7 word delay-3" />} />
+              <TechIcon label="v0" icon={<V0Icon className="w-7 h-7 word delay-3" />} />
             </div>
           </div>
 
@@ -175,23 +189,23 @@ export default function AboutPage() {
               Hosting & Tools
             </strong>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <CanvaIcon className="w-7 h-7 word delay-4" />
-              <DrawIoIcon className="w-7 h-7 word delay-4" />
-              <FigmaIcon className="w-7 h-7 word delay-4" />
-              <FirebaseIcon className="w-7 h-7 word delay-4" />
-              <FramerIcon className="w-7 h-7 word delay-4" />
-              <GitHubIcon className="w-7 h-7 word delay-4" />
-              <GitlabIcon className="w-7 h-7 word delay-4" />
-              <NetlifyIcon className="w-7 h-7 word delay-4" />
-              <PhotoshopIcon className="w-7 h-7 word delay-4" />
-              <PowerBiIcon className="w-7 h-7 word delay-4" />
-              <RenderIcon className="w-7 h-7 word delay-4" />
-              <ResendIcon className="w-7 h-7 word delay-4" />
-              <StackBlitzIcon className="w-7 h-7 word delay-4" />
-              <SupabaseIcon className="w-7 h-7 word delay-4" />
-              <VercelIcon className="w-7 h-7 word delay-4" />
-              <WhimsicalIcon className="w-7 h-7 word delay-4" />
+            <div className="flex flex-wrap items-start gap-4">
+              <TechIcon label="Canva" icon={<CanvaIcon className="w-7 h-7 word delay-4" />} />
+              <TechIcon label="draw.io" icon={<DrawIoIcon className="w-7 h-7 word delay-4" />} />
+              <TechIcon label="Figma" icon={<FigmaIcon className="w-7 h-7 word delay-4" />} />
+              <TechIcon label="Firebase" icon={<FirebaseIcon className="w-7 h-7 word delay-4" />} />
+              <TechIcon label="Framer" icon={<FramerIcon className="w-7 h-7 word delay-4" />} />
+              <TechIcon label="GitHub" icon={<GitHubIcon className="w-7 h-7 word delay-4" />} />
+              <TechIcon label="GitLab" icon={<GitlabIcon className="w-7 h-7 word delay-4" />} />
+              <TechIcon label="Netlify" icon={<NetlifyIcon className="w-7 h-7 word delay-4" />} />
+              <TechIcon label="Photoshop" icon={<PhotoshopIcon className="w-7 h-7 word delay-4" />} />
+              <TechIcon label="Power BI" icon={<PowerBiIcon className="w-7 h-7 word delay-4" />} />
+              <TechIcon label="Render" icon={<RenderIcon className="w-7 h-7 word delay-4" />} />
+              <TechIcon label="Resend" icon={<ResendIcon className="w-7 h-7 word delay-4" />} />
+              <TechIcon label="StackBlitz" icon={<StackBlitzIcon className="w-7 h-7 word delay-4" />} />
+              <TechIcon label="Supabase" icon={<SupabaseIcon className="w-7 h-7 word delay-4" />} />
+              <TechIcon label="Vercel" icon={<VercelIcon className="w-7 h-7 word delay-4" />} />
+              <TechIcon label="Whimsical" icon={<WhimsicalIcon className="w-7 h-7 word delay-4" />} />
             </div>
           </div>
         </div>
