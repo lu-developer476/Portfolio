@@ -54,6 +54,11 @@ type TechIconProps = {
   icon: React.ReactNode;
 };
 
+const iconClassName = "w-7 h-7 word delay-0";
+const delayedIconClassName = (delay: number) => `w-7 h-7 word delay-${delay}`;
+const iconGroupClassName = "flex flex-wrap items-start gap-4";
+const skillListClassName = "skills-list grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60";
+
 function TechIcon({ label, icon }: TechIconProps) {
   return (
     <span className="flex w-16 flex-col items-center gap-1 text-center text-[0.65rem] leading-tight text-white/70">
@@ -65,6 +70,81 @@ function TechIcon({ label, icon }: TechIconProps) {
 
 export default function AboutPage() {
   const { t } = useLanguage();
+  const techSections = [
+    {
+      title: "Languages",
+      items: [
+        ["CSS3", CSS3Icon, iconClassName],
+        ["CoffeeScript", CoffeeScriptIcon, iconClassName],
+        ["HTML5", HTML5Icon, iconClassName],
+        ["JavaScript", JavaScriptIcon, iconClassName],
+        ["Node.js", NodeJSIcon, iconClassName],
+        ["Python", PythonIcon, iconClassName],
+        ["SQL Server", SQLIcon, iconClassName],
+        ["TypeScript", TypeScriptIcon, iconClassName],
+      ],
+    },
+    {
+      title: "Frameworks",
+      items: [
+        ["Alpine.js", AlpineJSIcon, iconClassName],
+        ["Bootstrap", BootstrapIcon, iconClassName],
+        ["Django", DjangoIcon, iconClassName],
+        ["Next.js", NextJSIcon, iconClassName],
+        ["Swiper", SwiperJSIcon, iconClassName],
+      ],
+    },
+    {
+      title: "Libraries",
+      items: [
+        ["Anime.js", AnimeJSIcon, iconClassName],
+        ["Chart.js", ChartJSIcon, iconClassName],
+        ["Cropper.js", CropperJSIcon, iconClassName],
+        ["Howler.js", HowlerJSIcon, iconClassName],
+        ["React", ReactIcon, iconClassName],
+        ["SweetAlert2", SweetAlert2Icon, iconClassName],
+        ["Tailwind", TailwindIcon, iconClassName],
+        ["Three.js", ThreeJSIcon, iconClassName],
+        ["Tone.js", ToneJSIcon, iconClassName],
+      ],
+    },
+    {
+      title: "AI",
+      items: [
+        ["ElevenLabs", ElevenLabsIcon, delayedIconClassName(3)],
+        ["Gemini", GeminiIcon, delayedIconClassName(3)],
+        ["n8n", N8nIcon, delayedIconClassName(3)],
+        ["OpenAI", OpenAIIcon, delayedIconClassName(3)],
+        ["v0", V0Icon, delayedIconClassName(3)],
+      ],
+    },
+    {
+      title: "Hosting & Tools",
+      items: [
+        ["Canva", CanvaIcon, delayedIconClassName(4)],
+        ["draw.io", DrawIoIcon, delayedIconClassName(4)],
+        ["Figma", FigmaIcon, delayedIconClassName(4)],
+        ["Firebase", FirebaseIcon, delayedIconClassName(4)],
+        ["Framer", FramerIcon, delayedIconClassName(4)],
+        ["GitHub", GitHubIcon, delayedIconClassName(4)],
+        ["GitLab", GitlabIcon, delayedIconClassName(4)],
+        ["Netlify", NetlifyIcon, delayedIconClassName(4)],
+        ["Photoshop", PhotoshopIcon, delayedIconClassName(4)],
+        ["Power BI", PowerBiIcon, delayedIconClassName(4)],
+        ["Render", RenderIcon, delayedIconClassName(4)],
+        ["Resend", ResendIcon, delayedIconClassName(4)],
+        ["StackBlitz", StackBlitzIcon, delayedIconClassName(4)],
+        ["Supabase", SupabaseIcon, delayedIconClassName(4)],
+        ["Vercel", VercelIcon, delayedIconClassName(4)],
+        ["Whimsical", WhimsicalIcon, delayedIconClassName(4)],
+      ],
+    },
+  ] satisfies { title: string; items: [string, React.ComponentType<{ className?: string }>, string][] }[];
+
+  const skillSections = [
+    { icon: "💡", title: "Soft Skills", skills: t.about.softSkills },
+    { icon: "💻", title: "Hard Skills", skills: t.about.hardSkills },
+  ];
 
   return (
     <div className="space-y-14">
@@ -74,17 +154,14 @@ export default function AboutPage() {
         subtitle={t.about.subtitle}
       >
         <div className="rounded-xl border border-white/10 bg-black/35 p-6">
-          <p className="light-electric-blue text-white/85 leading-7">
-            {t.about.paragraphs[0]}
-          </p>
-
-          <p className="light-electric-blue mt-4 text-white/85 leading-7">
-            {t.about.paragraphs[1]}
-          </p>
-
-          <p className="light-electric-blue mt-4 text-white/85 leading-7">
-            {t.about.paragraphs[2]}
-          </p>
+          {t.about.paragraphs.map((paragraph, index) => (
+            <p
+              key={paragraph}
+              className={`light-electric-blue text-white/85 leading-7 ${index ? "mt-4" : ""}`}
+            >
+              {paragraph}
+            </p>
+          ))}
         </div>
       </Section>
 
@@ -94,57 +171,17 @@ export default function AboutPage() {
         subtitle={t.about.skillsSubtitle}
       >
         <div className="w-full max-w-full overflow-hidden rounded-xl border border-white/10 bg-black/35 p-4 sm:p-5 md:p-6 space-y-4 text-white/85 leading-7">
-          {/* Languages */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
-            <strong className="sm:w-42 shrink-0">
-              Languages
-            </strong>
+          {techSections.slice(0, 3).map(({ title, items }) => (
+            <div key={title} className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+              <strong className="sm:w-42 shrink-0">{title}</strong>
 
-            <div className="flex flex-wrap items-start gap-4">
-              <TechIcon label="CSS3" icon={<CSS3Icon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="CoffeeScript" icon={<CoffeeScriptIcon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="HTML5" icon={<HTML5Icon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="JavaScript" icon={<JavaScriptIcon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="Node.js" icon={<NodeJSIcon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="Python" icon={<PythonIcon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="SQL Server" icon={<SQLIcon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="TypeScript" icon={<TypeScriptIcon className="w-7 h-7 word delay-0" />} />
+              <div className={iconGroupClassName}>
+                {items.map(([label, Icon, className]) => (
+                  <TechIcon key={label} label={label} icon={<Icon className={className} />} />
+                ))}
+              </div>
             </div>
-          </div>
-
-          {/* Frameworks */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
-            <strong className="sm:w-42 shrink-0">
-              Frameworks
-            </strong>
-
-            <div className="flex flex-wrap items-start gap-4">
-              <TechIcon label="Alpine.js" icon={<AlpineJSIcon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="Bootstrap" icon={<BootstrapIcon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="Django" icon={<DjangoIcon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="Next.js" icon={<NextJSIcon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="Swiper" icon={<SwiperJSIcon className="w-7 h-7 word delay-0" />} />
-            </div>
-          </div>
-
-          {/* Libraries */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
-            <strong className="sm:w-42 shrink-0">
-              Libraries
-            </strong>
-
-            <div className="flex flex-wrap items-start gap-4">
-              <TechIcon label="Anime.js" icon={<AnimeJSIcon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="Chart.js" icon={<ChartJSIcon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="Cropper.js" icon={<CropperJSIcon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="Howler.js" icon={<HowlerJSIcon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="React" icon={<ReactIcon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="SweetAlert2" icon={<SweetAlert2Icon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="Tailwind" icon={<TailwindIcon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="Three.js" icon={<ThreeJSIcon className="w-7 h-7 word delay-0" />} />
-              <TechIcon label="Tone.js" icon={<ToneJSIcon className="w-7 h-7 word delay-0" />} />
-            </div>
-          </div>
+          ))}
 
           {/* Frontend */}
           <div className="flex items-start gap-6">
@@ -168,75 +205,36 @@ export default function AboutPage() {
             </span>
           </div>
 
-          {/* AI */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
-            <strong className="sm:w-42 shrink-0">
-              AI
-            </strong>
+          {techSections.slice(3).map(({ title, items }) => (
+            <div key={title} className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+              <strong className="sm:w-42 shrink-0">{title}</strong>
 
-            <div className="flex flex-wrap items-start gap-4">
-              <TechIcon label="ElevenLabs" icon={<ElevenLabsIcon className="w-7 h-7 word delay-3" />} />
-              <TechIcon label="Gemini" icon={<GeminiIcon className="w-7 h-7 word delay-3" />} />
-              <TechIcon label="n8n" icon={<N8nIcon className="w-7 h-7 word delay-3" />} />
-              <TechIcon label="OpenAI" icon={<OpenAIIcon className="w-7 h-7 word delay-3" />} />
-              <TechIcon label="v0" icon={<V0Icon className="w-7 h-7 word delay-3" />} />
+              <div className={iconGroupClassName}>
+                {items.map(([label, Icon, className]) => (
+                  <TechIcon key={label} label={label} icon={<Icon className={className} />} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {skillSections.map(({ icon, title, skills }, index) => (
+          <div key={title}>
+            <hr className={`my-6 border-t ${index ? "border-white/25" : "border-white/20"}`} />
+
+            <div className="mt-6">
+              <h3 className="text-white/90 font-semibold mb-2">
+                <span className="text-lg font-semibold text-cyber-gold">{icon} {title}</span>
+              </h3>
+
+              <div className={skillListClassName}>
+                {skills.map((skill) => (
+                  <span key={skill} className="word delay-4">{skill}</span>
+                ))}
+              </div>
             </div>
           </div>
-
-          {/* Hosting & Tools */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
-            <strong className="sm:w-42 shrink-0">
-              Hosting & Tools
-            </strong>
-
-            <div className="flex flex-wrap items-start gap-4">
-              <TechIcon label="Canva" icon={<CanvaIcon className="w-7 h-7 word delay-4" />} />
-              <TechIcon label="draw.io" icon={<DrawIoIcon className="w-7 h-7 word delay-4" />} />
-              <TechIcon label="Figma" icon={<FigmaIcon className="w-7 h-7 word delay-4" />} />
-              <TechIcon label="Firebase" icon={<FirebaseIcon className="w-7 h-7 word delay-4" />} />
-              <TechIcon label="Framer" icon={<FramerIcon className="w-7 h-7 word delay-4" />} />
-              <TechIcon label="GitHub" icon={<GitHubIcon className="w-7 h-7 word delay-4" />} />
-              <TechIcon label="GitLab" icon={<GitlabIcon className="w-7 h-7 word delay-4" />} />
-              <TechIcon label="Netlify" icon={<NetlifyIcon className="w-7 h-7 word delay-4" />} />
-              <TechIcon label="Photoshop" icon={<PhotoshopIcon className="w-7 h-7 word delay-4" />} />
-              <TechIcon label="Power BI" icon={<PowerBiIcon className="w-7 h-7 word delay-4" />} />
-              <TechIcon label="Render" icon={<RenderIcon className="w-7 h-7 word delay-4" />} />
-              <TechIcon label="Resend" icon={<ResendIcon className="w-7 h-7 word delay-4" />} />
-              <TechIcon label="StackBlitz" icon={<StackBlitzIcon className="w-7 h-7 word delay-4" />} />
-              <TechIcon label="Supabase" icon={<SupabaseIcon className="w-7 h-7 word delay-4" />} />
-              <TechIcon label="Vercel" icon={<VercelIcon className="w-7 h-7 word delay-4" />} />
-              <TechIcon label="Whimsical" icon={<WhimsicalIcon className="w-7 h-7 word delay-4" />} />
-            </div>
-          </div>
-        </div>
-
-        <hr className="my-6 border-t border-white/20" />
-
-        <div className="mt-6">
-          <h3 className="text-white/90 font-semibold mb-2">
-            <span className="text-lg font-semibold text-cyber-gold">💡 Soft Skills</span>
-          </h3>
-
-          <div className="skills-list grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60">
-            {t.about.softSkills.map((skill, index) => (
-              <span key={skill} className="word delay-4">{skill}</span>
-            ))}
-          </div>
-        </div>
-
-        <hr className="my-6 border-t border-white/25" />
-
-        <div className="mt-6">
-          <h3 className="text-white/90 font-semibold mb-2">
-            <span className="text-lg font-semibold text-cyber-gold">💻 Hard Skills</span>
-          </h3>
-
-          <div className="skills-list grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60">
-            {t.about.hardSkills.map((skill, index) => (
-              <span key={skill} className="word delay-4">{skill}</span>
-            ))}
-          </div>
-        </div>
+        ))}
       </Section>
 
       <Section

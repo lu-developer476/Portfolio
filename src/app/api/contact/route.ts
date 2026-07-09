@@ -4,29 +4,28 @@ import { getAdminDb } from "@/lib/firebaseAdmin";
 import { Resend } from "resend";
 import { transporter } from "@/lib/mailer";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-// ✅ Validación fuerte
 const schema = z.object({
   name: z.string().min(2).max(80),
   email: z.string().email().max(120),
   message: z.string().min(10).max(2000)
 });
 
-// ✅ Validar ENV críticos al cargar
-if (!process.env.GMAIL_USER) {
-  throw new Error("Missing GMAIL_USER env variable");
-}
+function requireEnv(name: string) {
+  const value = process.env[name];
 
-if (!process.env.RESEND_API_KEY) {
-  throw new Error("Missing RESEND_API_KEY env variable");
+  if (!value) {
+    throw new Error(`Missing ${name} env variable`);
+  }
+
+  return value;
 }
 
 export async function POST(req: Request) {
   try {
     const json = await req.json();
     const data = schema.parse(json);
-
+    const gmailUser = requireEnv("GMAIL_USER");
+    const resend = new Resend(requireEnv("RESEND_API_KEY"));
     const db = getAdminDb();
 
     // ✅ Sanitización básica HTML
@@ -77,7 +76,7 @@ export async function POST(req: Request) {
     try {
       const mailResponse = await Promise.race([
         transporter.sendMail({
-          from: `"Lucas Montenegro" <${process.env.GMAIL_USER}>`,
+          from: `"Lucas Montenegro" <${gmailUser}>`,
           to: data.email,
           subject: "¡Muchas gracias por tu mensaje! 🦾",
           html: `
