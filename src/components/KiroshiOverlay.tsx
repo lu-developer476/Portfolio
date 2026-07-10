@@ -102,7 +102,7 @@ export default function KiroshiOverlay() {
       {/* Círculo HUD */}
       <div
         ref={circleRef}
-        className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyber-neonGreen/40 opacity-0"
+        className="hud-circle absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyber-neonGreen/40 opacity-0"
       />
 
       {/* Línea de escaneo */}

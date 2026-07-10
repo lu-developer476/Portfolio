@@ -50,6 +50,9 @@ export default function ThemeAtmosphere() {
         <div className="fog-layer fog-a" />
         <div className="fog-layer fog-b" />
         <div className="fog-layer fog-c" />
+
+        {/* Relámpagos de colores que truenan de vez en cuando */}
+        <CloudLightning />
       </div>
     );
   }
@@ -63,6 +66,69 @@ export default function ThemeAtmosphere() {
   }
 
   return null;
+}
+
+const LIGHTNING_COLORS = ["#a855f7", "#ec4899", "#facc15", "#38bdf8"];
+
+type Bolt = {
+  id: number;
+  top: number;
+  left: number;
+  color: string;
+  scaleX: number;
+};
+
+function CloudLightning() {
+  const [bolt, setBolt] = useState<Bolt | null>(null);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return undefined;
+    }
+
+    let scheduleTimer = 0;
+    let clearTimer = 0;
+
+    const strike = () => {
+      setBolt({
+        id: Date.now(),
+        top: 4 + Math.random() * 32,
+        left: 8 + Math.random() * 74,
+        color: LIGHTNING_COLORS[Math.floor(Math.random() * LIGHTNING_COLORS.length)],
+        scaleX: Math.random() > 0.5 ? 1 : -1
+      });
+      clearTimer = window.setTimeout(() => setBolt(null), 650);
+      schedule();
+    };
+
+    function schedule() {
+      const delay = 3000 + Math.random() * 5000;
+      scheduleTimer = window.setTimeout(strike, delay);
+    }
+
+    schedule();
+
+    return () => {
+      window.clearTimeout(scheduleTimer);
+      window.clearTimeout(clearTimer);
+    };
+  }, []);
+
+  if (!bolt) return null;
+
+  return (
+    <div key={bolt.id} className="lightning-wrap" style={{ ["--bolt-color" as string]: bolt.color }}>
+      <div className="lightning-flash" />
+      <div
+        className="lightning-bolt"
+        style={{
+          top: `${bolt.top}%`,
+          left: `${bolt.left}%`,
+          transform: `scaleX(${bolt.scaleX})`
+        }}
+      />
+    </div>
+  );
 }
 
 function GalaxyVoid() {
