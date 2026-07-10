@@ -76,10 +76,11 @@ type Bolt = {
   left: number;
   color: string;
   scaleX: number;
+  delay: number;
 };
 
 function CloudLightning() {
-  const [bolt, setBolt] = useState<Bolt | null>(null);
+  const [bolts, setBolts] = useState<Bolt[]>([]);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -87,22 +88,26 @@ function CloudLightning() {
     }
 
     let scheduleTimer = 0;
-    let clearTimer = 0;
+    const clearTimers: number[] = [];
 
     const strike = () => {
-      setBolt({
-        id: Date.now(),
-        top: 4 + Math.random() * 32,
-        left: 8 + Math.random() * 74,
+      const burstCount = 1 + Math.floor(Math.random() * 3);
+      const newBolts = Array.from({ length: burstCount }, (_, index) => ({
+        id: Date.now() + index,
+        top: 10 + Math.random() * 72,
+        left: 6 + Math.random() * 84,
         color: LIGHTNING_COLORS[Math.floor(Math.random() * LIGHTNING_COLORS.length)],
-        scaleX: Math.random() > 0.5 ? 1 : -1
-      });
-      clearTimer = window.setTimeout(() => setBolt(null), 650);
+        scaleX: Math.random() > 0.5 ? 1 : -1,
+        delay: index * 110
+      }));
+
+      setBolts(newBolts);
+      clearTimers.push(window.setTimeout(() => setBolts([]), 950));
       schedule();
     };
 
     function schedule() {
-      const delay = 3000 + Math.random() * 5000;
+      const delay = 2200 + Math.random() * 4200;
       scheduleTimer = window.setTimeout(strike, delay);
     }
 
@@ -110,23 +115,28 @@ function CloudLightning() {
 
     return () => {
       window.clearTimeout(scheduleTimer);
-      window.clearTimeout(clearTimer);
+      clearTimers.forEach((timer) => window.clearTimeout(timer));
     };
   }, []);
 
-  if (!bolt) return null;
+  if (bolts.length === 0) return null;
 
   return (
-    <div key={bolt.id} className="lightning-wrap" style={{ ["--bolt-color" as string]: bolt.color }}>
+    <div className="lightning-wrap">
       <div className="lightning-flash" />
-      <div
-        className="lightning-bolt"
-        style={{
-          top: `${bolt.top}%`,
-          left: `${bolt.left}%`,
-          transform: `scaleX(${bolt.scaleX})`
-        }}
-      />
+      {bolts.map((bolt) => (
+        <div
+          key={bolt.id}
+          className="lightning-bolt"
+          style={{
+            ["--bolt-color" as string]: bolt.color,
+            top: `${bolt.top}%`,
+            left: `${bolt.left}%`,
+            transform: `scaleX(${bolt.scaleX})`,
+            animationDelay: `${bolt.delay}ms`
+          }}
+        />
+      ))}
     </div>
   );
 }
