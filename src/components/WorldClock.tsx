@@ -16,8 +16,8 @@ const ZONES: Zone[] = [
   { labelEs: "Brasil", labelEn: "Brazil", tz: "America/Sao_Paulo", flag: "🇧🇷" },
   { labelEs: "Perú", labelEn: "Peru", tz: "America/Lima", flag: "🇵🇪" },
   { labelEs: "México", labelEn: "Mexico", tz: "America/Mexico_City", flag: "🇲🇽" },
-  { labelEs: "EE.UU. (Nueva York)", labelEn: "USA (New York)", tz: "America/New_York", flag: "🇺🇸" },
-  { labelEs: "EE.UU. (Los Ángeles)", labelEn: "USA (Los Angeles)", tz: "America/Los_Angeles", flag: "🇺🇸" },
+  { labelEs: "EE. UU. (NY)", labelEn: "USA (New York)", tz: "America/New_York", flag: "🇺🇸" },
+  { labelEs: "EE. UU. (LA)", labelEn: "USA (Los Angeles)", tz: "America/Los_Angeles", flag: "🇺🇸" },
   { labelEs: "España", labelEn: "Spain", tz: "Europe/Madrid", flag: "🇪🇸" },
   { labelEs: "Reino Unido", labelEn: "United Kingdom", tz: "Europe/London", flag: "🇬🇧" },
   { labelEs: "Japón", labelEn: "Japan", tz: "Asia/Tokyo", flag: "🇯🇵" }
@@ -96,9 +96,6 @@ export default function WorldClock({ open, onClose }: Props) {
         >
           ✕
         </button>
-
-        <h2 className="text-lg font-bold tracking-tight text-cyber-gold">{t.worldClock.title}</h2>
-        <p className="mt-1 text-xs text-white/60">{t.worldClock.subtitle}</p>
 
         {/* Zona local detectada */}
         <div className="mt-4 rounded-xl border border-cyber-neonGreen/40 bg-white/5 p-4 text-center">
