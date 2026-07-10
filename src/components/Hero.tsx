@@ -7,20 +7,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import ThreeBackground from "./ThreeBackground";
 import KiroshiOverlay from "./KiroshiOverlay";
-import { getTagline } from "@/generated/tagline";
 import { useLanguage } from "@/lib/i18n";
 
 export default function Hero() {
   const titleRef = useRef<HTMLHeadingElement | null>(null);
-  const { language, t } = useLanguage();
-
-  const tagline = useMemo(() => {
-    try {
-      return getTagline();
-    } catch {
-      return t.hero.fallbackTagline;
-    }
-  }, [t.hero.fallbackTagline]);
+  const { t } = useLanguage();
 
   const stats = useMemo(
     () => [
@@ -119,11 +110,6 @@ export default function Hero() {
             </div>
           ))}
         </div>
-
-        {/* Tagline dinámico */}
-        <p className="mt-10 text-xs md:text-sm text-white/40 font-mono">
-          {language === "es" ? tagline : t.hero.fallbackTagline}
-        </p>
 
       </div>
     </section>
