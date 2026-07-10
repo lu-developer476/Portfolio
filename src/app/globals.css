@@ -649,9 +649,27 @@ html[data-theme="cloud"] .three-bg {
 }
 
 /* ============================= */
-/* World clock modal (dark fixed) */
-/* Keep readable across all themes */
+/* World clock modal themed styles */
 /* ============================= */
+
+html:not([data-theme="dark"]) .world-clock-overlay {
+  background-color: color-mix(in srgb, var(--theme-page) 88%, black) !important;
+}
+
+html:not([data-theme="dark"]) .world-clock {
+  background-color: var(--theme-surface-strong) !important;
+  border-color: var(--theme-border) !important;
+  box-shadow: 0 0 28px color-mix(in srgb, var(--theme-accent) 24%, transparent) !important;
+}
+
+html:not([data-theme="dark"]) .world-clock .bg-white\/5 {
+  background-color: color-mix(in srgb, var(--theme-surface) 72%, transparent) !important;
+}
+
+html:not([data-theme="dark"]) .world-clock .bg-black,
+html:not([data-theme="dark"]) .world-clock.bg-black\/95 {
+  background-color: var(--theme-header) !important;
+}
 
 html:not([data-theme="dark"]) .world-clock .text-white,
 html:not([data-theme="dark"]) .world-clock .text-white\/90,
@@ -659,32 +677,33 @@ html:not([data-theme="dark"]) .world-clock .text-white\/80,
 html:not([data-theme="dark"]) .world-clock .text-white\/70,
 html:not([data-theme="dark"]) .world-clock .text-white\/60,
 html:not([data-theme="dark"]) .world-clock .text-white\/45 {
-  color: #ffffff !important;
+  color: var(--theme-text) !important;
 }
 
-html:not([data-theme="dark"]) .world-clock .text-white\/80 {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-
-html:not([data-theme="dark"]) .world-clock .text-white\/70 {
-  color: rgba(255, 255, 255, 0.7) !important;
-}
-
-html:not([data-theme="dark"]) .world-clock .text-white\/60 {
-  color: rgba(255, 255, 255, 0.6) !important;
-}
-
+html:not([data-theme="dark"]) .world-clock .text-white\/80,
+html:not([data-theme="dark"]) .world-clock .text-white\/70,
+html:not([data-theme="dark"]) .world-clock .text-white\/60,
 html:not([data-theme="dark"]) .world-clock .text-white\/45 {
-  color: rgba(255, 255, 255, 0.45) !important;
+  color: var(--theme-text-soft) !important;
 }
 
-html:not([data-theme="dark"]) .world-clock .text-cyber-gold {
-  color: #ffd700 !important;
-}
-
+html:not([data-theme="dark"]) .world-clock .text-cyber-gold,
 html:not([data-theme="dark"]) .world-clock .text-cyber-neonGreen {
-  color: #05f7b7 !important;
+  color: var(--theme-accent) !important;
 }
+
+html:not([data-theme="dark"]) .world-clock .border-cyber-gold\/60,
+html:not([data-theme="dark"]) .world-clock .border-cyber-neonGreen\/40,
+html:not([data-theme="dark"]) .world-clock .border-cyber-neonGreen\/50,
+html:not([data-theme="dark"]) .world-clock .border-white\/10,
+html:not([data-theme="dark"]) .world-clock .border-white\/20 {
+  border-color: var(--theme-border) !important;
+}
+
+html:not([data-theme="dark"]) .world-clock .bg-cyber-neonGreen\/10 {
+  background-color: color-mix(in srgb, var(--theme-accent-3) 18%, transparent) !important;
+}
+
 
 html[data-theme="cloud"] .hero-glow,
 html[data-theme="cloud"] .hud-circle {
