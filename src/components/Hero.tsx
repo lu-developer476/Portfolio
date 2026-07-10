@@ -89,16 +89,15 @@ export default function Hero() {
 {t.hero.description}
         </p>
 
-        {/* Stats carrusel deslizable */}
-        <div className="text-white/75 mt-8">
+        {/* Stats: carrusel en móvil/tablet, grilla fija en desktop */}
+        <div className="text-white/75 mt-8 lg:hidden">
           <Swiper
             modules={[Pagination]}
             pagination={{ clickable: true }}
             spaceBetween={14}
             slidesPerView={1}
             breakpoints={{
-              640: { slidesPerView: 2.1 },
-              1024: { slidesPerView: 3.1 }
+              640: { slidesPerView: 2.1 }
             }}
             className="!pb-10"
           >
@@ -108,6 +107,17 @@ export default function Hero() {
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+
+        <div className="mt-8 hidden text-white/75 lg:grid lg:grid-cols-6 lg:gap-4">
+          {stats.map((stat, index) => (
+            <div
+              key={stat.label}
+              className={index === 3 ? "col-span-2 col-start-2" : "col-span-2"}
+            >
+              <Stat label={stat.label} value={stat.value} hint={stat.hint} />
+            </div>
+          ))}
         </div>
 
         {/* Tagline dinámico */}
