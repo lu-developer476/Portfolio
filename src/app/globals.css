@@ -294,6 +294,36 @@ html[data-theme="beige"] {
   --theme-gradient: radial-gradient(60% 60% at 10% 10%, rgba(192, 138, 69, .32), transparent 60%), radial-gradient(60% 60% at 90% 20%, rgba(91, 58, 31, .26), transparent 60%), radial-gradient(60% 60% at 50% 90%, rgba(20, 13, 7, .14), transparent 60%), linear-gradient(180deg, rgba(239, 225, 196, .98), rgba(199, 163, 110, .58));
 }
 
+html[data-theme="cloud"] {
+  color-scheme: light;
+  --theme-page: #cbd0d6;
+  --theme-surface: rgba(203, 208, 214, 0.82);
+  --theme-surface-strong: rgba(171, 178, 186, 0.94);
+  --theme-header: rgba(55, 62, 71, 0.9);
+  --theme-text: #000000;
+  --theme-text-soft: rgba(0, 0, 0, 0.78);
+  --theme-border: rgba(71, 85, 105, 0.35);
+  --theme-accent: #1f2937;
+  --theme-accent-2: #475569;
+  --theme-accent-3: #94a3b8;
+  --theme-gradient: radial-gradient(60% 60% at 12% 12%, rgba(226, 232, 240, .55), transparent 60%), radial-gradient(60% 60% at 88% 18%, rgba(148, 163, 184, .38), transparent 60%), radial-gradient(60% 60% at 50% 92%, rgba(100, 116, 139, .22), transparent 60%), linear-gradient(180deg, rgba(203, 208, 214, .92), rgba(148, 163, 184, .62));
+}
+
+html[data-theme="galaxy"] {
+  color-scheme: dark;
+  --theme-page: #05060f;
+  --theme-surface: rgba(12, 14, 30, 0.72);
+  --theme-surface-strong: rgba(20, 24, 46, 0.9);
+  --theme-header: rgba(8, 10, 24, 0.86);
+  --theme-text: #d7e84a;
+  --theme-text-soft: rgba(215, 232, 74, 0.78);
+  --theme-border: rgba(180, 220, 60, 0.3);
+  --theme-accent: #c8e64b;
+  --theme-accent-2: #a3d93a;
+  --theme-accent-3: #d4e600;
+  --theme-gradient: radial-gradient(70% 70% at 15% 10%, rgba(60, 90, 30, .28), transparent 60%), radial-gradient(60% 60% at 85% 20%, rgba(120, 90, 180, .18), transparent 60%), radial-gradient(80% 80% at 50% 100%, rgba(30, 60, 40, .3), transparent 65%), linear-gradient(180deg, rgba(6, 8, 20, .55), rgba(2, 3, 10, .92));
+}
+
 html:not([data-theme="dark"]) body {
   background: var(--theme-page);
   color: var(--theme-text);
@@ -406,4 +436,170 @@ html:not([data-theme="dark"]) .theme-toggle button[aria-pressed="true"] {
 html[data-theme="light"] .light-electric-blue,
 html[data-theme="light"] .skills-list .word {
   color: #0077ff !important;
+}
+
+/* ============================= */
+/* Galaxy overrides (dark theme) */
+/* ============================= */
+
+html[data-theme="galaxy"] body {
+  color: #d7e84a;
+}
+
+html[data-theme="galaxy"] footer,
+html[data-theme="galaxy"] footer .text-white\/70,
+html[data-theme="galaxy"] footer .text-cyber-gold {
+  color: #c8e64b !important;
+}
+
+html[data-theme="galaxy"] header .text-white,
+html[data-theme="galaxy"] header .text-white\/70,
+html[data-theme="galaxy"] header .hover\:text-white:hover {
+  color: #e9f5a3 !important;
+}
+
+html[data-theme="galaxy"] .freelancer-role {
+  color: #d4e600 !important;
+}
+
+html[data-theme="galaxy"] .live-badge {
+  color: #b6ff3a !important;
+}
+
+html[data-theme="galaxy"] .skills-list .word {
+  color: #d4e600 !important;
+}
+
+html[data-theme="galaxy"] .light-electric-blue {
+  color: #b7d24a !important;
+}
+
+/* ============================= */
+/* Título con aura de fondo       */
+/* ============================= */
+
+html[data-theme="cloud"] h1 span,
+html[data-theme="cloud"] h2 span,
+html[data-theme="cloud"] h3 {
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.95), 0 0 34px rgba(255, 255, 255, 0.65);
+}
+
+html[data-theme="galaxy"] h1 span,
+html[data-theme="galaxy"] h2 span,
+html[data-theme="galaxy"] h3 {
+  text-shadow: 0 0 12px rgba(200, 230, 75, 0.8), 0 0 30px rgba(160, 220, 60, 0.5);
+}
+
+/* ============================= */
+/* Atmósfera de tema              */
+/* ============================= */
+
+.theme-atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* --- Nube / neblina --- */
+.fog-layer {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat-x;
+  will-change: transform, opacity;
+}
+
+.fog-layer.fog-a {
+  background: radial-gradient(closest-side at 20% 40%, rgba(255, 255, 255, 0.55), transparent 70%),
+    radial-gradient(closest-side at 55% 60%, rgba(226, 232, 240, 0.5), transparent 70%),
+    radial-gradient(closest-side at 80% 45%, rgba(203, 213, 225, 0.5), transparent 70%);
+  background-size: 60% 70%;
+  animation: fogDrift 46s linear infinite;
+  opacity: 0.7;
+}
+
+.fog-layer.fog-b {
+  background: radial-gradient(closest-side at 30% 55%, rgba(241, 245, 249, 0.5), transparent 70%),
+    radial-gradient(closest-side at 65% 35%, rgba(148, 163, 184, 0.42), transparent 70%),
+    radial-gradient(closest-side at 90% 60%, rgba(226, 232, 240, 0.48), transparent 70%);
+  background-size: 70% 80%;
+  animation: fogDrift 68s linear infinite reverse;
+  opacity: 0.55;
+}
+
+.fog-layer.fog-c {
+  background: radial-gradient(closest-side at 15% 50%, rgba(255, 255, 255, 0.4), transparent 72%),
+    radial-gradient(closest-side at 75% 50%, rgba(203, 213, 225, 0.4), transparent 72%);
+  background-size: 80% 90%;
+  animation: fogDrift 92s linear infinite;
+  opacity: 0.45;
+}
+
+@keyframes fogDrift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(25%, -2%, 0);
+  }
+  100% {
+    transform: translate3d(50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fog-layer {
+    animation: none !important;
+  }
+}
+
+/* --- Galaxia / vacío sideral --- */
+.galaxy-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ============================= */
+/* World clock modal (dark fixed) */
+/* Keep readable across all themes */
+/* ============================= */
+
+html:not([data-theme="dark"]) .world-clock .text-white,
+html:not([data-theme="dark"]) .world-clock .text-white\/90,
+html:not([data-theme="dark"]) .world-clock .text-white\/80,
+html:not([data-theme="dark"]) .world-clock .text-white\/70,
+html:not([data-theme="dark"]) .world-clock .text-white\/60,
+html:not([data-theme="dark"]) .world-clock .text-white\/45 {
+  color: #ffffff !important;
+}
+
+html:not([data-theme="dark"]) .world-clock .text-white\/80 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+html:not([data-theme="dark"]) .world-clock .text-white\/70 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+html:not([data-theme="dark"]) .world-clock .text-white\/60 {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+html:not([data-theme="dark"]) .world-clock .text-white\/45 {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+html:not([data-theme="dark"]) .world-clock .text-cyber-gold {
+  color: #ffd700 !important;
+}
+
+html:not([data-theme="dark"]) .world-clock .text-cyber-neonGreen {
+  color: #05f7b7 !important;
 }

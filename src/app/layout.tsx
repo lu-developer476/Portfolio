@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { LanguageProvider } from "@/lib/i18n";
 import Footer from "@/components/Footer";
+import ThemeAtmosphere from "@/components/ThemeAtmosphere";
 
 export const metadata: Metadata = {
   title: "Frontend Developer •  UX Interfaces",
@@ -19,8 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LanguageProvider>
           <div className="relative min-h-screen bg-cyber-gradient">
             <div className="noise" />
+            <ThemeAtmosphere />
             <Navbar />
-            <main className="relative mx-auto w-full max-w-6xl px-4 pb-20 pt-8">
+            <main className="relative z-10 mx-auto w-full max-w-6xl px-4 pb-20 pt-8">
               {children}
             </main>
             <Footer />
