@@ -57,7 +57,7 @@ type TechIconProps = {
 
 const iconClassName = "w-7 h-7 word delay-0";
 const delayedIconClassName = (delay: number) => `w-7 h-7 word delay-${delay}`;
-const iconGroupClassName = "flex flex-wrap items-start gap-4";
+const iconGroupClassName = "flex flex-wrap items-start gap-x-3 gap-y-4 sm:gap-x-4";
 const skillListClassName = "skills-list grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60";
 
 // Extrae solo las clases de animación (word + delay-*) del className del icono,
@@ -71,9 +71,9 @@ function labelAnimationClass(className: string) {
 
 function TechIcon({ label, icon, className }: TechIconProps) {
   return (
-    <span className="flex w-16 flex-col items-center gap-1 text-center text-[0.65rem] leading-tight text-white/70">
+    <span className="flex min-w-[4.75rem] flex-col items-center gap-1 text-center text-[0.6rem] leading-tight text-white/70 sm:min-w-20 sm:text-[0.65rem]">
       {icon}
-      <span className={labelAnimationClass(className)}>{label}</span>
+      <span className={`${labelAnimationClass(className)} whitespace-nowrap`}>{label}</span>
     </span>
   );
 }
