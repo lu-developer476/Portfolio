@@ -1,34 +1,57 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useLanguage } from "@/lib/i18n";
+import { Language, useLanguage } from "@/lib/i18n";
 
-const ROBOTIC_FEMALE_VOICE_HINTS = [
-  "zira",
-  "samantha",
-  "victoria",
-  "karen",
-  "moira",
-  "susan",
-  "female",
-  "woman"
-];
+type VoiceProfile = {
+  lang: string;
+  localePrefixes: string[];
+  nameHints: string[];
+};
 
-const getRoboticFemaleVoice = (voices: SpeechSynthesisVoice[]) => {
-  const englishVoices = voices.filter((voice) => voice.lang.toLowerCase().startsWith("en"));
-  const preferredVoice = englishVoices.find((voice) => {
-    const voiceName = voice.name.toLowerCase();
-    return ROBOTIC_FEMALE_VOICE_HINTS.some((hint) => voiceName.includes(hint));
-  });
+const VOICE_PROFILES: Record<Language, VoiceProfile> = {
+  es: {
+    lang: "es-419",
+    localePrefixes: ["es-419", "es-mx", "es-us", "es-ar", "es-co", "es-cl", "es-pe", "es-uy", "es"],
+    nameHints: ["paulina", "sabina", "monica", "mónica", "soledad", "laura", "female", "mujer"]
+  },
+  en: {
+    lang: "en-CA",
+    localePrefixes: ["en-ca", "en"],
+    nameHints: ["claire", "samantha", "victoria", "karen", "zira", "susan", "female", "woman"]
+  }
+};
 
-  return preferredVoice ?? englishVoices[0] ?? voices[0] ?? null;
+const normalize = (value: string) => value.toLowerCase();
+
+const scoreVoice = (voice: SpeechSynthesisVoice, profile: VoiceProfile) => {
+  const voiceLang = normalize(voice.lang);
+  const voiceName = normalize(voice.name);
+  const localeIndex = profile.localePrefixes.findIndex((locale) => voiceLang.startsWith(locale));
+
+  if (localeIndex === -1) return -1;
+
+  const exactLocaleBonus = voiceLang === normalize(profile.lang) ? 100 : 0;
+  const femaleHintBonus = profile.nameHints.some((hint) => voiceName.includes(hint)) ? 25 : 0;
+  const localServiceBonus = voice.localService ? 5 : 0;
+
+  return exactLocaleBonus + femaleHintBonus + localServiceBonus - localeIndex;
+};
+
+const getNaturalFemaleVoice = (voices: SpeechSynthesisVoice[], language: Language) => {
+  const profile = VOICE_PROFILES[language];
+
+  return voices
+    .map((voice) => ({ voice, score: scoreVoice(voice, profile) }))
+    .filter(({ score }) => score >= 0)
+    .sort((a, b) => b.score - a.score)[0]?.voice ?? null;
 };
 
 export default function KiroshiOverlay() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const circleRef = useRef<HTMLDivElement | null>(null);
   const scanRef = useRef<HTMLDivElement | null>(null);
-  const hasSpokenRef = useRef(false);
+  const spokenLanguageRef = useRef<Language | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -61,24 +84,25 @@ export default function KiroshiOverlay() {
   }, []);
 
   useEffect(() => {
-    let cancelled = false;
-    const speechSynthesis = window.speechSynthesis;
-
-    if (hasSpokenRef.current || !("speechSynthesis" in window)) {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
       return undefined;
     }
 
+    let cancelled = false;
+    const speechSynthesis = window.speechSynthesis;
+    const voiceProfile = VOICE_PROFILES[language];
+
     const speakCyberpunk = () => {
-      if (cancelled || hasSpokenRef.current) return;
+      if (cancelled || spokenLanguageRef.current === language) return;
 
       const message = new SpeechSynthesisUtterance(t.hero.systemVoice);
-      message.voice = getRoboticFemaleVoice(speechSynthesis.getVoices());
-      message.lang = "en-US";
-      message.rate = 0.78;
-      message.pitch = 1.45;
+      message.lang = voiceProfile.lang;
+      message.voice = getNaturalFemaleVoice(speechSynthesis.getVoices(), language);
+      message.rate = language === "es" ? 0.88 : 0.86;
+      message.pitch = 1.08;
       message.volume = 1;
 
-      hasSpokenRef.current = true;
+      spokenLanguageRef.current = language;
       speechSynthesis.cancel();
       speechSynthesis.speak(message);
     };
@@ -94,7 +118,7 @@ export default function KiroshiOverlay() {
       speechSynthesis.removeEventListener("voiceschanged", speakCyberpunk);
       speechSynthesis.cancel();
     };
-  }, [t.hero.systemVoice]);
+  }, [language, t.hero.systemVoice]);
 
   return (
     <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
