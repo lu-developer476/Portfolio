@@ -2,28 +2,28 @@
 
 import { projects } from "@/config/projects";
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { useHoverSound } from "@/lib/useHoverSound";
 import { useLanguage } from "@/lib/i18n";
 
 export default function ProjectsCarousel({ expanded = false }: { expanded?: boolean }) {
-  const list = expanded ? projects : projects.slice(0, 6);
+  const list = expanded ? projects : projects.slice(0, 5);
   const { play } = useHoverSound("zoom");
   const { language, t } = useLanguage();
 
   return (
     <Swiper
-      modules={[Pagination]}
-      pagination={{ clickable: true }}
+      modules={[Navigation]}
+      navigation
       spaceBetween={24}
       slidesPerView={1.05}
       breakpoints={{
         640: { slidesPerView: 2.05 },
         1024: { slidesPerView: 3.05 }
       }}
-      className="!pb-10"
+      className="projects-arrow-carousel"
     >
       {list.map((p) => {
         const CardContent = (

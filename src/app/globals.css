@@ -685,3 +685,111 @@ html:not([data-theme="dark"]) .world-clock .text-cyber-gold {
 html:not([data-theme="dark"]) .world-clock .text-cyber-neonGreen {
   color: #05f7b7 !important;
 }
+
+/* --- Relámpagos multicolor (modo Nube) --- */
+.lightning-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.lightning-flash {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.28), transparent 36%);
+  animation: cloudFlash 950ms ease-out both;
+  mix-blend-mode: screen;
+}
+
+.lightning-bolt {
+  --bolt-color: #a855f7;
+  position: absolute;
+  width: 68px;
+  height: 180px;
+  opacity: 0;
+  filter: drop-shadow(0 0 10px var(--bolt-color)) drop-shadow(0 0 22px var(--bolt-color));
+  animation: thunderBolt 700ms steps(2, end) both;
+}
+
+.lightning-bolt::before,
+.lightning-bolt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--bolt-color);
+  clip-path: polygon(45% 0, 68% 0, 54% 34%, 78% 34%, 31% 100%, 43% 50%, 22% 50%);
+}
+
+.lightning-bolt::after {
+  background: #ffffff;
+  transform: scale(0.45);
+  transform-origin: 48% 38%;
+  opacity: 0.88;
+}
+
+@keyframes thunderBolt {
+  0%, 16%, 34% { opacity: 0; }
+  8%, 24%, 44% { opacity: 1; }
+  62%, 100% { opacity: 0; }
+}
+
+@keyframes cloudFlash {
+  0%, 18%, 36% { opacity: 0; }
+  9%, 27% { opacity: 0.62; }
+  58%, 100% { opacity: 0; }
+}
+
+html[data-theme="cloud"] .hero-glow,
+html[data-theme="cloud"] .hud-circle {
+  display: none !important;
+}
+
+/* --- Carrusel de proyectos con flechas --- */
+.projects-arrow-carousel {
+  padding: 0 3rem 0.25rem !important;
+}
+
+.projects-arrow-carousel .swiper-button-prev,
+.projects-arrow-carousel .swiper-button-next {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.projects-arrow-carousel .swiper-button-prev::after,
+.projects-arrow-carousel .swiper-button-next::after {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.projects-arrow-carousel .swiper-button-prev:hover,
+.projects-arrow-carousel .swiper-button-next:hover {
+  transform: scale(1.08);
+  border-color: #05f7b7;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-prev,
+html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
+  border-color: var(--theme-border);
+  background: var(--theme-surface-strong);
+  color: var(--theme-accent-2);
+}
+
+@media (max-width: 640px) {
+  .projects-arrow-carousel {
+    padding: 0 2.35rem 0.25rem !important;
+  }
+
+  .projects-arrow-carousel .swiper-button-prev,
+  .projects-arrow-carousel .swiper-button-next {
+    width: 2.15rem;
+    height: 2.15rem;
+  }
+}
