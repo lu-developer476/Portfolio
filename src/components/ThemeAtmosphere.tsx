@@ -51,8 +51,6 @@ export default function ThemeAtmosphere() {
         <div className="fog-layer fog-b" />
         <div className="fog-layer fog-c" />
 
-        {/* Relámpagos de colores que truenan de vez en cuando */}
-        <CloudLightning />
       </div>
     );
   }
@@ -66,79 +64,6 @@ export default function ThemeAtmosphere() {
   }
 
   return null;
-}
-
-const LIGHTNING_COLORS = ["#a855f7", "#ec4899", "#facc15", "#38bdf8"];
-
-type Bolt = {
-  id: number;
-  top: number;
-  left: number;
-  color: string;
-  scaleX: number;
-  delay: number;
-};
-
-function CloudLightning() {
-  const [bolts, setBolts] = useState<Bolt[]>([]);
-
-  useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      return undefined;
-    }
-
-    let scheduleTimer = 0;
-    const clearTimers: number[] = [];
-
-    const strike = () => {
-      const burstCount = 1 + Math.floor(Math.random() * 3);
-      const newBolts = Array.from({ length: burstCount }, (_, index) => ({
-        id: Date.now() + index,
-        top: 10 + Math.random() * 72,
-        left: 6 + Math.random() * 84,
-        color: LIGHTNING_COLORS[Math.floor(Math.random() * LIGHTNING_COLORS.length)],
-        scaleX: Math.random() > 0.5 ? 1 : -1,
-        delay: index * 110
-      }));
-
-      setBolts(newBolts);
-      clearTimers.push(window.setTimeout(() => setBolts([]), 950));
-      schedule();
-    };
-
-    function schedule() {
-      const delay = 2200 + Math.random() * 4200;
-      scheduleTimer = window.setTimeout(strike, delay);
-    }
-
-    schedule();
-
-    return () => {
-      window.clearTimeout(scheduleTimer);
-      clearTimers.forEach((timer) => window.clearTimeout(timer));
-    };
-  }, []);
-
-  if (bolts.length === 0) return null;
-
-  return (
-    <div className="lightning-wrap">
-      <div className="lightning-flash" />
-      {bolts.map((bolt) => (
-        <div
-          key={bolt.id}
-          className="lightning-bolt"
-          style={{
-            ["--bolt-color" as string]: bolt.color,
-            top: `${bolt.top}%`,
-            left: `${bolt.left}%`,
-            transform: `scaleX(${bolt.scaleX})`,
-            animationDelay: `${bolt.delay}ms`
-          }}
-        />
-      ))}
-    </div>
-  );
 }
 
 function GalaxyVoid() {
