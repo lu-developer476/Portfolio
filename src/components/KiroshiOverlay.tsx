@@ -97,7 +97,7 @@ export default function KiroshiOverlay() {
   }, [t.hero.systemVoice]);
 
   return (
-    <div className="pointer-events-none absolute inset-0 z-20 overflow-hidden">
+    <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
       
       {/* Círculo HUD */}
       <div
@@ -112,7 +112,7 @@ export default function KiroshiOverlay() {
       />
 
       {/* Coordenadas */}
-      <div className="absolute left-4 top-4 text-[10px] text-cyber-neonGreen/60 font-mono tracking-wider">
+      <div className="absolute left-4 right-4 top-4 truncate text-[9px] text-cyber-neonGreen/60 font-mono tracking-wider sm:text-[10px]">
         {t.hero.systemStatus}
       </div>
     </div>

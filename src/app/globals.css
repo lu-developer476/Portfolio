@@ -686,60 +686,6 @@ html:not([data-theme="dark"]) .world-clock .text-cyber-neonGreen {
   color: #05f7b7 !important;
 }
 
-/* --- Relámpagos multicolor (modo Nube) --- */
-.lightning-wrap {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.lightning-flash {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.28), transparent 36%);
-  animation: cloudFlash 950ms ease-out both;
-  mix-blend-mode: screen;
-}
-
-.lightning-bolt {
-  --bolt-color: #a855f7;
-  position: absolute;
-  width: 68px;
-  height: 180px;
-  opacity: 0;
-  filter: drop-shadow(0 0 10px var(--bolt-color)) drop-shadow(0 0 22px var(--bolt-color));
-  animation: thunderBolt 700ms steps(2, end) both;
-}
-
-.lightning-bolt::before,
-.lightning-bolt::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--bolt-color);
-  clip-path: polygon(45% 0, 68% 0, 54% 34%, 78% 34%, 31% 100%, 43% 50%, 22% 50%);
-}
-
-.lightning-bolt::after {
-  background: #ffffff;
-  transform: scale(0.45);
-  transform-origin: 48% 38%;
-  opacity: 0.88;
-}
-
-@keyframes thunderBolt {
-  0%, 16%, 34% { opacity: 0; }
-  8%, 24%, 44% { opacity: 1; }
-  62%, 100% { opacity: 0; }
-}
-
-@keyframes cloudFlash {
-  0%, 18%, 36% { opacity: 0; }
-  9%, 27% { opacity: 0.62; }
-  58%, 100% { opacity: 0; }
-}
-
 html[data-theme="cloud"] .hero-glow,
 html[data-theme="cloud"] .hud-circle {
   display: none !important;

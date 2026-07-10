@@ -63,7 +63,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden px-6 py-16 md:px-12 md:py-24 min-h-[80vh] flex items-center">
+    <section className="relative isolate overflow-hidden px-5 py-14 sm:px-6 md:px-12 md:py-24 min-h-[80vh] flex items-center">
       <ThreeBackground />
       <KiroshiOverlay />
 
@@ -71,21 +71,21 @@ export default function Hero() {
       <div className="pointer-events-none absolute -left-24 -top-24 h-[300px] w-[300px] md:h-[420px] md:w-[420px] rounded-full bg-cyber-gold/15 blur-3xl hero-glow" />
       <div className="pointer-events-none absolute -right-24 top-0 h-[300px] w-[300px] md:h-[420px] md:w-[420px] rounded-full bg-cyber-violet/20 blur-3xl hero-glow" />
 
-      <div className="relative z-10 max-w-5xl">
+      <div className="relative z-10 w-full max-w-5xl min-w-0">
 
         <h1
           ref={titleRef}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight opacity-0"
+          className="max-w-full text-[2.15rem] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08] opacity-0"
         >
-          <span className="text-cyber-gold block">
+          <span className="text-cyber-gold block break-words">
             {t.hero.titleGold}
           </span>
-          <span className="text-white block">
+          <span className="text-white block break-words">
             {t.hero.titleWhite}
           </span>
         </h1>
 
-        <p className="mt-6 max-w-2xl text-white/75 leading-relaxed text-sm sm:text-base md:text-lg">
+        <p className="mt-6 max-w-2xl break-words text-white/75 leading-relaxed text-sm sm:text-base md:text-lg">
 {t.hero.description}
         </p>
 
@@ -94,8 +94,8 @@ export default function Hero() {
           <Swiper
             modules={[Pagination]}
             pagination={{ clickable: true }}
-            spaceBetween={16}
-            slidesPerView={1.1}
+            spaceBetween={14}
+            slidesPerView={1}
             breakpoints={{
               640: { slidesPerView: 2.1 },
               1024: { slidesPerView: 3.1 }
