@@ -706,7 +706,8 @@ html:not([data-theme="dark"]) .world-clock .bg-cyber-neonGreen\/10 {
 
 
 html[data-theme="cloud"] .hero-glow,
-html[data-theme="cloud"] .hud-circle {
+html[data-theme="cloud"] .hud-circle,
+html[data-theme="dark"] .hud-circle {
   display: none !important;
 }
 
