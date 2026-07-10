@@ -5,21 +5,23 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useHoverSound } from "@/lib/useHoverSound";
 import { useLanguage } from "@/lib/i18n";
+import WorldClock from "@/components/WorldClock";
 
-type ThemeMode = "dark" | "light" | "beige";
+type ThemeMode = "dark" | "light" | "beige" | "cloud" | "galaxy";
+
+const VALID_THEMES: ThemeMode[] = ["dark", "light", "beige", "cloud", "galaxy"];
 
 const getInitialTheme = (): ThemeMode => {
   if (typeof window === "undefined") return "dark";
 
-  const storedTheme = window.localStorage.getItem("portfolio-theme");
-  return storedTheme === "light" || storedTheme === "beige" || storedTheme === "dark"
-    ? storedTheme
-    : "dark";
+  const storedTheme = window.localStorage.getItem("portfolio-theme") as ThemeMode | null;
+  return storedTheme && VALID_THEMES.includes(storedTheme) ? storedTheme : "dark";
 };
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [clockOpen, setClockOpen] = useState(false);
   const [theme, setTheme] = useState<ThemeMode>("dark");
   const { play } = useHoverSound("bleep");
   const { language, toggleLanguage, t } = useLanguage();
@@ -36,7 +38,19 @@ export default function Navbar() {
       icon: "🌊",
       title: language === "es" ? "Modo claro" : "Light mode"
     },
-    { mode: "beige", label: "Beige", icon: "🏜️", title: language === "es" ? "Modo beige" : "Beige mode" }
+    { mode: "beige", label: "Beige", icon: "🏜️", title: language === "es" ? "Modo beige" : "Beige mode" },
+    {
+      mode: "cloud",
+      label: language === "es" ? "Nube" : "Cloud",
+      icon: "☁️",
+      title: language === "es" ? "Modo nube" : "Cloud mode"
+    },
+    {
+      mode: "galaxy",
+      label: language === "es" ? "Galaxia" : "Galaxy",
+      icon: "🌌",
+      title: language === "es" ? "Modo galaxia" : "Galaxy mode"
+    }
   ];
 
   useEffect(() => {
@@ -50,6 +64,7 @@ export default function Navbar() {
       if (e.key === "Escape") {
         setOpen(false);
         setMenuOpen(false);
+        setClockOpen(false);
       }
     };
 
@@ -180,6 +195,22 @@ export default function Navbar() {
                       ))}
                     </div>
                   </div>
+
+                  <div>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setClockOpen(true);
+                        setMenuOpen(false);
+                        play();
+                      }}
+                      onMouseEnter={play}
+                      className="flex w-full items-center justify-between rounded-xl border border-cyber-gold/60 bg-white/5 px-3 py-2 text-xs font-semibold tracking-widest text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen"
+                    >
+                      <span>{t.nav.worldClock}</span>
+                      <span aria-hidden>🕓</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             )}
@@ -217,6 +248,8 @@ export default function Navbar() {
           </div>
         </div>
       )}
+
+      <WorldClock open={clockOpen} onClose={() => setClockOpen(false)} />
     </>
   );
 }

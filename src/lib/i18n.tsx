@@ -7,7 +7,13 @@ export type Language = "es" | "en";
 const translations = {
   es: {
     languageName: "Español",
-    nav: { about: "Perfil", contact: "Contacto", toggle: "Cambiar idioma a inglés", navigation: "Navegación", languages: "Idiomas", modes: "Modos" },
+    nav: { about: "Perfil", contact: "Contacto", toggle: "Cambiar idioma a inglés", navigation: "Navegación", languages: "Idiomas", modes: "Modos", worldClock: "Horario mundial" },
+    worldClock: {
+      title: "Horario mundial",
+      subtitle: "Detectado automáticamente según tu ubicación.",
+      local: "Tu zona horaria",
+      world: "Otras zonas del mundo"
+    },
     footer: "Todos los derechos reservados • Built with React.js, Next.js, TypeScript & Tailwind CSS • UX/UI Interface • Database powered by Firebase • Deployed on Vercel ®",
     hero: {
       titleGold: "Interfaces que escalan",
@@ -95,7 +101,13 @@ const translations = {
   },
   en: {
     languageName: "English",
-    nav: { about: "Profile", contact: "Contact", toggle: "Switch language to Spanish", navigation: "Navigation", languages: "Languages", modes: "Modes" },
+    nav: { about: "Profile", contact: "Contact", toggle: "Switch language to Spanish", navigation: "Navigation", languages: "Languages", modes: "Modes", worldClock: "World clock" },
+    worldClock: {
+      title: "World clock",
+      subtitle: "Automatically detected from your location.",
+      local: "Your time zone",
+      world: "Other time zones"
+    },
     footer: "All rights reserved • Built with React.js, Next.js, TypeScript & Tailwind CSS • UX/UI Interface • Database powered by Firebase • Deployed on Vercel ®",
     hero: {
       titleGold: "Interfaces that scale",
