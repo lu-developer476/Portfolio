@@ -1,6 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useRef } from "react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 import ThreeBackground from "./ThreeBackground";
 import KiroshiOverlay from "./KiroshiOverlay";
 import { getTagline } from "@/generated/tagline";
@@ -17,6 +21,17 @@ export default function Hero() {
       return t.hero.fallbackTagline;
     }
   }, [t.hero.fallbackTagline]);
+
+  const stats = useMemo(
+    () => [
+      { label: "Performance", value: "⚙️ + 📈", hint: t.hero.stats.performance },
+      { label: "User Experience", value: "🧭 + 🔎", hint: t.hero.stats.ux },
+      { label: "Backend Ready", value: "🔐 + 🛠️ + 🌐", hint: t.hero.stats.backend },
+      { label: "Code Quality", value: "🧩 + ✅", hint: t.hero.stats.quality },
+      { label: "Motion & UI", value: "🎬 + ✨", hint: t.hero.stats.motion }
+    ],
+    [t.hero.stats]
+  );
 
   useEffect(() => {
     let cancelled = false;
@@ -74,23 +89,25 @@ export default function Hero() {
 {t.hero.description}
         </p>
 
-        {/* Stats responsive */}
-        <div className="text-white/75 mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <Stat
-            label="Performance"
-            value="⚙️ + 📈"
-            hint={t.hero.stats.performance}
-          />
-          <Stat
-            label="User Experience"
-            value="🧭 + 🔎"
-            hint={t.hero.stats.ux}
-          />
-          <Stat
-            label="Backend Ready"
-            value="🔐 + 🛠️ + 🌐"
-            hint={t.hero.stats.backend}
-          />
+        {/* Stats carrusel deslizable */}
+        <div className="text-white/75 mt-8">
+          <Swiper
+            modules={[Pagination]}
+            pagination={{ clickable: true }}
+            spaceBetween={16}
+            slidesPerView={1.1}
+            breakpoints={{
+              640: { slidesPerView: 2.1 },
+              1024: { slidesPerView: 3.1 }
+            }}
+            className="!pb-10"
+          >
+            {stats.map((stat) => (
+              <SwiperSlide key={stat.label} className="h-auto">
+                <Stat label={stat.label} value={stat.value} hint={stat.hint} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
 
         {/* Tagline dinámico */}
@@ -113,7 +130,7 @@ function Stat({
   hint: string;
 }) {
   return (
-    <div className="rounded-lg border border-white/10 bg-black/40 backdrop-blur-sm p-4 transition hover:border-cyber-gold/40">
+    <div className="h-full rounded-lg border border-white/10 bg-black/40 backdrop-blur-sm p-4 transition hover:border-cyber-gold/40">
       <div className="flex items-center justify-between">
         <div className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest">
           {label}

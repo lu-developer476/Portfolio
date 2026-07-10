@@ -22,7 +22,9 @@ const translations = {
       stats: {
         performance: "Core Web Vitals optimizados y render eficiente",
         ux: "Interacciones claras con validaciones en tiempo real",
-        backend: "Firestore + API Routes listos para escalar"
+        backend: "Firestore + API Routes listos para escalar",
+        quality: "TypeScript, componentes reutilizables y código predecible",
+        motion: "Microinteracciones y animaciones que guían sin distraer"
       },
       fallbackTagline: "Interfaces precisas. Arquitectura limpia. Experiencia sin fricción.",
       systemStatus: "> SISTEMA: EN LINEA • ESTADO: ACTIVO • SEÑAL: ESTABLE",
@@ -116,7 +118,9 @@ const translations = {
       stats: {
         performance: "Optimized Core Web Vitals and efficient rendering",
         ux: "Clear interactions with real-time validations",
-        backend: "Firestore + API Routes ready to scale"
+        backend: "Firestore + API Routes ready to scale",
+        quality: "TypeScript, reusable components, and predictable code",
+        motion: "Microinteractions and animations that guide without distracting"
       },
       fallbackTagline: "Precise interfaces. Clean architecture. Frictionless experience.",
       systemStatus: "> SYSTEM: ONLINE • STATUS: DEPLOYED • SIGNAL: STABLE",

@@ -29,7 +29,24 @@ export default function ThemeAtmosphere() {
 
   if (theme === "cloud") {
     return (
-      <div className="theme-atmosphere" aria-hidden>
+      <div className="theme-atmosphere cloud-atmosphere" aria-hidden>
+        {/* Nubes en movimiento (blancas y grises) */}
+        <div className="cloud-layer cloud-slow">
+          <span className="cloud cloud-white" style={{ top: "12%", left: "-20%" }} />
+          <span className="cloud cloud-gray" style={{ top: "58%", left: "10%" }} />
+          <span className="cloud cloud-white" style={{ top: "78%", left: "45%" }} />
+        </div>
+        <div className="cloud-layer cloud-mid">
+          <span className="cloud cloud-gray" style={{ top: "26%", left: "5%" }} />
+          <span className="cloud cloud-white" style={{ top: "44%", left: "55%" }} />
+          <span className="cloud cloud-gray" style={{ top: "8%", left: "70%" }} />
+        </div>
+        <div className="cloud-layer cloud-fast">
+          <span className="cloud cloud-white" style={{ top: "35%", left: "25%" }} />
+          <span className="cloud cloud-gray" style={{ top: "66%", left: "80%" }} />
+        </div>
+
+        {/* Neblina */}
         <div className="fog-layer fog-a" />
         <div className="fog-layer fog-b" />
         <div className="fog-layer fog-c" />

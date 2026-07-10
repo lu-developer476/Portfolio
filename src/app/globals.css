@@ -502,6 +502,88 @@ html[data-theme="galaxy"] h3 {
   pointer-events: none;
 }
 
+/* En modo Nube se oculta la animación 3D propia del modo Oscuro */
+html[data-theme="cloud"] .three-bg {
+  display: none;
+}
+
+/* --- Nubes en movimiento (modo Nube) --- */
+.cloud-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cloud {
+  position: absolute;
+  width: 340px;
+  height: 120px;
+  border-radius: 100px;
+  filter: blur(14px);
+  opacity: 0.75;
+  will-change: transform;
+}
+
+/* Volumen tipo nube con varios "puffs" */
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.cloud::before {
+  width: 150px;
+  height: 150px;
+  top: -60px;
+  left: 55px;
+}
+
+.cloud::after {
+  width: 110px;
+  height: 110px;
+  top: -40px;
+  right: 60px;
+}
+
+.cloud-white {
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.55) 70%, transparent);
+}
+
+.cloud-gray {
+  background: radial-gradient(closest-side, rgba(148, 163, 184, 0.85), rgba(100, 116, 139, 0.5) 70%, transparent);
+  opacity: 0.62;
+}
+
+.cloud-slow {
+  animation: cloudDrift 90s linear infinite;
+}
+
+.cloud-mid {
+  animation: cloudDrift 64s linear infinite;
+}
+
+.cloud-fast {
+  animation: cloudDrift 42s linear infinite;
+}
+
+@keyframes cloudDrift {
+  from {
+    transform: translate3d(-30%, 0, 0);
+  }
+  to {
+    transform: translate3d(130%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cloud-layer {
+    animation: none !important;
+  }
+}
+
 /* --- Nube / neblina --- */
 .fog-layer {
   position: absolute;
