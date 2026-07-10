@@ -79,14 +79,14 @@ export default function WorldClock({ open, onClose }: Props) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 px-4 backdrop-blur-md animate-fadeIn"
+      className="world-clock-overlay fixed inset-0 z-50 flex items-center justify-center bg-black/90 px-4 backdrop-blur-md animate-fadeIn"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
       aria-label={t.worldClock.title}
     >
       <div
-        className="world-clock relative w-full max-w-md animate-scaleIn rounded-2xl border border-cyber-gold/60 bg-black/95 p-6 shadow-[0_0_28px_rgba(250,204,21,0.22)]"
+        className="world-clock relative w-full max-w-md animate-scaleIn rounded-2xl border border-cyber-gold/60 bg-black/95 p-6 text-center shadow-[0_0_28px_rgba(250,204,21,0.22)]"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -101,14 +101,14 @@ export default function WorldClock({ open, onClose }: Props) {
         <p className="mt-1 text-xs text-white/60">{t.worldClock.subtitle}</p>
 
         {/* Zona local detectada */}
-        <div className="mt-4 rounded-xl border border-cyber-neonGreen/40 bg-white/5 p-4">
+        <div className="mt-4 rounded-xl border border-cyber-neonGreen/40 bg-white/5 p-4 text-center">
           <div className="text-[10px] font-semibold uppercase tracking-[0.28em] text-cyber-neonGreen">
             {t.worldClock.local}
           </div>
           <div className="mt-1 font-mono text-3xl font-bold text-white tabular-nums">
             {formatTime(now, localTz, locale)}
           </div>
-          <div className="mt-1 flex flex-wrap items-center gap-x-2 text-xs text-white/70">
+          <div className="mt-1 flex flex-wrap items-center justify-center gap-x-2 text-xs text-white/70">
             <span>{localTz.replace(/_/g, " ")}</span>
             <span className="text-cyber-gold">{offsetLabel(now, localTz)}</span>
             <span>• {formatDate(now, localTz, locale)}</span>
@@ -117,7 +117,7 @@ export default function WorldClock({ open, onClose }: Props) {
 
         {/* Otras zonas del mundo */}
         <div className="mt-4">
-          <div className="mb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/45">
+          <div className="mb-2 text-center text-[10px] font-semibold uppercase tracking-[0.28em] text-white/45">
             {t.worldClock.world}
           </div>
           <ul className="max-h-64 space-y-1 overflow-y-auto pr-1">
