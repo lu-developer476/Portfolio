@@ -52,6 +52,7 @@ import { useLanguage } from "@/lib/i18n";
 type TechIconProps = {
   label: string;
   icon: React.ReactNode;
+  className: string;
 };
 
 const iconClassName = "w-7 h-7 word delay-0";
@@ -59,11 +60,20 @@ const delayedIconClassName = (delay: number) => `w-7 h-7 word delay-${delay}`;
 const iconGroupClassName = "flex flex-wrap items-start gap-4";
 const skillListClassName = "skills-list grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60";
 
-function TechIcon({ label, icon }: TechIconProps) {
+// Extrae solo las clases de animación (word + delay-*) del className del icono,
+// para que el nombre revele con el mismo efecto y tiempo que su .svg.
+function labelAnimationClass(className: string) {
+  return className
+    .split(" ")
+    .filter((c) => c === "word" || c.startsWith("delay-"))
+    .join(" ");
+}
+
+function TechIcon({ label, icon, className }: TechIconProps) {
   return (
     <span className="flex w-16 flex-col items-center gap-1 text-center text-[0.65rem] leading-tight text-white/70">
       {icon}
-      <span>{label}</span>
+      <span className={labelAnimationClass(className)}>{label}</span>
     </span>
   );
 }
@@ -177,7 +187,12 @@ export default function AboutPage() {
 
               <div className={iconGroupClassName}>
                 {items.map(([label, Icon, className]) => (
-                  <TechIcon key={label} label={label} icon={<Icon className={className} />} />
+                  <TechIcon
+                    key={label}
+                    label={label}
+                    icon={<Icon className={className} />}
+                    className={className}
+                  />
                 ))}
               </div>
             </div>
@@ -211,7 +226,12 @@ export default function AboutPage() {
 
               <div className={iconGroupClassName}>
                 {items.map(([label, Icon, className]) => (
-                  <TechIcon key={label} label={label} icon={<Icon className={className} />} />
+                  <TechIcon
+                    key={label}
+                    label={label}
+                    icon={<Icon className={className} />}
+                    className={className}
+                  />
                 ))}
               </div>
             </div>

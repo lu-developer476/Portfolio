@@ -98,7 +98,7 @@ export default function ThreeBackground() {
     <div
       ref={mountRef}
       aria-hidden
-      className="pointer-events-none absolute right-0 top-0 h-full w-full opacity-60 md:opacity-80"
+      className="three-bg pointer-events-none absolute right-0 top-0 h-full w-full opacity-60 md:opacity-80"
     />
   );
 }
