@@ -139,10 +139,9 @@ export default function Navbar() {
             </button>
 
             {menuOpen && (
-              <div className="absolute right-0 top-12 z-50 w-[min(21rem,calc(100vw-2rem))] rounded-2xl border border-cyber-gold/60 bg-black/95 p-4 shadow-[0_0_28px_rgba(250,204,21,0.22)] backdrop-blur">
+              <div className="absolute right-0 top-12 z-50 w-[min(18rem,calc(100vw-2rem))] rounded-2xl border border-cyber-gold/60 bg-black/95 p-3 shadow-[0_0_28px_rgba(250,204,21,0.22)] backdrop-blur">
                 <div className="space-y-4">
                   <div>
-                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/45">{t.nav.navigation}</p>
                     <div className="grid gap-2">
                       <Link
                         href="/about"
@@ -164,7 +163,6 @@ export default function Navbar() {
                   </div>
 
                   <div>
-                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/45">{t.nav.languages}</p>
                     <button
                       type="button"
                       onClick={handleLanguageToggle}
