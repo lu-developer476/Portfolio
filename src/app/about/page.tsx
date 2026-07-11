@@ -101,7 +101,6 @@ export default function AboutPage() {
         ["Bootstrap", BootstrapIcon, iconClassName],
         ["Django", DjangoIcon, iconClassName],
         ["Next.js", NextJSIcon, iconClassName],
-        ["Swiper", SwiperJSIcon, iconClassName],
       ],
     },
     {
@@ -113,6 +112,7 @@ export default function AboutPage() {
         ["Howler.js", HowlerJSIcon, iconClassName],
         ["React", ReactIcon, iconClassName],
         ["SweetAlert2", SweetAlert2Icon, iconClassName],
+        ["Swiper.js", SwiperJSIcon, iconClassName],
         ["Tailwind", TailwindIcon, iconClassName],
         ["Three.js", ThreeJSIcon, iconClassName],
         ["Tone.js", ToneJSIcon, iconClassName],
