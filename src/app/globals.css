@@ -977,7 +977,7 @@ html[data-theme="galaxy"] .hud-circle {
 
 /* --- Carrusel de proyectos con flechas --- */
 .projects-arrow-carousel {
-  padding: 0 3rem 0.25rem !important;
+  padding: 1rem 3rem 1.25rem !important;
 }
 
 .projects-arrow-carousel .project-card-live {
@@ -1037,7 +1037,7 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
 
 @media (max-width: 640px) {
   .projects-arrow-carousel {
-    padding: 0 2.35rem 0.25rem !important;
+    padding: 1rem 2.35rem 1.25rem !important;
   }
 
   .projects-arrow-carousel .swiper-button-prev,
