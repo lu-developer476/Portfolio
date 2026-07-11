@@ -768,7 +768,7 @@ html[data-theme="cloud"] .three-bg {
   }
 }
 
-/* --- Nubes en movimiento (modo Nube) --- */
+/* --- Nubes en movimiento (modo Neblina) --- */
 .cloud-layer {
   position: absolute;
   inset: 0;
@@ -845,7 +845,7 @@ html[data-theme="cloud"] .three-bg {
   }
 }
 
-/* --- Nube / neblina --- */
+/* --- Neblina --- */
 .fog-layer {
   position: absolute;
   top: 0;
