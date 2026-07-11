@@ -980,6 +980,29 @@ html[data-theme="galaxy"] .hud-circle {
   padding: 0 3rem 0.25rem !important;
 }
 
+.projects-arrow-carousel .project-card-live {
+  --project-aura: rgba(5, 247, 183, 0.72);
+  --project-aura-soft: rgba(5, 247, 183, 0.18);
+}
+
+.projects-arrow-carousel .swiper-slide-active .project-card-live,
+.projects-arrow-carousel a:focus-visible .project-card-live,
+.projects-arrow-carousel a:active .project-card-live,
+.projects-arrow-carousel .project-card-live:hover {
+  border-color: color-mix(in srgb, var(--project-aura) 82%, white 10%) !important;
+  background: radial-gradient(circle at 50% 16%, var(--project-aura-soft), rgba(0, 0, 0, 0.5) 62%) !important;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--project-aura) 78%, white 12%),
+    0 0 18px var(--project-aura),
+    0 0 36px var(--project-aura-soft);
+  transform: translateY(-1px);
+}
+
+.projects-arrow-carousel a:focus-visible {
+  border-radius: 1rem;
+  outline: none;
+}
+
 .projects-arrow-carousel .swiper-button-prev,
 .projects-arrow-carousel .swiper-button-next {
   width: 2.75rem;

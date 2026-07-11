@@ -24,10 +24,10 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
       {list.map((p) => {
         const CardContent = (
           <article
-            className={`group h-full rounded-2xl border bg-black/40 p-6 transition-all duration-300
+            className={`project-card group h-full rounded-2xl border bg-black/40 p-6 transition-all duration-300
             ${
               p.demo
-                ? "cursor-pointer border-white/100 hover:border-cyber-neonGreen/60 hover:shadow-neonGreen hover:bg-black/50"
+                ? "project-card-live cursor-pointer border-white/100 hover:border-cyber-neonGreen/60 hover:shadow-neonGreen hover:bg-black/50"
                 : "border-white/100 hover:border-cyber-gold/40 hover:bg-black/50"
             }`}
           >
