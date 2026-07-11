@@ -18,11 +18,7 @@ export default function ProjectsCarousel({ expanded = false }: { expanded?: bool
       modules={[Navigation]}
       navigation
       spaceBetween={24}
-      slidesPerView={1.05}
-      breakpoints={{
-        640: { slidesPerView: 2.05 },
-        1024: { slidesPerView: 3.05 }
-      }}
+      slidesPerView={1}
       className="projects-arrow-carousel"
     >
       {list.map((p) => {
