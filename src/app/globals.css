@@ -502,9 +502,226 @@ html[data-theme="galaxy"] h3 {
   pointer-events: none;
 }
 
-/* En modo Nube se oculta la animación 3D propia del modo Oscuro */
+
+/* En temas atmosféricos claros se oculta la pieza 3D cyber para que mande el paisaje */
+html[data-theme="light"] .three-bg,
+html[data-theme="beige"] .three-bg,
 html[data-theme="cloud"] .three-bg {
   display: none;
+}
+
+/* --- Manantial / humedad / lluvia / oleaje (modo Claro) --- */
+.spring-atmosphere {
+  background:
+    linear-gradient(180deg, rgba(214, 251, 248, 0.38), rgba(125, 211, 252, 0.2) 48%, rgba(12, 148, 136, 0.22)),
+    radial-gradient(70% 55% at 50% 112%, rgba(8, 145, 178, 0.38), transparent 62%);
+}
+
+.spring-glow,
+.spring-mist,
+.spring-source,
+.spring-wave,
+.spring-rain,
+.spring-bubble {
+  position: absolute;
+  pointer-events: none;
+}
+
+.spring-glow {
+  border-radius: 999px;
+  filter: blur(34px);
+  opacity: 0.72;
+  mix-blend-mode: screen;
+}
+
+.spring-glow-a {
+  width: 48vw;
+  height: 48vw;
+  left: -10vw;
+  top: 8vh;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.34), transparent 68%);
+  animation: springBreath 12s ease-in-out infinite;
+}
+
+.spring-glow-b {
+  width: 42vw;
+  height: 42vw;
+  right: -8vw;
+  bottom: 4vh;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.3), transparent 70%);
+  animation: springBreath 15s ease-in-out infinite reverse;
+}
+
+.spring-mist {
+  left: -35%;
+  width: 170%;
+  height: 48%;
+  filter: blur(18px);
+  opacity: 0.56;
+  background:
+    radial-gradient(closest-side at 18% 62%, rgba(240, 253, 250, 0.74), transparent 72%),
+    radial-gradient(closest-side at 48% 48%, rgba(186, 230, 253, 0.5), transparent 70%),
+    radial-gradient(closest-side at 78% 58%, rgba(204, 251, 241, 0.62), transparent 72%);
+  background-size: 52% 90%;
+  animation: springMistDrift 42s linear infinite;
+}
+
+.spring-mist-a { top: 18%; }
+.spring-mist-b { top: 46%; opacity: 0.42; animation-duration: 64s; animation-direction: reverse; }
+
+.spring-rain {
+  inset: -12% 0 0 0;
+  opacity: 0.26;
+  transform: skewX(-12deg);
+  background-image: repeating-linear-gradient(98deg, transparent 0 24px, rgba(3, 105, 161, 0.24) 25px 27px, transparent 28px 48px);
+  animation: springRainFall 1.5s linear infinite;
+}
+
+.spring-rain-front { opacity: 0.18; background-size: 72px 72px; animation-duration: 0.95s; }
+.spring-rain-back { filter: blur(1px); background-size: 110px 110px; }
+
+.spring-source {
+  width: min(46vw, 620px);
+  height: min(46vw, 620px);
+  left: 50%;
+  bottom: -26%;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 50% 47%, rgba(240, 253, 250, 0.58) 0 5%, rgba(45, 212, 191, 0.2) 9%, transparent 22%),
+    repeating-radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.26) 0 2px, transparent 3px 28px);
+  filter: blur(0.2px);
+  opacity: 0.7;
+  animation: springPulse 7s ease-in-out infinite;
+}
+
+.spring-bubble {
+  width: 10px;
+  height: 10px;
+  left: 50%;
+  bottom: 52%;
+  border-radius: 999px;
+  background: rgba(236, 254, 255, 0.78);
+  box-shadow: 0 0 14px rgba(45, 212, 191, 0.62);
+  animation: springBubble 5.6s ease-in infinite;
+}
+.spring-bubble-b { left: 42%; animation-delay: -1.8s; transform: scale(0.72); }
+.spring-bubble-c { left: 59%; animation-delay: -3.4s; transform: scale(0.9); }
+
+.spring-wave {
+  left: -8%;
+  right: -8%;
+  bottom: -10%;
+  height: 34%;
+  border-radius: 45% 45% 0 0;
+  opacity: 0.34;
+  background: radial-gradient(80% 80% at 50% 0%, rgba(14, 165, 233, 0.34), transparent 64%);
+  border-top: 1px solid rgba(240, 253, 250, 0.54);
+  animation: springWave 9s ease-in-out infinite;
+}
+.spring-wave-b { bottom: -14%; opacity: 0.26; animation-duration: 12s; animation-delay: -3s; }
+.spring-wave-c { bottom: -18%; opacity: 0.18; animation-duration: 16s; animation-delay: -6s; }
+
+@keyframes springBreath { 50% { transform: scale(1.09) translate3d(2%, -2%, 0); opacity: 0.9; } }
+@keyframes springMistDrift { to { transform: translate3d(36%, -2%, 0); } }
+@keyframes springRainFall { to { background-position: -42px 92px; } }
+@keyframes springPulse { 50% { transform: translateX(-50%) scale(1.05); opacity: 0.86; } }
+@keyframes springBubble { 0% { opacity: 0; transform: translate3d(0, 0, 0) scale(0.55); } 20% { opacity: 0.75; } 100% { opacity: 0; transform: translate3d(24px, -38vh, 0) scale(1.28); } }
+@keyframes springWave { 50% { transform: translate3d(3%, -5%, 0) scaleX(1.04); } }
+
+/* --- Tormenta del desierto (modo Beige) --- */
+.desert-atmosphere {
+  background:
+    linear-gradient(180deg, rgba(146, 64, 14, 0.16), rgba(245, 158, 11, 0.18) 48%, rgba(92, 54, 20, 0.28)),
+    radial-gradient(60% 50% at 72% 18%, rgba(253, 186, 116, 0.35), transparent 58%);
+}
+
+.desert-sun,
+.desert-dune,
+.sand-haze,
+.sand-squall,
+.sand-vortex {
+  position: absolute;
+  pointer-events: none;
+}
+
+.desert-sun {
+  width: 22vw;
+  height: 22vw;
+  right: 8vw;
+  top: 11vh;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(254, 215, 170, 0.76), rgba(251, 146, 60, 0.2) 42%, transparent 70%);
+  filter: blur(18px);
+  animation: desertSunVeil 9s ease-in-out infinite;
+}
+
+.desert-dune {
+  left: -12%;
+  right: -12%;
+  bottom: -18%;
+  height: 42%;
+  border-radius: 50% 50% 0 0;
+  background: linear-gradient(180deg, rgba(180, 113, 45, 0.28), rgba(92, 54, 20, 0.28));
+}
+.desert-dune-back { bottom: -23%; transform: translateX(-8%) rotate(2deg); opacity: 0.44; }
+.desert-dune-front { bottom: -29%; transform: translateX(8%) rotate(-2deg); opacity: 0.56; }
+
+.sand-haze {
+  left: -45%;
+  width: 190%;
+  height: 100%;
+  filter: blur(12px);
+  background:
+    radial-gradient(closest-side at 20% 36%, rgba(251, 191, 36, 0.24), transparent 72%),
+    radial-gradient(closest-side at 54% 54%, rgba(194, 120, 52, 0.3), transparent 72%),
+    radial-gradient(closest-side at 84% 44%, rgba(120, 74, 35, 0.24), transparent 72%);
+  animation: sandHazeDrift 34s linear infinite;
+}
+.sand-haze-b { opacity: 0.66; animation-duration: 52s; animation-direction: reverse; }
+
+.sand-squall {
+  inset: -8% -18%;
+  transform: rotate(-9deg);
+  background-image: repeating-linear-gradient(94deg, transparent 0 18px, rgba(120, 74, 35, 0.2) 19px 21px, transparent 22px 42px);
+  opacity: 0.4;
+  animation: sandSheet 1.15s linear infinite;
+}
+.sand-squall-back { filter: blur(1.5px); opacity: 0.24; animation-duration: 1.9s; }
+.sand-squall-front { opacity: 0.32; }
+
+.sand-vortex {
+  width: 24vw;
+  height: 62vh;
+  bottom: 2vh;
+  border-radius: 50%;
+  border: 2px solid rgba(146, 64, 14, 0.22);
+  filter: blur(1px);
+  opacity: 0.44;
+  transform: skewX(-10deg);
+  animation: sandVortex 7s ease-in-out infinite;
+}
+.sand-vortex-a { left: 14vw; }
+.sand-vortex-b { right: 10vw; height: 46vh; opacity: 0.28; animation-delay: -3s; }
+
+@keyframes desertSunVeil { 50% { opacity: 0.42; transform: scale(0.94); } }
+@keyframes sandHazeDrift { to { transform: translate3d(28%, 0, 0); } }
+@keyframes sandSheet { to { background-position: -72px 96px; } }
+@keyframes sandVortex { 50% { transform: translate3d(8%, -3%, 0) skewX(-16deg) scaleX(0.82); opacity: 0.62; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .spring-glow,
+  .spring-mist,
+  .spring-rain,
+  .spring-source,
+  .spring-bubble,
+  .spring-wave,
+  .desert-sun,
+  .sand-haze,
+  .sand-squall,
+  .sand-vortex {
+    animation: none !important;
+  }
 }
 
 /* --- Nubes en movimiento (modo Nube) --- */

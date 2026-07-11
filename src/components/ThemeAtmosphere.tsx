@@ -27,6 +27,43 @@ export default function ThemeAtmosphere() {
     return () => observer.disconnect();
   }, []);
 
+  if (theme === "light") {
+    return (
+      <div className="theme-atmosphere spring-atmosphere" aria-hidden>
+        <div className="spring-glow spring-glow-a" />
+        <div className="spring-glow spring-glow-b" />
+        <div className="spring-mist spring-mist-a" />
+        <div className="spring-mist spring-mist-b" />
+        <div className="spring-rain spring-rain-back" />
+        <div className="spring-rain spring-rain-front" />
+        <div className="spring-source">
+          <span className="spring-bubble spring-bubble-a" />
+          <span className="spring-bubble spring-bubble-b" />
+          <span className="spring-bubble spring-bubble-c" />
+        </div>
+        <div className="spring-wave spring-wave-a" />
+        <div className="spring-wave spring-wave-b" />
+        <div className="spring-wave spring-wave-c" />
+      </div>
+    );
+  }
+
+  if (theme === "beige") {
+    return (
+      <div className="theme-atmosphere desert-atmosphere" aria-hidden>
+        <div className="desert-sun" />
+        <div className="desert-dune desert-dune-back" />
+        <div className="desert-dune desert-dune-front" />
+        <div className="sand-haze sand-haze-a" />
+        <div className="sand-haze sand-haze-b" />
+        <div className="sand-squall sand-squall-back" />
+        <div className="sand-squall sand-squall-front" />
+        <div className="sand-vortex sand-vortex-a" />
+        <div className="sand-vortex sand-vortex-b" />
+      </div>
+    );
+  }
+
   if (theme === "cloud") {
     return (
       <div className="theme-atmosphere cloud-atmosphere" aria-hidden>
