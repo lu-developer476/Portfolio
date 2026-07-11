@@ -979,3 +979,27 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
     height: 2.15rem;
   }
 }
+
+/* --- Carrusel de cards para selector de modos --- */
+.modes-card-carousel {
+  padding: 0 2.25rem 0.15rem !important;
+}
+
+.modes-card-carousel .swiper-wrapper {
+  align-items: stretch;
+}
+
+.modes-card-carousel .swiper-slide {
+  height: auto;
+}
+
+.modes-card-carousel .swiper-button-prev,
+.modes-card-carousel .swiper-button-next {
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
+.modes-card-carousel .swiper-button-prev::after,
+.modes-card-carousel .swiper-button-next::after {
+  font-size: 0.7rem;
+}
