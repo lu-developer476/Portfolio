@@ -1026,7 +1026,7 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
 
 /* --- Carrusel de cards para selector de modos --- */
 .modes-card-carousel {
-  overflow: visible !important;
+  overflow: hidden !important;
   padding: 0.35rem 2.25rem 0.25rem !important;
 }
 
