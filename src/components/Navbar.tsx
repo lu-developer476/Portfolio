@@ -33,7 +33,7 @@ export default function Navbar() {
     {
       mode: "dark",
       label: language === "es" ? "Oscuro" : "Dark",
-      icon: "🌙",
+      icon: "🌑",
       title: language === "es" ? "Modo oscuro" : "Dark mode"
     },
     {
@@ -46,7 +46,7 @@ export default function Navbar() {
     {
       mode: "cloud",
       label: language === "es" ? "Nube" : "Cloud",
-      icon: "☁️",
+      icon: "🌨️",
       title: language === "es" ? "Modo nube" : "Cloud mode"
     },
     {
@@ -194,9 +194,9 @@ export default function Navbar() {
                             title={title}
                             aria-label={title}
                             aria-pressed={theme === mode}
-                            className={`flex min-h-24 w-full flex-col items-center justify-center gap-2 rounded-xl border px-2 py-3 text-[12px] font-semibold transition ${
+                            className={`mode-option mode-option-${mode} flex min-h-24 w-full flex-col items-center justify-center gap-2 rounded-xl border px-2 py-3 text-[12px] font-semibold transition ${
                               theme === mode
-                                ? "border-cyber-gold bg-cyber-gold text-black"
+                                ? "mode-option-active border-white/80 bg-white/5"
                                 : "border-white/10 bg-white/5 text-cyber-gold hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen"
                             }`}
                           >
