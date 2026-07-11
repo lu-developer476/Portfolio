@@ -45,9 +45,9 @@ export default function Navbar() {
     { mode: "beige", label: "Beige", icon: "🏜️", title: language === "es" ? "Modo beige" : "Beige mode" },
     {
       mode: "cloud",
-      label: language === "es" ? "Nube" : "Cloud",
+      label: language === "es" ? "Neblina" : "Cloud",
       icon: "🌨️",
-      title: language === "es" ? "Modo nube" : "Cloud mode"
+      title: language === "es" ? "Modo neblina" : "Cloud mode"
     },
     {
       mode: "galaxy",
