@@ -433,6 +433,50 @@ html:not([data-theme="dark"]) .theme-toggle button[aria-pressed="true"] {
   color: var(--theme-text) !important;
 }
 
+.mode-option {
+  --mode-aura: rgba(34, 211, 238, 0.55);
+  --mode-aura-soft: rgba(34, 211, 238, 0.16);
+}
+
+.mode-option-dark {
+  --mode-aura: rgba(148, 163, 184, 0.75);
+  --mode-aura-soft: rgba(15, 23, 42, 0.42);
+}
+
+.mode-option-light {
+  --mode-aura: rgba(56, 189, 248, 0.78);
+  --mode-aura-soft: rgba(14, 165, 233, 0.20);
+}
+
+.mode-option-beige {
+  --mode-aura: rgba(217, 119, 6, 0.78);
+  --mode-aura-soft: rgba(180, 83, 9, 0.24);
+}
+
+.mode-option-cloud {
+  --mode-aura: rgba(226, 232, 240, 0.88);
+  --mode-aura-soft: rgba(148, 163, 184, 0.28);
+}
+
+.mode-option-galaxy {
+  --mode-aura: rgba(168, 85, 247, 0.82);
+  --mode-aura-soft: rgba(59, 130, 246, 0.22);
+}
+
+.mode-option-active {
+  color: white;
+  background: radial-gradient(circle at 50% 18%, var(--mode-aura-soft), rgba(255, 255, 255, 0.05) 58%) !important;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--mode-aura) 78%, white 12%),
+    0 0 18px var(--mode-aura),
+    0 0 36px var(--mode-aura-soft);
+  transform: translateY(-1px);
+}
+
+.mode-option-active .text-2xl {
+  filter: drop-shadow(0 0 8px var(--mode-aura)) drop-shadow(0 0 16px var(--mode-aura));
+}
+
 html[data-theme="light"] .light-electric-blue,
 html[data-theme="light"] .skills-list .word {
   color: #0077ff !important;
