@@ -182,11 +182,7 @@ export default function Navbar() {
                       modules={[Navigation]}
                       navigation
                       spaceBetween={10}
-                      slidesPerView={2.05}
-                      breakpoints={{
-                        360: { slidesPerView: 2.35 },
-                        520: { slidesPerView: 3.05 }
-                      }}
+                      slidesPerView={1}
                       className="projects-arrow-carousel modes-card-carousel"
                       aria-label={language === "es" ? "Selector de tema" : "Theme selector"}
                     >
