@@ -113,8 +113,8 @@ export const projects: Project[] = [
     demo: "https://technochessgame.onrender.com",
   },
   {
-    slug: "duel-monsters",
-    title: "Duel Monsters",
+    slug: "dofus-duelists",
+    title: "Dofus Duelists",
     year: "2026",
     description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
