@@ -86,7 +86,7 @@ export const projects: Project[] = [
     year: "2026",
     description: "SPA turística realizada con React y Typescript. Desplegado con Vercel.",
     tags: ["HTML", "CSS", "TypeScript", "React", "UX/UI", "Vercel"],
-    demo: "https://granmilla.vercel.app",
+    demo: "https://granmilla.vercel.app/",
   },
   {
     slug: "2048",
@@ -134,7 +134,7 @@ export const projects: Project[] = [
     year: "2026",
     description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
-    demo: "https://hangman-thegame.onrender.com/",
+    demo: "https://hangman-thegame.onrender.com",
   },
     {
     slug: "frogger-rally",
@@ -142,9 +142,17 @@ export const projects: Project[] = [
     year: "2026",
     description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
-    demo: "https://jumpingfrogger-thegame.onrender.com/",
+    demo: "https://jumpingfrogger-thegame.onrender.com",
   },
-  {
+    {
+    slug: "bunny-quest",
+    title: "Bunny Quest",
+    year: "2026",
+    description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
+    tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
+    demo: "https://bunny-quest.onrender.com",
+  },
+    {
     slug: "coming-soon",
     title: "PRÓXIMAMENTE",
     year: "❔",
