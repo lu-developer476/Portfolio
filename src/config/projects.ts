@@ -138,7 +138,7 @@ export const projects: Project[] = [
   },
     {
     slug: "jumping-frogger",
-    title: "Jumping frogger",
+    title: "Jumping Frogger",
     year: "2026",
     description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
@@ -161,8 +161,8 @@ export const projects: Project[] = [
     demo: "https://paper-duck.onrender.com/",
   },
     {
-    slug: "otter-rescue",
-    title: "Otter rescue",
+    slug: "otters-rescue",
+    title: "Otter's Rescue",
     year: "2026",
     description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
