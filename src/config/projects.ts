@@ -137,8 +137,8 @@ export const projects: Project[] = [
     demo: "https://hangman-thegame.onrender.com",
   },
     {
-    slug: "frogger-rally",
-    title: "Frogger Rally",
+    slug: "jumping-frogger",
+    title: "Jumping frogger",
     year: "2026",
     description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
@@ -151,6 +151,22 @@ export const projects: Project[] = [
     description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
     demo: "https://bunny-quest.onrender.com",
+  },
+    {
+    slug: "paper-duck",
+    title: "Paper Duck",
+    year: "2026",
+    description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
+    tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
+    demo: "https://paper-duck.onrender.com/",
+  },
+    {
+    slug: "otter-rescue",
+    title: "Otter rescue",
+    year: "2026",
+    description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
+    tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
+    demo: "https://otter-rescue.onrender.com",
   },
     {
     slug: "coming-soon",
