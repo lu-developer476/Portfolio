@@ -42,3 +42,4 @@ export { default as TypeScriptIcon } from "@/assets/svg/typescript.svg";
 export { default as V0Icon } from "@/assets/svg/v0.svg";
 export { default as VercelIcon } from "@/assets/svg/vercelhosting.svg";
 export { default as WhimsicalIcon } from "@/assets/svg/whimsical.svg";
+export { default as WixIcon } from "@/assets/svg/wix.svg";
