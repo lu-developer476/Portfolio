@@ -47,6 +47,7 @@ import {
   V0Icon,
   VercelIcon,
   WhimsicalIcon,
+  WixIcon,
 } from "@/icons";
 import { useLanguage } from "@/lib/i18n";
 
@@ -149,6 +150,7 @@ export default function AboutPage() {
         ["Supabase", SupabaseIcon, delayedIconClassName(4)],
         ["Vercel", VercelIcon, delayedIconClassName(4)],
         ["Whimsical", WhimsicalIcon, delayedIconClassName(4)],
+        ["Wix", WixIcon, delayedIconClassName(4)],
       ],
     },
   ] satisfies { title: string; items: [string, React.ComponentType<{ className?: string }>, string][] }[];
