@@ -2,6 +2,7 @@ export { default as AlpineJSIcon } from "@/assets/svg/alpinejs.svg";
 export { default as AnimeJSIcon } from "@/assets/svg/animejs.svg";
 export { default as BootstrapIcon } from "@/assets/svg/bootstrap.svg";
 export { default as CanvaIcon } from "@/assets/svg/canva.svg";
+export { default as CapCutIcon } from "@/assets/svg/capcut.svg";
 export { default as ChartJSIcon } from "@/assets/svg/chartjs.svg";
 export { default as CoffeeScriptIcon } from "@/assets/svg/coffeescript.svg";
 export { default as CropperJSIcon } from "@/assets/svg/cropperjs.svg";
