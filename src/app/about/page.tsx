@@ -7,6 +7,7 @@ import {
   AnimeJSIcon,
   BootstrapIcon,
   CanvaIcon,
+  CapCutIcon,
   ChartJSIcon,
   CSS3Icon,
   CoffeeScriptIcon,
@@ -132,6 +133,7 @@ export default function AboutPage() {
       title: "Hosting & Tools",
       items: [
         ["Canva", CanvaIcon, delayedIconClassName(4)],
+        ["CapCut", CapCutIcon, delayedIconClassName(4)],
         ["draw.io", DrawIoIcon, delayedIconClassName(4)],
         ["Figma", FigmaIcon, delayedIconClassName(4)],
         ["Firebase", FirebaseIcon, delayedIconClassName(4)],
