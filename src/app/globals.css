@@ -1059,3 +1059,51 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
 .modes-card-carousel .swiper-button-next::after {
   font-size: 0.7rem;
 }
+
+/* ============================= */
+/* Project live previews         */
+/* ============================= */
+
+.project-preview-viewport {
+  height: 13rem;
+}
+
+.project-preview-frame {
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .project-preview-viewport {
+    height: 14rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .project-preview-viewport {
+    height: 15rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-preview-viewport {
+    height: 16rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .project-preview-viewport {
+    container-type: inline-size;
+    height: clamp(16rem, 160cqw, 28rem);
+  }
+
+  .project-preview-frame {
+    height: 667px;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%) scale(calc(100cqw / 375));
+    transform-origin: top center;
+    width: 375px;
+  }
+}
