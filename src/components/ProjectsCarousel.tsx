@@ -49,17 +49,10 @@ export default function ProjectsCarousel({ expanded = false, items = projects }:
               </span>
             </div>
 
-            {/* Live preview */}
+            {/* Site preview */}
             {p.demo && (
               <div className="mt-5 overflow-hidden rounded-xl border border-cyber-neonGreen/35 bg-black/70 shadow-inner shadow-cyber-neonGreen/10">
-                <div className="flex items-center justify-between border-b border-cyber-neonGreen/20 bg-black/80 px-3 py-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-cyber-neonGreen">
-                    Live preview
-                  </span>
-                  <span className="h-2 w-2 rounded-full bg-cyber-neonGreen shadow-neonGreen" />
-                </div>
-
-                <div className="relative h-64 bg-cyber-black md:h-80">
+                <div className="relative h-52 bg-cyber-black sm:h-56 md:h-60 lg:h-64">
                   <iframe
                     src={p.demo}
                     title={`Vista previa en vivo de ${p.title}`}
