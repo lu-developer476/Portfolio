@@ -73,7 +73,7 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
                     <button
                       type="button"
                       className="project-preview-enable absolute inset-0 z-10 flex items-center justify-center px-6 text-center"
-                      aria-label={`Habilitar vista previa de ${p.title}`}
+                      aria-label={`Vista previa de ${p.title}`}
                       onClick={(event) => {
                         event.preventDefault();
                         event.stopPropagation();
@@ -84,7 +84,7 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
                       }}
                     >
                       <span className="project-preview-enable-label rounded-full border border-cyber-neonGreen/70 bg-black/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-cyber-neonGreen shadow-neonGreen">
-                        habilitar vista previa
+                        Vista previa
                       </span>
                     </button>
                   )}

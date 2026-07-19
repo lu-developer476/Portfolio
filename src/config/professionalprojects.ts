@@ -18,10 +18,10 @@ export const professionalProjects: Project[] = [
   },
   {
     slug: "arkhe-digital-museum",
-    title: "ARKHÉ - Museo Digital",
+    title: "ARKHÉ",
     year: "2026",
     description: "Museo digital de arte y cultura sintética que combina diseño editorial, experiencias interactivas y una colección curada de obras contemporáneas.",
-    tags: ["Museo Digital", "Arte Animado", "Diseño Editorial", "UX/UI", "Motion Design", "Framer"],
+    tags: ["Edición Digital", "Arte Animado", "UX/UI", "Motion Design", "Framer"],
     demo: "https://arkhe-digital-musem.framer.website/",
   },
   {
