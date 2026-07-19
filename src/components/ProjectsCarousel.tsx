@@ -1,6 +1,7 @@
 "use client";
 
 import { personalProjects, type Project } from "@/config/personalprojects";
+import { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,6 +18,7 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
   const list = expanded ? items : items.slice(0, 5);
   const { play } = useHoverSound("zoom");
   const { language, t } = useLanguage();
+  const [enabledPreviews, setEnabledPreviews] = useState<Record<string, boolean>>({});
 
   return (
     <Swiper
@@ -27,6 +29,8 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
       className="projects-arrow-carousel"
     >
       {list.map((p) => {
+        const isPreviewEnabled = Boolean(enabledPreviews[p.slug]);
+
         const CardContent = (
           <article
             className={`project-card group h-full rounded-2xl border bg-black/40 p-6 transition-all duration-300
@@ -58,9 +62,32 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
                     title={`Vista previa en vivo de ${p.title}`}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="project-preview-frame pointer-events-none border-0 bg-white"
+                    scrolling="no"
+                    className={`project-preview-frame pointer-events-none border-0 bg-white ${
+                      isPreviewEnabled ? "" : "project-preview-frame--locked"
+                    }`}
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+
+                  {!isPreviewEnabled && (
+                    <button
+                      type="button"
+                      className="project-preview-enable absolute inset-0 z-10 flex items-center justify-center px-6 text-center"
+                      aria-label={`Habilitar vista previa de ${p.title}`}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        setEnabledPreviews((current) => ({
+                          ...current,
+                          [p.slug]: true,
+                        }));
+                      }}
+                    >
+                      <span className="project-preview-enable-label rounded-full border border-cyber-neonGreen/70 bg-black/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-cyber-neonGreen shadow-neonGreen">
+                        habilitar vista previa
+                      </span>
+                    </button>
+                  )}
                 </div>
               </div>
             )}
@@ -92,15 +119,21 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
         return (
           <SwiperSlide key={p.slug}>
             {p.demo ? (
-              <a
-                href={p.demo}
-                target="_blank"
-                rel="noreferrer"
+              <div
+                role="link"
+                tabIndex={0}
                 className="block h-full"
                 onMouseEnter={play}
+                onClick={() => window.open(p.demo, "_blank", "noopener,noreferrer")}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    window.open(p.demo, "_blank", "noopener,noreferrer");
+                  }
+                }}
               >
                 {CardContent}
-              </a>
+              </div>
             ) : (
               CardContent
             )}
