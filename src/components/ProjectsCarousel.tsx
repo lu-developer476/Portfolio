@@ -1,6 +1,6 @@
 "use client";
 
-import { projects, type Project } from "@/config/projects";
+import { personalProjects, type Project } from "@/config/personalprojects";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,7 +13,7 @@ type ProjectsCarouselProps = {
   items?: Project[];
 };
 
-export default function ProjectsCarousel({ expanded = false, items = projects }: ProjectsCarouselProps) {
+export default function ProjectsCarousel({ expanded = false, items = personalProjects }: ProjectsCarouselProps) {
   const list = expanded ? items : items.slice(0, 5);
   const { play } = useHoverSound("zoom");
   const { language, t } = useLanguage();
