@@ -9,14 +9,6 @@ export type Project = {
 
 export const personalProjects: Project[] = [
   {
-    slug: "chint",
-    title: "CHINT",
-    year: "2024",
-    description: "Sitio web reversionado con enfoque en el análisis entre la IA e interacción social en la actualidad. Desplegado en Netlify.",
-    tags: ["HTML", "CSS", "UX/UI", "Netlify"],
-    demo: "https://chint.netlify.app/",
-  },
-  {
     slug: "irbis-supplies",
     title: "Irbis Supplies",
     year: "2024",
@@ -73,22 +65,6 @@ export const personalProjects: Project[] = [
     demo: "https://minesweeper-slet.onrender.com",
   },
   {
-    slug: "la-buena-mesa",
-    title: "La Buena Mesa",
-    year: "2026",
-    description: "Landing page gastronómica realizada con React y Typescript. Desplegado en Vercel.",
-    tags: ["HTML", "CSS", "TypeScript", "React", "UX/UI", "Vercel"],
-    demo: "https://labuenamesa.vercel.app/",
-  },
-  {
-    slug: "gran-milla",
-    title: "Gran Milla",
-    year: "2026",
-    description: "SPA turística realizada con React y Typescript. Desplegado con Vercel.",
-    tags: ["HTML", "CSS", "TypeScript", "React", "UX/UI", "Vercel"],
-    demo: "https://granmilla.vercel.app/",
-  },
-  {
     slug: "2048",
     title: "2048",
     year: "2026",
@@ -128,7 +104,7 @@ export const personalProjects: Project[] = [
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
     demo: "https://twothousandfortytwo.onrender.com",
   },
-    {
+  {
     slug: "hangman",
     title: "El Ahorcado",
     year: "2026",
@@ -136,7 +112,7 @@ export const personalProjects: Project[] = [
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
     demo: "https://hangman-thegame.onrender.com",
   },
-    {
+  {
     slug: "jumping-frogger",
     title: "Jumping Frogger",
     year: "2026",
@@ -144,7 +120,7 @@ export const personalProjects: Project[] = [
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
     demo: "https://jumpingfrogger-thegame.onrender.com",
   },
-    {
+  {
     slug: "bunny-quest",
     title: "Bunny Quest",
     year: "2026",
@@ -152,7 +128,7 @@ export const personalProjects: Project[] = [
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
     demo: "https://bunny-quest.onrender.com",
   },
-    {
+  {
     slug: "paper-duck",
     title: "Paper Duck",
     year: "2026",
@@ -160,7 +136,7 @@ export const personalProjects: Project[] = [
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
     demo: "https://paper-duck.onrender.com/",
   },
-    {
+  {
     slug: "otter-rescue",
     title: "Otter Rescue",
     year: "2026",
