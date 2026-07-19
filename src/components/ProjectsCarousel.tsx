@@ -51,14 +51,14 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
 
             {/* Site preview */}
             {p.demo && (
-              <div className="mt-5 overflow-hidden rounded-xl border border-cyber-neonGreen/35 bg-black/70 shadow-inner shadow-cyber-neonGreen/10">
-                <div className="relative h-52 bg-cyber-black sm:h-56 md:h-60 lg:h-64">
+              <div className="project-preview mt-5 overflow-hidden rounded-xl border border-cyber-neonGreen/35 bg-black/70 shadow-inner shadow-cyber-neonGreen/10">
+                <div className="project-preview-viewport relative bg-cyber-black">
                   <iframe
                     src={p.demo}
                     title={`Vista previa en vivo de ${p.title}`}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="pointer-events-none h-full w-full border-0 bg-white"
+                    className="project-preview-frame pointer-events-none border-0 bg-white"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                 </div>
