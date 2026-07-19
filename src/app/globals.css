@@ -1068,7 +1068,7 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
   --project-preview-width: 390px;
   --project-preview-height: 720px;
   container-type: inline-size;
-  height: clamp(17rem, calc(100cqw * 1.85), 30rem);
+  height: clamp(8.5rem, calc(100cqw * 0.925), 15rem);
   isolation: isolate;
 }
 
@@ -1082,11 +1082,39 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
   width: var(--project-preview-width);
 }
 
+.project-preview-frame--locked {
+  filter: blur(5px) saturate(0.7) brightness(0.55);
+}
+
+.project-preview-enable {
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  background:
+    radial-gradient(circle at center, rgba(57, 255, 20, 0.16), transparent 55%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.55), rgba(7, 7, 10, 0.78));
+  cursor: pointer;
+  animation: previewEnableFade 1.8s ease-in-out infinite alternate;
+}
+
+.project-preview-enable-label {
+  animation: previewEnablePulse 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes previewEnableFade {
+  from { opacity: 0.78; }
+  to { opacity: 1; }
+}
+
+@keyframes previewEnablePulse {
+  from { transform: translateY(0); }
+  to { transform: translateY(-2px); }
+}
+
 @media (min-width: 640px) {
   .project-preview-viewport {
     --project-preview-width: 768px;
     --project-preview-height: 620px;
-    height: clamp(17rem, calc(100cqw * 0.81), 34rem);
+    height: clamp(8.5rem, calc(100cqw * 0.405), 17rem);
   }
 }
 
@@ -1094,7 +1122,7 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
   .project-preview-viewport {
     --project-preview-width: 1024px;
     --project-preview-height: 640px;
-    height: clamp(18rem, calc(100cqw * 0.625), 36rem);
+    height: clamp(9rem, calc(100cqw * 0.3125), 18rem);
   }
 }
 
@@ -1102,6 +1130,6 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
   .project-preview-viewport {
     --project-preview-width: 1280px;
     --project-preview-height: 720px;
-    height: clamp(20rem, calc(100cqw * 0.5625), 38rem);
+    height: clamp(10rem, calc(100cqw * 0.28125), 19rem);
   }
 }
