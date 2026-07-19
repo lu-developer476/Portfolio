@@ -54,7 +54,9 @@ const translations = {
       hardSkills: ["AI Automation", "Agentic Experience", "Customer Experience", "UI/UX", "Flujo de procesos", "Bases de datos", "Herramientas digitales", "Maquetación Web", "Prototipado", "Storytelling", "UI Editing", "UX Writing", "User Research"],
       softSkills: ["Adaptación", "Análisis de datos", "Colaboración", "Comunicación", "Creatividad", "Mediación", "Proactividad", "Sinergia"],
       projectsTitle: "Proyectos desplegados",
-      projectsSubtitle: ""
+      projectsSubtitle: "",
+      professionalProjectsTitle: "Profesionales",
+      personalProjectsTitle: "Personales"
     },
     contact: {
       title: "Contacto",
@@ -150,7 +152,9 @@ const translations = {
       hardSkills: ["AI Automation", "Agentic Experience", "Customer Experience", "UI/UX", "Process flows", "Databases", "Digital tools", "Web layout", "Prototyping", "Storytelling", "UI Editing", "UX Writing", "User Research"],
       softSkills: ["Adaptability", "Data analysis", "Collaboration", "Communication", "Creativity", "Mediation", "Proactivity", "Synergy"],
       projectsTitle: "Completed work",
-      projectsSubtitle: "The result of understanding, creating, adapting, and refining… ready to be explored."
+      projectsSubtitle: "The result of understanding, creating, adapting, and refining… ready to be explored.",
+      professionalProjectsTitle: "Professional",
+      personalProjectsTitle: "Personal"
     },
     contact: {
       title: "Contact",

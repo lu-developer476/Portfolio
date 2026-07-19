@@ -1,6 +1,6 @@
 "use client";
 
-import { projects } from "@/config/projects";
+import { projects, type Project } from "@/config/projects";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,8 +8,13 @@ import { Navigation } from "swiper/modules";
 import { useHoverSound } from "@/lib/useHoverSound";
 import { useLanguage } from "@/lib/i18n";
 
-export default function ProjectsCarousel({ expanded = false }: { expanded?: boolean }) {
-  const list = expanded ? projects : projects.slice(0, 5);
+type ProjectsCarouselProps = {
+  expanded?: boolean;
+  items?: Project[];
+};
+
+export default function ProjectsCarousel({ expanded = false, items = projects }: ProjectsCarouselProps) {
+  const list = expanded ? items : items.slice(0, 5);
   const { play } = useHoverSound("zoom");
   const { language, t } = useLanguage();
 
