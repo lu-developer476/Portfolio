@@ -177,6 +177,9 @@ export const upcomingProject: Project = {
   description: "☑️ Nuevos proyectos en fase de desarrollo."
 };
 
-export const professionalProjects: Project[] = [upcomingProject];
+export const professionalProjects: Project[] = [
+  ...personalProjects.filter(({ slug }) => ["chint", "dinosauria"].includes(slug)),
+  upcomingProject,
+];
 
 export const projects: Project[] = [...personalProjects, upcomingProject];
