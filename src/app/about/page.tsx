@@ -2,7 +2,7 @@
 
 import Section from "@/components/Section";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
-import { personalProjects, professionalProjects } from "@/config/projects";
+import { personalProjects, professionalProjects, upcomingProject } from "@/config/projects";
 import {
   AlpineJSIcon,
   AnimeJSIcon,
@@ -279,7 +279,7 @@ export default function AboutPage() {
             <h3 className="text-xl font-semibold text-cyber-gold">
               {t.about.personalProjectsTitle}
             </h3>
-            <ProjectsCarousel expanded items={personalProjects} />
+            <ProjectsCarousel expanded items={[...personalProjects, upcomingProject]} />
           </div>
         </div>
       </Section>
