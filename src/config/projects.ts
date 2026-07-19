@@ -7,7 +7,7 @@ export type Project = {
   tags?: string[];
 };
 
-export const projects: Project[] = [
+export const personalProjects: Project[] = [
   {
     slug: "chint",
     title: "CHINT",
@@ -168,10 +168,15 @@ export const projects: Project[] = [
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
     demo: "https://otter-rescue.onrender.com",
   },
-    {
-    slug: "coming-soon",
-    title: "PRÓXIMAMENTE",
-    year: "❔",
-    description: "☑️ Nuevos proyectos en fase de desarrollo."
-  }
-];
+  ];
+
+export const upcomingProject: Project = {
+  slug: "coming-soon",
+  title: "PRÓXIMAMENTE",
+  year: "❔",
+  description: "☑️ Nuevos proyectos en fase de desarrollo."
+};
+
+export const professionalProjects: Project[] = [upcomingProject];
+
+export const projects: Project[] = [...personalProjects, upcomingProject];
