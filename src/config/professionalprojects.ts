@@ -11,7 +11,7 @@ export const professionalProjects: Project[] = [
   {
     slug: "ascendo-crescendo",
     title: "Ascendo Crescendo",
-    year: "2024",
+    year: "2026",
     description: "Plataforma digital de mentoría para estudiantes, desarrolladores y profesionales del sector tecnológico.",
     tags: ["Mentoría", "Educación", "Tecnología", "UX/UI", "Wix"],
     demo: "https://lu-dev.wixsite.com/ascendo-crescendo",
