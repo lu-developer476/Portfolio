@@ -79,7 +79,6 @@ const translations = {
       }
     },
     projects: {
-      live: "● LIVE",
       descriptions: {
         chint: "Sitio web reversionado con enfoque en el análisis entre la IA e interacción social en la actualidad. Desplegado en Netlify.",
         "irbis-supplies": "Tienda online ficticia refactorizada de JavaScript vanilla con arquitectura modular. Desplegado en Netlify.",
@@ -177,7 +176,6 @@ const translations = {
       }
     },
     projects: {
-      live: "● LIVE",
       descriptions: {
         chint: "Redesigned website focused on analyzing AI and current social interaction. Deployed on Netlify.",
         "irbis-supplies": "Fictional online store refactored from vanilla JavaScript with modular architecture. Deployed on Netlify.",

@@ -86,12 +86,6 @@ export default function ProjectsCarousel({ expanded = false, items = projects }:
               </div>
             )}
 
-            {/* Live badge */}
-            {p.demo && (
-              <div className="live-badge mt-5 text-xs font-semibold text-cyber-neonGreen tracking-wider">
-                {t.projects.live}
-              </div>
-            )}
           </article>
         );
 
