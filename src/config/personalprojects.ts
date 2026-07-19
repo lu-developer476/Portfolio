@@ -9,12 +9,12 @@ export type Project = {
 
 export const personalProjects: Project[] = [
   {
-    slug: "ascendo-crescendo",
-    title: "Ascendo Crescendo",
+    slug: "chint",
+    title: "CHINT",
     year: "2024",
-    description: "Plataforma digital de mentoría para estudiantes, desarrolladores y profesionales del sector tecnológico.",
-    tags: ["Mentoría", "Educación", "Tecnología", "UX/UI", "Wix"],
-    demo: "https://lu-dev.wixsite.com/ascendo-crescendo",
+    description: "Sitio web reversionado con enfoque en el análisis entre la IA e interacción social en la actualidad. Desplegado en Netlify.",
+    tags: ["HTML", "CSS", "UX/UI", "Netlify"],
+    demo: "https://chint.netlify.app/",
   },
   {
     slug: "irbis-supplies",
@@ -168,18 +168,10 @@ export const personalProjects: Project[] = [
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
     demo: "https://otter-rescue.onrender.com",
   },
-  ];
-
-export const upcomingProject: Project = {
-  slug: "coming-soon",
-  title: "PRÓXIMAMENTE",
-  year: "❔",
-  description: "☑️ Nuevos proyectos en fase de desarrollo."
-};
-
-export const professionalProjects: Project[] = [
-  ...personalProjects.filter(({ slug }) => ["ascendo-crescendo"].includes(slug)),
-  upcomingProject,
+  {
+    slug: "coming-soon",
+    title: "PRÓXIMAMENTE",
+    year: "❔",
+    description: "☑️ Nuevos proyectos en fase de desarrollo."
+  },
 ];
-
-export const projects: Project[] = [...personalProjects, upcomingProject];
