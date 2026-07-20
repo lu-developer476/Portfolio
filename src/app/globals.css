@@ -981,7 +981,7 @@ html[data-theme="galaxy"] .hud-circle {
 }
 
 .projects-arrow-carousel .project-card {
-  height: clamp(34rem, 72vw, 43rem);
+  height: clamp(38rem, 78vw, 47rem);
 }
 
 .projects-arrow-carousel .project-description {
