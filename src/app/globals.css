@@ -981,7 +981,8 @@ html[data-theme="galaxy"] .hud-circle {
 }
 
 .projects-arrow-carousel .project-card {
-  height: clamp(44rem, 90vw, 56rem);
+  height: auto;
+  min-height: clamp(50rem, 148vw, 58rem);
 }
 
 .projects-arrow-carousel .project-description {
@@ -994,14 +995,6 @@ html[data-theme="galaxy"] .hud-circle {
   padding-right: 0.2rem;
 }
 
-.projects-arrow-carousel .project-tags::-webkit-scrollbar {
-  width: 0.3rem;
-}
-
-.projects-arrow-carousel .project-tags::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.28);
-  border-radius: 9999px;
-}
 
 .projects-arrow-carousel .project-card-live {
   --project-aura: rgba(5, 247, 183, 0.72);
@@ -1058,13 +1051,21 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
   color: var(--theme-accent-2);
 }
 
+@media (min-width: 641px) {
+  .projects-arrow-carousel .project-card {
+    min-height: clamp(48rem, 92vw, 58rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-arrow-carousel .project-card {
+    min-height: 56rem;
+  }
+}
+
 @media (max-width: 640px) {
   .projects-arrow-carousel {
     padding: 1rem 2.35rem 1.25rem !important;
-  }
-
-  .projects-arrow-carousel .project-card {
-    height: clamp(50rem, 148vw, 58rem);
   }
 
   .projects-arrow-carousel .swiper-button-prev,
