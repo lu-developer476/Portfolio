@@ -985,10 +985,8 @@ html[data-theme="galaxy"] .hud-circle {
 }
 
 .projects-arrow-carousel .project-description {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .projects-arrow-carousel .project-tags {
