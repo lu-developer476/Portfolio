@@ -1,6 +1,6 @@
 <svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Chico codeando en una computadora de escritorio</title>
-  <desc id="desc">Ilustración cyberpunk de un desarrollador frente a un monitor con líneas de código.</desc>
+  <title id="title">Chico codeando de perfil en una computadora de escritorio</title>
+  <desc id="desc">Ilustración cyberpunk de un desarrollador de perfil frente a un monitor con líneas de código.</desc>
   <defs>
     <radialGradient id="halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(626 280) rotate(90) scale(384 520)">
       <stop stop-color="#d7ff34" stop-opacity="0.55"/>
@@ -47,11 +47,14 @@
   <rect x="451" y="585" width="298" height="34" rx="17" fill="#111827" stroke="#21ffc4" stroke-opacity="0.35" stroke-width="3"/>
   <rect x="94" y="602" width="1012" height="76" rx="28" fill="url(#desk)" stroke="#d7ff34" stroke-opacity="0.35" stroke-width="3"/>
   <g filter="url(#soft)">
-    <path d="M600 335C650 335 690 374 690 424V603H510V424C510 374 550 335 600 335Z" fill="#101624" stroke="#21ffc4" stroke-opacity="0.42" stroke-width="3"/>
-    <circle cx="600" cy="279" r="58" fill="#d7b48f"/>
-    <path d="M542 268C548 219 587 199 626 212C664 225 675 254 667 294C635 269 588 262 542 268Z" fill="#111827"/>
-    <path d="M552 438C494 474 455 520 421 594" stroke="#d7b48f" stroke-width="34" stroke-linecap="round"/>
-    <path d="M648 438C706 474 745 520 779 594" stroke="#d7b48f" stroke-width="34" stroke-linecap="round"/>
+    <path d="M573 339C632 337 683 376 699 430L748 600H540L523 450C517 394 526 350 573 339Z" fill="#101624" stroke="#21ffc4" stroke-opacity="0.42" stroke-width="3"/>
+    <path d="M590 224C631 210 676 229 689 269C702 309 681 348 641 360C612 368 576 356 560 329C540 296 552 237 590 224Z" fill="#d7b48f"/>
+    <path d="M666 274C692 278 711 290 727 309C705 315 687 314 668 305Z" fill="#d7b48f"/>
+    <path d="M610 219C656 217 690 244 694 285C665 266 626 264 585 283C578 257 584 231 610 219Z" fill="#111827"/>
+    <path d="M657 309C665 314 676 314 684 309" stroke="#111827" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="656" cy="286" r="5" fill="#111827"/>
+    <path d="M563 444C504 476 462 521 421 594" stroke="#d7b48f" stroke-width="34" stroke-linecap="round"/>
+    <path d="M681 439C733 470 771 519 812 594" stroke="#d7b48f" stroke-width="34" stroke-linecap="round"/>
   </g>
   <rect x="356" y="534" width="488" height="106" rx="18" fill="#07111f" stroke="#d7ff34" stroke-opacity="0.58" stroke-width="3"/>
   <rect x="386" y="562" width="210" height="12" rx="6" fill="#d7ff34" opacity="0.9"/>
