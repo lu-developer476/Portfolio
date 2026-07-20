@@ -99,7 +99,7 @@ const translations = {
         "2042": "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
         "coming-soon": "☑️ Nuevos proyectos en fase de desarrollo."
       },
-      titles: { ajedrez: "Ajedrez", hangman: "El Ahorcado", "coming-soon": "PRÓXIMAMENTE" }
+      titles: { ajedrez: "Ajedrez", hangman: "El Ahorcado", "coming-soon": "En proceso…" }
     }
   },
   en: {
@@ -196,7 +196,7 @@ const translations = {
         "2042": "Web video game developed with Python and Django. Deployed on Render.",
         "coming-soon": "☑️ New projects in development phase."
       },
-      titles: { ajedrez: "Chess", hangman: "Hangman", "coming-soon": "COMING SOON" }
+      titles: { ajedrez: "Chess", hangman: "Hangman", "coming-soon": "In progress…" }
     }
   }
 } as const;

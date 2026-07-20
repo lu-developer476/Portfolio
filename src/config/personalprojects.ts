@@ -1,4 +1,4 @@
-const upcomingProjectTags = ["En proceso…"];
+const upcomingProjectTags = ["PRÓXIMAMENTE"];
 
 export type Project = {
   slug: string;
@@ -150,7 +150,7 @@ export const personalProjects: Project[] = [
   },
   {
     slug: "coming-soon",
-    title: "PRÓXIMAMENTE",
+    title: "En proceso…",
     year: "❔",
     description: "☑️ Nuevos proyectos en fase de desarrollo.",
     previewImage: "/developer-preview.svg",
