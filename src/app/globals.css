@@ -981,7 +981,7 @@ html[data-theme="galaxy"] .hud-circle {
 }
 
 .projects-arrow-carousel .project-card {
-  height: clamp(38rem, 78vw, 47rem);
+  height: clamp(44rem, 90vw, 56rem);
 }
 
 .projects-arrow-carousel .project-description {
@@ -990,10 +990,8 @@ html[data-theme="galaxy"] .hud-circle {
 }
 
 .projects-arrow-carousel .project-tags {
-  max-height: 5.75rem;
-  overflow-y: auto;
+  overflow: visible;
   padding-right: 0.2rem;
-  scrollbar-width: thin;
 }
 
 .projects-arrow-carousel .project-tags::-webkit-scrollbar {
@@ -1063,6 +1061,10 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
 @media (max-width: 640px) {
   .projects-arrow-carousel {
     padding: 1rem 2.35rem 1.25rem !important;
+  }
+
+  .projects-arrow-carousel .project-card {
+    height: clamp(50rem, 148vw, 58rem);
   }
 
   .projects-arrow-carousel .swiper-button-prev,
