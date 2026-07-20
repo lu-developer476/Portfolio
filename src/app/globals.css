@@ -968,6 +968,45 @@ html[data-theme="galaxy"] .hud-circle {
   padding: 1rem 3rem 1.25rem !important;
 }
 
+.projects-arrow-carousel .swiper-wrapper {
+  align-items: stretch;
+}
+
+.projects-arrow-carousel .swiper-slide {
+  height: auto;
+}
+
+.projects-arrow-carousel .swiper-slide > * {
+  height: 100%;
+}
+
+.projects-arrow-carousel .project-card {
+  height: clamp(34rem, 72vw, 43rem);
+}
+
+.projects-arrow-carousel .project-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.projects-arrow-carousel .project-tags {
+  max-height: 5.75rem;
+  overflow-y: auto;
+  padding-right: 0.2rem;
+  scrollbar-width: thin;
+}
+
+.projects-arrow-carousel .project-tags::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+.projects-arrow-carousel .project-tags::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 9999px;
+}
+
 .projects-arrow-carousel .project-card-live {
   --project-aura: rgba(5, 247, 183, 0.72);
   --project-aura-soft: rgba(5, 247, 183, 0.18);

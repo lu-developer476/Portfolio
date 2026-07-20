@@ -33,7 +33,7 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
 
         const CardContent = (
           <article
-            className={`project-card group h-full rounded-2xl border bg-black/40 p-6 transition-all duration-300
+            className={`project-card group flex h-full flex-col overflow-hidden rounded-2xl border bg-black/40 p-6 transition-all duration-300
             ${
               p.demo
                 ? "project-card-live cursor-pointer border-white/100 hover:border-cyber-neonGreen/60 hover:shadow-neonGreen hover:bg-black/50"
@@ -93,7 +93,7 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
             )}
 
             {/* Description */}
-            <p className="light-electric-blue mt-4 text-sm leading-relaxed text-white/100">
+            <p className="project-description light-electric-blue mt-4 text-sm leading-relaxed text-white/100">
               {language === "en"
                 ? t.projects.descriptions[p.slug as keyof typeof t.projects.descriptions] ?? p.description
                 : p.description}
@@ -101,7 +101,7 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
 
             {/* Tags */}
             {p.tags && p.tags.length > 0 && (
-              <div className="mt-4 flex flex-wrap gap-2">
+              <div className="project-tags mt-4 flex flex-wrap gap-2">
                 {p.tags.map((tag) => (
                   <span
                     key={tag}
