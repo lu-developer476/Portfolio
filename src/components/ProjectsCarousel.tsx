@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { personalProjects, type Project } from "@/config/personalprojects";
 import { useState } from "react";
 import "swiper/css";
@@ -54,22 +55,32 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
             </div>
 
             {/* Site preview */}
-            {p.demo && (
+            {(p.demo || p.previewImage) && (
               <div className="project-preview mt-5 overflow-hidden rounded-xl border border-cyber-neonGreen/35 bg-black/70 shadow-inner shadow-cyber-neonGreen/10">
                 <div className="project-preview-viewport relative bg-cyber-black">
-                  <iframe
-                    src={p.demo}
-                    title={`Vista previa en vivo de ${p.title}`}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    scrolling="no"
-                    className={`project-preview-frame pointer-events-none border-0 bg-white ${
-                      isPreviewEnabled ? "" : "project-preview-frame--locked"
-                    }`}
-                  />
+                  {p.demo ? (
+                    <iframe
+                      src={p.demo}
+                      title={`Vista previa en vivo de ${p.title}`}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      scrolling="no"
+                      className={`project-preview-frame pointer-events-none border-0 bg-white ${
+                        isPreviewEnabled ? "" : "project-preview-frame--locked"
+                      }`}
+                    />
+                  ) : (
+                    <Image
+                      src={p.previewImage ?? ""}
+                      alt={p.previewAlt ?? `Vista previa de ${p.title}`}
+                      fill
+                      sizes="(min-width: 768px) 520px, 85vw"
+                      className="object-cover"
+                    />
+                  )}
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
-                  {!isPreviewEnabled && (
+                  {p.demo && !isPreviewEnabled && (
                     <button
                       type="button"
                       className="project-preview-enable absolute inset-0 z-10 flex items-center justify-center px-6 text-center"

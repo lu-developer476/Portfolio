@@ -4,6 +4,8 @@ export type Project = {
   year: string;
   description: string;
   demo?: string;
+  previewImage?: string;
+  previewAlt?: string;
   tags?: string[];
 };
 
@@ -52,6 +54,9 @@ export const professionalProjects: Project[] = [
     slug: "coming-soon",
     title: "PRÓXIMAMENTE",
     year: "❔",
-    description: "☑️ Nuevos proyectos en fase de desarrollo."
+    description: "☑️ Nuevos proyectos en fase de desarrollo.",
+    previewImage: "/developer-preview.svg",
+    previewAlt: "Chico codeando en una computadora de escritorio",
+    tags: ["Frontend", "UX/UI", "React", "Next.js"]
   },
 ];
