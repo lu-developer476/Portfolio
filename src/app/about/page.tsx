@@ -61,7 +61,8 @@ type TechIconProps = {
 
 const iconClassName = "w-7 h-7 word delay-0";
 const delayedIconClassName = (delay: number) => `w-7 h-7 word delay-${delay}`;
-const iconGroupClassName = "flex flex-wrap items-start gap-x-3 gap-y-4 sm:gap-x-4";
+const techRowClassName = "grid gap-3 sm:grid-cols-[8.5rem_minmax(0,1fr)] sm:items-center sm:gap-5";
+const iconGroupClassName = "grid grid-cols-[repeat(auto-fit,minmax(4.75rem,4.75rem))] justify-start gap-x-3 gap-y-4 sm:grid-cols-[repeat(auto-fit,minmax(5rem,5rem))] sm:gap-x-4 lg:gap-x-5";
 const skillListClassName = "skills-list grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60";
 
 // Extrae solo las clases de animación (word + delay-*) del className del icono,
@@ -75,7 +76,7 @@ function labelAnimationClass(className: string) {
 
 function TechIcon({ label, icon, className }: TechIconProps) {
   return (
-    <span className="flex min-w-[4.75rem] flex-col items-center gap-1 text-center text-[0.6rem] leading-tight text-white/70 sm:min-w-20 sm:text-[0.65rem]">
+    <span className="flex w-[4.75rem] flex-col items-center gap-1 text-center text-[0.6rem] leading-tight text-white/70 sm:w-20 sm:text-[0.65rem]">
       {icon}
       <span className={`${labelAnimationClass(className)} whitespace-nowrap`}>{label}</span>
     </span>
@@ -188,8 +189,8 @@ export default function AboutPage() {
       >
         <div className="w-full max-w-full overflow-hidden rounded-xl border border-white/10 bg-black/35 p-4 sm:p-5 md:p-6 space-y-4 text-white/85 leading-7">
           {techSections.slice(0, 3).map(({ title, items }) => (
-            <div key={title} className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
-              <strong className="sm:w-42 shrink-0">{title}</strong>
+            <div key={title} className={techRowClassName}>
+              <strong className="shrink-0">{title}</strong>
 
               <div className={iconGroupClassName}>
                 {items.map(([label, Icon, className]) => (
@@ -205,30 +206,26 @@ export default function AboutPage() {
           ))}
 
           {/* Frontend */}
-          <div className="flex items-start gap-6">
-            <strong className="w-42 shrink-0">
-              Frontend
-            </strong>
+          <div className={techRowClassName}>
+            <strong className="shrink-0">Frontend</strong>
 
-            <span className="light-electric-blue word delay-1">
+            <span className="light-electric-blue word delay-1 min-w-0">
               {t.about.frontend}
             </span>
           </div>
 
           {/* Backend */}
-          <div className="flex items-start gap-6">
-            <strong className="w-42 shrink-0">
-              Backend
-            </strong>
+          <div className={techRowClassName}>
+            <strong className="shrink-0">Backend</strong>
 
-            <span className="light-electric-blue word delay-2">
+            <span className="light-electric-blue word delay-2 min-w-0">
               API Design, Debugging, Dev & Prod, Email APIs, Web Storage
             </span>
           </div>
 
           {techSections.slice(3).map(({ title, items }) => (
-            <div key={title} className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
-              <strong className="sm:w-42 shrink-0">{title}</strong>
+            <div key={title} className={techRowClassName}>
+              <strong className="shrink-0">{title}</strong>
 
               <div className={iconGroupClassName}>
                 {items.map(([label, Icon, className]) => (
