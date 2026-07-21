@@ -1164,6 +1164,11 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
     --project-preview-height: 640px;
     height: clamp(8.5rem, calc(100cqw * 0.285), 13rem);
   }
+
+  .project-preview-image {
+    object-fit: contain;
+    padding: 0.75rem 1rem;
+  }
 }
 
 @media (min-width: 1440px) {
