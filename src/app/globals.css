@@ -977,11 +977,24 @@ html[data-theme="galaxy"] .hud-circle {
 }
 
 .projects-arrow-carousel .swiper-slide > * {
-  height: 100%;
+  height: auto;
 }
 
 .projects-arrow-carousel .project-card {
-  height: clamp(40rem, 82vw, 50rem);
+  height: auto;
+  min-height: clamp(31rem, 74vw, 35rem);
+}
+
+@media (min-width: 640px) {
+  .projects-arrow-carousel .project-card {
+    min-height: clamp(32rem, 58vw, 37rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-arrow-carousel .project-card {
+    min-height: clamp(33rem, 44vw, 38rem);
+  }
 }
 
 .projects-arrow-carousel .project-description {
