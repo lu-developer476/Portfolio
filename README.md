@@ -27,42 +27,56 @@ Todo se ejecuta mediante un entorno server-side seguro.
 
 ### Frontend
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- PostCSS
+<p>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" height="34" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" height="34" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" height="34" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" height="34" />
+  <img src="https://img.shields.io/badge/PostCSS-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white" alt="PostCSS" height="34" />
+</p>
 
 ### Animación y visual
 
-- Anime.js
-- Three.js
-- Swiper
+<p>
+  <img src="https://img.shields.io/badge/Anime.js-FF1461?style=for-the-badge&logo=javascript&logoColor=white" alt="Anime.js" height="34" />
+  <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white" alt="Three.js" height="34" />
+  <img src="https://img.shields.io/badge/Swiper-6332F6?style=for-the-badge&logo=swiper&logoColor=white" alt="Swiper" height="34" />
+</p>
 
 ### Sonidos
 
-- Howler.js
+<p>
+  <img src="https://img.shields.io/badge/Howler.js-111111?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="Howler.js" height="34" />
+</p>
 
 ### Experiencia de usuario
 
-- SweetAlert2
+<p>
+  <img src="https://img.shields.io/badge/SweetAlert2-896AFB?style=for-the-badge&logo=javascript&logoColor=white" alt="SweetAlert2" height="34" />
+</p>
 
 ### Backend
 
-- Firebase Admin
-- Resend
-- Nodemailer
-- Zod
+<p>
+  <img src="https://img.shields.io/badge/Firebase_Admin-DD2C00?style=for-the-badge&logo=firebase&logoColor=white" alt="Firebase Admin" height="34" />
+  <img src="https://img.shields.io/badge/Resend-000000?style=for-the-badge&logo=resend&logoColor=white" alt="Resend" height="34" />
+  <img src="https://img.shields.io/badge/Nodemailer-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Nodemailer" height="34" />
+  <img src="https://img.shields.io/badge/Zod-3E67B1?style=for-the-badge&logo=zod&logoColor=white" alt="Zod" height="34" />
+</p>
 
 ### Complementos
 
-- ESLint
-- CoffeeScript
-- SVGR
+<p>
+  <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint" height="34" />
+  <img src="https://img.shields.io/badge/CoffeeScript-2F2625?style=for-the-badge&logo=coffeescript&logoColor=white" alt="CoffeeScript" height="34" />
+  <img src="https://img.shields.io/badge/SVGR-FFB13B?style=for-the-badge&logo=svg&logoColor=111111" alt="SVGR" height="34" />
+</p>
 
 ### Despliegue
 
-- Vercel
+<p>
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" height="34" />
+</p>
 
 ## Instalación local
 
