@@ -24,25 +24,13 @@ export default function ContactPage() {
           <ul className="mt-4 space-y-3 text-white/85">
             <li>
               <a
-                href="https://www.behance.net/lucasmontenegrob"
-                target="_blank"
-                rel="noopener noreferrer"
-                onMouseEnter={play}
-                className="text-blue-500 hover:text-blue-700 transition"
-              >
-                Behance Pro
-              </a>
-            </li>
-
-            <li>
-              <a
                 href="https://lucasmontenegro-lifepath.framer.website/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={play}
-                className="text-blue-500 hover:text-blue-700 transition"
+                className="text-blue-500 transition hover:text-blue-700"
               >
-                Curriculum
+                CV
               </a>
             </li>
 
@@ -52,7 +40,7 @@ export default function ContactPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={play}
-                className="text-blue-500 hover:text-blue-700 transition"
+                className="text-blue-500 transition hover:text-blue-700"
               >
                 Freelancer
               </a>
@@ -64,7 +52,7 @@ export default function ContactPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={play}
-                className="text-blue-500 hover:text-blue-700 transition"
+                className="text-blue-500 transition hover:text-blue-700"
               >
                 LinkedIn
               </a>
@@ -76,14 +64,26 @@ export default function ContactPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={play}
-                className="text-blue-500 hover:text-blue-700 transition"
+                className="text-blue-500 transition hover:text-blue-700"
               >
                 GitHub
               </a>
             </li>
+
+            <li>
+              <a
+                href="https://gitlab.com/lu-developer476"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={play}
+                className="text-blue-500 transition hover:text-blue-700"
+              >
+                GitLab
+              </a>
+            </li>
           </ul>
 
-          <p className="mt-6 text-sm text-white/100 leading-relaxed">
+          <p className="mt-6 text-sm leading-relaxed text-white/100">
             {t.contact.note}
           </p>
         </div>
