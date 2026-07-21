@@ -48,25 +48,13 @@ export default function ContactPage() {
 
             <li>
               <a
-                href="https://www.linkedin.com/in/lucas-montenegro-burgos/"
-                target="_blank"
-                rel="noopener noreferrer"
-                onMouseEnter={play}
-                className="text-blue-500 transition hover:text-blue-700"
-              >
-                LinkedIn
-              </a>
-            </li>
-
-            <li>
-              <a
                 href="https://github.com/lu-developer476"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={play}
                 className="text-blue-500 transition hover:text-blue-700"
               >
-                GitHub
+                Github
               </a>
             </li>
 
@@ -78,7 +66,19 @@ export default function ContactPage() {
                 onMouseEnter={play}
                 className="text-blue-500 transition hover:text-blue-700"
               >
-                GitLab
+                Gitlab
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.linkedin.com/in/lucas-montenegro-burgos/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={play}
+                className="text-blue-500 transition hover:text-blue-700"
+              >
+                LinkedIn
               </a>
             </li>
           </ul>
