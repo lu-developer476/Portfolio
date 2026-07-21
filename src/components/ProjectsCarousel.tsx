@@ -75,7 +75,7 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
                       alt={p.previewAlt ?? `Vista previa de ${p.title}`}
                       fill
                       sizes="(min-width: 768px) 520px, 85vw"
-                      className="object-cover"
+                      className="project-preview-image object-cover"
                     />
                   )}
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
