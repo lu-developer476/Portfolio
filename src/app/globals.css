@@ -977,23 +977,23 @@ html[data-theme="galaxy"] .hud-circle {
 }
 
 .projects-arrow-carousel .swiper-slide > * {
-  height: auto;
+  height: 100%;
 }
 
 .projects-arrow-carousel .project-card {
-  height: auto;
-  min-height: clamp(31rem, 74vw, 35rem);
+  height: 100%;
+  min-height: 34rem;
 }
 
 @media (min-width: 640px) {
   .projects-arrow-carousel .project-card {
-    min-height: clamp(32rem, 58vw, 37rem);
+    min-height: 32rem;
   }
 }
 
 @media (min-width: 1024px) {
   .projects-arrow-carousel .project-card {
-    min-height: clamp(33rem, 44vw, 38rem);
+    min-height: 30rem;
   }
 }
 
@@ -1003,19 +1003,7 @@ html[data-theme="galaxy"] .hud-circle {
 }
 
 .projects-arrow-carousel .project-tags {
-  max-height: 6.5rem;
-  overflow-y: auto;
-  padding-right: 0.2rem;
-  scrollbar-width: thin;
-}
-
-.projects-arrow-carousel .project-tags::-webkit-scrollbar {
-  width: 0.3rem;
-}
-
-.projects-arrow-carousel .project-tags::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.28);
-  border-radius: 9999px;
+  overflow: visible;
 }
 
 
@@ -1166,7 +1154,7 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
   .project-preview-viewport {
     --project-preview-width: 768px;
     --project-preview-height: 620px;
-    height: clamp(8.5rem, calc(100cqw * 0.405), 17rem);
+    height: clamp(8.5rem, calc(100cqw * 0.405), 14.5rem);
   }
 }
 
@@ -1174,7 +1162,7 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
   .project-preview-viewport {
     --project-preview-width: 1024px;
     --project-preview-height: 640px;
-    height: clamp(9rem, calc(100cqw * 0.3125), 18rem);
+    height: clamp(8.5rem, calc(100cqw * 0.285), 13rem);
   }
 }
 
@@ -1182,6 +1170,6 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
   .project-preview-viewport {
     --project-preview-width: 1280px;
     --project-preview-height: 720px;
-    height: clamp(10rem, calc(100cqw * 0.28125), 19rem);
+    height: clamp(8.5rem, calc(100cqw * 0.255), 14rem);
   }
 }
