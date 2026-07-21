@@ -36,18 +36,6 @@ export default function ContactPage() {
 
             <li>
               <a
-                href="https://www.freelancer.com.ar/u/Lucasmontenegro5"
-                target="_blank"
-                rel="noopener noreferrer"
-                onMouseEnter={play}
-                className="text-blue-500 transition hover:text-blue-700"
-              >
-                Freelancer
-              </a>
-            </li>
-
-            <li>
-              <a
                 href="https://github.com/lu-developer476"
                 target="_blank"
                 rel="noopener noreferrer"
