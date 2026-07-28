@@ -68,7 +68,6 @@ const delayedIconClassName = (delay: number) => `w-7 h-7 word delay-${delay}`;
 const techRowClassName = "grid gap-3 sm:grid-cols-[8.5rem_minmax(0,1fr)] sm:items-center sm:gap-5";
 const iconGroupClassName = "grid grid-cols-[repeat(auto-fit,minmax(4.75rem,4.75rem))] justify-start gap-x-3 gap-y-4 sm:grid-cols-[repeat(auto-fit,minmax(5rem,5rem))] sm:gap-x-4 lg:gap-x-5";
 const skillListClassName = "skills-list grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60";
-const renderSafeSvgLabels = new Set(["Gemini", "Vanta.js", "Firebase"]);
 
 function labelAnimationClass(className: string) {
   return className
@@ -84,23 +83,14 @@ function iconPresentationClass(className: string) {
     .join(" ");
 }
 
-function iconDelayClass(className: string) {
-  return className
-    .split(" ")
-    .filter((classToken) => classToken.startsWith("delay-"))
-    .join(" ");
-}
-
 function TechIcon({ label, Icon, className }: TechIconProps) {
   const animationClassName = labelAnimationClass(className);
-  const usesRenderSafeAnimation = renderSafeSvgLabels.has(label);
-  const renderedIconClassName = usesRenderSafeAnimation
-    ? `${iconPresentationClass(className)} opacity-0 animate-fadeIn [animation-duration:1.4s] [animation-fill-mode:forwards] ${iconDelayClass(className)}`
-    : className;
 
   return (
     <span className="flex w-[4.75rem] flex-col items-center gap-1 text-center text-[0.6rem] leading-tight text-white/70 sm:w-20 sm:text-[0.65rem]">
-      <Icon className={renderedIconClassName} />
+      <span className={animationClassName}>
+        <Icon className={iconPresentationClass(className)} />
+      </span>
       <span className={`${animationClassName} whitespace-nowrap`}>{label}</span>
     </span>
   );
