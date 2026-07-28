@@ -59,7 +59,7 @@ import { useLanguage } from "@/lib/i18n";
 
 type TechIconProps = {
   label: string;
-  icon: React.ReactNode;
+  Icon: React.ComponentType<{ className?: string }>;
   className: string;
 };
 
@@ -69,8 +69,8 @@ const techRowClassName = "grid gap-3 sm:grid-cols-[8.5rem_minmax(0,1fr)] sm:item
 const iconGroupClassName = "grid grid-cols-[repeat(auto-fit,minmax(4.75rem,4.75rem))] justify-start gap-x-3 gap-y-4 sm:grid-cols-[repeat(auto-fit,minmax(5rem,5rem))] sm:gap-x-4 lg:gap-x-5";
 const skillListClassName = "skills-list grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-cyber-neonGreen/60";
 
-// Extrae solo las clases de animación (word + delay-*) del className del icono,
-// para que el nombre revele con el mismo efecto y tiempo que su .svg.
+// Extrae solo las clases de animación (word + delay-*) para aplicarlas
+// al contenedor y al nombre sin recortar el contenido interno del SVG.
 function labelAnimationClass(className: string) {
   return className
     .split(" ")
@@ -78,11 +78,22 @@ function labelAnimationClass(className: string) {
     .join(" ");
 }
 
-function TechIcon({ label, icon, className }: TechIconProps) {
+function iconPresentationClass(className: string) {
+  return className
+    .split(" ")
+    .filter((c) => c !== "word" && !c.startsWith("delay-"))
+    .join(" ");
+}
+
+function TechIcon({ label, Icon, className }: TechIconProps) {
+  const animationClassName = labelAnimationClass(className);
+
   return (
     <span className="flex w-[4.75rem] flex-col items-center gap-1 text-center text-[0.6rem] leading-tight text-white/70 sm:w-20 sm:text-[0.65rem]">
-      {icon}
-      <span className={`${labelAnimationClass(className)} whitespace-nowrap`}>{label}</span>
+      <span className={animationClassName}>
+        <Icon className={iconPresentationClass(className)} />
+      </span>
+      <span className={`${animationClassName} whitespace-nowrap`}>{label}</span>
     </span>
   );
 }
@@ -205,7 +216,7 @@ export default function AboutPage() {
                   <TechIcon
                     key={label}
                     label={label}
-                    icon={<Icon className={className} />}
+                    Icon={Icon}
                     className={className}
                   />
                 ))}
@@ -240,7 +251,7 @@ export default function AboutPage() {
                   <TechIcon
                     key={label}
                     label={label}
-                    icon={<Icon className={className} />}
+                    Icon={Icon}
                     className={className}
                   />
                 ))}
