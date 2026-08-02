@@ -31,6 +31,9 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
     >
       {list.map((p) => {
         const isPreviewEnabled = Boolean(enabledPreviews[p.slug]);
+        const localizedTitle = language === "en"
+          ? t.projects.titles[p.slug as keyof typeof t.projects.titles] ?? p.title
+          : p.title;
 
         const CardContent = (
           <article
@@ -44,9 +47,7 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
             {/* Header */}
             <div className="flex items-start justify-between">
               <h3 className="text-lg font-semibold text-cyber-gold transition group-hover:text-white">
-                {language === "en"
-                  ? t.projects.titles[p.slug as keyof typeof t.projects.titles] ?? p.title
-                  : p.title}
+                {localizedTitle}
               </h3>
 
               <span className="text-[11px] tracking-wider text-white/100 border border-white/100 px-2 py-1 rounded-md">
@@ -61,7 +62,7 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
                   {p.demo ? (
                     <iframe
                       src={p.demo}
-                      title={`Vista previa en vivo de ${p.title}`}
+                      title={`${t.projects.livePreview} ${localizedTitle}`}
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
                       scrolling="no"
@@ -72,7 +73,7 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
                   ) : (
                     <Image
                       src={p.previewImage ?? ""}
-                      alt={p.previewAlt ?? `Vista previa de ${p.title}`}
+                      alt={`${t.projects.previewOf} ${localizedTitle}`}
                       fill
                       sizes="(min-width: 768px) 520px, 85vw"
                       className="project-preview-image object-cover"
@@ -84,7 +85,7 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
                     <button
                       type="button"
                       className="project-preview-enable absolute inset-0 z-10 flex items-center justify-center px-6 text-center"
-                      aria-label={`Vista previa de ${p.title}`}
+                      aria-label={`${t.projects.previewOf} ${localizedTitle}`}
                       onClick={(event) => {
                         event.preventDefault();
                         event.stopPropagation();
@@ -95,7 +96,7 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
                       }}
                     >
                       <span className="project-preview-enable-label rounded-full border border-cyber-neonGreen/70 bg-black/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-cyber-neonGreen shadow-neonGreen">
-                        Vista previa
+                        {t.projects.preview}
                       </span>
                     </button>
                   )}
@@ -118,7 +119,9 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
                     key={tag}
                     className="text-[11px] px-2 py-1 rounded-md border border-white/100 bg-black/60 text-white/100 transition group-hover:border-white/100"
                   >
-                    {tag}
+                    {p.slug === "coming-soon"
+                      ? t.projects.comingSoonTag
+                      : language === "en" ? t.projects.tags[tag] ?? tag : tag}
                   </span>
                 ))}
               </div>
