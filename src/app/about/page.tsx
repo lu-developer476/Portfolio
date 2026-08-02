@@ -268,8 +268,8 @@ export default function AboutPage() {
               </h3>
 
               <div className={skillListClassName}>
-                {skills.map((skill) => (
-                  <span key={skill} className="word delay-4">{skill}</span>
+                {skills.map((skill, skillIndex) => (
+                  <span key={skillIndex} className="word delay-4">{skill}</span>
                 ))}
               </div>
             </div>
