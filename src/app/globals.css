@@ -97,7 +97,7 @@ body {
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 12ch; } /* Freelancer = 10 caracteres */
+  to { width: 20ch; }
 }
 
 @keyframes hideCursor {
@@ -112,7 +112,7 @@ body {
   border-right: 2px solid #39ff14;
 
   animation:
-    typing 2s steps(10) forwards,
+    typing 2s steps(20) forwards,
     hideCursor 0.2s linear 2s forwards; /* empieza cuando termina typing */
 }
 
