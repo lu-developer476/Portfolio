@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import ThemeAtmosphere from "@/components/ThemeAtmosphere";
 
 export const metadata: Metadata = {
-  title: "Frontend Developer •  UX Interfaces",
+  title: "FS Dev - UX Interfaces",
   description: "Portfolio digital",
   icons: {
     icon: "/favicon.ico?v=2",
