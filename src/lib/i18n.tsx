@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useMemo, useState } from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
 export type Language = "es" | "en";
 
@@ -79,6 +79,10 @@ const translations = {
       }
     },
     projects: {
+      preview: "Vista previa",
+      livePreview: "Vista previa en vivo de",
+      previewOf: "Vista previa de",
+      comingSoonTag: "PRÓXIMAMENTE",
       descriptions: {
         chint: "Sitio web reversionado con enfoque en el análisis entre la IA e interacción social en la actualidad. Desplegado en Netlify.",
         "irbis-supplies": "Tienda online ficticia refactorizada de JavaScript vanilla con arquitectura modular. Desplegado en Netlify.",
@@ -99,7 +103,8 @@ const translations = {
         "2042": "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
         "coming-soon": "☑️ Nuevos proyectos en fase de desarrollo."
       },
-      titles: { ajedrez: "Ajedrez", hangman: "El Ahorcado", "coming-soon": "En proceso…" }
+      titles: { ajedrez: "Ajedrez", hangman: "El Ahorcado", "coming-soon": "En proceso…" },
+      tags: {} as Record<string, string>
     }
   },
   en: {
@@ -111,14 +116,14 @@ const translations = {
       local: "Your time zone",
       world: "Other time zones"
     },
-    footer: "All rights reserved • Built with React.js, Next.js, TypeScript & Tailwind CSS • UX/UI Interface • Database powered by Firebase • Deployed on Vercel ®",
+    footer: "All rights reserved • Built with React.js, Next.js, TypeScript & Tailwind CSS • UX/UI Design • Database powered by Firebase • Deployed on Vercel ®",
     hero: {
       titleGold: "Interfaces that scale",
       titleWhite: "without breaking the experience",
-      description: "I build digital products focused on performance, structural clarity, and UX judgment. Maintainable code. Immediate feedback. Production-ready real backend.",
+      description: "I build digital products with a focus on performance, structural clarity, and thoughtful UX. Maintainable code. Immediate feedback. A production-ready backend.",
       stats: {
         performance: "Optimized Core Web Vitals and efficient rendering",
-        ux: "Clear interactions with real-time validations",
+        ux: "Clear interactions with real-time validation",
         backend: "Firestore + API Routes ready to scale",
         quality: "TypeScript, reusable components, and predictable code",
         motion: "Microinteractions and animations that guide without distracting"
@@ -129,25 +134,25 @@ const translations = {
     },
     home: {
       methodTitle: "Methodology",
-      methodSubtitle: "My approach combines solid frontend development with UX/UI sensitivity. I build clear, scalable interfaces focused on real experience, not only technical implementation.",
+      methodSubtitle: "My approach combines solid frontend engineering with UX/UI awareness. I build clear, scalable interfaces for real-world experiences—not just technical implementation.",
       cards: [
         ["Frontend", "Modern interfaces with Next.js and React, prioritizing visual clarity, scalable structure, and a consistent experience. I use TypeScript to ensure maintainability and predictability in every component."],
         ["UX / UI & Motion", "Design focused on usability, visual hierarchy, and immediate feedback. I use strategic animations and microinteractions to guide users without distracting or overloading the interface."],
-        ["Architecture", "I integrate lightweight backends with Firebase and API Routes on Netlify / Vercel, optimizing development time while keeping a solid foundation to scale features as each project needs."],
-        ["Product Mindset", "Result-oriented solutions. I explore unconventional tools and languages when they add real value to the workflow, prioritizing efficiency and clarity over passing trends. Every technical decision responds to clarity, performance, and end-user experience."]
+        ["Architecture", "I integrate lightweight backends with Firebase and API Routes on Netlify and Vercel, streamlining development while maintaining a solid foundation that can scale with each project's needs."],
+        ["Product Mindset", "Results-oriented solutions. I explore unconventional tools and languages when they add real value to the workflow, prioritizing efficiency and clarity over passing trends. Every technical decision supports clarity, performance, and the end-user experience."]
       ]
     },
     about: {
-      title: "Who am I?",
-      subtitle: "I am a curious person who demands a lot from myself. After entering this world, I found a space to channel ideas and turn them into something real, with the daily challenge of solving problems and constantly improving.",
+      title: "About me",
+      subtitle: "I am curious and hold myself to high standards. After discovering this field, I found a place to channel ideas and turn them into something real—facing the daily challenge of solving problems and continually improving.",
       paragraphs: [
         "I like creating interfaces that feel alive: responsive, clear, and self-explanatory. I work with React and Next.js because they let me build solid products without sacrificing detail.",
         "Beyond my frontend specialization, I adapt to each project's needs and each client's goals. I care about understanding the context, proposing improvements when needed, and providing solutions that truly add value. I work proactively, making sure every technical decision is aligned with the desired result.",
-        "I enjoy the full process: from the idea to deployment. The satisfaction is in transforming an idea into something concrete that actually works."
+        "I enjoy the entire process, from the initial idea to deployment. The satisfaction comes from turning an idea into something tangible that genuinely works."
       ],
-      skillsTitle: "Skills and Knowledge",
+      skillsTitle: "Skills and knowledge",
       skillsSubtitle: "Tools, technologies, and abilities I have acquired and applied in real projects.",
-      frontend: "Animations, Components, Interactive, Responsive, Carousels",
+      frontend: "Animations, Components, Interactivity, Responsive Design, Carousels",
       hardSkills: ["AI Automation", "Agentic Experience", "Customer Experience", "UI/UX", "Process flows", "Databases", "Digital tools", "Web layout", "Prototyping", "Storytelling", "UI Editing", "UX Writing", "User Research"],
       softSkills: ["Adaptability", "Data analysis", "Collaboration", "Communication", "Creativity", "Mediation", "Proactivity", "Synergy"],
       projectsTitle: "Completed work",
@@ -157,46 +162,64 @@ const translations = {
     },
     contact: {
       title: "Contact",
-      subtitle: "If you are looking to work with me or have an idea in mind, feel free to write to me.",
-      invite: "I invite you to explore:",
+      subtitle: "If you would like to work with me or have an idea in mind, feel free to get in touch.",
+      invite: "You can also find me on:",
       note: "Transforming challenges into new learning opportunities and valuable experiences.",
       form: {
         personal: "Personal information",
         namePlaceholder: "Full name",
         reason: "Reason for your inquiry?",
         messagePlaceholder: "Tell me how I can help you...",
-        sending: "One moment please...",
+        sending: "Sending...",
         submit: "Send",
-        privacy: "Your information will be treated confidentially to respond to your message.",
+        privacy: "Your information will be kept confidential and used only to respond to your message.",
         successTitle: "Success",
-        successText: "Message received. Check your main inbox and/or Spam folder.",
+        successText: "Message received. Please check your inbox and spam folder.",
         errorTitle: "Failed to send",
         unknownError: "Unknown error",
         retry: "Try again in one minute."
       }
     },
     projects: {
+      preview: "Preview",
+      livePreview: "Live preview of",
+      previewOf: "Preview of",
+      comingSoonTag: "COMING SOON",
       descriptions: {
-        chint: "Redesigned website focused on analyzing AI and current social interaction. Deployed on Netlify.",
+        chint: "Redesigned website exploring the relationship between AI and social interaction today. Deployed on Netlify.",
         "irbis-supplies": "Fictional online store refactored from vanilla JavaScript with modular architecture. Deployed on Netlify.",
         "art-syntex": "Fictional online store rebuilt with an integrated database. Deployed on Firebase.",
-        dinosauria: "Encyclopedia of the most popular fictional dinosaurs in modern culture. Deployed on Vercel.",
+        dinosauria: "Encyclopedia of popular dinosaurs from modern fiction and culture. Deployed on Vercel.",
         "calcu-len": "Comprehensive multi-purpose calculator. Deployed on Vercel.",
         "calcu-lenD": "Unofficial currency converter. Deployed on Vercel.",
-        "tick-tack-toe": "Web video game developed with Python and Django. Deployed on Render.",
-        minesweeper: "Web video game developed with Python and Django. Deployed on Render.",
-        "la-buena-mesa": "Gastronomic landing page built with React and TypeScript. Deployed on Vercel.",
-        "gran-milla": "Tourism SPA built with React and TypeScript. Deployed on Vercel.",
-        "2048": "Web video game developed with Python and Django. Deployed on Render.",
-        boaworm: "Web video game developed with Python and Django. Deployed on Render.",
-        ajedrez: "Web video game developed with Python and Django with an integrated database. Deployed on Render.",
-        hangman: "Web video game developed with Python and Django with an integrated database. Deployed on Render.",
+        "tick-tack-toe": "Web-based game developed with Python and Django. Deployed on Render.",
+        minesweeper: "Web-based game developed with Python and Django. Deployed on Render.",
+        "la-buena-mesa": "Restaurant landing page built with React and TypeScript. Deployed on Vercel.",
+        "gran-milla": "Tourism-focused SPA built with React and TypeScript. Deployed on Vercel.",
+        "ascendo-crescendo": "Digital mentoring platform for students, developers, and technology professionals. Deployed on Wix.",
+        arkhe: "Digital art and culture museum combining an interactive experience with a diverse collection of works. Deployed on Framer.",
+        "2048": "Web-based game developed with Python and Django. Deployed on Render.",
+        boaworm: "Web-based game developed with Python and Django. Deployed on Render.",
+        ajedrez: "Web-based game developed with Python and Django. Deployed on Render.",
+        "monster-duelists": "Web-based game developed with Python and Django. Deployed on Render.",
+        hangman: "Web-based game developed with Python and Django. Deployed on Render.",
+        "jumping-frogger": "Web-based game developed with Python and Django. Deployed on Render.",
+        "bunny-quest": "Web-based game developed with Python and Django. Deployed on Render.",
+        "paper-duck": "Web-based game developed with Python and Django. Deployed on Render.",
+        "otter-rescue": "Web-based game developed with Python and Django. Deployed on Render.",
         "frogger-rally": "Web video game developed with Python and Django with an integrated database. Deployed on Render.",
         "do-fu-ioh": "Web video game developed with Python and Django with an integrated database. Deployed on Render.",
-        "2042": "Web video game developed with Python and Django. Deployed on Render.",
-        "coming-soon": "☑️ New projects in development phase."
+        "2042": "Web-based game developed with Python and Django. Deployed on Render.",
+        "coming-soon": "☑️ New projects currently in development."
       },
-      titles: { ajedrez: "Chess", hangman: "Hangman", "coming-soon": "In progress…" }
+      titles: { ajedrez: "Chess", hangman: "Hangman", "coming-soon": "In progress…" },
+      tags: {
+        "Mentoría": "Mentoring",
+        "Educación": "Education",
+        "Tecnología": "Technology",
+        "Edición Digital": "Digital Editing",
+        "Arte Animado": "Animated Art"
+      } as Record<string, string>
     }
   }
 } as const;
@@ -222,6 +245,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }),
     [language]
   );
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 }
