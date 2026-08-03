@@ -96,9 +96,8 @@ body {
 }
 
 @keyframes typing {
-  from { width: 0 }
-  /* 20 characters plus the spacing added by `tracking-wider`. */
-  to { width: 21ch; }
+  from { width: 0; }
+  to { width: calc(20ch + 1em + 2px); }
 }
 
 @keyframes hideCursor {
@@ -107,6 +106,7 @@ body {
 
 .animate-typing {
   display: inline-block;
+  width: calc(20ch + 1em + 2px);
   overflow: hidden;
   white-space: nowrap;
 
