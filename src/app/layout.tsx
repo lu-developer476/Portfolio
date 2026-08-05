@@ -10,6 +10,7 @@ const siteUrl = "https://lu-dev-portfolio.vercel.app";
 const siteTitle = "Lucas Montenegro - Full Stack Developer";
 const siteDescription =
   "Portfolio digital de Lucas Montenegro, Full Stack Developer especializado en interfaces UX/UI, frontend escalable y productos web listos para producción.";
+const socialImage = "/og-image.png?v=20260805";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     description: siteDescription,
     images: [
       {
-        url: "/opengraph-image",
+        url: socialImage,
         width: 1200,
         height: 630,
         alt: "Vista previa del portfolio de Lucas Montenegro"
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
-    images: ["/opengraph-image"]
+    images: [socialImage]
   }
 };
 
