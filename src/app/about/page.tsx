@@ -166,6 +166,7 @@ export default function AboutPage() {
         ["GitLab", GitlabIcon, delayedIconClassName(4)],
         ["Netlify", NetlifyIcon, delayedIconClassName(4)],
         ["Photoshop", PhotoshopIcon, delayedIconClassName(4)],
+        ["Postman", PostmanIcon, delayedIconClassName(4)],
         ["Power BI", PowerBiIcon, delayedIconClassName(4)],
         ["Render", RenderIcon, delayedIconClassName(4)],
         ["Resend", ResendIcon, delayedIconClassName(4)],
@@ -238,12 +239,9 @@ export default function AboutPage() {
           <div className={techRowClassName}>
             <strong className="shrink-0">Backend</strong>
 
-            <div className="flex min-w-0 flex-wrap items-center gap-4">
-              <TechIcon label="Postman" Icon={PostmanIcon} className="w-7 h-7 word delay-2" />
-              <span className="light-electric-blue word delay-2 min-w-0">
-                API Design, Debugging, Dev & Prod, Email APIs, Web Storage
-              </span>
-            </div>
+            <span className="light-electric-blue word delay-2 min-w-0">
+              API Design, Debugging, Dev & Prod, Email APIs, Web Storage
+            </span>
           </div>
 
           {techSections.slice(3).map(({ title, items }) => (
