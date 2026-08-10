@@ -62,6 +62,7 @@ Todo se ejecuta mediante un entorno server-side seguro.
   <img src="https://img.shields.io/badge/Resend-000000?style=for-the-badge&logo=resend&logoColor=white" alt="Resend" height="34" />
   <img src="https://img.shields.io/badge/Nodemailer-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Nodemailer" height="34" />
   <img src="https://img.shields.io/badge/Zod-3E67B1?style=for-the-badge&logo=zod&logoColor=white" alt="Zod" height="34" />
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" height="34" />
 </p>
 
 ### Complementos
@@ -76,6 +77,7 @@ Todo se ejecuta mediante un entorno server-side seguro.
 
 <p>
   <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" height="34" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" height="34" />
 </p>
 
 ## Instalación local
