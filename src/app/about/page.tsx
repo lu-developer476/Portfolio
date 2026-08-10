@@ -15,6 +15,7 @@ import {
   CoffeeScriptIcon,
   CropperJSIcon,
   DjangoIcon,
+  DockerIcon,
   DrawIoIcon,
   ElevenLabsIcon,
   FigmaIcon,
@@ -36,6 +37,7 @@ import {
   PhaserIcon,
   PowerBiIcon,
   PhotoshopIcon,
+  PostmanIcon,
   PythonIcon,
   ReactIcon,
   RenderIcon,
@@ -155,6 +157,7 @@ export default function AboutPage() {
       items: [
         ["Canva", CanvaIcon, delayedIconClassName(4)],
         ["CapCut", CapCutIcon, delayedIconClassName(4)],
+        ["Docker", DockerIcon, delayedIconClassName(4)],
         ["draw.io", DrawIoIcon, delayedIconClassName(4)],
         ["Figma", FigmaIcon, delayedIconClassName(4)],
         ["Firebase", FirebaseIcon, delayedIconClassName(4)],
@@ -235,9 +238,12 @@ export default function AboutPage() {
           <div className={techRowClassName}>
             <strong className="shrink-0">Backend</strong>
 
-            <span className="light-electric-blue word delay-2 min-w-0">
-              API Design, Debugging, Dev & Prod, Email APIs, Web Storage
-            </span>
+            <div className="flex min-w-0 flex-wrap items-center gap-4">
+              <TechIcon label="Postman" Icon={PostmanIcon} className="w-7 h-7 word delay-2" />
+              <span className="light-electric-blue word delay-2 min-w-0">
+                API Design, Debugging, Dev & Prod, Email APIs, Web Storage
+              </span>
+            </div>
           </div>
 
           {techSections.slice(3).map(({ title, items }) => (
