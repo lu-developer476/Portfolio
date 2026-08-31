@@ -53,6 +53,14 @@ export const professionalProjects: Project[] = [
     demo: "https://arkhe-digital-musem.framer.website/",
   },
   {
+    slug: "gestoría-ays",
+    title: "Gestoría AyS",
+    year: "2026",
+    description: "Sitio web oficial de consultoría y gestiones administrativas. Desplegado en Netlify.",
+    tags: ["Consultora", "Asistencia y Simplicidad", "React", "Node.js", "User Experience", "UX/UI", "Netlify"],
+    demo: "https://asistenciaysimplicidad.netlify.app/",
+  },
+  {
     slug: "coming-soon",
     title: "En proceso…",
     year: "❔",
