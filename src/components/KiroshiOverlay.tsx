@@ -88,6 +88,7 @@ export default function KiroshiOverlay() {
     }
 
     let cancelled = false;
+    let speechTimeout: number | undefined;
     const speechSynthesis = window.speechSynthesis;
     const voiceProfile = VOICE_PROFILES[language];
 
@@ -102,7 +103,13 @@ export default function KiroshiOverlay() {
       message.volume = 1;
 
       speechSynthesis.cancel();
-      speechSynthesis.speak(message);
+      speechTimeout = window.setTimeout(() => {
+        if (cancelled) return;
+
+        // Chrome can discard an utterance queued in the same task as cancel().
+        speechSynthesis.resume();
+        speechSynthesis.speak(message);
+      }, 0);
     };
 
     if (speechSynthesis.getVoices().length > 0) {
@@ -113,6 +120,9 @@ export default function KiroshiOverlay() {
 
     return () => {
       cancelled = true;
+      if (speechTimeout !== undefined) {
+        window.clearTimeout(speechTimeout);
+      }
       speechSynthesis.removeEventListener("voiceschanged", speakCyberpunk);
       speechSynthesis.cancel();
     };
