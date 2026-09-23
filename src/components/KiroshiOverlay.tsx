@@ -51,7 +51,6 @@ export default function KiroshiOverlay() {
   const { language, t } = useLanguage();
   const circleRef = useRef<HTMLDivElement | null>(null);
   const scanRef = useRef<HTMLDivElement | null>(null);
-  const spokenLanguageRef = useRef<Language | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -93,7 +92,7 @@ export default function KiroshiOverlay() {
     const voiceProfile = VOICE_PROFILES[language];
 
     const speakCyberpunk = () => {
-      if (cancelled || spokenLanguageRef.current === language) return;
+      if (cancelled) return;
 
       const message = new SpeechSynthesisUtterance(t.hero.systemVoice);
       message.lang = voiceProfile.lang;
@@ -102,7 +101,6 @@ export default function KiroshiOverlay() {
       message.pitch = 1.08;
       message.volume = 1;
 
-      spokenLanguageRef.current = language;
       speechSynthesis.cancel();
       speechSynthesis.speak(message);
     };
