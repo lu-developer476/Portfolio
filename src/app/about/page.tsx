@@ -240,7 +240,7 @@ export default function AboutPage() {
             <strong className="shrink-0">Backend</strong>
 
             <span className="light-electric-blue word delay-2 min-w-0">
-              API Design, Debugging, Dev & Prod, Email APIs, Web Storage
+              API Design, Debugging, Email APIs, Refactoring, Web Storage
             </span>
           </div>
 
