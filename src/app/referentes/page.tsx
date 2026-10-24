@@ -36,13 +36,13 @@ export default function ReferencesPage() {
                 <h4 className="text-xs font-semibold uppercase tracking-[0.16em] text-cyber-neonGreen">{copy.learn}</h4>
                 <p className="mt-2 text-sm leading-relaxed text-white/75">{isSpanish ? company.lessonEs : company.lessonEn}</p>
               </div>
-              <a href={company.referenceUrl} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex w-fit items-center gap-2 rounded-lg border border-white/15 px-3 py-2 text-sm font-semibold text-white/75 transition hover:border-cyber-neonGreen/60 hover:text-cyber-neonGreen">
+              <a href={company.referenceUrl} target="_blank" rel="noopener noreferrer" className="mx-auto mt-5 inline-flex w-fit items-center justify-center gap-2 rounded-lg border border-white/15 px-3 py-2 text-center text-sm font-semibold text-white/75 transition hover:border-cyber-neonGreen/60 hover:text-cyber-neonGreen">
                 {copy.open}<span aria-hidden="true">↗</span>
               </a>
             </article>
           ))}
         </div>
-        <p className="mt-6 text-xs leading-relaxed text-white/40">{copy.disclaimer}</p>
+        <p className="mt-6 text-center text-xs leading-relaxed text-white/40">{copy.disclaimer}</p>
       </Section>
     </div>
   );
