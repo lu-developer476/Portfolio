@@ -123,7 +123,21 @@ export default function Navbar() {
           </div>
 
           {/* DERECHA */}
-          <nav className="relative ml-auto flex items-center justify-end gap-3 md:gap-5">
+          <nav className="relative ml-auto flex items-center justify-end gap-2 md:gap-5">
+            <Link
+              href="/about"
+              onMouseEnter={play}
+              className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold tracking-widest text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen md:px-4 md:text-sm"
+            >
+              {t.nav.about}
+            </Link>
+            <Link
+              href="/contact"
+              onMouseEnter={play}
+              className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold tracking-widest text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen md:px-4 md:text-sm"
+            >
+              {t.nav.contact}
+            </Link>
             <button
               type="button"
               onClick={() => {
@@ -143,22 +157,6 @@ export default function Navbar() {
                 <div className="space-y-4">
                   <div>
                     <div className="grid gap-2">
-                      <Link
-                        href="/about"
-                        onClick={() => setMenuOpen(false)}
-                        onMouseEnter={play}
-                        className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold tracking-widest text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen"
-                      >
-                        {t.nav.about}
-                      </Link>
-                      <Link
-                        href="/contact"
-                        onClick={() => setMenuOpen(false)}
-                        onMouseEnter={play}
-                        className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold tracking-widest text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen"
-                      >
-                        {t.nav.contact}
-                      </Link>
                     </div>
                   </div>
 
