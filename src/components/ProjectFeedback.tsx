@@ -215,7 +215,7 @@ export default function ProjectFeedback({ projectSlug, projectTitle, language }:
                       <article key={projectSlug + "-editorial-review-" + index} className="rounded-xl border border-white/10 bg-white/[0.025] p-3">
                         <div className="flex flex-wrap items-center justify-between gap-2">
                           <p className="text-sm font-semibold text-cyber-gold">{review.name}</p>
-                          <span className="text-sm text-amber-300" aria-label={review.rating + " / 5}>{"★".repeat(review.rating)}{"☆".repeat(5 - review.rating)}</span>
+                          <span className="text-sm text-amber-300" aria-label={review.rating + " / 5"}>{"★".repeat(review.rating)}{"☆".repeat(5 - review.rating)}</span>
                         </div>
                         <p className="mt-2 whitespace-pre-wrap break-words text-sm leading-relaxed text-white/75">{review.message}</p>
                       </article>
