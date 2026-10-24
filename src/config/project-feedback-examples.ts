@@ -14,7 +14,6 @@ export const projectFeedbackExamples: Record<string, ProjectFeedbackExample> = {
       { rating: 5, es: "La refactorización modular le da más sentido a una tienda hecha con JavaScript vanilla; es una buena base para seguir agregando funciones sin mezclar todo.", en: "The modular refactor makes a vanilla-JavaScript store easier to extend without mixing every feature together." },
       { rating: 4, es: "La idea funciona como práctica de e-commerce. Para el siguiente paso, explicaría mejor qué datos se mantienen al volver al catálogo.", en: "It works well as an e-commerce exercise. Next, I would make it clearer which data stays available when returning to the catalog." },
       { rating: 3, es: "Se entiende el objetivo comercial, aunque la experiencia ganaría con estados vacíos y mensajes de carrito más explícitos.", en: "The store's purpose is clear, but empty states and cart messages could be more explicit." },
-      { rating: 4, es: "Me interesa que sea una tienda ficticia refactorizada y no solo una maqueta visual; sumaría pruebas para los cálculos del carrito.", en: "I like that this is a refactored fictional store rather than only a visual mockup; tests for cart calculations would be a useful addition." }
     ]
   },
   "art-syntex": {
@@ -59,7 +58,6 @@ export const projectFeedbackExamples: Record<string, ProjectFeedbackExample> = {
       { rating: 4, es: "El convertidor resuelve una necesidad concreta, pero en monedas la confianza depende mucho de saber de cuándo es la cotización y de dónde sale.", en: "The converter addresses a real need, but currency tools depend on users knowing when a rate was updated and where it came from." },
       { rating: 4, es: "La idea de tener una herramienta separada de Calcu-len tiene sentido. Haría muy visible que es no oficial y no usaría cifras sin contexto.", en: "Keeping this separate from Calcu-len makes sense. I would make the unofficial status clear and avoid showing rates without context." },
       { rating: 3, es: "Como utilidad rápida funciona como concepto; para usarlo en decisiones reales necesitaría fuente, actualización y aclaración de comisiones.", en: "It makes sense as a quick utility; real decisions would require a source, update time, and fee disclaimer." },
-      { rating: 5, es: "La conversión de monedas tiene un propósito claro y fácil de explicar. La trazabilidad de cada tasa sería el detalle que más elevaría el proyecto.", en: "Currency conversion has a clear, easy-to-explain purpose. Rate traceability would be the improvement that adds the most value." }
     ]
   },
   "tick-tack-toe": {
@@ -93,7 +91,6 @@ export const projectFeedbackExamples: Record<string, ProjectFeedbackExample> = {
       { rating: 4, es: "2048 se entiende rápido si el movimiento de fichas es consistente. La sensación de control depende mucho de que cada deslizamiento se registre una sola vez.", en: "2048 is easy to understand when tile movement is consistent. The sense of control depends on each swipe being registered exactly once." },
       { rating: 5, es: "Es una elección sólida para mostrar manejo de teclado, cuadrícula y estado de juego sin necesitar una explicación larga.", en: "It is a solid choice for demonstrating keyboard input, a grid, and game state without a long explanation." },
       { rating: 3, es: "Para que la partida sea más legible, separaría visualmente la mejor puntuación del puntaje de la ronda actual.", en: "I would visually separate the best score from the current round score to make progress easier to read." },
-      { rating: 4, es: "El reto principal está en que los movimientos se sientan previsibles. También sumaría una confirmación antes de reiniciar una partida avanzada.", en: "The main challenge is making movement predictable. I would also confirm before restarting an advanced game." }
     ]
   },
   "boaworm": {
@@ -127,7 +124,6 @@ export const projectFeedbackExamples: Record<string, ProjectFeedbackExample> = {
       { rating: 4, es: "La temática de duelos puede diferenciarlo de un minijuego clásico. Las estadísticas deberían influir de forma comprensible, no sentirse como números decorativos.", en: "The duel theme can distinguish it from a classic mini-game. Stats should affect play in a way users can understand, not feel decorative." },
       { rating: 5, es: "El nombre promete enfrentamientos y progresión; un registro corto de cada turno haría más fácil entender por qué ganó un monstruo.", en: "The concept promises battles and progression; a short turn log would make it easier to understand why a monster won." },
       { rating: 3, es: "La propuesta necesita reglas visibles para que el resultado no parezca arbitrario, sobre todo si existen habilidades distintas por personaje.", en: "The rules need to be visible so outcomes do not feel arbitrary, especially if monsters have different abilities." },
-      { rating: 4, es: "Me centraría en que las decisiones del jugador tengan una consecuencia clara: daño, defensa o ventaja deberían explicarse en el momento.", en: "I would make each player choice have a clear consequence: damage, defense, or advantage should be explained as it happens." }
     ]
   },
   "2042": {
@@ -161,7 +157,6 @@ export const projectFeedbackExamples: Record<string, ProjectFeedbackExample> = {
       { rating: 4, es: "La premisa de cruzar obstáculos se entiende rápido. La dificultad debería subir por etapas y no por cambios bruscos que parezcan injustos.", en: "The obstacle-crossing premise is easy to grasp. Difficulty should rise in steps rather than through sudden, unfair-feeling changes." },
       { rating: 5, es: "Es un buen formato para trabajar tiempo de respuesta y feedback inmediato; cada choque o cruce exitoso debería tener una señal inequívoca.", en: "It is a good format for testing response timing and immediate feedback; every collision or successful crossing should be unmistakable." },
       { rating: 3, es: "Revisaría el control desde teclado y móvil por separado. Si el salto responde tarde, el jugador puede atribuirlo a una colisión injusta.", en: "I would test keyboard and mobile controls separately. Delayed jumps can make a collision feel unfair." },
-      { rating: 4, es: "Una pantalla de inicio breve con controles y objetivo ahorraría intentos perdidos sin convertir el juego en un tutorial largo.", en: "A short start screen explaining controls and the goal would prevent wasted attempts without turning the game into a long tutorial." }
     ]
   },
   "bunny-quest": {
@@ -195,7 +190,6 @@ export const projectFeedbackExamples: Record<string, ProjectFeedbackExample> = {
       { rating: 4, es: "Otter Rescue transmite una misión concreta, algo útil para orientar al jugador. La primera pantalla debería explicar el rescate y la condición de éxito.", en: "Otter Rescue suggests a clear mission, which can guide players well. The first screen should explain the rescue and win condition." },
       { rating: 4, es: "Me gusta la posibilidad de construir niveles alrededor de obstáculos; marcar mejor los elementos interactivos evitaría confundir decoración con peligro.", en: "The idea lends itself to obstacle-based levels; clearer interactive cues would prevent decorative elements being mistaken for hazards." },
       { rating: 3, es: "La ambientación puede atraer, pero el movimiento y las colisiones tienen que sentirse justos. Revisaría la respuesta cuando se juega desde el móvil.", en: "The setting can draw people in, but movement and collisions need to feel fair. I would check mobile responsiveness closely." },
-      { rating: 5, es: "El tema de rescate da una motivación fácil de comunicar. Mostrar el progreso hacia el objetivo puede hacer que cada intento tenga más sentido.", en: "The rescue theme provides an easy-to-understand motivation. Showing progress toward the goal could make each attempt feel more purposeful." }
     ]
   },
   "chint": {
@@ -229,7 +223,6 @@ export const projectFeedbackExamples: Record<string, ProjectFeedbackExample> = {
       { rating: 4, es: "El formato SPA encaja con una experiencia turística, donde comparar opciones importa. Mantendría visibles los datos prácticos además de la presentación visual.", en: "A SPA suits tourism, where comparing options matters. I would keep practical details visible alongside the visual presentation." },
       { rating: 5, es: "El proyecto tiene un contexto claro: ayudar a imaginar y organizar un viaje. Fichas consistentes para cada destino harían más sencilla la comparación.", en: "The project has a clear purpose: helping people imagine and plan a trip. Consistent destination entries would make comparison easier." },
       { rating: 3, es: "La parte visual puede inspirar, pero no debería obligar a buscar demasiado la ubicación, duración o condiciones de cada propuesta.", en: "The visual presentation can inspire, but visitors should not have to hunt for each option's location, duration, or conditions." },
-      { rating: 4, es: "Como portfolio, muestra un caso de navegación con varias secciones. Revisaría estados de carga y el comportamiento del botón atrás del navegador.", en: "As a portfolio piece, it demonstrates multi-section navigation. I would test loading states and the browser back button." }
     ]
   },
   "ascendo-crescendo": {
@@ -263,7 +256,6 @@ export const projectFeedbackExamples: Record<string, ProjectFeedbackExample> = {
       { rating: 4, es: "En inmobiliaria, comparar propiedades es central. La consistencia entre fichas pesa tanto como la fotografía, especialmente para precio, ubicación y cantidad de ambientes.", en: "Property comparison is central to real estate. Consistent listing details matter as much as photography, especially price, location, and room count." },
       { rating: 5, es: "El rubro tiene una necesidad funcional clara: pasar de explorar inmuebles a consultar por uno. Haría que ese siguiente paso siempre sea visible.", en: "The sector has a clear functional need: moving from browsing listings to asking about one. I would keep that next step visible." },
       { rating: 3, es: "Las fotos pueden atraer, pero sin información práctica comparable cuesta decidir. Revisaría también la experiencia cuando una búsqueda no devuelve resultados.", en: "Photos can attract attention, but decisions are hard without comparable details. I would also review the empty-search state." },
-      { rating: 4, es: "El caso de uso encaja con una web de propiedades. Un filtro que preserve la selección al entrar y volver de una ficha ahorraría pasos.", en: "The use case fits a property website. Filters that retain selections when opening and leaving a listing would save steps." }
     ]
   },
   "gestoría-ays": {
