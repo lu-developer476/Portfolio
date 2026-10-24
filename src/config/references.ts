@@ -1,3 +1,21 @@
-export type CompanyReference = { name: string; slug: string; referenceUrl: string; focusEs: string; focusEn: string; lessonEs: string; lessonEn: string; };
+export type CompanyReference = {
+  name: string;
+  slug: string;
+  referenceUrl: string;
+  focusEs: string;
+  focusEn: string;
+  lessonEs: string;
+  lessonEn: string;
+};
 
-export const companyReferences: CompanyReference[] = [];
+export const companyReferences: CompanyReference[] = [
+  {"name":"Vercel","slug":"vercel","referenceUrl":"https://vercel.com/geist/introduction","focusEs":"Sistemas de diseño para productos digitales y herramientas de desarrollo.","focusEn":"Design systems for digital products and developer tools.","lessonEs":"Jerarquía tipográfica, contraste, componentes consistentes y una estética técnica sin ruido visual.","lessonEn":"Typographic hierarchy, contrast, consistent components, and a technical aesthetic without visual noise."},
+  {"name":"Figma","slug":"figma","referenceUrl":"https://www.figma.com/es-la/design-systems/","focusEs":"Diseño de interfaces, sistemas visuales y prototipado colaborativo.","focusEn":"Interface design, visual systems, and collaborative prototyping.","lessonEs":"Cómo construir componentes reutilizables, variables y modos que mantienen la coherencia entre pantallas.","lessonEn":"How reusable components, variables, and modes help maintain consistency across screens."},
+  {"name":"Linear","slug":"linear","referenceUrl":"https://linear.app/now/behind-the-latest-design-refresh","focusEs":"Experiencia de producto, navegación y herramientas de productividad.","focusEn":"Product experience, navigation, and productivity tools.","lessonEs":"Reducir el ruido visual, hacer más escaneable la información y mantener las acciones en lugares previsibles.","lessonEn":"Reducing visual noise, making information easier to scan, and keeping actions in predictable places."},
+  {"name":"GitHub","slug":"github","referenceUrl":"https://primer.style/","focusEs":"Interfaces para desarrolladores y sistemas de diseño abiertos.","focusEn":"Developer interfaces and open design systems.","lessonEs":"Patrones reutilizables, accesibilidad, estados de componentes y flujos de trabajo que se entienden con rapidez.","lessonEn":"Reusable patterns, accessibility, component states, and workflows that are easy to understand."},
+  {"name":"Stripe","slug":"stripe","referenceUrl":"https://stripe.com/payments/checkout","focusEs":"Experiencia de compra, formularios y productos financieros digitales.","focusEn":"Checkout experiences, forms, and digital financial products.","lessonEs":"Validaciones claras, formularios que reducen fricción y experiencias adaptables sin perder la identidad de marca.","lessonEn":"Clear validation, low-friction forms, and adaptive experiences that preserve brand identity."},
+  {"name":"Framer","slug":"framer","referenceUrl":"https://www.framer.com/design/","focusEs":"Diseño web visual, composición responsive e interacciones.","focusEn":"Visual web design, responsive composition, and interactions.","lessonEs":"Cómo dar movimiento y personalidad a una web sin perder control de la composición ni de los distintos tamaños de pantalla.","lessonEn":"How to add motion and personality to a website while preserving layout control across screen sizes."},
+  {"name":"Shopify","slug":"shopify","referenceUrl":"https://shopify.dev/docs/apps/design","focusEs":"Comercio digital y experiencias para tiendas y comerciantes.","focusEn":"Digital commerce and experiences for stores and merchants.","lessonEs":"Jerarquía clara, patrones familiares y componentes coherentes para que tareas comerciales sean fáciles de completar.","lessonEn":"Clear hierarchy, familiar patterns, and consistent components that make commerce tasks easier to complete."},
+  {"name":"Apple","slug":"apple","referenceUrl":"https://developer.apple.com/design/human-interface-guidelines/","focusEs":"Principios de interacción, diseño adaptable y accesibilidad.","focusEn":"Interaction principles, adaptive design, and accessibility.","lessonEs":"Priorizar propósito, simplicidad, consistencia y accesibilidad antes que agregar efectos solo por decoración.","lessonEn":"Prioritizing purpose, simplicity, consistency, and accessibility over decorative effects."},
+  {"name":"Google","slug":"google","referenceUrl":"https://m3.material.io/","focusEs":"Diseño de interfaces y patrones que funcionan en diferentes contextos.","focusEn":"Interface design and patterns that work across contexts.","lessonEs":"Usar reglas visuales claras y componentes flexibles para sostener una experiencia coherente en distintas pantallas.","lessonEn":"Using clear visual rules and flexible components to maintain consistency across screens."},
+];
