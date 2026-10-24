@@ -187,23 +187,6 @@ export default function AboutPage() {
   return (
     <div className="space-y-14">
       <Section
-        id="about"
-        title={t.about.title}
-        subtitle={t.about.subtitle}
-      >
-        <div className="rounded-xl border border-white/10 bg-black/35 p-6">
-          {t.about.paragraphs.map((paragraph, index) => (
-            <p
-              key={paragraph}
-              className={`light-electric-blue text-white/85 leading-7 ${index ? "mt-4" : ""}`}
-            >
-              {paragraph}
-            </p>
-          ))}
-        </div>
-      </Section>
-
-      <Section
         id="skills"
         title={t.about.skillsTitle}
         subtitle={t.about.skillsSubtitle}
