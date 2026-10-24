@@ -7,5 +7,5 @@
 .references-logo-item:focus-visible { box-shadow: 0 0 0 2px rgba(5,247,183,0.22); }
 .references-logo-item span { font-size: 0.9rem; font-weight: 650; letter-spacing: 0.015em; white-space: nowrap; }
 .references-track:hover, .references-marquee:focus-within .references-track { animation-play-state: paused; }
-@keyframes references-marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes references-marquee-scroll { from { transform: translateX(-50%); } to { transform: translateX(0); } }
 @media (prefers-reduced-motion: reduce) { .references-track { animation: none; will-change: auto; } .references-marquee { overflow-x: auto; mask-image: none; -webkit-mask-image: none; } }
