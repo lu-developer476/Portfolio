@@ -1,6 +1,5 @@
 export type ProjectRecommendations = {
   recommendations: { es: string[]; en: string[] };
-  comments: Array<{ rating: number; es: string; en: string }>;
 };
 
 export const projectRecommendations: Record<string, ProjectRecommendations> = {
