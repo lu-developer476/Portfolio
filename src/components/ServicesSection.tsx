@@ -16,7 +16,6 @@ const serviceCopy = {
     eyebrow: "SERVICIOS",
     title: "Tu proyecto, a tu medida",
     subtitle: "Paquetes de referencia para que puedas estimar una inversión inicial. El alcance final se define en una propuesta según tus objetivos, funcionalidades, materiales y plazos.",
-    marketNote: "Referencias de mercado freelance en Argentina · relevadas en octubre de 2026. Valores expresados en USD para evitar equivalencias en pesos que queden desactualizadas.",
     quoteCta: "Consultar este servicio",
     packages: [
       {
@@ -142,7 +141,6 @@ const serviceCopy = {
     eyebrow: "SERVICES",
     title: "Your project, your way",
     subtitle: "Reference packages to help estimate an initial investment. Final scope is defined in a proposal based on your goals, features, supplied materials, and timeline.",
-    marketNote: "Freelance market references for Argentina · reviewed in October 2026. Prices are shown in USD to avoid outdated peso conversions.",
     quoteCta: "Ask about this service",
     packages: [
       {
@@ -276,7 +274,6 @@ export default function ServicesSection() {
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyber-neonGreen">{copy.eyebrow}</p>
         <h2 className="text-2xl font-bold text-cyber-gold sm:text-3xl">{copy.title}</h2>
         <p className="w-full leading-relaxed text-white/75">{copy.subtitle}</p>
-        <p className="w-full rounded-xl border border-cyber-gold/25 bg-black/25 px-4 py-3 text-sm leading-relaxed text-white/65">{copy.marketNote}</p>
       </div>
 
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
