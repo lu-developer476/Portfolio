@@ -105,11 +105,6 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
               </div>
             )}
 
-            {/* Project feedback actions sit directly beneath the preview, inside each card. */}
-            {(p.demo || p.previewImage) && (
-              <ProjectFeedback projectSlug={p.slug} projectTitle={localizedTitle} language={language} />
-            )}
-
             {/* Description */}
             <p className="project-description light-electric-blue mt-4 text-sm leading-relaxed text-white/100">
               {language === "en"
@@ -133,6 +128,10 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
               </div>
             )}
 
+            {/* Feedback controls follow the description and technology tags. */}
+            {(p.demo || p.previewImage) && (
+              <ProjectFeedback projectSlug={p.slug} projectTitle={localizedTitle} language={language} />
+            )}
           </article>
         );
 
