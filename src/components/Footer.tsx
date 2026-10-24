@@ -8,7 +8,8 @@ export default function Footer() {
 
   return (
     <footer className="relative z-10 border-t border-white/10 py-10">
-      <div className="mx-auto max-w-6xl px-4 text-sm text-white/70">
+      <div className="footer-line-scroll overflow-x-auto">
+        <div className="mx-auto w-max min-w-full whitespace-nowrap px-4 text-center text-xs text-white/70 sm:text-sm">
         <span className="text-cyber-gold">©</span> {new Date().getFullYear()}{" "}
         {footerParts.map((part, index) => {
           const isHighlightedTech = /^(?:React\.js|Next\.js|TypeScript|CoffeeScript|Tailwind CSS|UX\/UI (?:Interface|Design)|Firebase|Vercel)$/.test(part);
@@ -25,6 +26,7 @@ export default function Footer() {
             <span key={index}>{part}</span>
           );
         })}
+        </div>
       </div>
     </footer>
   );
