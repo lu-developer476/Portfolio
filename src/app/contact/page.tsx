@@ -2,6 +2,7 @@
 
 import ContactForm from "@/components/ContactForm";
 import Section from "@/components/Section";
+import ServicesSection from "@/components/ServicesSection";
 import { useHoverSound } from "@/lib/useHoverSound";
 import { useLanguage } from "@/lib/i18n";
 
@@ -76,10 +77,12 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="rounded-xl border border-white/50 bg-black/35 p-5">
+        <div id="contact-form" className="scroll-mt-28 rounded-xl border border-white/50 bg-black/35 p-5">
           <ContactForm />
         </div>
       </div>
+
+      <ServicesSection />
     </Section>
   );
 }
