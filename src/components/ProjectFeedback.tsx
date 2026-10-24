@@ -164,12 +164,8 @@ export default function ProjectFeedback({ projectSlug, projectTitle, language }:
 
       {mode && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/80 p-4 backdrop-blur-sm" role="presentation" onClick={(event) => { event.stopPropagation(); setMode(null); }}>
-          <section role="dialog" aria-modal="true" aria-labelledby={`feedback-title-${projectSlug}`} className="my-auto max-h-[90vh] w-full max-w-xl overflow-y-auto rounded-2xl border border-cyber-gold/50 bg-[#09090d] p-5 shadow-[0_0_38px_rgba(250,204,21,0.14)] sm:p-6" onClick={(event) => event.stopPropagation()} onKeyDown={(event) => event.stopPropagation()}>
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-cyber-neonGreen">{projectTitle}</p>
-                <h3 id={`feedback-title-${projectSlug}`} className="mt-2 text-xl font-bold text-cyber-gold">{mode === "recommendations" ? labels.recommendations : labels.comments}</h3>
-              </div>
+          <section role="dialog" aria-modal="true" aria-label={mode === "recommendations" ? labels.recommendations : labels.comments} className="my-auto max-h-[90vh] w-full max-w-xl overflow-y-auto rounded-2xl border border-cyber-gold/50 bg-[#09090d] p-5 shadow-[0_0_38px_rgba(250,204,21,0.14)] sm:p-6" onClick={(event) => event.stopPropagation()} onKeyDown={(event) => event.stopPropagation()}>
+            <div className="flex justify-end">
               <button type="button" onClick={() => setMode(null)} className="rounded-lg border border-white/15 px-3 py-2 text-sm text-white/70 hover:border-cyber-neonGreen hover:text-cyber-neonGreen" aria-label={labels.close}>✕</button>
             </div>
 
