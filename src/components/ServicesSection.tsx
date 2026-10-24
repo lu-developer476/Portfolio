@@ -130,7 +130,7 @@ const serviceCopy = {
       "Dominio, hosting, licencias, comisiones de pago y servicios de terceros se pagan por separado; siempre que sea posible, las cuentas quedan a nombre del cliente.",
       "El presupuesto final especificará alcance, entregables, revisiones, plazos, soporte posterior, moneda de pago e impuestos aplicables."
     ],
-    sourcesTitle: "Referencias de precios consultadas",
+    sourcesTitle: "Referencias",
     sources: [
       { label: "Tarifario.info · tarifas de desarrollo web en Argentina (septiembre de 2026)", url: "https://tarifario.info/desarrollo-web/" },
       { label: "Freelancer.ar · rangos freelance publicados para 2026", url: "https://freelancer.ar/cuanto-cobrar-por-una-pagina-web-en-argentina-precios-de-freelancers/" },
@@ -255,7 +255,7 @@ const serviceCopy = {
       "Domain, hosting, licenses, payment fees, and third-party services are charged separately; whenever possible, accounts remain in the client's name.",
       "The final proposal will specify scope, deliverables, revisions, timeline, post-launch support, payment currency, and applicable taxes."
     ],
-    sourcesTitle: "Pricing references",
+    sourcesTitle: "References",
     sources: [
       { label: "Tarifario.info · web development rates in Argentina (September 2026)", url: "https://tarifario.info/desarrollo-web/" },
       { label: "Freelancer.ar · freelance pricing ranges published for 2026", url: "https://freelancer.ar/cuanto-cobrar-por-una-pagina-web-en-argentina-precios-de-freelancers/" },
