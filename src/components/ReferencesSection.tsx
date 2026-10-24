@@ -24,15 +24,17 @@ export default function ReferencesSection() {
           aria-label={duplicate ? undefined : `${company.name}: ${isSpanish ? company.focusEs : company.focusEn}`}
           className="references-logo-item group"
         >
+          <span className={`flex h-[30px] w-[30px] shrink-0 items-center ${company.logoMode === "crop-left" ? "justify-start overflow-hidden" : "justify-center"}`}>
           <img
-            src={`https://cdn.simpleicons.org/${company.slug}/FFFFFF`}
+            src={company.logoUrl ?? `https://cdn.simpleicons.org/${company.slug}/FFFFFF`}
             alt=""
             width="30"
             height="30"
             loading="eager"
             decoding="async"
-            className="h-7 w-7 shrink-0 object-contain opacity-80 transition duration-300 group-hover:scale-110 group-hover:opacity-100"
+            className={`${company.logoMode === "crop-left" ? "h-6 w-[120px] max-w-none object-contain object-left" : "h-7 w-7 object-contain"} ${company.logoMonochrome ? "brightness-0 invert" : ""} shrink-0 opacity-80 transition duration-300 group-hover:scale-110 group-hover:opacity-100`
           />
+          </span>
           <span>{company.name}</span>
         </a>
       ))}
