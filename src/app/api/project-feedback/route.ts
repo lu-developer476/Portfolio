@@ -1,11 +1,15 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { getAdminDb } from "@/lib/firebaseAdmin";
+import { personalProjects } from "@/config/personalprojects";
+import { professionalProjects } from "@/config/professionalprojects";
 
 export const runtime = "nodejs";
 
 const projectSlugSchema = z.string().min(1).max(80).regex(/^[a-zA-Z0-9-]+$/);
 const visitorIdSchema = z.string().uuid();
+const validProjectSlugs = new Set([...personalProjects, ...professionalProjects].map((project) => project.slug).filter((slug) => slug !== "coming-soon"));
+const isValidProject = (slug: string) => validProjectSlugs.has(slug);
 
 const recommendationSchema = z.object({
   action: z.literal("recommend"),
@@ -25,7 +29,7 @@ const commentSchema = z.object({
 export async function GET(request: Request) {
   const projectSlug = new URL(request.url).searchParams.get("project");
   const parsedSlug = projectSlugSchema.safeParse(projectSlug);
-  if (!parsedSlug.success) {
+  if (!parsedSlug.success || !isValidProject(parsedSlug.data)) {
     return NextResponse.json({ error: "Invalid project." }, { status: 400 });
   }
 
@@ -87,6 +91,9 @@ export async function POST(request: Request) {
       }
 
       const { projectSlug, visitorId } = parsed.data;
+      if (!isValidProject(projectSlug)) {
+        return NextResponse.json({ error: "Invalid project." }, { status: 400 });
+      }
       const recommendationId = `${projectSlug}__${visitorId}`;
       try {
         await db.collection("project_recommendations").doc(recommendationId).create({
@@ -106,6 +113,9 @@ export async function POST(request: Request) {
     const parsed = commentSchema.safeParse(body);
     if (!parsed.success) {
       return NextResponse.json({ error: "Check the name, rating, and comment. Comments must be 8–800 characters." }, { status: 400 });
+    }
+    if (!isValidProject(parsed.data.projectSlug)) {
+      return NextResponse.json({ error: "Invalid project." }, { status: 400 });
     }
     if (parsed.data.website) {
       return NextResponse.json({ ok: true, pendingModeration: true }, { status: 202 });
