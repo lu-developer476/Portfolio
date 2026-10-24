@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { useHoverSound } from "@/lib/useHoverSound";
 import { useLanguage } from "@/lib/i18n";
+import ProjectFeedback from "@/components/ProjectFeedback";
 
 type ProjectsCarouselProps = {
   expanded?: boolean;
@@ -104,6 +105,11 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
               </div>
             )}
 
+            {/* Project feedback actions sit directly beneath the preview, inside each card. */}
+            {(p.demo || p.previewImage) && (
+              <ProjectFeedback projectSlug={p.slug} projectTitle={localizedTitle} language={language} />
+            )}
+
             {/* Description */}
             <p className="project-description light-electric-blue mt-4 text-sm leading-relaxed text-white/100">
               {language === "en"
@@ -140,6 +146,7 @@ export default function ProjectsCarousel({ expanded = false, items = personalPro
                 onMouseEnter={play}
                 onClick={() => window.open(p.demo, "_blank", "noopener,noreferrer")}
                 onKeyDown={(event) => {
+                  if (event.target !== event.currentTarget) return;
                   if (event.key === "Enter" || event.key === " ") {
                     event.preventDefault();
                     window.open(p.demo, "_blank", "noopener,noreferrer");
