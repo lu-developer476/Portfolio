@@ -33,8 +33,8 @@ function shuffleComments(comments: FeedbackComment[]) {
 export default function ProjectFeedback({ projectSlug, projectTitle, language }: ProjectFeedbackProps) {
   const isSpanish = language === "es";
   const labels = isSpanish
-    ? { recommendations: "Sugerencias de mejora", comments: "Comentarios", recommendTitle: "Recomendá este proyecto", recommendText: "Si este proyecto te resultó útil o interesante, podés recomendarlo.", alreadyRecommended: "Ya recomendaste este proyecto desde este navegador.", recommendAction: "Recomendar proyecto", recommendationCount: "recomendaciones", rating: "Valoración", noRatings: "Todavía no hay valoraciones publicadas.", reviews: "Opiniones publicadas por visitantes", noComments: "Todavía no hay opiniones enviadas por visitantes. Podés dejar la primera.", name: "Nombre o alias", namePlaceholder: "Cómo querés aparecer", comment: "Tu comentario", commentPlaceholder: "¿Qué te pareció este proyecto? Contá algo concreto…", send: "Enviar comentario", sending: "Enviando…", pending: "Gracias. Tu comentario quedó pendiente de revisión antes de publicarse.", loadError: "No se pudo cargar el feedback en este momento.", submitError: "No se pudo enviar el comentario. Probá nuevamente.", close: "Cerrar", stars: "estrellas", commentMin: "Mínimo 8 caracteres.", noProject: "Los comentarios para proyectos en preparación estarán disponibles cuando se publiquen.", editorialRecommendationsTitle: "Sugerencias de mejora para este proyecto" }
-    : { recommendations: "Improvement suggestions", comments: "Comments", recommendTitle: "Recommend this project", recommendText: "If you found this project useful or interesting, you can recommend it.", alreadyRecommended: "You have already recommended this project from this browser.", recommendAction: "Recommend project", recommendationCount: "recommendations", rating: "Rating", noRatings: "There are no published ratings yet.", reviews: "Published visitor reviews", noComments: "No visitor reviews yet. You can leave the first one.", name: "Name or alias", namePlaceholder: "How you want to appear", comment: "Your comment", commentPlaceholder: "What did you think of this project? Be specific…", send: "Submit comment", sending: "Sending…", pending: "Thanks. Your comment is pending review before it can be published.", loadError: "Feedback could not be loaded right now.", submitError: "The comment could not be submitted. Please try again.", close: "Close", stars: "stars", commentMin: "At least 8 characters.", noProject: "Feedback for upcoming projects will be available when they are published.", editorialRecommendationsTitle: "Improvement suggestions for this project" };
+    ? { recommendations: "Recomendaciones", comments: "Comentarios", recommendTitle: "Recomendá este proyecto", recommendText: "Si este proyecto te resultó útil o interesante, podés recomendarlo.", alreadyRecommended: "Ya recomendaste este proyecto desde este navegador.", recommendAction: "Recomendar proyecto", recommendationCount: "recomendaciones", rating: "Valoración", noRatings: "Todavía no hay valoraciones publicadas.", reviews: "Opiniones publicadas por visitantes", noComments: "Todavía no hay opiniones enviadas por visitantes. Podés dejar la primera.", name: "Nombre o alias", namePlaceholder: "Cómo querés aparecer", comment: "Tu comentario", commentPlaceholder: "¿Qué te pareció este proyecto? Contá algo concreto…", send: "Enviar comentario", sending: "Enviando…", pending: "Gracias. Tu comentario quedó pendiente de revisión antes de publicarse.", loadError: "No se pudo cargar el feedback en este momento.", submitError: "No se pudo enviar el comentario. Probá nuevamente.", close: "Cerrar", stars: "estrellas", commentMin: "Mínimo 8 caracteres.", noProject: "Los comentarios para proyectos en preparación estarán disponibles cuando se publiquen.", editorialRecommendationsTitle: "Recomendaciones para este proyecto" }
+    : { recommendations: "Recommendations", comments: "Comments", recommendTitle: "Recommend this project", recommendText: "If you found this project useful or interesting, you can recommend it.", alreadyRecommended: "You have already recommended this project from this browser.", recommendAction: "Recommend project", recommendationCount: "recommendations", rating: "Rating", noRatings: "There are no published ratings yet.", reviews: "Published visitor reviews", noComments: "No visitor reviews yet. You can leave the first one.", name: "Name or alias", namePlaceholder: "How you want to appear", comment: "Your comment", commentPlaceholder: "What did you think of this project? Be specific…", send: "Submit comment", sending: "Sending…", pending: "Thanks. Your comment is pending review before it can be published.", loadError: "Feedback could not be loaded right now.", submitError: "The comment could not be submitted. Please try again.", close: "Close", stars: "stars", commentMin: "At least 8 characters.", noProject: "Feedback for upcoming projects will be available when they are published.", editorialRecommendationsTitle: "Recommendations for this project" };
 
   const [mode, setMode] = useState<FeedbackMode>(null);
   const [summary, setSummary] = useState<FeedbackSummary>(emptySummary);
@@ -52,10 +52,12 @@ export default function ProjectFeedback({ projectSlug, projectTitle, language }:
 
   const recommendationStorageKey = `portfolio-recommended:${projectSlug}`;
   const projectRecommendationsForProject = projectRecommendations[projectSlug];
-  const displayedSuggestionCount = projectRecommendationsForProject?.recommendations[language].length ?? 0;
-  const displayedRecommendationCount = summary.recommendationCount;
-  const displayedReviewCount = summary.ratingsCount;
-  const displayedRatingAverage = summary.ratingAverage;
+  const editorialReviews = projectRecommendationsForProject?.reviews[language] ?? [];
+  const displayedRecommendationCount = Math.max(summary.recommendationCount, projectRecommendationsForProject?.recommendations[language].length ?? 0);
+  const displayedReviewCount = editorialReviews.length + summary.ratingsCount;
+  const displayedRatingAverage = displayedReviewCount
+    ? Math.round(((editorialReviews.reduce((sum, review) => sum + review.rating, 0) + summary.comments.reduce((sum, comment) => sum + comment.rating, 0)) / displayedReviewCount) * 10) / 10
+    : null;
 
   const refreshSummary = useCallback(async () => {
     try {
@@ -152,7 +154,7 @@ export default function ProjectFeedback({ projectSlug, projectTitle, language }:
       <div className="project-feedback-actions mt-3 grid grid-cols-2 gap-2" onClick={(event) => event.stopPropagation()} onKeyDown={(event) => event.stopPropagation()}>
         <button type="button" onClick={() => openModal("recommendations")} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-cyber-gold/50 bg-black/50 px-3 py-2 text-xs font-semibold text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen sm:text-sm" aria-label={`${labels.recommendations}: ${projectTitle}`}>
           <span aria-hidden="true">👍</span><span>{labels.recommendations}</span>
-          <span className="rounded-md bg-white/5 px-1.5 py-0.5 text-[10px] text-white/65">{loading ? "…" : displayedSuggestionCount}</span>
+          <span className="rounded-md bg-white/5 px-1.5 py-0.5 text-[10px] text-white/65">{loading ? "…" : displayedRecommendationCount}</span>
         </button>
         <button type="button" onClick={() => openModal("comments")} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-white/20 bg-black/50 px-3 py-2 text-xs font-semibold text-white/85 transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen sm:text-sm" aria-label={`${labels.comments}: ${projectTitle}`}>
           <span aria-hidden="true">💬</span><span>{labels.comments}</span>
@@ -207,7 +209,19 @@ export default function ProjectFeedback({ projectSlug, projectTitle, language }:
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-white/90">{labels.reviews}</h4>
+                  <h4 className="font-semibold text-white/90">{isSpanish ? "Comentarios de ejemplo" : "Sample comments"}</h4>
+                  <div className="mt-3 space-y-3">
+                    {editorialReviews.map((review, index) => (
+                      <article key={projectSlug + "-editorial-review-" + index} className="rounded-xl border border-white/10 bg-white/[0.025] p-3">
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                          <p className="text-sm font-semibold text-cyber-gold">{review.name}</p>
+                          <span className="text-sm text-amber-300" aria-label={review.rating + " / 5"}>{"★".repeat(review.rating)}{"☆".repeat(5 - review.rating)}</span>
+                        </div>
+                        <p className="mt-2 whitespace-pre-wrap break-words text-sm leading-relaxed text-white/75">{review.message}</p>
+                      </article>
+                    ))}
+                  </div>
+                  <h4 className="mt-5 font-semibold text-white/90">{labels.reviews}</h4>
                   {loading ? <p className="mt-2 text-sm text-white/55">…</p> : summary.comments.length === 0 ? <p className="mt-2 text-sm text-white/55">{labels.noComments}</p> : (
                     <div className="mt-3 space-y-3">
                       {summary.comments.map((comment) => (
