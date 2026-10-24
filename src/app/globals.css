@@ -1179,3 +1179,56 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
     height: clamp(8.5rem, calc(100cqw * 0.255), 14rem);
   }
 }
+
+/* Brillo dorado titilante para las tecnologías del footer */
+@keyframes footerTechGoldFlicker {
+  0%, 100% {
+    color: #ffe8a3;
+    opacity: 1;
+    text-shadow: 0 0 2px rgba(255, 221, 133, 0.8), 0 0 7px rgba(255, 191, 55, 0.55), 0 0 13px rgba(255, 174, 0, 0.28);
+  }
+  17% {
+    color: #f2cb6a;
+    opacity: 0.92;
+    text-shadow: 0 0 4px rgba(255, 198, 64, 0.6), 0 0 9px rgba(255, 174, 0, 0.3);
+  }
+  19% {
+    color: #fff4c6;
+    opacity: 1;
+    text-shadow: 0 0 4px rgba(255, 235, 173, 0.95), 0 0 12px rgba(255, 186, 30, 0.7), 0 0 18px rgba(255, 174, 0, 0.4);
+  }
+  21% {
+    color: #d8a73c;
+    opacity: 0.8;
+    text-shadow: 0 0 2px rgba(255, 191, 55, 0.45);
+  }
+  23%, 62% {
+    color: #ffe8a3;
+    opacity: 1;
+    text-shadow: 0 0 2px rgba(255, 221, 133, 0.8), 0 0 7px rgba(255, 191, 55, 0.55), 0 0 13px rgba(255, 174, 0, 0.28);
+  }
+  64% {
+    color: #e5bc5c;
+    opacity: 0.87;
+    text-shadow: 0 0 3px rgba(255, 198, 64, 0.55);
+  }
+  66% {
+    color: #fff4c6;
+    opacity: 1;
+    text-shadow: 0 0 4px rgba(255, 235, 173, 0.95), 0 0 12px rgba(255, 186, 30, 0.7), 0 0 18px rgba(255, 174, 0, 0.4);
+  }
+}
+
+.footer-tech-glow {
+  color: #ffe8a3;
+  animation: footerTechGoldFlicker 3.2s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-tech-glow {
+    animation: none;
+    color: #ffe8a3;
+    text-shadow: 0 0 3px rgba(255, 221, 133, 0.8), 0 0 8px rgba(255, 174, 0, 0.35);
+  }
+}
+
