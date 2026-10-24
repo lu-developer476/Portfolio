@@ -1232,3 +1232,14 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
   }
 }
 
+
+
+/* Footer credits stay on one line; narrow screens can scroll horizontally without visible scrollbars. */
+.footer-line-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.footer-line-scroll::-webkit-scrollbar {
+  display: none;
+}
