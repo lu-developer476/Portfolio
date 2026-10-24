@@ -1243,3 +1243,241 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
 .footer-line-scroll::-webkit-scrollbar {
   display: none;
 }
+
+
+/* ============================= */
+/* Responsive hardening: phone + tablet */
+/* ============================= */
+
+html {
+  min-width: 320px;
+  scroll-padding-top: 6rem;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100%;
+  overflow-x: clip;
+}
+
+img,
+video,
+canvas,
+iframe,
+svg {
+  max-width: 100%;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  touch-action: manipulation;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+main,
+main > *,
+section,
+article {
+  min-width: 0;
+}
+
+main {
+  overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+label {
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 767px) {
+  header > div {
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+
+  header > div > nav {
+    width: 100%;
+    margin-left: 0 !important;
+    justify-content: flex-start;
+    gap: 0.5rem !important;
+  }
+
+  header > div > nav > a {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0.65rem 0.5rem !important;
+    text-align: center;
+    letter-spacing: 0.08em !important;
+  }
+
+  header > div > nav > button {
+    flex: 0 0 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  main {
+    padding-top: 1.25rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  main .space-y-14 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 2.5rem;
+  }
+
+  .projects-arrow-carousel {
+    padding: 0.75rem 1.8rem 1.1rem !important;
+  }
+
+  .projects-arrow-carousel .project-card {
+    min-height: 0;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .projects-arrow-carousel .swiper-button-prev,
+  .projects-arrow-carousel .swiper-button-next {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .projects-arrow-carousel .swiper-button-prev::after,
+  .projects-arrow-carousel .swiper-button-next::after {
+    font-size: 0.75rem;
+  }
+
+  .project-preview-viewport {
+    height: clamp(8rem, 42vw, 12rem);
+  }
+
+  .hero-glow {
+    opacity: 0.12;
+  }
+
+  .theme-atmosphere {
+    position: fixed;
+    overflow: hidden;
+  }
+
+  .world-clock {
+    width: calc(100vw - 1.25rem);
+    max-width: calc(100vw - 1.25rem);
+    max-height: calc(100dvh - 1.5rem);
+    overflow-y: auto;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  header > div > div:first-child {
+    gap: 0.55rem;
+  }
+
+  header > div > div:first-child > a > div:first-child {
+    font-size: 0.78rem;
+  }
+
+  header > div > div:first-child .freelancer-role {
+    font-size: 0.58rem;
+    letter-spacing: 0.02em;
+    max-width: 13.5rem;
+  }
+
+  header > div > nav > a {
+    font-size: 0.62rem !important;
+    letter-spacing: 0.04em !important;
+  }
+
+  .projects-arrow-carousel {
+    padding-right: 1.55rem !important;
+    padding-left: 1.55rem !important;
+  }
+
+  .projects-arrow-carousel .project-card h3 {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .mode-option-active {
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--mode-aura) 78%, white 12%),
+      0 0 12px var(--mode-aura);
+  }
+}
+
+/* Tablet: keep content readable without forcing desktop-sized gaps/cards. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  header > div {
+    gap: 0.75rem 1rem;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  header > div > nav {
+    gap: 0.5rem !important;
+  }
+
+  header > div > nav > a {
+    padding-left: 0.7rem !important;
+    padding-right: 0.7rem !important;
+    font-size: 0.7rem !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  main {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  .projects-arrow-carousel {
+    padding-right: 2.5rem !important;
+    padding-left: 2.5rem !important;
+  }
+
+  .projects-arrow-carousel .project-card {
+    min-height: 0;
+    padding: 1.25rem;
+  }
+
+  .hero-section,
+  main section {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .world-clock {
+    max-height: calc(100dvh - 1rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
