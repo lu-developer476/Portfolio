@@ -209,7 +209,7 @@ export default function ProjectFeedback({ projectSlug, projectTitle, language }:
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-white/90">{isSpanish ? "Valoraciones editoriales" : "Editorial ratings"}</h4>
+                  <h4 className="font-semibold text-white/90">{isSpanish ? "Comentarios de ejemplo (no enviados por visitantes)" : "Sample comments (not submitted by visitors)"}</h4>
                   <div className="mt-3 space-y-3">
                     {editorialReviews.map((review, index) => (
                       <article key={projectSlug + "-editorial-review-" + index} className="rounded-xl border border-white/10 bg-white/[0.025] p-3">
