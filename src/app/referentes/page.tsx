@@ -9,8 +9,8 @@ export default function ReferencesPage() {
   const { language } = useLanguage();
   const isSpanish = language === "es";
   const copy = isSpanish
-    ? { title: "Referentes", subtitle: "Una selección de empresas cuyos productos, sistemas de diseño y recursos públicos pueden servir como material de estudio para proyectos web, UX/UI y desarrollo.", intro: "Qué observar en cada referente", learn: "Qué vale la pena estudiar", open: "Ver recurso oficial", back: "Volver al Inicio", disclaimer: "Esta selección es una guía de estudio independiente. Los nombres y logotipos pertenecen a sus respectivos titulares. No implica patrocinio, asociación ni una relación comercial con estas empresas." }
-    : { title: "References", subtitle: "A selection of companies whose products, design systems, and public resources can provide useful study material for web, UX/UI, and development projects.", intro: "What to look for in each reference", learn: "What is worth studying", open: "View official resource", back: "Back to Home", disclaimer: "This is an independent study guide. Names and logos belong to their respective owners. It does not imply sponsorship, affiliation, or a commercial relationship with these companies." };
+    ? { title: "Marcas líderes del mercado", subtitle: "Productos, sistemas de diseño y recursos públicos pueden servir como material de estudio para proyectos web, UX/UI y desarrollo.", intro: "Qué observar en cada referente", learn: "Qué vale la pena estudiar", open: "Ver recurso oficial", back: "Volver", disclaimer: "Los nombres y logotipos pertenecen a sus respectivos titulares. No implica patrocinio, asociación ni una relación comercial." }
+    : { title: "Leading Market Brands", subtitle: "Products, design systems, and public resources can provide useful study material for web, UX/UI, and development projects.", intro: "What to look for in each reference", learn: "What is worth studying", open: "View official resource", back: "Back", disclaimer: "Names and logos belong to their respective owners. This does not imply sponsorship, affiliation, or a commercial relationship." };
 
   return (
     <div className="space-y-8">
@@ -20,10 +20,6 @@ export default function ReferencesPage() {
         </Link>
       </div>
       <Section id="referentes" title={copy.title} subtitle={copy.subtitle}>
-        <div className="mb-6 rounded-xl border border-cyber-gold/25 bg-black/30 p-4 text-sm leading-relaxed text-white/65">
-          <p className="font-semibold text-cyber-gold">{copy.intro}</p>
-          <p className="mt-1">{isSpanish ? "No se trata de copiar interfaces; la idea es analizar decisiones y adaptar los principios adecuados a cada proyecto." : "The goal is not to copy interfaces, but to study decisions and adapt useful principles to each project."}</p>
-        </div>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {companyReferences.map((company) => (
             <article key={company.slug} className="flex h-full flex-col rounded-2xl border border-white/10 bg-black/35 p-5 transition duration-300 hover:border-cyber-gold/45">
