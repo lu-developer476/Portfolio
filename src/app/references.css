@@ -1,0 +1,11 @@
+/* --- Cinta horizontal de referentes --- */
+.references-marquee { overflow: hidden; position: relative; mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent); }
+.references-track { animation: references-marquee-scroll 42s linear infinite; display: flex; width: max-content; will-change: transform; }
+.references-marquee-set { align-items: center; display: flex; flex: 0 0 auto; gap: 0.9rem; padding-right: 0.9rem; }
+.references-logo-item { align-items: center; background: rgba(255,255,255,0.035); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.9rem; color: rgba(255,255,255,0.78); display: inline-flex; flex: 0 0 auto; gap: 0.8rem; justify-content: center; min-height: 4.5rem; min-width: 10.25rem; padding: 0.9rem 1.15rem; transition: border-color 180ms ease, color 180ms ease, background 180ms ease; }
+.references-logo-item:hover, .references-logo-item:focus-visible { background: rgba(5,247,183,0.055); border-color: rgba(5,247,183,0.5); color: #fff; outline: none; }
+.references-logo-item:focus-visible { box-shadow: 0 0 0 2px rgba(5,247,183,0.22); }
+.references-logo-item span { font-size: 0.9rem; font-weight: 650; letter-spacing: 0.015em; white-space: nowrap; }
+.references-track:hover, .references-marquee:focus-within .references-track { animation-play-state: paused; }
+@keyframes references-marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .references-track { animation: none; will-change: auto; } .references-marquee { overflow-x: auto; mask-image: none; -webkit-mask-image: none; } }
