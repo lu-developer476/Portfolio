@@ -45,6 +45,7 @@ export default function ProjectFeedback({ projectSlug, projectTitle, language }:
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [rating, setRating] = useState(0);
+  const [website, setWebsite] = useState("");
   const [notice, setNotice] = useState("");
   const [error, setError] = useState("");
 
@@ -125,7 +126,7 @@ export default function ProjectFeedback({ projectSlug, projectTitle, language }:
       const response = await fetch("/api/project-feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action: "comment", projectSlug, name, rating, message, website: "" })
+        body: JSON.stringify({ action: "comment", projectSlug, name, rating, message, website })
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error ?? "comment-failed");
@@ -226,7 +227,7 @@ export default function ProjectFeedback({ projectSlug, projectTitle, language }:
                     </div>
                     <div aria-hidden="true" className="absolute -left-[10000px] top-auto h-px w-px overflow-hidden">
                       <label htmlFor={`feedback-website-${projectSlug}`}>Website</label>
-                      <input id={`feedback-website-${projectSlug}`} name="website" tabIndex={-1} autoComplete="off" />
+                      <input id={`feedback-website-${projectSlug}`} name="website" value={website} onChange={(event) => setWebsite(event.target.value)} tabIndex={-1} autoComplete="off" />
                     </div>
                     <button type="submit" disabled={savingComment || rating < 1} className="w-full rounded-xl border border-cyber-gold/60 px-4 py-3 text-sm font-semibold text-cyber-gold transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen disabled:cursor-not-allowed disabled:border-white/10 disabled:text-white/35">
                       {savingComment ? labels.sending : labels.send}
