@@ -281,7 +281,7 @@ export default function ServicesSection() {
 
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
         {copy.packages.map((service, index) => (
-          <article key={service.name} className={`flex h-full flex-col rounded-2xl sm:col-span-1 lg:col-span-2 ${index === 3 ? "lg:col-start-2" : index === 4 ? "lg:col-start-4" : ""} rounded-2xl border border-white/15 bg-black/40 p-5 transition duration-300 hover:border-cyber-gold/55 hover:shadow-[0_0_22px_rgba(250,204,21,0.09)]">
+          <article key={service.name} className={`flex h-full flex-col rounded-2xl sm:col-span-1 lg:col-span-2 ${index === 3 ? "lg:col-start-2" : index === 4 ? "lg:col-start-4" : ""} border border-white/15 bg-black/40 p-5 transition duration-300 hover:border-cyber-gold/55 hover:shadow-[0_0_22px_rgba(250,204,21,0.09)]`}>
             <div className="mb-3 flex items-start gap-3">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-cyber-gold/30 bg-white/5 text-xl" aria-hidden="true">{service.icon}</span>
               <div className="min-w-0">
@@ -322,7 +322,7 @@ export default function ServicesSection() {
         </div>
         <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-6">
           {copy.extras.map((extra, index) => (
-            <article key={extra.name} className={`rounded-xl sm:col-span-1 lg:col-span-2 ${index === 3 ? "lg:col-start-2" : index === 4 ? "lg:col-start-4" : ""} border border-white/10 bg-black/30 p-4">
+            <article key={extra.name} className={`rounded-xl sm:col-span-1 lg:col-span-2 ${index === 3 ? "lg:col-start-2" : index === 4 ? "lg:col-start-4" : ""} border border-white/10 bg-black/30 p-4`}>
               <div className="flex items-start gap-3">
                 <span className="text-xl" aria-hidden="true">{extra.icon}</span>
                 <div className="min-w-0 flex-1">
