@@ -24,8 +24,8 @@ export default function ReferencesPage() {
           {companyReferences.map((company) => (
             <article key={company.slug} className="flex h-full flex-col rounded-2xl border border-white/10 bg-black/35 p-5 transition duration-300 hover:border-cyber-gold/45">
               <div className="flex items-center gap-3">
-                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5">
-                  <img src={`https://cdn.simpleicons.org/${company.slug}/FFFFFF`} alt="" width="32" height="32" loading="lazy" decoding="async" className="h-8 w-8 object-contain" />
+                <span className={`flex h-14 w-14 shrink-0 items-center rounded-xl border border-white/10 bg-white/5 ${company.logoMode === "crop-left" ? "justify-start overflow-hidden pl-1" : "justify-center"}`}>
+                  <img src={company.logoUrl ?? `https://cdn.simpleicons.org/${company.slug}/FFFFFF`} alt="" width="32" height="32" loading="lazy" decoding="async" className={`${company.logoMode === "crop-left" ? "h-10 w-[220px] max-w-none shrink-0 object-contain object-left" : "h-8 w-8 object-contain"} ${company.logoMonochrome ? "brightness-0 invert" : ""}`} />
                 </span>
                 <div className="min-w-0">
                   <h3 className="text-lg font-semibold text-cyber-gold">{company.name}</h3>
