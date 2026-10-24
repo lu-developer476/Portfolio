@@ -52,6 +52,12 @@ export default function ProjectFeedback({ projectSlug, projectTitle, language }:
 
   const recommendationStorageKey = `portfolio-recommended:${projectSlug}`;
   const projectRecommendationsForProject = projectRecommendations[projectSlug];
+  const editorialReviews = projectRecommendationsForProject?.reviews[language] ?? [];
+  const displayedRecommendationCount = Math.max(summary.recommendationCount, projectRecommendationsForProject?.recommendations[language].length ?? 0);
+  const displayedReviewCount = editorialReviews.length + summary.ratingsCount;
+  const displayedRatingAverage = displayedReviewCount
+    ? Math.round(((editorialReviews.reduce((sum, review) => sum + review.rating, 0) + summary.comments.reduce((sum, comment) => sum + comment.rating, 0)) / displayedReviewCount) * 10) / 10
+    : null;
 
   const refreshSummary = useCallback(async () => {
     try {
@@ -148,11 +154,11 @@ export default function ProjectFeedback({ projectSlug, projectTitle, language }:
       <div className="project-feedback-actions mt-3 grid grid-cols-2 gap-2" onClick={(event) => event.stopPropagation()} onKeyDown={(event) => event.stopPropagation()}>
         <button type="button" onClick={() => openModal("recommendations")} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-cyber-gold/50 bg-black/50 px-3 py-2 text-xs font-semibold text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen sm:text-sm" aria-label={`${labels.recommendations}: ${projectTitle}`}>
           <span aria-hidden="true">👍</span><span>{labels.recommendations}</span>
-          <span className="rounded-md bg-white/5 px-1.5 py-0.5 text-[10px] text-white/65">{loading ? "…" : summary.recommendationCount}</span>
+          <span className="rounded-md bg-white/5 px-1.5 py-0.5 text-[10px] text-white/65">{loading ? "…" : displayedRecommendationCount}</span>
         </button>
         <button type="button" onClick={() => openModal("comments")} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-white/20 bg-black/50 px-3 py-2 text-xs font-semibold text-white/85 transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen sm:text-sm" aria-label={`${labels.comments}: ${projectTitle}`}>
           <span aria-hidden="true">💬</span><span>{labels.comments}</span>
-          <span className="rounded-md bg-white/5 px-1.5 py-0.5 text-[10px] text-white/65">{loading ? "…" : summary.ratingsCount}</span>
+          <span className="rounded-md bg-white/5 px-1.5 py-0.5 text-[10px] text-white/65">{loading ? "…" : displayedReviewCount}</span>
         </button>
       </div>
 
@@ -171,7 +177,7 @@ export default function ProjectFeedback({ projectSlug, projectTitle, language }:
               <div className="mt-5 space-y-4">
                 <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
                   <p className="text-sm leading-relaxed text-white/75">{labels.recommendText}</p>
-                  <p className="mt-3 text-2xl font-bold text-cyber-gold">{loading ? "…" : summary.recommendationCount} <span className="text-sm font-medium text-white/60">{labels.recommendationCount}</span></p>
+                  <p className="mt-3 text-2xl font-bold text-cyber-gold">{loading ? "…" : displayedRecommendationCount} <span className="text-sm font-medium text-white/60">{labels.recommendationCount}</span></p>
                 </div>
                 {projectSlug === "coming-soon" ? <p className="text-sm text-white/55">{labels.noProject}</p> : (
                   <button type="button" onClick={() => void submitRecommendation()} disabled={recommended || savingRecommendation} className="w-full rounded-xl border border-cyber-neonGreen/60 bg-cyber-neonGreen/10 px-4 py-3 text-sm font-semibold text-cyber-neonGreen transition hover:bg-cyber-neonGreen/15 disabled:cursor-not-allowed disabled:border-white/10 disabled:text-white/45">
@@ -196,14 +202,26 @@ export default function ProjectFeedback({ projectSlug, projectTitle, language }:
                 <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
                   <p className="text-sm text-white/65">{labels.rating}</p>
                   <div className="mt-1 flex items-center gap-2">
-                    <span className="text-2xl font-bold text-cyber-gold">{summary.ratingAverage === null ? "—" : summary.ratingAverage.toFixed(1)}</span>
-                    <span className="text-amber-300" aria-label={summary.ratingAverage === null ? labels.noRatings : `${summary.ratingAverage} / 5`}>{"★".repeat(Math.round(summary.ratingAverage ?? 0))}{"☆".repeat(5 - Math.round(summary.ratingAverage ?? 0))}</span>
-                    <span className="text-xs text-white/45">({summary.ratingsCount})</span>
+                    <span className="text-2xl font-bold text-cyber-gold">{displayedRatingAverage === null ? "—" : displayedRatingAverage.toFixed(1)}</span>
+                    <span className="text-amber-300" aria-label={displayedRatingAverage === null ? labels.noRatings : `${displayedRatingAverage} / 5`}>{"★".repeat(Math.round(displayedRatingAverage ?? 0))}{"☆".repeat(5 - Math.round(displayedRatingAverage ?? 0))}</span>
+                    <span className="text-xs text-white/45">({displayedReviewCount})</span>
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-white/90">{labels.reviews}</h4>
+                  <h4 className="font-semibold text-white/90">{isSpanish ? "Valoraciones editoriales" : "Editorial ratings"}</h4>
+                  <div className="mt-3 space-y-3">
+                    {editorialReviews.map((review, index) => (
+                      <article key={projectSlug + "-editorial-review-" + index} className="rounded-xl border border-white/10 bg-white/[0.025] p-3">
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                          <p className="text-sm font-semibold text-cyber-gold">{review.name}</p>
+                          <span className="text-sm text-amber-300" aria-label={review.rating + " / 5}>{"★".repeat(review.rating)}{"☆".repeat(5 - review.rating)}</span>
+                        </div>
+                        <p className="mt-2 whitespace-pre-wrap break-words text-sm leading-relaxed text-white/75">{review.message}</p>
+                      </article>
+                    ))}
+                  </div>
+                  <h4 className="mt-5 font-semibold text-white/90">{labels.reviews}</h4>
                   {loading ? <p className="mt-2 text-sm text-white/55">…</p> : summary.comments.length === 0 ? <p className="mt-2 text-sm text-white/55">{labels.noComments}</p> : (
                     <div className="mt-3 space-y-3">
                       {summary.comments.map((comment) => (
