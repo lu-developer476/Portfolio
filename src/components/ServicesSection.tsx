@@ -279,7 +279,7 @@ export default function ServicesSection() {
         <p className="w-full rounded-xl border border-cyber-gold/25 bg-black/25 px-4 py-3 text-sm leading-relaxed text-white/65">{copy.marketNote}</p>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {copy.packages.map((service) => (
           <article key={service.name} className="flex h-full flex-col rounded-2xl border border-white/15 bg-black/40 p-5 transition duration-300 hover:border-cyber-gold/55 hover:shadow-[0_0_22px_rgba(250,204,21,0.09)]">
             <div className="mb-3 flex items-start gap-3">
@@ -320,7 +320,7 @@ export default function ServicesSection() {
           <h3 className="text-xl font-semibold text-cyber-gold">{copy.extrasTitle}</h3>
           <p className="mt-2 text-sm leading-relaxed text-white/65">{copy.extrasSubtitle}</p>
         </div>
-        <div className="grid gap-3 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {copy.extras.map((extra) => (
             <article key={extra.name} className="rounded-xl border border-white/10 bg-black/30 p-4">
               <div className="flex items-start gap-3">
