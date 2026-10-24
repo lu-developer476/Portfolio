@@ -9,8 +9,8 @@ export default function ReferencesSection() {
   const isSpanish = language === "es";
 
   const labels = isSpanish
-    ? { eyebrow: "INSPIRACIÓN Y APRENDIZAJE", title: "Referentes de producto y diseño", subtitle: "Empresas que vale la pena estudiar por sus sistemas visuales, sus interfaces y la forma en que resuelven problemas digitales.", button: "Referentes", explore: "Explorar referentes", logos: "Cinta de empresas de referencia", note: "Referencias de estudio; no implica afiliación ni colaboración con estas empresas." }
-    : { eyebrow: "INSPIRATION AND LEARNING", title: "Product and design references", subtitle: "Companies worth studying for their visual systems, interfaces, and approach to solving digital problems.", button: "References", explore: "Explore references", logos: "Company reference logo strip", note: "These are study references; this does not imply affiliation or collaboration with these companies." };
+    ? { eyebrow: "INSPIRACIÓN Y APRENDIZAJE", title: "Empresas destacadas de Producto y Diseño", subtitle: "Una selección de empresas con productos digitales y recursos públicos que permiten observar cómo organizan sus interfaces, mantienen la coherencia visual y responden a necesidades concretas de sus usuarios.", button: "Ver más", explore: "Explorar referentes", logos: "Cinta de empresas de referencia", note: "Las menciones no implican afiliación ni colaboración con estas empresas." }
+    : { eyebrow: "INSPIRATION AND LEARNING", title: "Featured Product and Design Companies", subtitle: "A selection of companies with digital products and public resources that offer examples of how interfaces are organized, visual consistency is maintained, and concrete user needs are addressed.", button: "See more", explore: "Explore references", logos: "Company reference logo strip", note: "Mentions do not imply affiliation or collaboration with these companies." };
 
   const renderLogos = (duplicate: boolean) => (
     <div className="references-marquee-set" aria-hidden={duplicate || undefined}>
