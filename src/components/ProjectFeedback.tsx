@@ -152,13 +152,11 @@ export default function ProjectFeedback({ projectSlug, projectTitle, language }:
   return (
     <>
       <div className="project-feedback-actions mt-3 grid grid-cols-2 gap-2" onClick={(event) => event.stopPropagation()} onKeyDown={(event) => event.stopPropagation()}>
-        <button type="button" onClick={() => openModal("recommendations")} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-cyber-gold/50 bg-black/50 px-3 py-2 text-xs font-semibold text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen sm:text-sm" aria-label={`${labels.recommendations}: ${projectTitle}`}>
-          <span aria-hidden="true">👍</span><span>{labels.recommendations}</span>
-          <span className="rounded-md bg-white/5 px-1.5 py-0.5 text-[10px] text-white/65">{loading ? "…" : displayedRecommendationCount}</span>
+        <button type="button" onClick={() => openModal("recommendations")} className="inline-flex min-h-11 min-w-0 items-center justify-center rounded-xl border border-cyber-gold/50 bg-black/50 px-3 py-2 text-2xl transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen" aria-label={`${labels.recommendations}: ${projectTitle}`}>
+          <span aria-hidden="true">👍</span>
         </button>
-        <button type="button" onClick={() => openModal("comments")} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-white/20 bg-black/50 px-3 py-2 text-xs font-semibold text-white/85 transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen sm:text-sm" aria-label={`${labels.comments}: ${projectTitle}`}>
-          <span aria-hidden="true">💬</span><span>{labels.comments}</span>
-          <span className="rounded-md bg-white/5 px-1.5 py-0.5 text-[10px] text-white/65">{loading ? "…" : displayedReviewCount}</span>
+        <button type="button" onClick={() => openModal("comments")} className="inline-flex min-h-11 min-w-0 items-center justify-center rounded-xl border border-white/20 bg-black/50 px-3 py-2 text-2xl text-white/85 transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen" aria-label={`${labels.comments}: ${projectTitle}`}>
+          <span aria-hidden="true">💬</span>
         </button>
       </div>
 
