@@ -9,8 +9,8 @@ export default function ReferencesSection() {
   const isSpanish = language === "es";
 
   const labels = isSpanish
-    ? { eyebrow: "INSPIRACIÓN Y APRENDIZAJE", title: "Empresas destacadas de Producto y Diseño", subtitle: "Una selección de empresas con productos digitales y recursos públicos que permiten observar cómo organizan sus interfaces, mantienen la coherencia visual y responden a necesidades concretas de sus usuarios.", button: "Ver más", explore: "Explorar referentes", logos: "Cinta de empresas de referencia", note: "Las menciones no implican afiliación ni colaboración con estas empresas." }
-    : { eyebrow: "INSPIRATION AND LEARNING", title: "Featured Product and Design Companies", subtitle: "A selection of companies with digital products and public resources that offer examples of how interfaces are organized, visual consistency is maintained, and concrete user needs are addressed.", button: "See more", explore: "Explore references", logos: "Company reference logo strip", note: "Mentions do not imply affiliation or collaboration with these companies." };
+    ? { eyebrow: "INSPIRACIÓN Y APRENDIZAJE", title: "Empresas destacadas de Producto y Diseño", button: "Ver más", explore: "Explorar referentes", logos: "Cinta de empresas de referencia", note: "Las menciones no implican afiliación ni colaboración con estas empresas." }
+    : { eyebrow: "INSPIRATION AND LEARNING", title: "Featured Product and Design Companies", button: "See more", explore: "Explore references", logos: "Company reference logo strip", note: "Mentions do not imply affiliation or collaboration with these companies." };
 
   const renderLogos = (duplicate: boolean) => (
     <div className="references-marquee-set" aria-hidden={duplicate || undefined}>
@@ -53,7 +53,6 @@ export default function ReferencesSection() {
         <div className="max-w-3xl">
           <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-cyber-neonGreen">{labels.eyebrow}</p>
           <h2 id="references-showcase-title" className="mt-2 text-xl font-bold text-cyber-gold sm:text-2xl">{labels.title}</h2>
-          <p className="mt-2 text-sm leading-relaxed text-white/70">{labels.subtitle}</p>
         </div>
         <Link href="/referentes" className="inline-flex w-fit shrink-0 items-center justify-center gap-2 rounded-xl border border-cyber-gold/60 bg-white/5 px-5 py-3 text-sm font-semibold tracking-wide text-cyber-gold transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyber-neonGreen">
           {labels.button}<span aria-hidden="true">↗</span>
