@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import "./references.css";
 import Navbar from "@/components/Navbar";
 import { LanguageProvider } from "@/lib/i18n";
 import Footer from "@/components/Footer";
