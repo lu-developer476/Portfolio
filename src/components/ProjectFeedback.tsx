@@ -50,7 +50,7 @@ export default function ProjectFeedback({ projectSlug, projectTitle, language }:
   const [error, setError] = useState("");
 
   const recommendationStorageKey = `portfolio-recommended:${projectSlug}`;
-  const projectRecommendations = projectFeedbackExamples[projectSlug];
+  const projectRecommendationsForProject = projectRecommendations[projectSlug];
 
   const refreshSummary = useCallback(async () => {
     try {
@@ -177,11 +177,11 @@ export default function ProjectFeedback({ projectSlug, projectTitle, language }:
                     {recommended ? labels.alreadyRecommended : savingRecommendation ? labels.sending : labels.recommendAction}
                   </button>
                 )}
-                {projectRecommendations && (
+                {projectRecommendationsForProject && (
                   <section className="rounded-xl border border-white/10 bg-white/[0.025] p-4">
                     <h4 className="font-semibold text-white/90">{labels.editorialRecommendationsTitle}</h4>
                     <ul className="mt-3 space-y-2 text-sm leading-relaxed text-white/75">
-                      {projectRecommendations.recommendations[language].map((recommendation, index) => (
+                      {projectRecommendationsForProject.recommendations[language].map((recommendation, index) => (
                         <li key={`${projectSlug}-recommendation-${index}`} className="flex items-start gap-2">
                           <span className="mt-px text-cyber-neonGreen" aria-hidden="true">✓</span><span>{recommendation}</span>
                         </li>
