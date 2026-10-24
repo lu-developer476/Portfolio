@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { useLanguage } from "@/lib/i18n";
+import ReferencesSection from "@/components/ReferencesSection";
 
 export default function HomePage() {
   const { t } = useLanguage();
@@ -81,6 +82,7 @@ export default function HomePage() {
           ))}
         </div>
       </Section>
+      <ReferencesSection />
     </div>
   );
 }
