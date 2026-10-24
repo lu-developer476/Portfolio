@@ -32,7 +32,7 @@ export default function ReferencesSection() {
             height="30"
             loading="eager"
             decoding="async"
-            className={`${company.logoMode === "crop-left" ? "h-6 w-[120px] max-w-none object-contain object-left" : "h-7 w-7 object-contain"} ${company.logoMonochrome ? "brightness-0 invert" : ""} shrink-0 opacity-80 transition duration-300 group-hover:scale-110 group-hover:opacity-100`
+            className={`${company.logoMode === "crop-left" ? "h-6 w-[120px] max-w-none object-contain object-left" : "h-7 w-7 object-contain"} ${company.logoMonochrome ? "brightness-0 invert" : ""} shrink-0 opacity-80 transition duration-300 group-hover:scale-110 group-hover:opacity-100`}
           />
           </span>
           <span>{company.name}</span>
