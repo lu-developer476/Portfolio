@@ -14,7 +14,7 @@ type ServicePackage = {
 const serviceCopy = {
   es: {
     eyebrow: "SERVICIOS",
-    title: "Servicios web a tu medida",
+    title: "Tu proyecto, a tu medida",
     subtitle: "Paquetes de referencia para que puedas estimar una inversión inicial. El alcance final se define en una propuesta según tus objetivos, funcionalidades, materiales y plazos.",
     marketNote: "Referencias de mercado freelance en Argentina · relevadas en octubre de 2026. Valores expresados en USD para evitar equivalencias en pesos que queden desactualizadas.",
     quoteCta: "Consultar este servicio",
@@ -140,7 +140,7 @@ const serviceCopy = {
   },
   en: {
     eyebrow: "SERVICES",
-    title: "Web services tailored to your needs",
+    title: "Your project, your way",
     subtitle: "Reference packages to help estimate an initial investment. Final scope is defined in a proposal based on your goals, features, supplied materials, and timeline.",
     marketNote: "Freelance market references for Argentina · reviewed in October 2026. Prices are shown in USD to avoid outdated peso conversions.",
     quoteCta: "Ask about this service",
