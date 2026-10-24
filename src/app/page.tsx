@@ -7,7 +7,7 @@ import { useLanguage } from "@/lib/i18n";
 import ReferencesSection from "@/components/ReferencesSection";
 
 export default function HomePage() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const cardsRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -64,7 +64,7 @@ export default function HomePage() {
       cancelled = true;
       observer?.disconnect();
     };
-  }, []);
+  }, [language]);
 
   return (
     <div className="space-y-8">
