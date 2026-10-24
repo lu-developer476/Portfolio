@@ -24,16 +24,22 @@ export default function ReferencesSection() {
           aria-label={duplicate ? undefined : `${company.name}: ${isSpanish ? company.focusEs : company.focusEn}`}
           className="references-logo-item group"
         >
-          <span className={`flex h-[30px] w-[30px] shrink-0 items-center ${company.logoMode === "crop-left" ? "justify-start overflow-hidden" : "justify-center"}`}>
-          <img
-            src={company.logoUrl ?? `https://cdn.simpleicons.org/${company.slug}/FFFFFF`}
-            alt=""
-            width="30"
-            height="30"
-            loading="eager"
-            decoding="async"
-            className={`${company.logoMode === "crop-left" ? "h-6 w-[120px] max-w-none object-contain object-left" : "h-7 w-7 object-contain"} ${company.logoMonochrome ? "brightness-0 invert" : ""} shrink-0 opacity-80 transition duration-300 group-hover:scale-110 group-hover:opacity-100`}
-          />
+          <span className="flex h-7 w-7 shrink-0 items-center justify-center">
+            {company.logoMode === "crop-left" && company.logoUrl ? (
+              <span className="relative block h-7 w-7 shrink-0 overflow-hidden">
+                <img src={company.logoUrl} alt="" width="28" height="28" loading="eager" decoding="async" className="absolute left-0 top-0 h-7 w-auto max-w-none object-contain opacity-80 transition duration-300 group-hover:opacity-100" />
+              </span>
+            ) : (
+              <img
+                src={company.logoUrl ?? `https://cdn.simpleicons.org/${company.slug}/${company.logoColor}`}
+                alt=""
+                width="28"
+                height="28"
+                loading="eager"
+                decoding="async"
+                className="h-7 w-7 shrink-0 object-contain opacity-80 transition duration-300 group-hover:scale-110 group-hover:opacity-100"
+              />
+            )}
           </span>
           <span>{company.name}</span>
         </a>
