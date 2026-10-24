@@ -32,7 +32,7 @@ const translations = {
     },
     home: {
       methodTitle: "Metodología",
-      methodSubtitle: "Mi enfoque combina frontend sólido con sensibilidad UX/UI. Desarrollo interfaces claras, escalables y orientadas a experiencia real, no solo a implementación técnica",
+      methodSubtitle: "Soy una persona curiosa y exigente conmigo mismo que, tras incursionar en éste mundo, encontró un espacio para canalizar las ideas y convertirlas en algo real, teniendo el desafío diario de resolver y mejorarse constantemente.",
       cards: [
         ["Frontend", "Interfaces modernas con Next.js y React priorizando claridad visual, estructura escalable y experiencia consistente. Trabajo con TypeScript para garantizar mantenibilidad y previsibilidad en cada componente"],
         ["UX / UI & Motion", "Diseño enfocado en usabilidad, jerarquía visual y feedback inmediato. Utilizo animaciones y microinteracciones estratégicas para guiar al usuario sin distraerlo ni sobrecargar la interfaz"],
@@ -41,13 +41,6 @@ const translations = {
       ]
     },
     about: {
-      title: "¿Quién soy?",
-      subtitle: "Soy una persona curiosa y exigente conmigo mismo que, tras incursionar en éste mundo, encontró un espacio para canalizar las ideas y convertirlas en algo real, teniendo el desafío diario de resolver y mejorarse constantemente.",
-      paragraphs: [
-        "Me gusta crear interfaces que se sientan vivas. Que respondan bien, que comuniquen claro y que no necesiten explicación. Trabajo con React y Next.js porque me permiten construir cosas sólidas sin sacrificar detalle.",
-        "Más allá de mi especialización en frontend, me adapto a las necesidades de cada proyecto y a los objetivos del cliente. Me interesa entender el contexto, proponer mejoras cuando hace falta y aportar soluciones que realmente sumen valor. Trabajo de forma proactiva, buscando que cada decisión técnica esté alineada con el resultado que se quiere lograr.",
-        "Disfruto el proceso completo: desde la idea hasta el deploy. La satisfacción está en transformar una idea en algo concreto que realmente funciona."
-      ],
       skillsTitle: "Stack tecnológico",
       skillsSubtitle: "",
       frontend: "Animaciones, Componentes, Interactive, Responsive, Carousels",
@@ -134,7 +127,7 @@ const translations = {
     },
     home: {
       methodTitle: "Methodology",
-      methodSubtitle: "My approach combines solid frontend engineering with UX/UI awareness. I build clear, scalable interfaces for real-world experiences—not just technical implementation.",
+      methodSubtitle: "I am curious and hold myself to high standards. After discovering this field, I found a place to channel ideas and turn them into something real—facing the daily challenge of solving problems and continually improving.",
       cards: [
         ["Frontend", "Modern interfaces with Next.js and React, prioritizing visual clarity, scalable structure, and a consistent experience. I use TypeScript to ensure maintainability and predictability in every component."],
         ["UX / UI & Motion", "Design focused on usability, visual hierarchy, and immediate feedback. I use strategic animations and microinteractions to guide users without distracting or overloading the interface."],
@@ -143,13 +136,6 @@ const translations = {
       ]
     },
     about: {
-      title: "About me",
-      subtitle: "I am curious and hold myself to high standards. After discovering this field, I found a place to channel ideas and turn them into something real—facing the daily challenge of solving problems and continually improving.",
-      paragraphs: [
-        "I like creating interfaces that feel alive: responsive, clear, and self-explanatory. I work with React and Next.js because they let me build solid products without sacrificing detail.",
-        "Beyond my frontend specialization, I adapt to each project's needs and each client's goals. I care about understanding the context, proposing improvements when needed, and providing solutions that truly add value. I work proactively, making sure every technical decision is aligned with the desired result.",
-        "I enjoy the entire process, from the initial idea to deployment. The satisfaction comes from turning an idea into something tangible that genuinely works."
-      ],
       skillsTitle: "Skills and knowledge",
       skillsSubtitle: "Tools, technologies, and abilities I have acquired and applied in real projects.",
       frontend: "Animations, Components, Interactivity, Responsive Design, Carousels",
