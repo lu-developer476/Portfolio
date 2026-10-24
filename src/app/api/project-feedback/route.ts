@@ -6,7 +6,7 @@ import { professionalProjects } from "@/config/professionalprojects";
 
 export const runtime = "nodejs";
 
-const projectSlugSchema = z.string().min(1).max(80).regex(/^[a-zA-Z0-9-]+$/);
+const projectSlugSchema = z.string().min(1).max(80).regex(/^[\p{L}\p{N}-]+$/u);
 const visitorIdSchema = z.string().uuid();
 const validProjectSlugs = new Set([...personalProjects, ...professionalProjects].map((project) => project.slug).filter((slug) => slug !== "coming-soon"));
 const isValidProject = (slug: string) => validProjectSlugs.has(slug);
