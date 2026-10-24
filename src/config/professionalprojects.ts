@@ -53,6 +53,14 @@ export const professionalProjects: Project[] = [
     demo: "https://arkhe-digital-musem.framer.website/",
   },
   {
+    slug: "grupo-meridiano",
+    title: "Grupo Meridiano",
+    year: "2026",
+    description: "Sitio web de bienes raíces, desarrollado para la gestión y exhibición de propiedades. Desplegado en Vercel.",
+    tags: ["Inmobiliaria", "React", "Node.js", "User Experience", "UX/UI", "Vercel"],
+    demo: "https://grupomeridiano.vercel.app/",
+  },
+  {
     slug: "gestoría-ays",
     title: "Gestoría AyS",
     year: "2026",
