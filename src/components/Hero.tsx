@@ -54,7 +54,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative isolate overflow-hidden px-5 py-14 sm:px-6 md:px-12 md:py-24 min-h-[80vh] flex items-center">
+    <section className="hero-section relative isolate flex min-h-[auto] items-center overflow-hidden px-4 py-10 sm:min-h-[70vh] sm:px-6 sm:py-14 md:min-h-[75vh] md:px-10 md:py-20 lg:min-h-[80vh] lg:px-12 lg:py-24">
       <ThreeBackground />
       <KiroshiOverlay />
 
@@ -66,7 +66,7 @@ export default function Hero() {
 
         <h1
           ref={titleRef}
-          className="max-w-full text-[2.15rem] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08] opacity-0"
+          className="max-w-full text-[clamp(1.8rem,7vw,2.7rem)] font-extrabold leading-[1.08] tracking-tight opacity-0 sm:text-4xl md:text-5xl lg:text-6xl"
         >
           <span className="text-cyber-gold block break-words">
             {t.hero.titleGold}
@@ -76,7 +76,7 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="mt-6 max-w-2xl break-words text-white/75 leading-relaxed text-sm sm:text-base md:text-lg">
+        <p className="mt-5 max-w-2xl break-words text-sm leading-relaxed text-white/75 sm:mt-6 sm:text-base md:text-lg">
 {t.hero.description}
         </p>
 
