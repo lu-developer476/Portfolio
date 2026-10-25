@@ -14,7 +14,7 @@ const translations = {
       local: "Tu zona horaria",
       world: "Otras zonas del mundo"
     },
-    footer: "Todos los derechos reservados • Built with React.js, Next.js, TypeScript, CoffeeScript & Tailwind CSS • UX/UI Interface • Database powered by Firebase • Deployed on Vercel ®",
+    footer: "Todos los derechos reservados • Built with React - Next.js - TypeScript - CoffeeScript - Node.js & Tailwind CSS • UX/UI Interface • Database powered by Firebase • Deployed on Vercel ®",
     hero: {
       titleGold: "Interfaces que escalan",
       titleWhite: "sin romper la experiencia",
@@ -109,7 +109,7 @@ const translations = {
       local: "Your time zone",
       world: "Other time zones"
     },
-    footer: "All rights reserved • Built with React.js, Next.js, TypeScript, CoffeeScript & Tailwind CSS • UX/UI Interface • Database powered by Firebase • Deployed on Vercel ®",
+    footer: "All rights reserved • Built with React - Next.js - TypeScript - CoffeeScript - Node.js & Tailwind CSS • UX/UI Interface • Database powered by Firebase • Deployed on Vercel ®",
     hero: {
       titleGold: "Interfaces that scale",
       titleWhite: "without breaking the experience",
