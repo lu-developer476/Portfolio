@@ -268,8 +268,8 @@ const serviceCopy = {
 function getArsEquivalent(price: string, rate: number, language: "es" | "en") {
   if (!price.includes("USD")) return null;
 
-  const amounts = price.match(/\d[\d,]*(?:\.\d+)?/g)?.map((amount) =>
-    Number(amount.replace(/,/g, ""))
+  const amounts = price.match(/\d[\d.,]*/g)?.map((amount) =>
+    Number(language === "es" ? amount.replace(/[.,]/g, "") : amount.replace(/,/g, ""))
   );
   if (!amounts?.length || amounts.some((amount) => !Number.isFinite(amount))) return null;
 
