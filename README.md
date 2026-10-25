@@ -1,8 +1,8 @@
 # Portfolio
 
-Portfolio profesional desarrollado con **React**, **TypeScript**, **Next.js**, **Node.js**, diseñado con **Tailwind CSS**.
+Portfolio profesional desarrollado con **React**, **TypeScript**, **CoffeeScript**, **Next.js**, **Node.js**, diseñado con **Tailwind CSS**.
 
-Este proyecto combina diseño visual sólido, animaciones controladas, integración 3D y backend real con Firebase, incluyendo un sistema de notificaciones por correo en tiempo real.
+Este proyecto combina diseño visual sólido, animaciones controladas, integración 3D y backend real con **Firebase**, incluyendo un sistema de notificaciones por correo en tiempo real.
 
 ## Descripción general
 
