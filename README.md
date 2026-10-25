@@ -1,6 +1,6 @@
 # Portfolio
 
-Portfolio profesional desarrollado con **Next.js**, **React** y **TypeScript**, diseñado con **Tailwind CSS** y una estética cyberpunk/futurista definida.
+Portfolio profesional desarrollado con **React**, **TypeScript**, **Next.js**, **Node.js**, diseñado con **Tailwind CSS**.
 
 Este proyecto combina diseño visual sólido, animaciones controladas, integración 3D y backend real con Firebase, incluyendo un sistema de notificaciones por correo en tiempo real.
 
@@ -58,6 +58,7 @@ Todo se ejecuta mediante un entorno server-side seguro.
 ### Backend
 
 <p>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" height="34" />
   <img src="https://img.shields.io/badge/Firebase_Admin-DD2C00?style=for-the-badge&logo=firebase&logoColor=white" alt="Firebase Admin" height="34" />
   <img src="https://img.shields.io/badge/Resend-000000?style=for-the-badge&logo=resend&logoColor=white" alt="Resend" height="34" />
   <img src="https://img.shields.io/badge/Nodemailer-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Nodemailer" height="34" />
