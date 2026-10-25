@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/i18n";
 
 type ServicePackage = {
@@ -264,9 +265,62 @@ const serviceCopy = {
   }
 } as const;
 
+function getArsEquivalent(price: string, rate: number, language: "es" | "en") {
+  if (!price.includes("USD")) return null;
+
+  const amounts = price.match(/\d[\d,]*(?:\.\d+)?/g)?.map((amount) =>
+    Number(amount.replace(/,/g, ""))
+  );
+  if (!amounts?.length || amounts.some((amount) => !Number.isFinite(amount))) return null;
+
+  const formatter = new Intl.NumberFormat(language === "es" ? "es-AR" : "en-US", {
+    style: "currency",
+    currency: "ARS",
+    maximumFractionDigits: 0
+  });
+  const converted = amounts.map((amount) => formatter.format(amount * rate));
+  const equivalent = converted.length > 1
+    ? `${converted[0]}–${converted[1]}`
+    : price.toLowerCase().includes("from") || price.toLowerCase().includes("desde")
+      ? `${language === "es" ? "Desde" : "From"} ${converted[0]}`
+      : converted[0];
+
+  return price.includes("/ month") || price.includes("/ mes")
+    ? `${equivalent} / ${language === "es" ? "mes" : "month"}`
+    : equivalent;
+}
+
 export default function ServicesSection() {
   const { language } = useLanguage();
   const copy = serviceCopy[language];
+  const [usdToArs, setUsdToArs] = useState<number | null>(null);
+
+  useEffect(() => {
+    let active = true;
+
+    const loadRate = async () => {
+      try {
+        const response = await fetch("https://dolarapi.com/v1/dolares/bolsa", {
+          cache: "no-store"
+        });
+        if (!response.ok) throw new Error("Could not load the MEP exchange rate");
+        const data: { venta?: number } = await response.json();
+        if (active && typeof data.venta === "number" && Number.isFinite(data.venta)) {
+          setUsdToArs(data.venta);
+        }
+      } catch {
+        // Keep the USD prices visible if the exchange-rate service is unavailable.
+      }
+    };
+
+    void loadRate();
+    const interval = window.setInterval(() => void loadRate(), 60 * 60 * 1000);
+
+    return () => {
+      active = false;
+      window.clearInterval(interval);
+    };
+  }, []);
 
   return (
     <section id="servicios" className="mt-14 space-y-8 scroll-mt-28">
@@ -284,6 +338,14 @@ export default function ServicesSection() {
               <div className="min-w-0">
                 <h3 className="text-lg font-semibold text-cyber-gold">{service.name}</h3>
                 <p className="mt-1 text-xl font-bold text-white">{service.price}</p>
+                {usdToArs !== null && getArsEquivalent(service.price, usdToArs, language) && (
+                  <p className="mt-1 text-sm font-semibold text-cyber-neonGreen">
+                    {getArsEquivalent(service.price, usdToArs, language)}
+                    <span className="mt-0.5 block text-[11px] font-normal text-white/50">
+                      {language === "es" ? "Equivalente aprox. en ARS · dólar MEP vendedor" : "Approx. ARS equivalent · MEP selling rate"}
+                    </span>
+                  </p>
+                )}
                 <p className="text-xs text-white/50">{language === "es" ? "por proyecto, salvo que se indique lo contrario" : "per project unless stated otherwise"}</p>
               </div>
             </div>
