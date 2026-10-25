@@ -175,7 +175,7 @@ const serviceCopy = {
       {
         icon: "🛍️",
         name: "Catalog or Online Store",
-        price: "USD 800–1,500",
+        price: "USD 800-1,500",
         description: "A product catalog and online purchasing flow using an agreed platform or solution.",
         includes: [
           "Catalog of up to around 50 products as a reference",
