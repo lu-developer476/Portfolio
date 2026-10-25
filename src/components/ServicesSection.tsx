@@ -22,7 +22,7 @@ const serviceCopy = {
       {
         icon: "🧭",
         name: "Landing Page",
-        price: "USD 150–300",
+        price: "USD 150-300",
         description: "Una página para presentar un negocio, servicio o campaña y convertir visitas en consultas.",
         includes: [
           "Una página adaptable a móvil, tablet y escritorio",
@@ -36,7 +36,7 @@ const serviceCopy = {
       {
         icon: "🏢",
         name: "Sitio Web Profesional",
-        price: "USD 350–700",
+        price: "USD 350-700",
         description: "Una presencia digital ordenada para profesionales, comercios, consultoras y pequeñas empresas.",
         includes: [
           "Sitio institucional de aproximadamente 5–10 páginas, según alcance",
@@ -50,7 +50,7 @@ const serviceCopy = {
       {
         icon: "🛍️",
         name: "Catálogo o Tienda Online",
-        price: "USD 800–1.500",
+        price: "USD 800-1.500",
         description: "Para mostrar productos y habilitar compras mediante una plataforma o una solución acordada para el negocio.",
         includes: [
           "Catálogo de hasta unos 50 productos como referencia",
@@ -77,7 +77,7 @@ const serviceCopy = {
       {
         icon: "🛠️",
         name: "Rediseño y Optimización",
-        price: "USD 200–500",
+        price: "USD 200-500",
         description: "Para mejorar un sitio existente sin rehacerlo necesariamente desde cero.",
         includes: [
           "Revisión inicial de problemas y prioridades",
@@ -109,7 +109,7 @@ const serviceCopy = {
       {
         icon: "🔧",
         name: "Mantenimiento básico",
-        price: "USD 30–60 / mes",
+        price: "USD 30-60 / mes",
         description: "Referencia para un abono limitado: revisiones básicas, pequeñas correcciones y soporte acordado. Nuevas funciones o tareas que excedan el alcance se cotizan aparte."
       },
       {
@@ -147,7 +147,7 @@ const serviceCopy = {
       {
         icon: "🧭",
         name: "Landing Page",
-        price: "USD 150–300",
+        price: "USD 150-300",
         description: "A single page to present a business, service, or campaign and turn visits into inquiries.",
         includes: [
           "One page responsive across mobile, tablet, and desktop",
@@ -161,7 +161,7 @@ const serviceCopy = {
       {
         icon: "🏢",
         name: "Professional Website",
-        price: "USD 350–700",
+        price: "USD 350-700",
         description: "A clear digital presence for professionals, shops, consultants, and small businesses.",
         includes: [
           "Institutional website of roughly 5–10 pages, depending on scope",
@@ -202,7 +202,7 @@ const serviceCopy = {
       {
         icon: "🛠️",
         name: "Redesign and Optimization",
-        price: "USD 200–500",
+        price: "USD 200-500",
         description: "Improve an existing site without necessarily rebuilding everything from scratch.",
         includes: [
           "Initial review of issues and priorities",
@@ -234,7 +234,7 @@ const serviceCopy = {
       {
         icon: "🔧",
         name: "Basic maintenance",
-        price: "USD 30–60 / month",
+        price: "USD 30-60 / month",
         description: "Reference price for a limited retainer: basic checks, small fixes, and agreed support. New features or work outside scope are quoted separately."
       },
       {
@@ -273,14 +273,13 @@ function getArsEquivalent(price: string, rate: number, language: "es" | "en") {
   );
   if (!amounts?.length || amounts.some((amount) => !Number.isFinite(amount))) return null;
 
-  const formatter = new Intl.NumberFormat(language === "es" ? "es-AR" : "en-US", {
-    style: "currency",
-    currency: "ARS",
-    maximumFractionDigits: 0
+  const formatter = new Intl.NumberFormat("es-AR", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
   });
-  const converted = amounts.map((amount) => formatter.format(amount * rate));
+  const converted = amounts.map((amount) => `$ ${formatter.format(amount * rate)}.-`);
   const equivalent = converted.length > 1
-    ? `${converted[0]}–${converted[1]}`
+    ? `${converted[0]} a ${converted[1]}`
     : price.toLowerCase().includes("from") || price.toLowerCase().includes("desde")
       ? `${language === "es" ? "Desde" : "From"} ${converted[0]}`
       : converted[0];
