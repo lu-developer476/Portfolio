@@ -8,7 +8,7 @@ export default function DevLabSection() {
   const copy = language === "es"
     ? {
         eyebrow: "EXPERIMENTACIÓN · INTERACCIÓN · CÓDIGO",
-        title: "DEV LAB",
+        title: "Bienvenidos",
         description: "Un espacio para explorar ideas en funcionamiento: una terminal interactiva, experimentos visuales y pequeños controles para entender cómo las decisiones de interfaz cambian la experiencia.",
         terminal: "Terminal interactiva",
         visual: "Laboratorio visual",
@@ -18,7 +18,7 @@ export default function DevLabSection() {
       }
     : {
         eyebrow: "EXPERIMENTATION · INTERACTION · CODE",
-        title: "DEV LAB",
+        title: "Bienvenidos",
         description: "A space to explore working ideas: an interactive terminal, visual experiments, and small controls that show how interface decisions shape the experience.",
         terminal: "Interactive terminal",
         visual: "Visual lab",
@@ -34,7 +34,7 @@ export default function DevLabSection() {
           <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-cyber-neonGreen">{copy.eyebrow}</p>
           <h2 id="dev-lab-section-title" className="mt-2 text-2xl font-bold text-cyber-gold sm:text-3xl">{copy.title}<span className="ml-2 inline-block text-cyber-neonGreen motion-safe:animate-[blink_1s_steps(2,start)_infinite]" aria-hidden="true">_</span></h2>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-white/75">{copy.description}</p>
-          <Link href="/dev-lab" className="mt-5 inline-flex w-fit items-center justify-center gap-2 rounded-xl border border-cyber-gold/60 bg-white/5 px-5 py-3 text-sm font-semibold tracking-wide text-cyber-gold transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyber-neonGreen">
+          <Link href="/laboratory" className="mt-5 inline-flex w-fit items-center justify-center gap-2 rounded-xl border border-cyber-gold/60 bg-white/5 px-5 py-3 text-sm font-semibold tracking-wide text-cyber-gold transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyber-neonGreen">
             {copy.button}<span aria-hidden="true">↗</span>
           </Link>
         </div>
