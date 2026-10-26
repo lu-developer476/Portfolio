@@ -18,7 +18,7 @@ export default function DevLabSection() {
       }
     : {
         eyebrow: "EXPERIMENTATION · INTERACTION · CODE",
-        title: "Bienvenidos",
+        title: "Welcome",
         description: "A space to explore working ideas: an interactive terminal, visual experiments, and small controls that show how interface decisions shape the experience.",
         terminal: "Interactive terminal",
         visual: "Visual lab",
