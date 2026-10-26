@@ -14,7 +14,7 @@ export default function DevLabSection() {
         visual: "Laboratorio visual",
         code: "Decisiones técnicas explicadas",
         button: "Entrar al laboratorio",
-        features: [{ title: "Interacción real", detail: "Controles y estado reactivo, sin simulaciones de backend." }, { title: "Código transparente", detail: "Cada experimento explica qué decisión técnica demuestra." }, { title: "Ligero por diseño", detail: "Sin dependencias nuevas ni envío de datos." }]
+        features: [{ title: "Interacción real", detail: "Controles y estado reactivo, sin simulaciones de backend." }, { title: "Código transparente", detail: "Cada experimento explica qué decisión técnica demuestra." }]
       }
     : {
         eyebrow: "EXPERIMENTATION · INTERACTION · CODE",
@@ -24,7 +24,7 @@ export default function DevLabSection() {
         visual: "Visual lab",
         code: "Technical decisions explained",
         button: "Enter the lab",
-        features: [{ title: "Real interaction", detail: "Controls and reactive state, without backend simulation." }, { title: "Transparent code", detail: "Each experiment explains the technical decision behind it." }, { title: "Lightweight by design", detail: "No extra dependencies and no data submission." }]
+        features: [{ title: "Real interaction", detail: "Controls and reactive state, without backend simulation." }, { title: "Transparent code", detail: "Each experiment explains the technical decision behind it." }]
       };
 
   return (
@@ -52,7 +52,7 @@ export default function DevLabSection() {
           <div className="mt-4 flex items-center gap-2 text-cyber-gold"><span>ready</span><span className="h-3.5 w-1.5 animate-pulse bg-cyber-neonGreen" /></div>
         </div>
       </div>
-      <div className="mt-7 grid gap-3 sm:grid-cols-3">
+      <div className="mt-7 grid gap-3 sm:grid-cols-2">
         {copy.features.map((feature, index) => (
           <article key={feature.title} className="group rounded-xl border border-white/10 bg-black/25 p-4 transition duration-300 hover:-translate-y-0.5 hover:border-cyber-neonGreen/35 hover:bg-cyber-neonGreen/[0.035]">
             <div className="mb-3 flex items-center gap-2">
