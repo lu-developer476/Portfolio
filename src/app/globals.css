@@ -1481,3 +1481,11 @@ label {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Company names on /references must remain readable in light themes. */
+html[data-theme="light"] .references-page .references-company-name,
+html[data-theme="cloud"] .references-page .references-company-name {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
