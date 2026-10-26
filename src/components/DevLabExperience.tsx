@@ -15,7 +15,7 @@ export default function DevLabExperience() {
   const [speed, setSpeed] = useState(50);
 
   const copy = isEs ? {
-    back: "Volver a Perfil",
+    back: "Volver",
     title: "DEV LAB",
     subtitle: "Probá la interfaz. Explorá el código. Descubrí el porqué de cada decisión.",
     terminal: "Terminal interactiva",
@@ -36,7 +36,7 @@ export default function DevLabExperience() {
     projects: ["Los proyectos profesionales y personales están en Perfil → Proyectos.", "Este laboratorio complementa esos proyectos; no los duplica."],
     unknown: "Comando no reconocido. Escribí «help» para ver las opciones."
   } : {
-    back: "Back to Profile",
+    back: "Back",
     title: "DEV LAB",
     subtitle: "Try the interface. Explore the code. Discover the reasoning behind each decision.",
     terminal: "Interactive terminal",
