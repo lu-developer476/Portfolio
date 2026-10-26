@@ -54,7 +54,7 @@ export default function ReferencesSection() {
           <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-cyber-neonGreen">{labels.eyebrow}</p>
           <h2 id="references-showcase-title" className="mt-2 text-xl font-bold text-cyber-gold sm:text-2xl">{labels.title}</h2>
         </div>
-        <Link href="/referentes" className="inline-flex w-fit shrink-0 items-center justify-center gap-2 rounded-xl border border-cyber-gold/60 bg-white/5 px-5 py-3 text-sm font-semibold tracking-wide text-cyber-gold transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyber-neonGreen">
+        <Link href="/references" className="inline-flex w-fit shrink-0 items-center justify-center gap-2 rounded-xl border border-cyber-gold/60 bg-white/5 px-5 py-3 text-sm font-semibold tracking-wide text-cyber-gold transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyber-neonGreen">
           {labels.button}<span aria-hidden="true">↗</span>
         </Link>
       </div>
