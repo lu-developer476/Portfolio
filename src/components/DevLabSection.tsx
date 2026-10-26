@@ -8,7 +8,7 @@ export default function DevLabSection() {
   const copy = language === "es"
     ? {
         eyebrow: "EXPERIMENTACIÓN · INTERACCIÓN · CÓDIGO",
-        title: "Bienvenidos",
+        title: "DEV-LAB",
         description: "Un espacio para explorar ideas en funcionamiento: una terminal interactiva, experimentos visuales y pequeños controles para entender cómo las decisiones de interfaz cambian la experiencia.",
         terminal: "Terminal interactiva",
         visual: "Laboratorio visual",
