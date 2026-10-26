@@ -200,10 +200,10 @@ export default function DevLabExperience() {
         <span aria-hidden="true">←</span>{copy.back}
       </Link>
 
-      <header className="relative overflow-hidden rounded-3xl border border-cyber-neonGreen/20 bg-[#080b0d] px-5 py-8 sm:px-9 sm:py-12">
+      <header className="relative flex min-h-40 items-center justify-center overflow-hidden rounded-3xl border border-cyber-neonGreen/20 bg-[#080b0d] px-5 py-8 text-center sm:min-h-48 sm:px-9 sm:py-12">
         <div aria-hidden="true" className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-cyber-neonGreen/10 blur-3xl" />
-        <div className="relative mx-auto w-full text-center">
-          <h1 className="mt-4 text-4xl font-black tracking-[-.06em] text-white motion-safe:animate-[pulse_3s_ease-in-out_infinite] sm:text-6xl">{copy.welcomeTitle}</h1>
+        <div className="relative mx-auto w-full">
+          <h1 className="text-4xl font-black tracking-[-.06em] text-white motion-safe:animate-[pulse_3s_ease-in-out_infinite] sm:text-6xl">{copy.welcomeTitle}</h1>
 
         </div>
       </header>
