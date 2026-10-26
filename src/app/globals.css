@@ -1505,15 +1505,9 @@ body[data-theme="cloud"] .references-page h3.references-company-name,
 
 
 /* Descriptive copy below each brand title on /references: black in Claro and Neblina. */
-html[data-theme="light"] .references-page p.text-white\\/60,
-html[data-theme="cloud"] .references-page p.text-white\\/60 {
+html[data-theme="light"] .references-page .references-description,
+html[data-theme="cloud"] .references-page .references-description {
   color: #000000 !important;
   -webkit-text-fill-color: #000000 !important;
-}
-
-/* Correct selector: the small paragraph directly below each brand title. */
-html[data-theme="light"] .references-page .flex.items-center.gap-3 p.mt-1,
-html[data-theme="cloud"] .references-page .flex.items-center.gap-3 p.mt-1 {
-  color: #000000 !important;
-  -webkit-text-fill-color: #000000 !important;
+  text-shadow: none !important;
 }
