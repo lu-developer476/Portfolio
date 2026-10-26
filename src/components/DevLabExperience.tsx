@@ -212,6 +212,30 @@ export default function DevLabExperience() {
         </div>
       </header>
 
+      <section className="space-y-4">
+        <div className="flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[.2em] text-cyber-neonGreen">{copy.whyLab}</p>
+            <h2 className="mt-2 text-xl font-bold text-white sm:text-2xl">{copy.featureTitle}</h2>
+          </div>
+          <span className="font-mono text-[10px] text-white/30">{copy.sectionLabel}</span>
+        </div>
+        <div className="grid gap-3 md:grid-cols-3">
+          {[
+            { n: "01", title: copy.feature1, description: copy.feature1d },
+            { n: "02", title: copy.feature2, description: copy.feature2d },
+            { n: "03", title: copy.feature3, description: copy.feature3d },
+          ].map((item) => (
+            <article key={item.n} className="rounded-xl border border-white/[0.08] bg-black/20 p-5">
+              <span className="font-mono text-xs text-cyber-gold">{item.n} / 03</span>
+              <h3 className="mt-4 text-sm font-semibold text-white/85">{item.title}</h3>
+              <p className="mt-2 text-xs leading-6 text-white/45">{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+
       <section className="space-y-6" aria-label={copy.tools}>
         <h2 className="text-xs font-semibold uppercase tracking-[.18em] text-white/65">{copy.tools}</h2>
         <Swiper
@@ -334,28 +358,6 @@ export default function DevLabExperience() {
         </div>
       </section>
 
-      <section className="space-y-4">
-        <div className="flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <p className="font-mono text-[10px] uppercase tracking-[.2em] text-cyber-neonGreen">{copy.whyLab}</p>
-            <h2 className="mt-2 text-xl font-bold text-white sm:text-2xl">{copy.featureTitle}</h2>
-          </div>
-          <span className="font-mono text-[10px] text-white/30">{copy.sectionLabel}</span>
-        </div>
-        <div className="grid gap-3 md:grid-cols-3">
-          {[
-            { n: "01", title: copy.feature1, description: copy.feature1d },
-            { n: "02", title: copy.feature2, description: copy.feature2d },
-            { n: "03", title: copy.feature3, description: copy.feature3d },
-          ].map((item) => (
-            <article key={item.n} className="rounded-xl border border-white/[0.08] bg-black/20 p-5">
-              <span className="font-mono text-xs text-cyber-gold">{item.n} / 03</span>
-              <h3 className="mt-4 text-sm font-semibold text-white/85">{item.title}</h3>
-              <p className="mt-2 text-xs leading-6 text-white/45">{item.description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
 
     </div>
   );
