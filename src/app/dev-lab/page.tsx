@@ -1,7 +1,6 @@
 import DevLabExperience from "@/components/DevLabExperience";
 
 export const metadata = {
-  title: "Dev Lab",
   description: "Herramientas prácticas para desarrollo web, ejecutadas directamente en el navegador.",
   alternates: { canonical: "/dev-lab" },
 };
