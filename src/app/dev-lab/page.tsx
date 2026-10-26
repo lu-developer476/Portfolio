@@ -1,8 +1,8 @@
 import DevLabExperience from "@/components/DevLabExperience";
 
 export const metadata = {
-  title: "DEV LAB | Lucas Montenegro",
-  description: "Explorá experimentos interactivos de interfaz, terminal y decisiones de código en el laboratorio de Lucas Montenegro.",
+  title: "Dev Lab",
+  description: "Herramientas prácticas para desarrollo web, ejecutadas directamente en el navegador.",
   alternates: { canonical: "/dev-lab" },
 };
 
