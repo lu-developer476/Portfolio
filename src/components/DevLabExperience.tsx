@@ -30,10 +30,13 @@ export default function DevLabExperience() {
     reset: "Restablecer",
     explanation: "Qué demuestra",
     explanationText: "El estado de React controla los parámetros en tiempo real. La presentación usa CSS y gradientes para mantener el experimento liviano, adaptable y sin dependencias adicionales.",
-    help: ["Comandos: help, about, stack, projects, clear", "Probá un comando para explorar este portfolio."],
+    help: ["Comandos: help, about, stack, projects, status, skills, contact, clear", "Probá un comando para explorar este portfolio."],
     about: ["Desarrollador Full Stack con foco en UX/UI, rendimiento y arquitectura mantenible.", "Este laboratorio reúne experimentos pequeños y decisiones de interfaz explicadas."],
     stack: ["Frontend: React, Next.js, TypeScript, Tailwind CSS", "Interacción: estado de React, CSS, accesibilidad y diseño responsive"],
     projects: ["Los proyectos profesionales y personales están en Perfil → Proyectos.", "Este laboratorio complementa esos proyectos; no los duplica."],
+    status: ["Sistema: operativo", "Renderizado: React · Estilos: CSS/Tailwind", "Datos: locales · Telemetría propia: ninguna"],
+    skills: ["UI: componentes reutilizables, responsive y accesibles", "Estado: interacciones reactivas con React", "Calidad: movimiento reducido y feedback inmediato"],
+    contact: ["Podés iniciar una conversación desde la sección Contacto.", "Ruta: /contact · No se envió ningún mensaje."],
     unknown: "Comando no reconocido. Escribí «help» para ver las opciones."
   } : {
     back: "Back",
@@ -51,10 +54,13 @@ export default function DevLabExperience() {
     reset: "Reset",
     explanation: "What it demonstrates",
     explanationText: "React state controls the parameters in real time. CSS and gradients keep the experiment lightweight, responsive, and dependency-free.",
-    help: ["Commands: help, about, stack, projects, clear", "Try a command to explore this portfolio."],
+    help: ["Commands: help, about, stack, projects, status, skills, contact, clear", "Try a command to explore this portfolio."],
     about: ["Full Stack Developer focused on UX/UI, performance, and maintainable architecture.", "This lab brings together small experiments and explained interface decisions."],
     stack: ["Frontend: React, Next.js, TypeScript, Tailwind CSS", "Interaction: React state, CSS, accessibility, and responsive design"],
     projects: ["Professional and personal projects are available in Profile → Projects.", "This lab complements those projects instead of duplicating them."],
+    status: ["System: operational", "Rendering: React · Styling: CSS/Tailwind", "Data: local · No custom telemetry"],
+    skills: ["UI: reusable, responsive, accessible components", "State: reactive interactions with React", "Quality: reduced motion and immediate feedback"],
+    contact: ["Start a conversation from the Contact section.", "Route: /contact · No message has been sent."],
     unknown: "Command not recognized. Type “help” to see the options."
   };
 
@@ -71,6 +77,9 @@ export default function DevLabExperience() {
       : normalized === "about" ? copy.about
       : normalized === "stack" ? copy.stack
       : normalized === "projects" ? copy.projects
+      : normalized === "status" ? copy.status
+      : normalized === "skills" ? copy.skills
+      : normalized === "contact" ? copy.contact
       : [copy.unknown];
     setHistory((current) => [...current, { command: normalized, output }].slice(-8));
     setCommand("");
@@ -97,7 +106,7 @@ export default function DevLabExperience() {
 
       <div className="grid gap-3 sm:grid-cols-3" aria-label={isEs ? "Resumen del laboratorio" : "Lab overview"}>
         {[
-          { value: "05", label: isEs ? "Comandos disponibles" : "Available commands", detail: "CLI / INPUT" },
+          { value: "08", label: isEs ? "Comandos disponibles" : "Available commands", detail: "CLI / INPUT" },
           { value: "02", label: isEs ? "Parámetros en vivo" : "Live parameters", detail: "STATE / CSS" },
           { value: "0", label: isEs ? "Dependencias nuevas" : "New dependencies", detail: "LIGHTWEIGHT" },
         ].map((item) => (
@@ -133,13 +142,13 @@ export default function DevLabExperience() {
             <label htmlFor="dev-lab-command" className="sr-only">{copy.terminal}</label>
             <div className="flex min-w-0 flex-1 items-center gap-2 rounded-lg border border-white/15 bg-black/50 px-3">
               <span className="text-cyber-neonGreen" aria-hidden="true">$</span>
-              <input id="dev-lab-command" value={command} onChange={(event) => setCommand(event.target.value)} placeholder={copy.placeholder} autoComplete="off" spellCheck={false} className="min-w-0 flex-1 bg-transparent py-3 text-sm text-white outline-none placeholder:text-white/30" />
+              <input id="dev-lab-command" value={command} onChange={(event) => setCommand(event.target.value)} placeholder={copy.placeholder} aria-label={isEs ? "Comando de terminal" : "Terminal command"} autoComplete="off" spellCheck={false} className="min-w-0 flex-1 bg-transparent py-3 text-sm text-white outline-none placeholder:text-white/30" />
             </div>
             <button type="submit" className="rounded-lg border border-cyber-neonGreen/50 px-4 py-3 text-sm font-semibold text-cyber-neonGreen transition hover:bg-cyber-neonGreen/10">{copy.run}</button>
           </form>
-          <p className="text-xs leading-relaxed text-white/45">{copy.commands}: <span className="text-white/70">help · about · stack · projects · clear</span></p>
+          <p className="text-xs leading-relaxed text-white/45">{copy.commands}: <span className="text-white/70">help · about · stack · projects · status · skills · contact · clear</span></p>
           <div className="flex flex-wrap gap-2" aria-label={isEs ? "Comandos rápidos" : "Quick commands"}>
-            {["help", "about", "stack", "projects", "clear"].map((quickCommand) => (
+            {["help", "about", "stack", "projects", "status", "skills", "contact", "clear"].map((quickCommand) => (
               <button
                 key={quickCommand}
                 type="button"
