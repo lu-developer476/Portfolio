@@ -35,7 +35,7 @@ export default function ReferencesPage() {
                 </span>
                 <div className="min-w-0">
                   <h3 className="references-company-name text-lg font-semibold text-cyber-gold">{company.name}</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-white/60">{isSpanish ? company.focusEs : company.focusEn}</p>
+                  <p className="references-description mt-1 text-sm leading-relaxed text-white/60">{isSpanish ? company.focusEs : company.focusEn}</p>
                 </div>
               </div>
               <div className="mt-5 flex-1">
