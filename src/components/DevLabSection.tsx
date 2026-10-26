@@ -32,7 +32,7 @@ export default function DevLabSection() {
           <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-cyber-neonGreen">{copy.eyebrow}</p>
           <h2 id="dev-lab-section-title" className="mt-2 text-2xl font-bold text-cyber-gold sm:text-3xl">{copy.title}<span className="ml-2 text-cyber-neonGreen" aria-hidden="true">_</span></h2>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-white/75">{copy.description}</p>
-          <Link href="/lab" className="mt-5 inline-flex w-fit items-center justify-center gap-2 rounded-xl border border-cyber-gold/60 bg-white/5 px-5 py-3 text-sm font-semibold tracking-wide text-cyber-gold transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyber-neonGreen">
+          <Link href="/dev-lab" className="mt-5 inline-flex w-fit items-center justify-center gap-2 rounded-xl border border-cyber-gold/60 bg-white/5 px-5 py-3 text-sm font-semibold tracking-wide text-cyber-gold transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyber-neonGreen">
             {copy.button}<span aria-hidden="true">↗</span>
           </Link>
         </div>
