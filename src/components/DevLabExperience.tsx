@@ -202,8 +202,8 @@ export default function DevLabExperience() {
 
       <header className="relative overflow-hidden rounded-3xl border border-cyber-neonGreen/20 bg-[#080b0d] px-5 py-8 sm:px-9 sm:py-12">
         <div aria-hidden="true" className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-cyber-neonGreen/10 blur-3xl" />
-        <div className="relative max-w-3xl">
-          <h1 className="mt-4 text-4xl font-black tracking-[-.06em] text-white sm:text-6xl">DEV <span className="text-cyber-gold">LAB</span></h1>
+        <div className="relative mx-auto w-full text-center">
+          <h1 className="mt-4 text-4xl font-black tracking-[-.06em] text-white motion-safe:animate-[pulse_3s_ease-in-out_infinite] sm:text-6xl">DEV <span className="text-cyber-gold">LAB</span></h1>
 
         </div>
       </header>
