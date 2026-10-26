@@ -32,7 +32,7 @@ export default function DevLabSection() {
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(15rem,0.75fr)] lg:items-center">
         <div>
           <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-cyber-neonGreen">{copy.eyebrow}</p>
-          <h2 id="dev-lab-section-title" className="mt-2 text-2xl font-bold text-cyber-gold sm:text-3xl">{copy.title}<span className="ml-2 text-cyber-neonGreen" aria-hidden="true">_</span></h2>
+          <h2 id="dev-lab-section-title" className="mt-2 text-center text-2xl font-bold text-cyber-gold motion-safe:animate-[pulse_3s_ease-in-out_infinite] sm:text-3xl">{copy.title}<span className="ml-2 inline-block text-cyber-neonGreen motion-safe:animate-[blink_1s_steps(2,start)_infinite]" aria-hidden="true">_</span></h2>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-white/75">{copy.description}</p>
           <Link href="/dev-lab" className="mt-5 inline-flex w-fit items-center justify-center gap-2 rounded-xl border border-cyber-gold/60 bg-white/5 px-5 py-3 text-sm font-semibold tracking-wide text-cyber-gold transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyber-neonGreen">
             {copy.button}<span aria-hidden="true">↗</span>
@@ -49,7 +49,7 @@ export default function DevLabSection() {
           <p className="mt-2 text-white/65">→ {copy.terminal}</p>
           <p className="mt-1 text-white/65">→ {copy.visual}</p>
           <p className="mt-1 text-white/65">→ {copy.code}</p>
-          <div className="mt-4 flex items-center gap-2 text-cyber-gold"><span>ready</span><span className="h-3.5 w-1.5 animate-pulse bg-cyber-neonGreen" /></div>
+          <div className="mt-4 flex items-center gap-2 text-cyber-gold"><span>ready</span><span className="h-3.5 w-1.5 bg-cyber-neonGreen motion-safe:animate-[blink_1s_steps(2,start)_infinite]" /></div>
         </div>
       </div>
       <div className="mt-7 grid gap-3 sm:grid-cols-2">
