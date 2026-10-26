@@ -279,18 +279,26 @@ export default function DevLabExperience() {
                   </button>
                   <button type="button" onClick={() => setExpandedTool(expandedTool === tool.id ? null : tool.id)} aria-expanded={expandedTool === tool.id} aria-label={isEs ? (expandedTool === tool.id ? "Ocultar explicación de " : "Explicar ") + tool.name : (expandedTool === tool.id ? "Hide explanation for " : "Explain ") + tool.name} className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-cyber-gold/50 text-lg font-semibold text-cyber-gold transition hover:bg-cyber-gold/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyber-gold">{expandedTool === tool.id ? "−" : "+"}</button>
                 </div>
-                {expandedTool === tool.id && (
-                  <div className="mt-4 space-y-3 border-t border-cyber-gold/20 pt-3 text-xs leading-5 text-white/65">
-                    <p><strong className="text-cyber-gold">{isEs ? "Qué es" : "What it is"}:</strong> {explanations[tool.id].what}</p>
-                    <p><strong className="text-cyber-gold">{isEs ? "Por qué se usa" : "Why it is used"}:</strong> {explanations[tool.id].why}</p>
-                    <p><strong className="text-cyber-gold">{isEs ? "Cuándo usarla" : "When to use it"}:</strong> {explanations[tool.id].when}</p>
-                    <p><strong className="text-cyber-gold">{isEs ? "En qué ayuda" : "How it helps"}:</strong> {explanations[tool.id].useful}</p>
-                  </div>
-                )}
+
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
+        {expandedTool && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm" onClick={() => setExpandedTool(null)}>
+            <section role="dialog" aria-modal="true" aria-labelledby="dev-lab-explanation-title" onClick={(event) => event.stopPropagation()} className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-cyber-gold/40 bg-[#080b0d] p-5 shadow-[0_0_40px_rgba(255,190,60,0.12)] sm:p-7">
+              <button type="button" onClick={() => setExpandedTool(null)} aria-label={isEs ? "Cerrar explicación" : "Close explanation"} className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-lg border border-cyber-gold/40 text-xl text-cyber-gold transition hover:bg-cyber-gold/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyber-gold">×</button>
+              <p className="font-mono text-[10px] tracking-[.2em] text-cyber-gold">{isEs ? "GUÍA DE HERRAMIENTA" : "TOOL GUIDE"}</p>
+              <h2 id="dev-lab-explanation-title" className="mt-2 pr-12 text-xl font-bold text-white sm:text-2xl">{tools[locale].find((tool) => tool.id === expandedTool)?.name}</h2>
+              <div className="mt-5 space-y-4 text-sm leading-6 text-white/70">
+                <p><strong className="text-cyber-gold">{isEs ? "Qué es" : "What it is"}:</strong> {explanations[expandedTool].what}</p>
+                <p><strong className="text-cyber-gold">{isEs ? "Por qué se usa" : "Why it is used"}:</strong> {explanations[expandedTool].why}</p>
+                <p><strong className="text-cyber-gold">{isEs ? "Cuándo usarla" : "When to use it"}:</strong> {explanations[expandedTool].when}</p>
+                <p><strong className="text-cyber-gold">{isEs ? "En qué ayuda" : "How it helps"}:</strong> {explanations[expandedTool].useful}</p>
+              </div>
+            </section>
+          </div>
+        )}
         <div className="flex items-center gap-3 rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3">
           <p className="font-mono text-[10px] uppercase tracking-[.18em] text-cyber-neonGreen">{copy.privacyLabel}</p>
           <p className="text-xs leading-5 text-white/70">{copy.local}</p>
