@@ -4,8 +4,10 @@ import { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/lib/i18n";
 
-type ToolId = "json" | "base64" | "url" | "uuid" | "timestamp";
+type ToolId = "json" | "base64" | "url" | "uuid" | "timestamp" | "hash" | "case";
 type ToolDefinition = { id: ToolId; icon: string; name: string; description: string; tag: string };
+type HashAlgorithm = "SHA-256" | "SHA-384" | "SHA-512";
+type CaseMode = "upper" | "lower" | "title" | "camel" | "snake" | "kebab";
 
 const tools: Record<"es" | "en", ToolDefinition[]> = {
   es: [
@@ -14,6 +16,8 @@ const tools: Record<"es" | "en", ToolDefinition[]> = {
     { id: "url", icon: "%", name: "URL Encoder", description: "Codificá o decodificá componentes de URL.", tag: "WEB" },
     { id: "uuid", icon: "ID", name: "UUID Generator", description: "Generá identificadores únicos v4.", tag: "UTILITY" },
     { id: "timestamp", icon: "TS", name: "Timestamp", description: "Convertí fechas a Unix y viceversa.", tag: "TIME" },
+    { id: "hash", icon: "#", name: "Hash Generator", description: "Generá hashes SHA-256, SHA-384 y SHA-512.", tag: "CRYPTO" },
+    { id: "case", icon: "Aa", name: "Case Converter", description: "Convertí texto a camelCase, snake_case y más.", tag: "TEXT" },
   ],
   en: [
     { id: "json", icon: "{ }", name: "JSON Toolkit", description: "Validate, format, and minify JSON.", tag: "DATA" },
@@ -21,6 +25,8 @@ const tools: Record<"es" | "en", ToolDefinition[]> = {
     { id: "url", icon: "%", name: "URL Encoder", description: "Encode or decode URL components.", tag: "WEB" },
     { id: "uuid", icon: "ID", name: "UUID Generator", description: "Generate unique v4 identifiers.", tag: "UTILITY" },
     { id: "timestamp", icon: "TS", name: "Timestamp", description: "Convert dates to and from Unix time.", tag: "TIME" },
+    { id: "hash", icon: "#", name: "Hash Generator", description: "Generate SHA-256, SHA-384, and SHA-512 hashes.", tag: "CRYPTO" },
+    { id: "case", icon: "Aa", name: "Case Converter", description: "Convert text to camelCase, snake_case, and more.", tag: "TEXT" },
   ],
 };
 
@@ -30,6 +36,8 @@ const samples: Record<ToolId, string> = {
   url: "search=dev lab&mode=fast",
   uuid: "",
   timestamp: "2026-10-26T12:00:00Z",
+  hash: "Text to hash",
+  case: "Convert this text to camelCase",
 };
 
 export default function DevLabExperience() {
@@ -45,6 +53,8 @@ export default function DevLabExperience() {
   const [urlMode, setUrlMode] = useState<"encode" | "decode">("encode");
   const [jsonMode, setJsonMode] = useState<"pretty" | "minify">("pretty");
   const [uuidCount, setUuidCount] = useState("3");
+  const [hashAlgorithm, setHashAlgorithm] = useState<HashAlgorithm>("SHA-256");
+  const [caseMode, setCaseMode] = useState<CaseMode>("camel");
 
   const copy = isEs ? {
     back: "Volver", kicker: "CAJA DE HERRAMIENTAS PARA DEVELOPERS",
@@ -64,7 +74,9 @@ export default function DevLabExperience() {
     base64Error: "No se pudo decodificar Base64. Verificá la entrada.",
     urlError: "No se pudo decodificar el componente URL.",
     dateError: "Fecha o timestamp no válido.",
-    ready: "Listo para procesar.", featureTitle: "Hecho para el flujo de trabajo real",
+    ready: "Listo para procesar.", featureTitle: "Utilidades prácticas",
+    hashHint: "Generá el hash de un texto en tu navegador.", caseHint: "Elegí un formato y convertí el texto al instante.",
+    hashError: "No se pudo generar el hash. Probá de nuevo.", caseModes: { upper: "MAYÚSCULAS", lower: "minúsculas", title: "Título", camel: "camelCase", snake: "snake_case", kebab: "kebab-case" },
     feature1: "Resultados inmediatos", feature1d: "Sin esperas de red ni servicios externos.",
     feature2: "Privacidad por diseño", feature2d: "El procesamiento ocurre del lado del cliente.",
     feature3: "Herramientas concretas", feature3d: "Utilidades comunes para tareas cotidianas de desarrollo.",
@@ -86,7 +98,9 @@ export default function DevLabExperience() {
     base64Error: "Could not decode Base64. Check the input.",
     urlError: "Could not decode the URL component.",
     dateError: "Invalid date or timestamp.",
-    ready: "Ready to process.", featureTitle: "Built for real workflows",
+    ready: "Ready to process.", featureTitle: "Practical utilities",
+    hashHint: "Generate a text hash right in your browser.", caseHint: "Choose a format and convert text instantly.",
+    hashError: "Could not generate the hash. Try again.", caseModes: { upper: "UPPERCASE", lower: "lowercase", title: "Title Case", camel: "camelCase", snake: "snake_case", kebab: "kebab-case" },
     feature1: "Instant results", feature1d: "No network wait or external services.",
     feature2: "Privacy by design", feature2d: "All processing happens on the client side.",
     feature3: "Practical utilities", feature3d: "Common helpers for everyday development tasks.",
@@ -103,6 +117,8 @@ export default function DevLabExperience() {
     if (id === "base64") setBase64Mode("encode");
     if (id === "url") setUrlMode("encode");
     if (id === "json") setJsonMode("pretty");
+    if (id === "hash") setHashAlgorithm("SHA-256");
+    if (id === "case") setCaseMode("camel");
   }
 
   function loadSample() {
@@ -112,7 +128,7 @@ export default function DevLabExperience() {
     setNotice("");
   }
 
-  function process() {
+  async function process() {
     setError("");
     setNotice("");
     try {
@@ -136,17 +152,31 @@ export default function DevLabExperience() {
       } else if (activeTool === "uuid") {
         const count = Math.max(1, Math.min(20, Number(uuidCount) || 1));
         setOutput(Array.from({ length: count }, () => crypto.randomUUID()).join("\n"));
-      } else {
+      } else if (activeTool === "timestamp") {
         const raw = input.trim();
         const numeric = /^-?\d+(\.\d+)?$/.test(raw);
         const date = numeric ? new Date(Number(raw) * (raw.replace(/\D/g, "").length <= 10 ? 1000 : 1)) : new Date(raw);
         if (!raw || Number.isNaN(date.getTime())) throw new Error("invalid-date");
         setOutput(`ISO 8601  ${date.toISOString()}\nUnix (s)  ${Math.floor(date.getTime() / 1000)}\nUnix (ms) ${date.getTime()}\nUTC       ${date.toUTCString()}`);
+      } else if (activeTool === "hash") {
+        const digest = await crypto.subtle.digest(hashAlgorithm, new TextEncoder().encode(input));
+        setOutput(Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, "0")).join(""));
+      } else {
+        const words = input.trim().split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+        const lowerWords = words.map((word) => word.toLocaleLowerCase());
+        const titleWords = words.map((word) => word.charAt(0).toLocaleUpperCase() + word.slice(1).toLocaleLowerCase());
+        const result = caseMode === "upper" ? input.toLocaleUpperCase()
+          : caseMode === "lower" ? input.toLocaleLowerCase()
+          : caseMode === "title" ? titleWords.join(" ")
+          : caseMode === "snake" ? lowerWords.join("_")
+          : caseMode === "kebab" ? lowerWords.join("-")
+          : lowerWords.map((word, index) => index === 0 ? word : word.charAt(0).toLocaleUpperCase() + word.slice(1)).join("");
+        setOutput(result);
       }
       setNotice(activeTool === "json" ? copy.valid : copy.ready);
     } catch {
       setOutput("");
-      setError(activeTool === "json" ? copy.jsonError : activeTool === "base64" ? copy.base64Error : activeTool === "url" ? copy.urlError : copy.dateError);
+      setError(activeTool === "json" ? copy.jsonError : activeTool === "base64" ? copy.base64Error : activeTool === "url" ? copy.urlError : activeTool === "timestamp" ? copy.dateError : activeTool === "hash" ? copy.hashError : copy.ready);
     }
   }
 
@@ -174,7 +204,7 @@ export default function DevLabExperience() {
           <p className="mt-4 max-w-2xl text-sm leading-7 text-white/65 sm:text-base">{copy.intro}</p>
           <div className="mt-7 flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-wider text-white/50">
             <span className="rounded-full border border-white/10 px-3 py-1.5">Client-side</span>
-            <span className="rounded-full border border-white/10 px-3 py-1.5">5 utilities</span>
+            <span className="rounded-full border border-white/10 px-3 py-1.5">7 utilities</span>
             <span className="rounded-full border border-white/10 px-3 py-1.5">No dependencies</span>
           </div>
         </div>
@@ -183,7 +213,7 @@ export default function DevLabExperience() {
       <section className="space-y-6" aria-label={copy.tools}>
         <div className="flex items-center justify-between gap-3">
           <h2 className="text-xs font-semibold uppercase tracking-[.18em] text-white/65">{copy.tools}</h2>
-          <span className="shrink-0 font-mono text-[10px] text-white/30">05 MODULES</span>
+          <span className="shrink-0 font-mono text-[10px] text-white/30">07 MODULES</span>
         </div>
         <nav className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-3 [scrollbar-width:thin] lg:grid lg:grid-cols-3 lg:overflow-visible lg:pb-0" aria-label={copy.tools}>
           {tools[locale].map((tool, index) => (
@@ -217,7 +247,7 @@ export default function DevLabExperience() {
 
           <div className="space-y-4 p-4 sm:p-6">
             <p className="text-xs leading-5 text-white/45">
-              {activeTool === "json" ? copy.jsonHint : activeTool === "base64" ? copy.base64Hint : activeTool === "url" ? copy.urlHint : activeTool === "uuid" ? copy.uuidHint : copy.timestampHint}
+              {activeTool === "json" ? copy.jsonHint : activeTool === "base64" ? copy.base64Hint : activeTool === "url" ? copy.urlHint : activeTool === "uuid" ? copy.uuidHint : activeTool === "timestamp" ? copy.timestampHint : activeTool === "hash" ? copy.hashHint : copy.caseHint}
             </p>
 
             {activeTool === "json" && (
@@ -246,6 +276,22 @@ export default function DevLabExperience() {
 
             {activeTool === "timestamp" && (
               <button type="button" onClick={() => setInput(new Date().toISOString())} className="rounded-lg border border-white/10 px-3 py-2 text-xs text-white/60 transition hover:border-cyber-neonGreen/40 hover:text-cyber-neonGreen">{copy.now}</button>
+            )}
+            {activeTool === "hash" && (
+              <label className="flex max-w-xs items-center justify-between gap-4 text-xs text-white/65">
+                {isEs ? "Algoritmo" : "Algorithm"}
+                <select value={hashAlgorithm} onChange={(event) => setHashAlgorithm(event.target.value as HashAlgorithm)} className="rounded-lg border border-white/10 bg-[#101317] px-3 py-2 text-white outline-none focus:border-cyber-neonGreen/50">
+                  {(["SHA-256", "SHA-384", "SHA-512"] as const).map((algorithm) => <option key={algorithm} value={algorithm}>{algorithm}</option>)}
+                </select>
+              </label>
+            )}
+            {activeTool === "case" && (
+              <label className="flex flex-wrap items-center justify-between gap-4 text-xs text-white/65">
+                {isEs ? "Formato" : "Format"}
+                <select value={caseMode} onChange={(event) => setCaseMode(event.target.value as CaseMode)} className="max-w-full rounded-lg border border-white/10 bg-[#101317] px-3 py-2 text-white outline-none focus:border-cyber-neonGreen/50">
+                  {(["upper", "lower", "title", "camel", "snake", "kebab"] as const).map((mode) => <option key={mode} value={mode}>{copy.caseModes[mode]}</option>)}
+                </select>
+              </label>
             )}
 
             <div>
