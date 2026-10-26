@@ -79,7 +79,7 @@ export default function DevLabExperience() {
     base64Error: "No se pudo decodificar Base64. Verificá la entrada.",
     urlError: "No se pudo decodificar el componente URL.",
     dateError: "Fecha o timestamp no válido.",
-    ready: "Listo para procesar.", processError: "No se pudo procesar el texto.", featureTitle: "Herramientas",
+    welcomeTitle: "Bienvenidos", ready: "Listo para procesar.", processError: "No se pudo procesar el texto.", featureTitle: "Herramientas",
     hashHint: "Generá el hash de un texto en tu navegador.", caseHint: "Elegí un formato y convertí el texto al instante.",
     hashError: "No se pudo generar el hash. Probá de nuevo.", caseModes: { upper: "MAYÚSCULAS", lower: "minúsculas", title: "Título", camel: "camelCase", snake: "snake_case", kebab: "kebab-case" },
     feature1: "Resultados inmediatos", feature1d: "Sin esperas de red ni servicios externos.",
@@ -103,7 +103,7 @@ export default function DevLabExperience() {
     base64Error: "Could not decode Base64. Check the input.",
     urlError: "Could not decode the URL component.",
     dateError: "Invalid date or timestamp.",
-    ready: "Ready to process.", processError: "Could not process the text.", featureTitle: "Tools",
+    welcomeTitle: "Welcome", ready: "Ready to process.", processError: "Could not process the text.", featureTitle: "Tools",
     hashHint: "Generate a text hash right in your browser.", caseHint: "Choose a format and convert text instantly.",
     hashError: "Could not generate the hash. Try again.", caseModes: { upper: "UPPERCASE", lower: "lowercase", title: "Title Case", camel: "camelCase", snake: "snake_case", kebab: "kebab-case" },
     feature1: "Instant results", feature1d: "No network wait or external services.",
@@ -203,7 +203,7 @@ export default function DevLabExperience() {
       <header className="relative overflow-hidden rounded-3xl border border-cyber-neonGreen/20 bg-[#080b0d] px-5 py-8 sm:px-9 sm:py-12">
         <div aria-hidden="true" className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-cyber-neonGreen/10 blur-3xl" />
         <div className="relative mx-auto w-full text-center">
-          <h1 className="mt-4 text-4xl font-black tracking-[-.06em] text-white motion-safe:animate-[pulse_3s_ease-in-out_infinite] sm:text-6xl">DEV <span className="text-cyber-gold">LAB</span></h1>
+          <h1 className="mt-4 text-4xl font-black tracking-[-.06em] text-white motion-safe:animate-[pulse_3s_ease-in-out_infinite] sm:text-6xl">{copy.welcomeTitle}</h1>
 
         </div>
       </header>
