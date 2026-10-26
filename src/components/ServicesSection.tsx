@@ -338,7 +338,7 @@ export default function ServicesSection() {
                 <h3 className="text-lg font-semibold text-cyber-gold">{service.name}</h3>
                 <p className="mt-1 text-xl font-bold text-white">{service.price}</p>
                 {usdToArs !== null && getArsEquivalent(service.price, usdToArs, language) && (
-                  <p className="mt-1 text-sm font-semibold text-cyber-neonGreen">
+                  <p className="mt-1 max-w-full overflow-x-auto whitespace-nowrap text-xs font-semibold text-cyber-neonGreen">
                     {getArsEquivalent(service.price, usdToArs, language)}
                   </p>
                 )}
