@@ -95,6 +95,22 @@ export default function DevLabExperience() {
         <p className="mt-3 text-sm leading-7 text-white/75 sm:text-base">{copy.subtitle}</p>
       </header>
 
+      <div className="grid gap-3 sm:grid-cols-3" aria-label={isEs ? "Resumen del laboratorio" : "Lab overview"}>
+        {[
+          { value: "05", label: isEs ? "Comandos disponibles" : "Available commands", detail: "CLI / INPUT" },
+          { value: "02", label: isEs ? "Parámetros en vivo" : "Live parameters", detail: "STATE / CSS" },
+          { value: "0", label: isEs ? "Dependencias nuevas" : "New dependencies", detail: "LIGHTWEIGHT" },
+        ].map((item) => (
+          <div key={item.detail} className="rounded-xl border border-white/10 bg-black/25 px-4 py-3">
+            <div className="flex items-baseline justify-between gap-3">
+              <span className="text-2xl font-bold tracking-tight text-cyber-gold">{item.value}</span>
+              <span className="font-mono text-[9px] tracking-[0.18em] text-cyber-neonGreen/70">{item.detail}</span>
+            </div>
+            <p className="mt-1 text-xs text-white/60">{item.label}</p>
+          </div>
+        ))}
+      </div>
+
       <section className="overflow-hidden rounded-2xl border border-cyber-neonGreen/25 bg-[#080b0d] shadow-[0_0_36px_rgba(5,247,183,0.06)]" aria-labelledby="dev-lab-terminal-title">
         <div className="flex items-center gap-1.5 border-b border-white/10 px-4 py-3">
           <span className="h-2.5 w-2.5 rounded-full bg-rose-400/80" />
@@ -122,6 +138,18 @@ export default function DevLabExperience() {
             <button type="submit" className="rounded-lg border border-cyber-neonGreen/50 px-4 py-3 text-sm font-semibold text-cyber-neonGreen transition hover:bg-cyber-neonGreen/10">{copy.run}</button>
           </form>
           <p className="text-xs leading-relaxed text-white/45">{copy.commands}: <span className="text-white/70">help · about · stack · projects · clear</span></p>
+          <div className="flex flex-wrap gap-2" aria-label={isEs ? "Comandos rápidos" : "Quick commands"}>
+            {["help", "about", "stack", "projects", "clear"].map((quickCommand) => (
+              <button
+                key={quickCommand}
+                type="button"
+                onClick={() => setCommand(quickCommand)}
+                className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 font-mono text-[11px] text-white/65 transition hover:border-cyber-neonGreen/50 hover:text-cyber-neonGreen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyber-neonGreen"
+              >
+                {quickCommand}
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
