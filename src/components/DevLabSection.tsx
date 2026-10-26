@@ -49,7 +49,7 @@ export default function DevLabSection() {
           <p className="mt-2 text-white/65">→ {copy.terminal}</p>
           <p className="mt-1 text-white/65">→ {copy.visual}</p>
           <p className="mt-1 text-white/65">→ {copy.code}</p>
-          <div className="mt-4 flex items-center gap-2 text-cyber-gold"><span>ready</span><span className="h-3.5 w-1.5 bg-cyber-neonGreen motion-safe:animate-[blink_1s_steps(2,start)_infinite]" /></div>
+          <div className="mt-4 flex items-center gap-2 text-cyber-gold"><span>ready</span><span className="dev-lab-title-cursor h-3.5 w-1.5 bg-cyber-neonGreen" /></div>
         </div>
       </div>
       <div className="mt-7 grid gap-3 sm:grid-cols-2">
