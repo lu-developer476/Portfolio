@@ -75,7 +75,7 @@ export default function DevLabExperience() {
     base64Error: "No se pudo decodificar Base64. Verificá la entrada.",
     urlError: "No se pudo decodificar el componente URL.",
     dateError: "Fecha o timestamp no válido.",
-    ready: "Listo para procesar.", featureTitle: "Herramientas útiles",
+    ready: "Listo para procesar.", processError: "No se pudo procesar el texto.", featureTitle: "Herramientas útiles",
     hashHint: "Generá el hash de un texto en tu navegador.", caseHint: "Elegí un formato y convertí el texto al instante.",
     hashError: "No se pudo generar el hash. Probá de nuevo.", caseModes: { upper: "MAYÚSCULAS", lower: "minúsculas", title: "Título", camel: "camelCase", snake: "snake_case", kebab: "kebab-case" },
     feature1: "Resultados inmediatos", feature1d: "Sin esperas de red ni servicios externos.",
@@ -100,7 +100,7 @@ export default function DevLabExperience() {
     base64Error: "Could not decode Base64. Check the input.",
     urlError: "Could not decode the URL component.",
     dateError: "Invalid date or timestamp.",
-    ready: "Ready to process.", featureTitle: "Useful tools",
+    ready: "Ready to process.", processError: "Could not process the text.", featureTitle: "Useful tools",
     hashHint: "Generate a text hash right in your browser.", caseHint: "Choose a format and convert text instantly.",
     hashError: "Could not generate the hash. Try again.", caseModes: { upper: "UPPERCASE", lower: "lowercase", title: "Title Case", camel: "camelCase", snake: "snake_case", kebab: "kebab-case" },
     feature1: "Instant results", feature1d: "No network wait or external services.",
@@ -164,7 +164,7 @@ export default function DevLabExperience() {
         const digest = await crypto.subtle.digest(hashAlgorithm, new TextEncoder().encode(input));
         setOutput(Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, "0")).join(""));
       } else {
-        const words = input.trim().split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+        const words = input.trim().replace(/([\p{Ll}\d])(\p{Lu})/gu, "$1 $2").split(/[^\p{L}\p{N}]+/u).filter(Boolean);
         const lowerWords = words.map((word) => word.toLocaleLowerCase());
         const titleWords = words.map((word) => word.charAt(0).toLocaleUpperCase() + word.slice(1).toLocaleLowerCase());
         const result = caseMode === "upper" ? input.toLocaleUpperCase()
@@ -178,7 +178,7 @@ export default function DevLabExperience() {
       setNotice(activeTool === "json" ? copy.valid : copy.ready);
     } catch {
       setOutput("");
-      setError(activeTool === "json" ? copy.jsonError : activeTool === "base64" ? copy.base64Error : activeTool === "url" ? copy.urlError : activeTool === "timestamp" ? copy.dateError : activeTool === "hash" ? copy.hashError : copy.ready);
+      setError(activeTool === "json" ? copy.jsonError : activeTool === "base64" ? copy.base64Error : activeTool === "url" ? copy.urlError : activeTool === "timestamp" ? copy.dateError : activeTool === "hash" ? copy.hashError : copy.processError);
     }
   }
 
