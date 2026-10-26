@@ -60,6 +60,7 @@ export default function DevLabExperience() {
     back: "Volver", kicker: "CAJA DE HERRAMIENTAS PARA DEVELOPERS",
     intro: "Herramientas pequeñas, útiles y ejecutadas en tu navegador.",
     tools: "Herramientas", select: "Seleccioná una herramienta para empezar.",
+    clientSide: "En navegador", utilityCount: "7 herramientas", dependencies: "Sin dependencias", modules: "07 MÓDULOS", privacyLabel: "PRIVACIDAD / 100%", whyLab: "POR QUÉ ESTE LAB", sectionLabel: "LOCAL FIRST / PARA DESARROLLADORES",
     input: "ENTRADA", output: "RESULTADO", run: "Procesar", copy: "Copiar resultado",
     copied: "Copiado al portapapeles", reset: "Restablecer", sample: "Cargar ejemplo",
     pretty: "Formatear", minify: "Compactar", encode: "Codificar", decode: "Decodificar",
@@ -74,7 +75,7 @@ export default function DevLabExperience() {
     base64Error: "No se pudo decodificar Base64. Verificá la entrada.",
     urlError: "No se pudo decodificar el componente URL.",
     dateError: "Fecha o timestamp no válido.",
-    ready: "Listo para procesar.", featureTitle: "Utilidades prácticas",
+    ready: "Listo para procesar.", featureTitle: "Herramientas útiles",
     hashHint: "Generá el hash de un texto en tu navegador.", caseHint: "Elegí un formato y convertí el texto al instante.",
     hashError: "No se pudo generar el hash. Probá de nuevo.", caseModes: { upper: "MAYÚSCULAS", lower: "minúsculas", title: "Título", camel: "camelCase", snake: "snake_case", kebab: "kebab-case" },
     feature1: "Resultados inmediatos", feature1d: "Sin esperas de red ni servicios externos.",
@@ -84,6 +85,7 @@ export default function DevLabExperience() {
     back: "Back", kicker: "A DEVELOPER'S TOOLBOX",
     intro: "Small, useful tools running right in your browser.",
     tools: "Tools", select: "Select a tool to get started.",
+    clientSide: "Client-side", utilityCount: "7 utilities", dependencies: "No dependencies", modules: "07 MODULES", privacyLabel: "PRIVACY / 100%", whyLab: "WHY THIS LAB", sectionLabel: "LOCAL FIRST / BUILT FOR DEVELOPERS",
     input: "INPUT", output: "OUTPUT", run: "Process", copy: "Copy result",
     copied: "Copied to clipboard", reset: "Reset", sample: "Load example",
     pretty: "Format", minify: "Minify", encode: "Encode", decode: "Decode",
@@ -98,7 +100,7 @@ export default function DevLabExperience() {
     base64Error: "Could not decode Base64. Check the input.",
     urlError: "Could not decode the URL component.",
     dateError: "Invalid date or timestamp.",
-    ready: "Ready to process.", featureTitle: "Practical utilities",
+    ready: "Ready to process.", featureTitle: "Useful tools",
     hashHint: "Generate a text hash right in your browser.", caseHint: "Choose a format and convert text instantly.",
     hashError: "Could not generate the hash. Try again.", caseModes: { upper: "UPPERCASE", lower: "lowercase", title: "Title Case", camel: "camelCase", snake: "snake_case", kebab: "kebab-case" },
     feature1: "Instant results", feature1d: "No network wait or external services.",
@@ -203,9 +205,9 @@ export default function DevLabExperience() {
           <h1 className="mt-4 text-4xl font-black tracking-[-.06em] text-white sm:text-6xl">DEV <span className="text-cyber-gold">LAB</span></h1>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-white/65 sm:text-base">{copy.intro}</p>
           <div className="mt-7 flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-wider text-white/50">
-            <span className="rounded-full border border-white/10 px-3 py-1.5">Client-side</span>
-            <span className="rounded-full border border-white/10 px-3 py-1.5">7 utilities</span>
-            <span className="rounded-full border border-white/10 px-3 py-1.5">No dependencies</span>
+            <span className="rounded-full border border-white/10 px-3 py-1.5">{copy.clientSide}</span>
+            <span className="rounded-full border border-white/10 px-3 py-1.5">{copy.utilityCount}</span>
+            <span className="rounded-full border border-white/10 px-3 py-1.5">{copy.dependencies}</span>
           </div>
         </div>
       </header>
@@ -213,7 +215,7 @@ export default function DevLabExperience() {
       <section className="space-y-6" aria-label={copy.tools}>
         <div className="flex items-center justify-between gap-3">
           <h2 className="text-xs font-semibold uppercase tracking-[.18em] text-white/65">{copy.tools}</h2>
-          <span className="shrink-0 font-mono text-[10px] text-white/30">07 MODULES</span>
+          <span className="shrink-0 font-mono text-[10px] text-white/30">{copy.modules}</span>
         </div>
         <nav className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-3 [scrollbar-width:thin] lg:grid lg:grid-cols-3 lg:overflow-visible lg:pb-0" aria-label={copy.tools}>
           {tools[locale].map((tool, index) => (
@@ -229,7 +231,7 @@ export default function DevLabExperience() {
           ))}
         </nav>
         <div className="flex items-center gap-3 rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3">
-          <p className="shrink-0 font-mono text-[9px] uppercase tracking-[.2em] text-cyber-neonGreen">PRIVACY / 100%</p>
+          <p className="shrink-0 font-mono text-[9px] uppercase tracking-[.2em] text-cyber-neonGreen">{copy.privacyLabel}</p>
           <p className="text-xs leading-5 text-white/45">{copy.local}</p>
         </div>
 
@@ -324,10 +326,10 @@ export default function DevLabExperience() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[.2em] text-cyber-neonGreen">WHY THIS LAB</p>
+            <p className="font-mono text-[10px] uppercase tracking-[.2em] text-cyber-neonGreen">{copy.whyLab}</p>
             <h2 className="mt-2 text-xl font-bold text-white sm:text-2xl">{copy.featureTitle}</h2>
           </div>
-          <span className="font-mono text-[10px] text-white/30">LOCAL FIRST / BUILT FOR DEVELOPERS</span>
+          <span className="font-mono text-[10px] text-white/30">{copy.sectionLabel}</span>
         </div>
         <div className="grid gap-3 md:grid-cols-3">
           {[
