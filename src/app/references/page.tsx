@@ -13,7 +13,7 @@ export default function ReferencesPage() {
     : { title: "Leading Market Brands", subtitle: "Products, design systems, and public resources can provide useful study material for web, UX/UI, and development projects.", intro: "What to look for in each reference", learn: "What is worth studying", open: "View official resource", back: "Back", disclaimer: "Names and logos belong to their respective owners. This does not imply sponsorship, affiliation, or a commercial relationship." };
 
   return (
-    <div className="space-y-8">
+    <div className="references-page space-y-8">
       <div>
         <Link href="/" className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-black/30 px-3 py-2 text-sm text-white/75 transition hover:border-cyber-neonGreen/60 hover:text-cyber-neonGreen">
           <span aria-hidden="true">←</span>{copy.back}
@@ -34,7 +34,7 @@ export default function ReferencesPage() {
                   )}
                 </span>
                 <div className="min-w-0">
-                  <h3 className="text-lg font-semibold text-cyber-gold">{company.name}</h3>
+                  <h3 className="references-company-name text-lg font-semibold text-cyber-gold">{company.name}</h3>
                   <p className="mt-1 text-sm leading-relaxed text-white/60">{isSpanish ? company.focusEs : company.focusEn}</p>
                 </div>
               </div>
