@@ -340,9 +340,6 @@ export default function ServicesSection() {
                 {usdToArs !== null && getArsEquivalent(service.price, usdToArs, language) && (
                   <p className="mt-1 text-sm font-semibold text-cyber-neonGreen">
                     {getArsEquivalent(service.price, usdToArs, language)}
-                    <span className="mt-0.5 block text-[11px] font-normal text-white/50">
-                      {language === "es" ? "Equivalente aprox. en ARS · dólar MEP vendedor" : "Approx. ARS equivalent · MEP selling rate"}
-                    </span>
                   </p>
                 )}
                 <p className="text-xs text-white/50">{language === "es" ? "por proyecto, salvo que se indique lo contrario" : "per project unless stated otherwise"}</p>
