@@ -1489,3 +1489,16 @@ html[data-theme="cloud"] .references-page .references-company-name {
   color: #000000 !important;
   text-shadow: none !important;
 }
+
+
+/* Hard override for brand names in Claro and Neblina on /references. */
+html[data-theme="light"] .references-page h3.references-company-name,
+body[data-theme="light"] .references-page h3.references-company-name,
+[data-theme="light"] .references-page h3.references-company-name,
+html[data-theme="cloud"] .references-page h3.references-company-name,
+body[data-theme="cloud"] .references-page h3.references-company-name,
+[data-theme="cloud"] .references-page h3.references-company-name {
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  text-shadow: none !important;
+}
