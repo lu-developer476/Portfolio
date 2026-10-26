@@ -61,10 +61,10 @@ export default function DevLabExperience() {
   const [caseMode, setCaseMode] = useState<CaseMode>("camel");
 
   const copy = isEs ? {
-    back: "Volver", kicker: "CAJA DE HERRAMIENTAS PARA DESARROLLADORES",
-    intro: "Herramientas pequeñas, útiles y ejecutadas en tu navegador",
+    back: "Volver",
+    intro: "Útiles y ejecutadas en tu navegador",
     tools: "Herramientas", select: "Seleccioná una herramienta para empezar.",
-    privacyLabel: "PRIVACIDAD", sectionLabel: "LOCAL FIRST / PARA DESARROLLADORES",
+    privacyLabel: "PRIVACIDAD",
     input: "ENTRADA", output: "RESULTADO", run: "Procesar", copy: "Copiar resultado",
     copied: "Copiado al portapapeles", reset: "Restablecer", sample: "Cargar ejemplo",
     pretty: "Formatear", minify: "Compactar", encode: "Codificar", decode: "Decodificar",
@@ -79,16 +79,16 @@ export default function DevLabExperience() {
     base64Error: "No se pudo decodificar Base64. Verificá la entrada.",
     urlError: "No se pudo decodificar el componente URL.",
     dateError: "Fecha o timestamp no válido.",
-    ready: "Listo para procesar.", processError: "No se pudo procesar el texto.", featureTitle: "Herramientas útiles",
+    ready: "Listo para procesar.", processError: "No se pudo procesar el texto.", featureTitle: "Herramientas",
     hashHint: "Generá el hash de un texto en tu navegador.", caseHint: "Elegí un formato y convertí el texto al instante.",
     hashError: "No se pudo generar el hash. Probá de nuevo.", caseModes: { upper: "MAYÚSCULAS", lower: "minúsculas", title: "Título", camel: "camelCase", snake: "snake_case", kebab: "kebab-case" },
     feature1: "Resultados inmediatos", feature1d: "Sin esperas de red ni servicios externos.",
     feature2: "Privacidad por diseño", feature2d: "El procesamiento ocurre del lado del cliente.",
       } : {
-    back: "Back", kicker: "TOOLBOX FOR DEVELOPERS",
-    intro: "Small, useful tools running right in your browser",
+    back: "Back",
+    intro: "Useful tools running in your browser",
     tools: "Tools", select: "Select a tool to get started.",
-    privacyLabel: "PRIVACY", sectionLabel: "LOCAL FIRST / BUILT FOR DEVELOPERS",
+    privacyLabel: "PRIVACY",
     input: "INPUT", output: "OUTPUT", run: "Process", copy: "Copy result",
     copied: "Copied to clipboard", reset: "Reset", sample: "Load example",
     pretty: "Format", minify: "Minify", encode: "Encode", decode: "Decode",
@@ -103,7 +103,7 @@ export default function DevLabExperience() {
     base64Error: "Could not decode Base64. Check the input.",
     urlError: "Could not decode the URL component.",
     dateError: "Invalid date or timestamp.",
-    ready: "Ready to process.", processError: "Could not process the text.", featureTitle: "Useful tools",
+    ready: "Ready to process.", processError: "Could not process the text.", featureTitle: "Tools",
     hashHint: "Generate a text hash right in your browser.", caseHint: "Choose a format and convert text instantly.",
     hashError: "Could not generate the hash. Try again.", caseModes: { upper: "UPPERCASE", lower: "lowercase", title: "Title Case", camel: "camelCase", snake: "snake_case", kebab: "kebab-case" },
     feature1: "Instant results", feature1d: "No network wait or external services.",
@@ -203,7 +203,6 @@ export default function DevLabExperience() {
       <header className="relative overflow-hidden rounded-3xl border border-cyber-neonGreen/20 bg-[#080b0d] px-5 py-8 sm:px-9 sm:py-12">
         <div aria-hidden="true" className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-cyber-neonGreen/10 blur-3xl" />
         <div className="relative max-w-3xl">
-          <p className="flex items-center gap-2 font-mono text-[10px] font-semibold uppercase tracking-[.22em] text-cyber-neonGreen"><span className="h-1.5 w-1.5 rounded-full bg-cyber-neonGreen shadow-[0_0_12px_rgba(5,247,183,.8)]" />{copy.kicker}</p>
           <h1 className="mt-4 text-4xl font-black tracking-[-.06em] text-white sm:text-6xl">DEV <span className="text-cyber-gold">LAB</span></h1>
 
         </div>
@@ -215,9 +214,8 @@ export default function DevLabExperience() {
             <h2 className="text-xl font-bold text-white sm:text-2xl">{copy.featureTitle}</h2>
             <p className="mt-2 text-sm leading-6 text-white/55">{copy.intro}</p>
           </div>
-          <span className="font-mono text-[10px] text-white/30">{copy.sectionLabel}</span>
         </div>
-        <div className="grid gap-3 md:grid-cols-3">
+        <div className="grid gap-3 md:grid-cols-2">
           {[
             { n: "01", title: copy.feature1, description: copy.feature1d },
             { n: "02", title: copy.feature2, description: copy.feature2d },
