@@ -62,9 +62,9 @@ export default function DevLabExperience() {
 
   const copy = isEs ? {
     back: "Volver", kicker: "CAJA DE HERRAMIENTAS PARA DESARROLLADORES",
-    intro: "Herramientas pequeñas, útiles y ejecutadas en tu navegador.",
+    intro: "Herramientas pequeñas, útiles y ejecutadas en tu navegador",
     tools: "Herramientas", select: "Seleccioná una herramienta para empezar.",
-    privacyLabel: "PRIVACIDAD", whyLab: "POR QUÉ ESTE LAB", sectionLabel: "LOCAL FIRST / PARA DESARROLLADORES",
+    privacyLabel: "PRIVACIDAD", sectionLabel: "LOCAL FIRST / PARA DESARROLLADORES",
     input: "ENTRADA", output: "RESULTADO", run: "Procesar", copy: "Copiar resultado",
     copied: "Copiado al portapapeles", reset: "Restablecer", sample: "Cargar ejemplo",
     pretty: "Formatear", minify: "Compactar", encode: "Codificar", decode: "Decodificar",
@@ -84,12 +84,11 @@ export default function DevLabExperience() {
     hashError: "No se pudo generar el hash. Probá de nuevo.", caseModes: { upper: "MAYÚSCULAS", lower: "minúsculas", title: "Título", camel: "camelCase", snake: "snake_case", kebab: "kebab-case" },
     feature1: "Resultados inmediatos", feature1d: "Sin esperas de red ni servicios externos.",
     feature2: "Privacidad por diseño", feature2d: "El procesamiento ocurre del lado del cliente.",
-    feature3: "Herramientas concretas", feature3d: "Utilidades comunes para tareas cotidianas de desarrollo.",
-  } : {
+      } : {
     back: "Back", kicker: "TOOLBOX FOR DEVELOPERS",
-    intro: "Small, useful tools running right in your browser.",
+    intro: "Small, useful tools running right in your browser",
     tools: "Tools", select: "Select a tool to get started.",
-    privacyLabel: "PRIVACY", whyLab: "WHY THIS LAB", sectionLabel: "LOCAL FIRST / BUILT FOR DEVELOPERS",
+    privacyLabel: "PRIVACY", sectionLabel: "LOCAL FIRST / BUILT FOR DEVELOPERS",
     input: "INPUT", output: "OUTPUT", run: "Process", copy: "Copy result",
     copied: "Copied to clipboard", reset: "Reset", sample: "Load example",
     pretty: "Format", minify: "Minify", encode: "Encode", decode: "Decode",
@@ -109,8 +108,7 @@ export default function DevLabExperience() {
     hashError: "Could not generate the hash. Try again.", caseModes: { upper: "UPPERCASE", lower: "lowercase", title: "Title Case", camel: "camelCase", snake: "snake_case", kebab: "kebab-case" },
     feature1: "Instant results", feature1d: "No network wait or external services.",
     feature2: "Privacy by design", feature2d: "All processing happens on the client side.",
-    feature3: "Practical utilities", feature3d: "Common helpers for everyday development tasks.",
-  };
+      };
 
   const selected = tools[locale].find((tool) => tool.id === activeTool)!;
 
@@ -207,7 +205,6 @@ export default function DevLabExperience() {
         <div className="relative max-w-3xl">
           <p className="flex items-center gap-2 font-mono text-[10px] font-semibold uppercase tracking-[.22em] text-cyber-neonGreen"><span className="h-1.5 w-1.5 rounded-full bg-cyber-neonGreen shadow-[0_0_12px_rgba(5,247,183,.8)]" />{copy.kicker}</p>
           <h1 className="mt-4 text-4xl font-black tracking-[-.06em] text-white sm:text-6xl">DEV <span className="text-cyber-gold">LAB</span></h1>
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-white/65 sm:text-base">{copy.intro}</p>
 
         </div>
       </header>
@@ -215,8 +212,8 @@ export default function DevLabExperience() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[.2em] text-cyber-neonGreen">{copy.whyLab}</p>
-            <h2 className="mt-2 text-xl font-bold text-white sm:text-2xl">{copy.featureTitle}</h2>
+            <h2 className="text-xl font-bold text-white sm:text-2xl">{copy.featureTitle}</h2>
+            <p className="mt-2 text-sm leading-6 text-white/55">{copy.intro}</p>
           </div>
           <span className="font-mono text-[10px] text-white/30">{copy.sectionLabel}</span>
         </div>
@@ -224,10 +221,9 @@ export default function DevLabExperience() {
           {[
             { n: "01", title: copy.feature1, description: copy.feature1d },
             { n: "02", title: copy.feature2, description: copy.feature2d },
-            { n: "03", title: copy.feature3, description: copy.feature3d },
           ].map((item) => (
             <article key={item.n} className="rounded-xl border border-white/[0.08] bg-black/20 p-5">
-              <span className="font-mono text-xs text-cyber-gold">{item.n} / 03</span>
+              <span className="font-mono text-xs text-cyber-gold">{item.n} / 02</span>
               <h3 className="mt-4 text-sm font-semibold text-white/85">{item.title}</h3>
               <p className="mt-2 text-xs leading-6 text-white/45">{item.description}</p>
             </article>
@@ -237,7 +233,6 @@ export default function DevLabExperience() {
 
 
       <section className="space-y-6" aria-label={copy.tools}>
-        <h2 className="text-xs font-semibold uppercase tracking-[.18em] text-white/65">{copy.tools}</h2>
         <Swiper
           modules={[Navigation]}
           navigation
