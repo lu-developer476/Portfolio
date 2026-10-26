@@ -203,7 +203,7 @@ export default function DevLabExperience() {
       <header className="relative flex min-h-40 items-center justify-center overflow-hidden rounded-3xl border border-cyber-neonGreen/20 bg-[#080b0d] px-5 py-8 text-center sm:min-h-48 sm:px-9 sm:py-12">
         <div aria-hidden="true" className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-cyber-neonGreen/10 blur-3xl" />
         <div className="relative mx-auto w-full">
-          <h1 className="text-4xl font-black tracking-[-.06em] motion-safe:animate-[pulse_3s_ease-in-out_infinite] sm:text-6xl"><span className="text-cyber-neonGreen">{isEs ? "ACCESO" : "ACCESS"}</span>{" "}<span className="text-white">{isEs ? "CON" : "GRANTED"}</span>{isEs && <> <span className="text-cyber-gold">CEDIDO</span></>}</h1>
+          <h1 className="text-4xl font-black tracking-[-.06em] text-cyber-neonGreen [text-shadow:0_0_6px_rgba(57,255,20,0.35),0_0_14px_rgba(57,255,20,0.18)] motion-safe:animate-[pulse_3s_ease-in-out_infinite] sm:text-6xl">{copy.welcomeTitle}</h1>
 
         </div>
       </header>
