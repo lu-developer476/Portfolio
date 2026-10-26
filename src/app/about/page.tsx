@@ -2,6 +2,7 @@
 
 import Section from "@/components/Section";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
+import DevLabSection from "@/components/DevLabSection";
 import { personalProjects } from "@/config/personalprojects";
 import { professionalProjects } from "@/config/professionalprojects";
 import {
@@ -285,6 +286,8 @@ export default function AboutPage() {
           </div>
         </div>
       </Section>
+
+      <DevLabSection />
     </div>
   );
 }
