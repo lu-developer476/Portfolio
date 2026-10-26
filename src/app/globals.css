@@ -1510,3 +1510,10 @@ html[data-theme="cloud"] .references-page p.text-white\\/60 {
   color: #000000 !important;
   -webkit-text-fill-color: #000000 !important;
 }
+
+/* Correct selector: the small paragraph directly below each brand title. */
+html[data-theme="light"] .references-page .flex.items-center.gap-3 p.mt-1,
+html[data-theme="cloud"] .references-page .flex.items-center.gap-3 p.mt-1 {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
