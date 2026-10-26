@@ -52,6 +52,18 @@ export default function DevLabSection() {
           <div className="mt-4 flex items-center gap-2 text-cyber-gold"><span>ready</span><span className="h-3.5 w-1.5 animate-pulse bg-cyber-neonGreen" /></div>
         </div>
       </div>
+      <div className="mt-7 grid gap-3 sm:grid-cols-3">
+        {copy.features.map((feature, index) => (
+          <article key={feature.title} className="group rounded-xl border border-white/10 bg-black/25 p-4 transition duration-300 hover:-translate-y-0.5 hover:border-cyber-neonGreen/35 hover:bg-cyber-neonGreen/[0.035]">
+            <div className="mb-3 flex items-center gap-2">
+              <span className="font-mono text-[10px] text-cyber-neonGreen/70">0{index + 1}</span>
+              <span className="h-px flex-1 bg-white/10 transition group-hover:bg-cyber-neonGreen/30" />
+            </div>
+            <h3 className="text-sm font-semibold text-cyber-gold">{feature.title}</h3>
+            <p className="mt-2 text-xs leading-6 text-white/60">{feature.detail}</p>
+          </article>
+        ))}
+      </div>
     </section>
   );
 }
