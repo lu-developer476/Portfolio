@@ -1511,3 +1511,10 @@ html[data-theme="cloud"] .references-page .references-description {
   -webkit-text-fill-color: #000000 !important;
   text-shadow: none !important;
 }
+
+/* Descriptive copy below each brand title on /references: dark orange-brown in Beige. */
+html[data-theme="beige"] .references-page .references-description {
+  color: #704214 !important;
+  -webkit-text-fill-color: #704214 !important;
+  text-shadow: none !important;
+}
