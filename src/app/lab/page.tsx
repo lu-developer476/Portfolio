@@ -1,20 +1,13 @@
 "use client";
 
-import Section from "@/components/Section";
 import DevLabExperience from "@/components/DevLabExperience";
-import { useLanguage } from "@/lib/i18n";
 
 export default function LabPage() {
-  const { language } = useLanguage();
-  const subtitle = language === "es"
-    ? "Experimentos interactivos para explorar ideas, probar variables y entender decisiones técnicas."
-    : "Interactive experiments to explore ideas, test variables, and understand technical decisions.";
-
   return (
     <div className="space-y-8">
-      <Section id="dev-lab" title="DEV LAB" subtitle={subtitle}>
+      <section id="dev-lab" className="scroll-mt-24 min-w-0 border-t border-white/5 pt-10 first:border-none first:pt-0 sm:scroll-mt-28 sm:pt-14 md:pt-16">
         <DevLabExperience />
-      </Section>
+      </section>
     </div>
   );
 }
