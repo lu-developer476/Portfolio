@@ -1502,3 +1502,11 @@ body[data-theme="cloud"] .references-page h3.references-company-name,
   -webkit-text-fill-color: #000 !important;
   text-shadow: none !important;
 }
+
+
+/* Descriptive copy below each brand title on /references: black in Claro and Neblina. */
+html[data-theme="light"] .references-page p.text-white\\/60,
+html[data-theme="cloud"] .references-page p.text-white\\/60 {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
