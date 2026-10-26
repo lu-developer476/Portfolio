@@ -13,7 +13,8 @@ export default function DevLabSection() {
         terminal: "Terminal interactiva",
         visual: "Laboratorio visual",
         code: "Decisiones técnicas explicadas",
-        button: "Entrar al laboratorio"
+        button: "Entrar al laboratorio",
+        features: [{ title: "Interacción real", detail: "Controles y estado reactivo, sin simulaciones de backend." }, { title: "Código transparente", detail: "Cada experimento explica qué decisión técnica demuestra." }, { title: "Ligero por diseño", detail: "Sin dependencias nuevas ni envío de datos." }]
       }
     : {
         eyebrow: "EXPERIMENTATION · INTERACTION · CODE",
@@ -22,7 +23,8 @@ export default function DevLabSection() {
         terminal: "Interactive terminal",
         visual: "Visual lab",
         code: "Technical decisions explained",
-        button: "Enter the lab"
+        button: "Enter the lab",
+        features: [{ title: "Real interaction", detail: "Controls and reactive state, without backend simulation." }, { title: "Transparent code", detail: "Each experiment explains the technical decision behind it." }, { title: "Lightweight by design", detail: "No extra dependencies and no data submission." }]
       };
 
   return (
