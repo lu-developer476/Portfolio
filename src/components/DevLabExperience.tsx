@@ -2,6 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 import { useLanguage } from "@/lib/i18n";
 
 type ToolId = "json" | "base64" | "url" | "uuid" | "timestamp" | "hash" | "case";
@@ -57,16 +61,16 @@ export default function DevLabExperience() {
   const [caseMode, setCaseMode] = useState<CaseMode>("camel");
 
   const copy = isEs ? {
-    back: "Volver", kicker: "CAJA DE HERRAMIENTAS PARA DEVELOPERS",
+    back: "Volver", kicker: "CAJA DE HERRAMIENTAS PARA DESARROLLADORES",
     intro: "Herramientas pequeñas, útiles y ejecutadas en tu navegador.",
     tools: "Herramientas", select: "Seleccioná una herramienta para empezar.",
-    clientSide: "En navegador", utilityCount: "7 herramientas", dependencies: "Sin dependencias", modules: "07 MÓDULOS", privacyLabel: "PRIVACIDAD / 100%", whyLab: "POR QUÉ ESTE LAB", sectionLabel: "LOCAL FIRST / PARA DESARROLLADORES",
+    privacyLabel: "PRIVACIDAD", whyLab: "POR QUÉ ESTE LAB", sectionLabel: "LOCAL FIRST / PARA DESARROLLADORES",
     input: "ENTRADA", output: "RESULTADO", run: "Procesar", copy: "Copiar resultado",
     copied: "Copiado al portapapeles", reset: "Restablecer", sample: "Cargar ejemplo",
     pretty: "Formatear", minify: "Compactar", encode: "Codificar", decode: "Decodificar",
     generate: "Generar UUID", count: "Cantidad", convert: "Convertir fecha",
     now: "Usar fecha actual", valid: "JSON válido", chars: "caracteres",
-    empty: "El resultado aparecerá acá.", local: "100% local · No se envían datos",
+    empty: "El resultado aparecerá acá.", local: "100% local",
     jsonHint: "Pegá JSON para validar, formatear o compactar.", base64Hint: "Trabaja con texto UTF-8. No es cifrado: no uses Base64 para proteger secretos.",
     urlHint: "Codifica o decodifica un componente de URL, no una URL completa.", uuidHint: "Generá UUID v4 aleatorios para pruebas, mocks o datos de desarrollo.",
     timestampHint: "Ingresá una fecha ISO 8601 o un timestamp Unix en segundos/milisegundos.",
@@ -82,16 +86,16 @@ export default function DevLabExperience() {
     feature2: "Privacidad por diseño", feature2d: "El procesamiento ocurre del lado del cliente.",
     feature3: "Herramientas concretas", feature3d: "Utilidades comunes para tareas cotidianas de desarrollo.",
   } : {
-    back: "Back", kicker: "A DEVELOPER'S TOOLBOX",
+    back: "Back", kicker: "TOOLBOX FOR DEVELOPERS",
     intro: "Small, useful tools running right in your browser.",
     tools: "Tools", select: "Select a tool to get started.",
-    clientSide: "Client-side", utilityCount: "7 utilities", dependencies: "No dependencies", modules: "07 MODULES", privacyLabel: "PRIVACY / 100%", whyLab: "WHY THIS LAB", sectionLabel: "LOCAL FIRST / BUILT FOR DEVELOPERS",
+    privacyLabel: "PRIVACY", whyLab: "WHY THIS LAB", sectionLabel: "LOCAL FIRST / BUILT FOR DEVELOPERS",
     input: "INPUT", output: "OUTPUT", run: "Process", copy: "Copy result",
     copied: "Copied to clipboard", reset: "Reset", sample: "Load example",
     pretty: "Format", minify: "Minify", encode: "Encode", decode: "Decode",
     generate: "Generate UUIDs", count: "Count", convert: "Convert date",
     now: "Use current time", valid: "Valid JSON", chars: "characters",
-    empty: "Your result will appear here.", local: "100% local · No data sent",
+    empty: "Your result will appear here.", local: "100% local",
     jsonHint: "Paste JSON to validate, format, or minify it.", base64Hint: "Works with UTF-8 text. Base64 is not encryption—never use it to protect secrets.",
     urlHint: "Encodes or decodes a URL component, not a complete URL.", uuidHint: "Generate random v4 UUIDs for tests, mocks, or development data.",
     timestampHint: "Enter an ISO 8601 date or a Unix timestamp in seconds/milliseconds.",
@@ -204,35 +208,42 @@ export default function DevLabExperience() {
           <p className="flex items-center gap-2 font-mono text-[10px] font-semibold uppercase tracking-[.22em] text-cyber-neonGreen"><span className="h-1.5 w-1.5 rounded-full bg-cyber-neonGreen shadow-[0_0_12px_rgba(5,247,183,.8)]" />{copy.kicker}</p>
           <h1 className="mt-4 text-4xl font-black tracking-[-.06em] text-white sm:text-6xl">DEV <span className="text-cyber-gold">LAB</span></h1>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-white/65 sm:text-base">{copy.intro}</p>
-          <div className="mt-7 flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-wider text-white/50">
-            <span className="rounded-full border border-white/10 px-3 py-1.5">{copy.clientSide}</span>
-            <span className="rounded-full border border-white/10 px-3 py-1.5">{copy.utilityCount}</span>
-            <span className="rounded-full border border-white/10 px-3 py-1.5">{copy.dependencies}</span>
-          </div>
+
         </div>
       </header>
 
       <section className="space-y-6" aria-label={copy.tools}>
-        <div className="flex items-center justify-between gap-3">
-          <h2 className="text-xs font-semibold uppercase tracking-[.18em] text-white/65">{copy.tools}</h2>
-          <span className="shrink-0 font-mono text-[10px] text-white/30">{copy.modules}</span>
-        </div>
-        <nav className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-3 [scrollbar-width:thin] lg:grid lg:grid-cols-3 lg:overflow-visible lg:pb-0" aria-label={copy.tools}>
+        <h2 className="text-xs font-semibold uppercase tracking-[.18em] text-white/65">{copy.tools}</h2>
+        <Swiper
+          modules={[Navigation]}
+          navigation
+          spaceBetween={12}
+          slidesPerView={1.15}
+          breakpoints={{
+            480: { slidesPerView: 1.8 },
+            768: { slidesPerView: 2.5 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="projects-arrow-carousel dev-lab-tools-carousel"
+          aria-label={copy.tools}
+        >
           {tools[locale].map((tool, index) => (
-            <button key={tool.id} type="button" onClick={() => chooseTool(tool.id)} aria-current={activeTool === tool.id ? "page" : undefined} className={"group w-[78vw] max-w-[18rem] shrink-0 snap-start rounded-xl border p-4 text-left transition sm:w-[48%] lg:w-auto lg:max-w-none " + (activeTool === tool.id ? "border-cyber-neonGreen/45 bg-cyber-neonGreen/[0.07]" : "border-white/[0.08] bg-black/20 hover:border-white/20")}>
-              <div className="flex items-center justify-between gap-2">
-                <span className={"flex h-8 min-w-8 items-center justify-center rounded-lg border px-1 font-mono text-[10px] " + (activeTool === tool.id ? "border-cyber-neonGreen/30 text-cyber-neonGreen" : "border-white/10 text-white/50")}>{tool.icon}</span>
-                <span className="font-mono text-[9px] text-white/25">0{index + 1}</span>
-              </div>
-              <span className="mt-3 block text-sm font-semibold text-white/85">{tool.name}</span>
-              <span className="mt-1 block text-xs leading-5 text-white/45">{tool.description}</span>
-              <span className="mt-2 block font-mono text-[9px] tracking-wider text-cyber-neonGreen/60">{tool.tag}</span>
-            </button>
+            <SwiperSlide key={tool.id}>
+              <button type="button" onClick={() => chooseTool(tool.id)} aria-current={activeTool === tool.id ? "page" : undefined} className={"group h-full w-full rounded-xl border p-4 text-left transition " + (activeTool === tool.id ? "border-cyber-neonGreen/45 bg-cyber-neonGreen/[0.07]" : "border-white/[0.08] bg-black/20 hover:border-white/20")}>
+                <div className="flex items-center justify-between gap-2">
+                  <span className={"flex h-8 min-w-8 items-center justify-center rounded-lg border px-1 font-mono text-[10px] " + (activeTool === tool.id ? "border-cyber-neonGreen/30 text-cyber-neonGreen" : "border-white/10 text-white/50")}>{tool.icon}</span>
+                  <span className="font-mono text-[9px] text-white/25">0{index + 1}</span>
+                </div>
+                <span className="mt-3 block text-sm font-semibold text-white/85">{tool.name}</span>
+                <span className="mt-1 block text-xs leading-5 text-white/45">{tool.description}</span>
+                <span className="mt-2 block font-mono text-[9px] tracking-wider text-cyber-neonGreen/60">{tool.tag}</span>
+              </button>
+            </SwiperSlide>
           ))}
-        </nav>
+        </Swiper>
         <div className="flex items-center gap-3 rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3">
-          <p className="shrink-0 font-mono text-[9px] uppercase tracking-[.2em] text-cyber-neonGreen">{copy.privacyLabel}</p>
-          <p className="text-xs leading-5 text-white/45">{copy.local}</p>
+          <p className="font-mono text-[10px] uppercase tracking-[.18em] text-cyber-neonGreen">{copy.privacyLabel}</p>
+          <p className="text-xs leading-5 text-white/70">{copy.local}</p>
         </div>
 
                 <div className="min-w-0 overflow-hidden rounded-2xl border border-white/10 bg-[#080b0d]">
