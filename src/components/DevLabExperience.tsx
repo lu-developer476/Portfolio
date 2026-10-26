@@ -47,8 +47,8 @@ export default function DevLabExperience() {
   const [uuidCount, setUuidCount] = useState("3");
 
   const copy = isEs ? {
-    back: "Volver al perfil", kicker: "CAJA DE HERRAMIENTAS PARA DEVELOPERS",
-    intro: "Herramientas pequeñas, útiles y ejecutadas en tu navegador. Sin cuentas, sin backend y sin enviar tus datos.",
+    back: "Volver", kicker: "CAJA DE HERRAMIENTAS PARA DEVELOPERS",
+    intro: "Herramientas pequeñas, útiles y ejecutadas en tu navegador.",
     tools: "Herramientas", select: "Seleccioná una herramienta para empezar.",
     input: "ENTRADA", output: "RESULTADO", run: "Procesar", copy: "Copiar resultado",
     copied: "Copiado al portapapeles", reset: "Restablecer", sample: "Cargar ejemplo",
@@ -68,10 +68,9 @@ export default function DevLabExperience() {
     feature1: "Resultados inmediatos", feature1d: "Sin esperas de red ni servicios externos.",
     feature2: "Privacidad por diseño", feature2d: "El procesamiento ocurre del lado del cliente.",
     feature3: "Herramientas concretas", feature3d: "Utilidades comunes para tareas cotidianas de desarrollo.",
-    foot: "Un laboratorio tiene que resolver problemas. Empecemos por los pequeños."
   } : {
-    back: "Back to profile", kicker: "A DEVELOPER'S TOOLBOX",
-    intro: "Small, useful tools running right in your browser. No accounts, no backend, and no data sent away.",
+    back: "Back", kicker: "A DEVELOPER'S TOOLBOX",
+    intro: "Small, useful tools running right in your browser.",
     tools: "Tools", select: "Select a tool to get started.",
     input: "INPUT", output: "OUTPUT", run: "Process", copy: "Copy result",
     copied: "Copied to clipboard", reset: "Reset", sample: "Load example",
@@ -91,7 +90,6 @@ export default function DevLabExperience() {
     feature1: "Instant results", feature1d: "No network wait or external services.",
     feature2: "Privacy by design", feature2d: "All processing happens on the client side.",
     feature3: "Practical utilities", feature3d: "Common helpers for everyday development tasks.",
-    foot: "A lab should solve problems. Start with the small ones."
   };
 
   const selected = tools[locale].find((tool) => tool.id === activeTool)!;
@@ -182,32 +180,30 @@ export default function DevLabExperience() {
         </div>
       </header>
 
-      <section className="grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)]" aria-label={copy.tools}>
-        <aside className="min-w-0">
-          <div className="mb-3 flex items-center justify-between">
-            <h2 className="text-xs font-semibold uppercase tracking-[.18em] text-white/65">{copy.tools}</h2>
-            <span className="font-mono text-[10px] text-white/30">05 MODULES</span>
-          </div>
-          <nav className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-1" aria-label={copy.tools}>
-            {tools[locale].map((tool, index) => (
-              <button key={tool.id} type="button" onClick={() => chooseTool(tool.id)} aria-current={activeTool === tool.id ? "page" : undefined} className={`group min-w-0 rounded-xl border p-3 text-left transition sm:p-4 ${activeTool === tool.id ? "border-cyber-neonGreen/45 bg-cyber-neonGreen/[0.07]" : "border-white/[0.08] bg-black/20 hover:border-white/20"}`}>
-                <div className="flex items-center justify-between gap-2">
-                  <span className={`flex h-8 min-w-8 items-center justify-center rounded-lg border px-1 font-mono text-[10px] ${activeTool === tool.id ? "border-cyber-neonGreen/30 text-cyber-neonGreen" : "border-white/10 text-white/50"}`}>{tool.icon}</span>
-                  <span className="font-mono text-[9px] text-white/25">0{index + 1}</span>
-                </div>
-                <span className="mt-3 block text-xs font-semibold text-white/85 sm:text-sm">{tool.name}</span>
-                <span className="mt-1 hidden text-xs leading-5 text-white/45 lg:block">{tool.description}</span>
-                <span className="mt-2 hidden font-mono text-[9px] tracking-wider text-cyber-neonGreen/60 lg:block">{tool.tag}</span>
-              </button>
-            ))}
-          </nav>
-          <div className="mt-4 rounded-xl border border-white/[0.08] bg-black/20 p-4">
-            <p className="font-mono text-[9px] uppercase tracking-[.2em] text-cyber-neonGreen">PRIVACY / 100%</p>
-            <p className="mt-2 text-xs leading-5 text-white/45">{copy.local}</p>
-          </div>
-        </aside>
+      <section className="space-y-6" aria-label={copy.tools}>
+        <div className="flex items-center justify-between gap-3">
+          <h2 className="text-xs font-semibold uppercase tracking-[.18em] text-white/65">{copy.tools}</h2>
+          <span className="shrink-0 font-mono text-[10px] text-white/30">05 MODULES</span>
+        </div>
+        <nav className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-3 [scrollbar-width:thin] lg:grid lg:grid-cols-3 lg:overflow-visible lg:pb-0" aria-label={copy.tools}>
+          {tools[locale].map((tool, index) => (
+            <button key={tool.id} type="button" onClick={() => chooseTool(tool.id)} aria-current={activeTool === tool.id ? "page" : undefined} className={"group w-[78vw] max-w-[18rem] shrink-0 snap-start rounded-xl border p-4 text-left transition sm:w-[48%] lg:w-auto lg:max-w-none " + (activeTool === tool.id ? "border-cyber-neonGreen/45 bg-cyber-neonGreen/[0.07]" : "border-white/[0.08] bg-black/20 hover:border-white/20")}>
+              <div className="flex items-center justify-between gap-2">
+                <span className={"flex h-8 min-w-8 items-center justify-center rounded-lg border px-1 font-mono text-[10px] " + (activeTool === tool.id ? "border-cyber-neonGreen/30 text-cyber-neonGreen" : "border-white/10 text-white/50")}>{tool.icon}</span>
+                <span className="font-mono text-[9px] text-white/25">0{index + 1}</span>
+              </div>
+              <span className="mt-3 block text-sm font-semibold text-white/85">{tool.name}</span>
+              <span className="mt-1 block text-xs leading-5 text-white/45">{tool.description}</span>
+              <span className="mt-2 block font-mono text-[9px] tracking-wider text-cyber-neonGreen/60">{tool.tag}</span>
+            </button>
+          ))}
+        </nav>
+        <div className="flex items-center gap-3 rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3">
+          <p className="shrink-0 font-mono text-[9px] uppercase tracking-[.2em] text-cyber-neonGreen">PRIVACY / 100%</p>
+          <p className="text-xs leading-5 text-white/45">{copy.local}</p>
+        </div>
 
-        <div className="min-w-0 overflow-hidden rounded-2xl border border-white/10 bg-[#080b0d]">
+                <div className="min-w-0 overflow-hidden rounded-2xl border border-white/10 bg-[#080b0d]">
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 px-4 py-4 sm:px-6">
             <div className="flex min-w-0 items-center gap-3">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-cyber-neonGreen/25 bg-cyber-neonGreen/[0.06] font-mono text-xs text-cyber-neonGreen">{selected.icon}</span>
@@ -302,9 +298,6 @@ export default function DevLabExperience() {
         </div>
       </section>
 
-      <div className="border-t border-white/10 pt-5">
-        <p className="text-xs leading-6 text-white/40">{copy.foot}</p>
-      </div>
     </div>
   );
 }
