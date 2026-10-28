@@ -47,7 +47,7 @@ export async function POST(req: Request) {
       "landing-page": "Landing Page",
       "professional-website": "Sitio Web Profesional / Professional Website",
       "online-store": "Catálogo o Tienda Online / Catalog or Online Store",
-      "custom-web-app": "Aplicación Web a Medida / Custom Web Application",
+      "custom-web-app": "Aplicación Web a medida (SPA) / Single Page Application (SPA)",
       "redesign-optimization": "Rediseño y Optimización / Redesign and Optimization",
       "custom-quote": "Presupuesto personalizado / Custom quote",
       extras: "Opcionales y servicios adicionales / Optional and additional services",

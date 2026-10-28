@@ -63,9 +63,9 @@ const serviceCopy = {
       },
       {
         icon: "⚙️",
-        name: "Aplicación Web a Medida",
+        name: "Aplicación Web a medida (SPA)",
         price: "Desde USD 1.000",
-        description: "Una solución personalizada cuando una web convencional no alcanza para resolver el proceso.",
+        description: "Una aplicación web a medida, como una Single Page Application (SPA), para resolver procesos que una web convencional no cubre.",
         includes: [
           "Relevamiento de requisitos y propuesta técnica",
           "Interfaces y flujos adaptados al caso de uso",
@@ -188,7 +188,7 @@ const serviceCopy = {
       },
       {
         icon: "⚙️",
-        name: "Custom Web Application",
+        name: "Single Page Application (SPA)",
         price: "From USD 1,000",
         description: "A tailored solution when a conventional website cannot handle the required workflow.",
         includes: [
