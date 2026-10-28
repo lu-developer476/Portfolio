@@ -1,1 +1,6 @@
 minimumReleaseAge: 0
+
+onlyBuiltDependencies:
+  - "@firebase/util"
+  - protobufjs
+  - unrs-resolver
