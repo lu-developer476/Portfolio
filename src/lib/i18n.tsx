@@ -63,8 +63,8 @@ const translations = {
         servicePlaceholder: "Seleccioná una opción",
         services: {
           landingPage: "Landing Page",
-          professionalWebsite: "Sitio Web Profesional",
-          onlineStore: "Catálogo o Tienda Online",
+          professionalWebsite: "Sitio Web profesional",
+          onlineStore: "Catálogo o Tienda online",
           customWebApp: "Aplicación Web a medida (SPA)",
           redesign: "Rediseño y Optimización",
           customQuote: "Presupuesto personalizado",
