@@ -7,6 +7,16 @@ import { transporter } from "@/lib/mailer";
 const schema = z.object({
   name: z.string().min(2).max(80),
   email: z.string().email().max(120),
+  service: z.enum([
+    "landing-page",
+    "professional-website",
+    "online-store",
+    "custom-web-app",
+    "redesign-optimization",
+    "custom-quote",
+    "extras",
+    "general"
+  ]),
   message: z.string().min(10).max(2000)
 });
 
@@ -30,8 +40,20 @@ export async function POST(req: Request) {
 
     // ✅ Sanitización básica HTML
     const safeMessage = data.message
+      .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;");
+    const serviceNames: Record<(typeof data.service), string> = {
+      "landing-page": "Landing Page",
+      "professional-website": "Sitio Web Profesional / Professional Website",
+      "online-store": "Catálogo o Tienda Online / Catalog or Online Store",
+      "custom-web-app": "Aplicación Web a Medida / Custom Web Application",
+      "redesign-optimization": "Rediseño y Optimización / Redesign and Optimization",
+      "custom-quote": "Presupuesto personalizado / Custom quote",
+      extras: "Opcionales y servicios adicionales / Optional and additional services",
+      general: "Consulta general / General inquiry"
+    };
+    const serviceLabel = serviceNames[data.service];
 
     // ------------------------------------------------
     // 1️⃣ Guardar en Firestore
@@ -39,6 +61,7 @@ export async function POST(req: Request) {
     await db.collection("contact_messages").add({
       name: data.name,
       email: data.email,
+      service: data.service,
       message: safeMessage,
       createdAt: new Date().toISOString(),
       userAgent: req.headers.get("user-agent") ?? null
@@ -58,6 +81,7 @@ export async function POST(req: Request) {
           <hr />
           <p><strong>Nombre:</strong> ${data.name}</p>
           <p><strong>Email:</strong> ${data.email}</p>
+          <p><strong>Servicio:</strong> ${serviceLabel}</p>
           <p><strong>Mensaje:</strong></p>
           <p style="background:#f4f4f4;padding:12px;border-radius:6px;">
             ${safeMessage}
@@ -86,6 +110,10 @@ export async function POST(req: Request) {
               <p>⏱︎ En breve leeré tu consulta y te estaré contactando.</p>
 
               <hr />
+
+              <p style="font-size:14px;">
+                <strong>Servicio consultado:</strong> ${serviceLabel}
+              </p>
 
               <p style="font-size:14px;">
                 <strong>Tu mensaje:</strong>

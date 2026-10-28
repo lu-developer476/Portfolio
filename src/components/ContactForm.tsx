@@ -1,12 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { useLanguage } from "@/lib/i18n";
+
+type ServiceOption =
+  | "landing-page"
+  | "professional-website"
+  | "online-store"
+  | "custom-web-app"
+  | "redesign-optimization"
+  | "custom-quote"
+  | "extras"
+  | "general";
 
 type FormState = {
   name: string;
   email: string;
+  service: string;
   message: string;
 };
 
@@ -23,9 +34,19 @@ const baseSwal = Swal.mixin({
 export default function ContactForm() {
   const { t } = useLanguage();
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState<FormState>({ name: "", email: "", message: "" });
+  const [data, setData] = useState<FormState>({ name: "", email: "", service: "", message: "" });
 
-  const onChange = (k: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  useEffect(() => {
+    const handleServiceSelection = (event: Event) => {
+      const service = (event as CustomEvent<ServiceOption>).detail;
+      setData((current) => ({ ...current, service }));
+    };
+
+    window.addEventListener("portfolio:select-service", handleServiceSelection);
+    return () => window.removeEventListener("portfolio:select-service", handleServiceSelection);
+  }, []);
+
+  const onChange = (k: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setData((d) => ({ ...d, [k]: e.target.value }));
   };
 
@@ -52,7 +73,7 @@ export default function ContactForm() {
         text: t.contact.form.successText
       });
 
-      setData({ name: "", email: "", message: "" });
+      setData({ name: "", email: "", service: "", message: "" });
     } catch (err: any) {
       await baseSwal.fire({
         icon: "error",
@@ -85,6 +106,25 @@ export default function ContactForm() {
           placeholder="micorreo@mail.com"
           required
         />
+      </Field>
+
+      <Field label={t.contact.form.serviceLabel}>
+        <select
+          value={data.service}
+          onChange={onChange("service")}
+          className="w-full rounded-lg border border-white/100 bg-black/60 px-3 py-2 text-sm text-white outline-none focus:border-cyber-neonGreen/60"
+          required
+        >
+          <option value="" disabled>{t.contact.form.servicePlaceholder}</option>
+          <option value="landing-page">{t.contact.form.services.landingPage}</option>
+          <option value="professional-website">{t.contact.form.services.professionalWebsite}</option>
+          <option value="online-store">{t.contact.form.services.onlineStore}</option>
+          <option value="custom-web-app">{t.contact.form.services.customWebApp}</option>
+          <option value="redesign-optimization">{t.contact.form.services.redesign}</option>
+          <option value="custom-quote">{t.contact.form.services.customQuote}</option>
+          <option value="extras">{t.contact.form.services.extras}</option>
+          <option value="general">{t.contact.form.services.general}</option>
+        </select>
       </Field>
 
       <Field label={t.contact.form.reason}>
