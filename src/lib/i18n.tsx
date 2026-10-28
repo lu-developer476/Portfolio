@@ -59,7 +59,19 @@ const translations = {
       form: {
         personal: "Datos personales",
         namePlaceholder: "Nombre y apellido",
-        reason: "¿Motivo de tu consulta?",
+        serviceLabel: "¿Qué servicio te interesa?",
+        servicePlaceholder: "Seleccioná una opción",
+        services: {
+          landingPage: "Landing Page",
+          professionalWebsite: "Sitio Web Profesional",
+          onlineStore: "Catálogo o Tienda Online",
+          customWebApp: "Aplicación Web a Medida",
+          redesign: "Rediseño y Optimización",
+          customQuote: "Presupuesto personalizado",
+          extras: "Opcionales y servicios adicionales",
+          general: "Consulta general"
+        },
+        reason: "Contame más sobre tu proyecto",
         messagePlaceholder: "Contame en qué te puedo ayudar...",
         sending: "Un momento por favor...",
         submit: "Enviar",
@@ -154,7 +166,19 @@ const translations = {
       form: {
         personal: "Personal information",
         namePlaceholder: "Full name",
-        reason: "Reason for your inquiry?",
+        serviceLabel: "Which service are you interested in?",
+        servicePlaceholder: "Choose an option",
+        services: {
+          landingPage: "Landing Page",
+          professionalWebsite: "Professional Website",
+          onlineStore: "Catalog or Online Store",
+          customWebApp: "Custom Web Application",
+          redesign: "Redesign and Optimization",
+          customQuote: "Custom quote",
+          extras: "Optional and additional services",
+          general: "General inquiry"
+        },
+        reason: "Tell me more about your project",
         messagePlaceholder: "Tell me how I can help you...",
         sending: "Sending...",
         submit: "Send",
