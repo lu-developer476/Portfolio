@@ -355,7 +355,13 @@ export default function ServicesSection() {
               ))}
             </ul>
             {service.note && <p className="mb-4 border-t border-white/10 pt-3 text-xs leading-relaxed text-white/55">{service.note}</p>}
-            <a href="#contact-form" className="mx-auto mt-auto inline-flex w-fit items-center justify-center gap-2 rounded-xl border border-cyber-gold/50 px-4 py-2 text-center text-sm font-semibold text-cyber-gold transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen">
+            <a
+              href="#contact-form"
+              onClick={() => window.dispatchEvent(new CustomEvent("portfolio:select-service", {
+                detail: (["landing-page", "professional-website", "online-store", "custom-web-app", "redesign-optimization"] as const)[index]
+              }))}
+              className="mx-auto mt-auto inline-flex w-fit items-center justify-center gap-2 rounded-xl border border-cyber-gold/50 px-4 py-2 text-center text-sm font-semibold text-cyber-gold transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen"
+            >
               {copy.quoteCta} <span aria-hidden="true">↗</span>
             </a>
           </article>
@@ -365,7 +371,11 @@ export default function ServicesSection() {
       <div className="rounded-2xl border border-cyber-neonGreen/35 bg-black/35 p-5 sm:p-6">
         <h3 className="text-xl font-semibold text-cyber-gold">{copy.customTitle}</h3>
         <p className="mt-2 w-full leading-relaxed text-white/75">{copy.customText}</p>
-        <a href="#contact-form" className="mt-4 inline-flex items-center gap-2 rounded-xl border border-cyber-neonGreen/60 px-4 py-2 text-sm font-semibold text-cyber-neonGreen transition hover:bg-cyber-neonGreen/10">
+        <a
+          href="#contact-form"
+          onClick={() => window.dispatchEvent(new CustomEvent("portfolio:select-service", { detail: "custom-quote" }))}
+          className="mt-4 inline-flex items-center gap-2 rounded-xl border border-cyber-neonGreen/60 px-4 py-2 text-sm font-semibold text-cyber-neonGreen transition hover:bg-cyber-neonGreen/10"
+        >
           {copy.customCta} <span aria-hidden="true">↗</span>
         </a>
       </div>
@@ -389,6 +399,13 @@ export default function ServicesSection() {
             </article>
           ))}
         </div>
+        <a
+          href="#contact-form"
+          onClick={() => window.dispatchEvent(new CustomEvent("portfolio:select-service", { detail: "extras" }))}
+          className="inline-flex items-center gap-2 rounded-xl border border-cyber-gold/40 px-4 py-2 text-sm font-semibold text-cyber-gold transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen"
+        >
+          {language === "es" ? "Consultar opcionales" : "Ask about optional services"} <span aria-hidden="true">↗</span>
+        </a>
       </div>
 
       <div className="space-y-3 rounded-xl border border-white/10 bg-black/25 p-4">
