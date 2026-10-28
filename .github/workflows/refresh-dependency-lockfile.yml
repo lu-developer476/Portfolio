@@ -7,6 +7,7 @@ on:
       - "package.json"
       - "pnpm-lock.yaml"
       - "pnpm-workspace.yaml"
+      - "tsconfig.json"
       - ".github/workflows/refresh-dependency-lockfile.yml"
   workflow_dispatch:
 
