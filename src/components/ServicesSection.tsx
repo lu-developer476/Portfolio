@@ -293,6 +293,17 @@ export default function ServicesSection() {
   const { language } = useLanguage();
   const copy = serviceCopy[language];
   const [usdToArs, setUsdToArs] = useState<number | null>(null);
+  const [selectedService, setSelectedService] = useState<string>("");
+
+  useEffect(() => {
+    const handleServiceSelection = (event: Event) => {
+      const service = (event as CustomEvent<string>).detail;
+      setSelectedService(service || "");
+    };
+
+    window.addEventListener("portfolio:select-service", handleServiceSelection);
+    return () => window.removeEventListener("portfolio:select-service", handleServiceSelection);
+  }, []);
 
   useEffect(() => {
     let active = true;
@@ -331,7 +342,7 @@ export default function ServicesSection() {
 
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
         {copy.packages.map((service, index) => (
-          <article key={service.name} className={`flex h-full flex-col rounded-2xl sm:col-span-1 lg:col-span-2 ${index === 3 ? "lg:col-start-2" : index === 4 ? "lg:col-start-4" : ""} border border-white/15 bg-black/40 p-5 transition duration-300 hover:border-cyber-gold/55 hover:shadow-[0_0_22px_rgba(250,204,21,0.09)]`}>
+          <article key={service.name} className={`service-package-card flex h-full flex-col rounded-2xl sm:col-span-1 lg:col-span-2 ${index === 3 ? "lg:col-start-2" : index === 4 ? "lg:col-start-4" : ""} border border-white/15 bg-black/40 p-5 transition duration-300 hover:border-cyber-gold/55 hover:shadow-[0_0_22px_rgba(250,204,21,0.09)] ${selectedService === (["landing-page", "professional-website", "online-store", "custom-web-app", "redesign-optimization"] as const)[index] ? "service-card-selected" : ""}`}>
             <div className="mb-3 flex items-start gap-3">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-cyber-gold/30 bg-white/5 text-xl" aria-hidden="true">{service.icon}</span>
               <div className="min-w-0">
@@ -368,7 +379,7 @@ export default function ServicesSection() {
         ))}
       </div>
 
-      <div className="rounded-2xl border border-cyber-neonGreen/35 bg-black/35 p-5 sm:p-6">
+      <div className={`rounded-2xl border border-cyber-neonGreen/35 bg-black/35 p-5 sm:p-6 ${selectedService === "custom-quote" ? "service-card-selected" : ""}`}>
         <h3 className="text-xl font-semibold text-cyber-gold">{copy.customTitle}</h3>
         <p className="mt-2 w-full leading-relaxed text-white/75">{copy.customText}</p>
         <a
@@ -380,7 +391,7 @@ export default function ServicesSection() {
         </a>
       </div>
 
-      <div className="space-y-4">
+      <div className={`space-y-4 rounded-2xl ${selectedService === "extras" ? "service-card-selected p-4" : ""}`}>
         <div>
           <h3 className="text-xl font-semibold text-cyber-gold">{copy.extrasTitle}</h3>
           <p className="mt-2 text-sm leading-relaxed text-white/65">{copy.extrasSubtitle}</p>
