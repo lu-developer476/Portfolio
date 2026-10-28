@@ -28,23 +28,21 @@ export default function Hero() {
     let cancelled = false;
 
     (async () => {
-      const anime = (await import("animejs")).default;
+      const { animate } = await import("animejs");
       if (cancelled) return;
 
-      anime({
-        targets: titleRef.current,
+      animate(titleRef.current, {
         translateY: [20, 0],
         opacity: [0, 1],
         duration: 900,
-        easing: "easeOutExpo"
+        ease: "outExpo"
       });
 
-      anime({
-        targets: ".hero-glow",
+      animate(".hero-glow", {
         opacity: [0.12, 0.28, 0.18],
         duration: 2600,
         loop: true,
-        easing: "easeInOutSine"
+        ease: "inOutSine"
       });
     })();
 

@@ -31,20 +31,19 @@ export default function HomePage() {
     let observer: IntersectionObserver | null = null;
 
     (async () => {
-      const anime = (await import("animejs")).default;
+      const { animate, stagger } = await import("animejs");
       if (cancelled) return;
 
       const run = () => {
         if (played) return;
         played = true;
-        anime({
-          targets: cards,
+        animate(cards, {
           translateY: [40, 0],
           opacity: [0, 1],
           scale: [0.96, 1],
-          delay: anime.stagger(140),
+          delay: stagger(140),
           duration: 750,
-          easing: "easeOutExpo"
+          ease: "outExpo"
         });
       };
 

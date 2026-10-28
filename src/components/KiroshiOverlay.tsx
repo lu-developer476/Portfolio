@@ -56,24 +56,22 @@ export default function KiroshiOverlay() {
     let cancelled = false;
 
     (async () => {
-      const anime = (await import("animejs")).default;
+      const { animate } = await import("animejs");
       if (cancelled) return;
 
       // Animaciones
-      anime({
-        targets: circleRef.current,
+      animate(circleRef.current, {
         scale: [0.8, 1],
         opacity: [0, 0.6],
         duration: 1200,
-        easing: "easeOutExpo"
+        ease: "outExpo"
       });
 
-      anime({
-        targets: scanRef.current,
+      animate(scanRef.current, {
         translateY: ["-100%", "100%"],
         duration: 2800,
         loop: true,
-        easing: "linear"
+        ease: "linear"
       });
     })();
 
