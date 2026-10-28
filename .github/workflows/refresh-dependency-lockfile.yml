@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 jobs:
-  update:
+  update-and-verify:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
@@ -31,12 +31,18 @@ jobs:
         run: pnpm update --latest
       - name: Regenerate lockfile
         run: pnpm install --no-frozen-lockfile
-      - name: Commit dependency updates
+      - name: Compile CoffeeScript sources
+        run: pnpm coffee:build
+      - name: Lint entire project
+        run: pnpm lint
+      - name: Build production application
+        run: pnpm build
+      - name: Commit verified dependency updates
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add package.json pnpm-lock.yaml
           if ! git diff --cached --quiet; then
-            git commit -m "chore(deps): update stack to latest stable releases"
+            git commit -m "chore(deps): update and verify latest stack"
             git push origin main
           fi
