@@ -27,8 +27,8 @@ importers:
         specifier: latest
         version: 0.0.2(supports-color@7.2.0)
       nodemailer:
-        specifier: ^6.9.14
-        version: 6.10.1
+        specifier: ^10.2.1
+        version: 10.2.1
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -2831,9 +2831,9 @@ packages:
     resolution: {integrity: sha512-OmO8+GM1JUZqXET720VrJCwkjUCXmCMQm0Z3UDDRbfNLHS4NEAvY60j5jiFv0tkKw2PNNlqOLhahVmwJIOLDIQ==}
     engines: {node: '>=18'}
 
-  nodemailer@6.10.1:
-    resolution: {integrity: sha512-Z+iLaBGVaSjbIzQ4pX6XV41HrooLsQ10ZWPUehGmuantvzWoDVBnmsdUcOIDM1t+yPor5pDhVlDESgOMEGxhHA==}
-    engines: {node: '>=6.0.0'}
+  nodemailer@10.2.1:
+    resolution: {integrity: sha512-ZrDNsPFoDMwefNs7sJwrYiEJ/CG4ClJWDZv05iNJsEBWa8GRDry1QJHTJxsuTAY9eDDKjX4k+q3SxslXJOao7w==}
+    engines: {node: '>=20.0.0'}
 
   nopt@7.2.1:
     resolution: {integrity: sha512-taM24ViiimT/XntxbPyJQzCG+p4EKOpgD3mxFwW38mGjVUrfERQOeY4EDHjdnptttfHuHQXFx+lTP08Q+mLa/w==}
@@ -6852,7 +6852,7 @@ snapshots:
 
   node-releases@2.0.60: {}
 
-  nodemailer@6.10.1: {}
+  nodemailer@10.2.1: {}
 
   nopt@7.2.1:
     dependencies:
