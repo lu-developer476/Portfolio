@@ -29,6 +29,8 @@ jobs:
           cache: pnpm
       - name: Update all dependencies to latest releases
         run: pnpm update --latest
+      - name: Align TypeScript and ESLint to latest compatible majors
+        run: pnpm add --save-dev "eslint@^9" "typescript@^6"
       - name: Regenerate lockfile
         run: pnpm install --no-frozen-lockfile
       - name: Compile CoffeeScript sources
