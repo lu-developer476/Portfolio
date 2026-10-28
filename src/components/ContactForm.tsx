@@ -47,7 +47,12 @@ export default function ContactForm() {
   }, []);
 
   const onChange = (k: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setData((d) => ({ ...d, [k]: e.target.value }));
+    const value = e.target.value;
+    setData((d) => ({ ...d, [k]: value }));
+
+    if (k === "service") {
+      window.dispatchEvent(new CustomEvent("portfolio:select-service", { detail: value }));
+    }
   };
 
   const submit = async (e: React.FormEvent) => {
@@ -74,6 +79,7 @@ export default function ContactForm() {
       });
 
       setData({ name: "", email: "", service: "", message: "" });
+      window.dispatchEvent(new CustomEvent("portfolio:select-service", { detail: "" }));
     } catch (err: any) {
       await baseSwal.fire({
         icon: "error",
