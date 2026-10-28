@@ -1531,26 +1531,50 @@ html[data-theme="beige"] .references-page .references-description {
 }
 
 
-/* Neon highlight for the service selected from a card CTA or the contact form. */
+/* Selected-service glow uses the same accent as each active theme. */
+html {
+  --service-glow-rgb: 11, 153, 115;
+}
+
+html[data-theme="dark"] {
+  --service-glow-rgb: 11, 153, 115;
+}
+
+html[data-theme="light"] {
+  --service-glow-rgb: 0, 119, 255;
+}
+
+html[data-theme="beige"] {
+  --service-glow-rgb: 139, 94, 52;
+}
+
+html[data-theme="cloud"] {
+  --service-glow-rgb: 71, 85, 105;
+}
+
+html[data-theme="galaxy"] {
+  --service-glow-rgb: 5, 247, 183;
+}
+
 .service-card-selected {
   position: relative;
   z-index: 1;
-  border-color: #39ff14 !important;
+  border-color: rgb(var(--service-glow-rgb)) !important;
   animation: serviceCardNeonPulse 1.6s ease-in-out infinite;
 }
 
 @keyframes serviceCardNeonPulse {
   0%, 100% {
-    box-shadow: 0 0 0 1px rgba(57, 255, 20, 0.8), 0 0 12px rgba(57, 255, 20, 0.48), 0 0 26px rgba(57, 255, 20, 0.2);
+    box-shadow: 0 0 0 1px rgba(var(--service-glow-rgb), 0.8), 0 0 12px rgba(var(--service-glow-rgb), 0.48), 0 0 26px rgba(var(--service-glow-rgb), 0.2);
   }
   50% {
-    box-shadow: 0 0 0 2px rgba(57, 255, 20, 1), 0 0 20px rgba(57, 255, 20, 0.8), 0 0 42px rgba(57, 255, 20, 0.36);
+    box-shadow: 0 0 0 2px rgba(var(--service-glow-rgb), 1), 0 0 20px rgba(var(--service-glow-rgb), 0.8), 0 0 42px rgba(var(--service-glow-rgb), 0.36);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .service-card-selected {
     animation: none;
-    box-shadow: 0 0 0 2px #39ff14, 0 0 18px rgba(57, 255, 20, 0.55);
+    box-shadow: 0 0 0 2px rgb(var(--service-glow-rgb)), 0 0 18px rgba(var(--service-glow-rgb), 0.55);
   }
 }

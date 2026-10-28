@@ -35,7 +35,7 @@ const serviceCopy = {
       },
       {
         icon: "🏢",
-        name: "Sitio Web Profesional",
+        name: "Sitio Web profesional",
         price: "USD 350 - 700",
         description: "Una presencia digital ordenada para profesionales, comercios, consultoras y pequeñas empresas.",
         includes: [
@@ -49,7 +49,7 @@ const serviceCopy = {
       },
       {
         icon: "🛍️",
-        name: "Catálogo o Tienda Online",
+        name: "Catálogo o Tienda online",
         price: "USD 800 - 1.500",
         description: "Para mostrar productos y habilitar compras mediante una plataforma o una solución acordada para el negocio.",
         includes: [
@@ -346,7 +346,7 @@ export default function ServicesSection() {
             <div className="mb-3 flex items-start gap-3">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-cyber-gold/30 bg-white/5 text-xl" aria-hidden="true">{service.icon}</span>
               <div className="min-w-0">
-                <h3 className="text-lg font-semibold text-cyber-gold">{service.name}</h3>
+                <h3 className={`font-semibold text-cyber-gold ${index === 3 ? "whitespace-nowrap text-[clamp(0.58rem,3.15vw,1.125rem)] tracking-tight" : "text-lg"}`}>{service.name}</h3>
                 <p className="mt-1 text-xl font-bold text-white">{service.price}</p>
                 {usdToArs !== null && getArsEquivalent(service.price, usdToArs, language) && (
                   <p className="mt-1 max-w-full overflow-x-auto whitespace-nowrap text-xs font-semibold text-cyber-neonGreen">
