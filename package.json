@@ -10,7 +10,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
@@ -19,8 +19,8 @@
     "next": "^16.4.3",
     "next-svgr": "latest",
     "nodemailer": "^10.2.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "resend": "^6.34.1",
     "@svgr/webpack": "^8.0.0",
     "sweetalert2": "^11.12.4",
@@ -31,14 +31,18 @@
   "devDependencies": {
     "@types/node": "^26.6.5",
     "@types/nodemailer": "^6.4.14",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "autoprefixer": "^10.6.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
     "coffeescript": "^2.7.0",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^15.5.28",
-    "postcss": "^8.5.31",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.3",
+    "postcss": "^8.5.32",
     "tailwindcss": "^4.3.3",
-    "typescript": "^5.5.4"
+    "typescript": "^6.0.2",
+    "@tailwindcss/postcss": "^4.3.3"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=20.9.0"
   }
 }
