@@ -8,6 +8,7 @@ on:
       - "pnpm-lock.yaml"
       - "pnpm-workspace.yaml"
       - "tsconfig.json"
+      - "src/app/api/contact/route.ts"
       - ".github/workflows/refresh-dependency-lockfile.yml"
   workflow_dispatch:
 
