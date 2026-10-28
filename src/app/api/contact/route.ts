@@ -73,7 +73,7 @@ export async function POST(req: Request) {
     await resend.emails.send({
       from: "Portfolio Online <onboarding@resend.dev>",
       to: "lucasmontenegroburgos@gmail.com",
-      reply_to: data.email,
+      replyTo: data.email,
       subject: "📩 Notificación",
       html: `
         <div style="font-family: Arial, sans-serif; line-height:1.6;">
