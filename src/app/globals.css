@@ -1553,7 +1553,7 @@ html[data-theme="cloud"] {
 }
 
 html[data-theme="galaxy"] {
-  --service-glow-rgb: 168, 85, 247;
+  --service-glow-rgb: 200, 230, 75;
 }
 
 .service-card-selected {
