@@ -116,7 +116,7 @@ export default function Navbar() {
               <div className="text-sm md:text-base font-semibold whitespace-nowrap">
                 Lucas Montenegro
               </div>
-              <div className="freelancer-role text-xs font-mono tracking-wider text-cyber-neonGreen/60 animate-typing">
+              <div className="freelancer-role freelancer-role-cursor text-xs font-mono tracking-wider text-cyber-neonGreen/60">
                 Full Stack Developer
               </div>
             </Link>
