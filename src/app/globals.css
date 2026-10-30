@@ -1595,48 +1595,46 @@ html[data-theme="galaxy"] {
   animation: freelancerRoleCursorBlink 0.8s steps(1, end) infinite;
 }
 
-/* Verde neón con el mismo pulso de brillo que las tecnologías del Footer. */
-@keyframes footerRightsGreenFlicker {
+/* El texto de derechos usa exactamente el acento de INSPIRACIÓN Y APRENDIZAJE. */
+@keyframes footerRightsAccentFlicker {
   0%, 100% {
-    color: #8dff9a;
     opacity: 1;
-    text-shadow: 0 0 2px rgba(57, 255, 20, 0.8), 0 0 7px rgba(57, 255, 20, 0.55), 0 0 13px rgba(57, 255, 20, 0.28);
+    text-shadow: 0 0 2px currentColor, 0 0 7px currentColor, 0 0 13px currentColor;
   }
   17% {
-    color: #39ff14;
     opacity: 0.92;
-    text-shadow: 0 0 4px rgba(57, 255, 20, 0.6), 0 0 9px rgba(57, 255, 20, 0.3);
+    text-shadow: 0 0 3px currentColor, 0 0 8px currentColor;
   }
   19% {
-    color: #c4ffc8;
     opacity: 1;
-    text-shadow: 0 0 4px rgba(173, 255, 180, 0.95), 0 0 12px rgba(57, 255, 20, 0.7), 0 0 18px rgba(57, 255, 20, 0.4);
+    text-shadow: 0 0 4px currentColor, 0 0 12px currentColor, 0 0 18px currentColor;
   }
   21% {
-    color: #20c933;
     opacity: 0.8;
-    text-shadow: 0 0 2px rgba(57, 255, 20, 0.45);
+    text-shadow: 0 0 2px currentColor;
   }
   23%, 62% {
-    color: #8dff9a;
     opacity: 1;
-    text-shadow: 0 0 2px rgba(57, 255, 20, 0.8), 0 0 7px rgba(57, 255, 20, 0.55), 0 0 13px rgba(57, 255, 20, 0.28);
+    text-shadow: 0 0 2px currentColor, 0 0 7px currentColor, 0 0 13px currentColor;
   }
   64% {
-    color: #56e66a;
     opacity: 0.87;
-    text-shadow: 0 0 3px rgba(57, 255, 20, 0.55);
+    text-shadow: 0 0 3px currentColor;
   }
   66% {
-    color: #c4ffc8;
     opacity: 1;
-    text-shadow: 0 0 4px rgba(173, 255, 180, 0.95), 0 0 12px rgba(57, 255, 20, 0.7), 0 0 18px rgba(57, 255, 20, 0.4);
+    text-shadow: 0 0 4px currentColor, 0 0 12px currentColor, 0 0 18px currentColor;
   }
 }
 
 .footer-rights-glow {
-  color: #8dff9a;
-  animation: footerRightsGreenFlicker 3.2s linear infinite;
+  color: #05f7b7;
+  animation: footerRightsAccentFlicker 3.2s linear infinite;
+}
+
+/* Mantiene el mismo color temático que text-cyber-neonGreen en cada tema. */
+html:not([data-theme="dark"]) .footer-rights-glow {
+  color: var(--theme-accent) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1647,7 +1645,6 @@ html[data-theme="galaxy"] {
 
   .footer-rights-glow {
     animation: none;
-    color: #8dff9a;
-    text-shadow: 0 0 3px rgba(57, 255, 20, 0.8), 0 0 8px rgba(57, 255, 20, 0.35);
+    text-shadow: 0 0 3px currentColor, 0 0 8px currentColor;
   }
 }
