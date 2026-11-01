@@ -1,4 +1,7 @@
 @import "tailwindcss";
+
+/* Tailwind 4: conserva la activación de hover al tocar en pantallas táctiles. */
+@custom-variant hover (&:hover);
 @config "../../tailwind.config.cjs";
 
 :root {
