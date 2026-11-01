@@ -548,7 +548,6 @@ html[data-theme="cloud"] .three-bg {
     linear-gradient(180deg, rgba(214, 251, 248, 0.38), rgba(125, 211, 252, 0.2) 48%, rgba(12, 148, 136, 0.22)),
     radial-gradient(70% 55% at 50% 112%, rgba(8, 145, 178, 0.38), transparent 62%);
 }
-
 .spring-glow,
 .spring-mist,
 .spring-source,
@@ -1097,8 +1096,7 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
 
 .modes-card-carousel .swiper-button-prev::after,
 .modes-card-carousel .swiper-button-next::after {
-  font-size: 0.7rem;
-}
+  font-size: 0.7rem;}
 
 /* ============================= */
 /* Project live previews         */
@@ -1470,16 +1468,7 @@ label {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
+
 
 
 /* Company names on /references must remain readable in light themes. */
