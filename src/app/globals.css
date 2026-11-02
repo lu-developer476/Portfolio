@@ -1042,7 +1042,7 @@ html[data-theme="galaxy"] .hud-circle {
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
-/* Hide Swiper's built-in text glyph completely; draw exactly one chevron. */
+/* Use one solid CSS chevron per control; never render Swiper's font glyph. */
 .projects-arrow-carousel .swiper-button-prev::after,
 .projects-arrow-carousel .swiper-button-next::after {
   content: none !important;
@@ -1051,21 +1051,20 @@ html[data-theme="galaxy"] .hud-circle {
 
 .projects-arrow-carousel .swiper-button-prev::before,
 .projects-arrow-carousel .swiper-button-next::before {
-  content: "";
+  all: unset;
   display: block;
   flex: 0 0 auto;
-  width: 0.42rem;
-  height: 0.42rem;
-  border-top: 2px solid currentColor;
-  border-right: 2px solid currentColor;
+  width: 0.52rem;
+  height: 0.78rem;
+  background: currentColor;
 }
 
 .projects-arrow-carousel .swiper-button-prev::before {
-  transform: rotate(-135deg);
+  clip-path: polygon(100% 0, 38% 50%, 100% 100%, 65% 100%, 0 50%, 65% 0);
 }
 
 .projects-arrow-carousel .swiper-button-next::before {
-  transform: rotate(45deg);
+  clip-path: polygon(0 0, 62% 50%, 0 100%, 35% 100%, 100% 50%, 35% 0);
 }
 
 .projects-arrow-carousel .swiper-button-prev:hover,
@@ -1376,9 +1375,8 @@ label {
 
   .projects-arrow-carousel .swiper-button-prev::before,
   .projects-arrow-carousel .swiper-button-next::before {
-    width: 0.36rem;
-    height: 0.36rem;
-    border-width: 1.5px;
+    width: 0.44rem;
+    height: 0.66rem;
   }
 
   .project-preview-viewport {
