@@ -398,7 +398,6 @@ html:not([data-theme="dark"]) footer .text-white\/70,
 html:not([data-theme="dark"]) footer .text-cyber-gold {
   color: #000000 !important;
 }
-
 html:not([data-theme="dark"]) .border-white\/5,
 html:not([data-theme="dark"]) .border-white\/10,
 html:not([data-theme="dark"]) .border-white\/20,
@@ -798,7 +797,6 @@ html[data-theme="cloud"] .three-bg {
   top: -40px;
   right: 60px;
 }
-
 .cloud-white {
   background: radial-gradient(closest-side, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.55) 70%, transparent);
 }
@@ -1046,7 +1044,7 @@ html[data-theme="galaxy"] .hud-circle {
 
 .projects-arrow-carousel .swiper-button-prev::after,
 .projects-arrow-carousel .swiper-button-next::after {
-  font-size: 1rem;
+  font-size: 0.65rem;
   font-weight: 800;
 }
 
@@ -1197,8 +1195,7 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
     opacity: 1;
     text-shadow: 0 0 4px rgba(255, 235, 173, 0.95), 0 0 12px rgba(255, 186, 30, 0.7), 0 0 18px rgba(255, 174, 0, 0.4);
   }
-  21% {
-    color: #d8a73c;
+  21% {    color: #d8a73c;
     opacity: 0.8;
     text-shadow: 0 0 2px rgba(255, 191, 55, 0.45);
   }
@@ -1359,7 +1356,7 @@ label {
 
   .projects-arrow-carousel .swiper-button-prev::after,
   .projects-arrow-carousel .swiper-button-next::after {
-    font-size: 0.75rem;
+    font-size: 0.55rem;
   }
 
   .project-preview-viewport {
@@ -1597,8 +1594,7 @@ html[data-theme="galaxy"] {
     opacity: 0.92;
     text-shadow: 0 0 3px currentColor, 0 0 8px currentColor;
   }
-  19% {
-    opacity: 1;
+  19% {    opacity: 1;
     text-shadow: 0 0 4px currentColor, 0 0 12px currentColor, 0 0 18px currentColor;
   }
   21% {
