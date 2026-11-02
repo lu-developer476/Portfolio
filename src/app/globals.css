@@ -965,6 +965,7 @@ html[data-theme="galaxy"] .hud-circle {
 
 /* --- Carrusel de proyectos con flechas --- */
 .projects-arrow-carousel {
+  --swiper-navigation-size: 1rem;
   padding: 1rem 3rem 1.25rem !important;
 }
 
@@ -1042,34 +1043,6 @@ html[data-theme="galaxy"] .hud-circle {
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
-/* Una sola flecha CSS por botón; se anula por completo el pseudo-elemento nativo de Swiper. */
-.projects-arrow-carousel .swiper-button-prev::after,
-.projects-arrow-carousel .swiper-button-next::after {
-  content: none !important;
-  display: none !important;
-}
-
-.projects-arrow-carousel .swiper-button-prev::before,
-.projects-arrow-carousel .swiper-button-next::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0.42rem;
-  height: 0.42rem;
-  border-top: 1.5px solid currentColor;
-  border-right: 1.5px solid currentColor;
-  transform-origin: center;
-}
-
-.projects-arrow-carousel .swiper-button-prev::before {
-  transform: translate(-35%, -50%) rotate(-135deg);
-}
-
-.projects-arrow-carousel .swiper-button-next::before {
-  transform: translate(-65%, -50%) rotate(45deg);
-}
-
 .projects-arrow-carousel .swiper-button-prev:hover,
 .projects-arrow-carousel .swiper-button-next:hover {
   transform: scale(1.08);
@@ -1088,6 +1061,10 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
 @media (max-width: 640px) {
   .projects-arrow-carousel {
     padding: 1rem 2.35rem 1.25rem !important;
+  }
+
+  .projects-arrow-carousel {
+    --swiper-navigation-size: 0.85rem;
   }
 
   .projects-arrow-carousel .swiper-button-prev,
