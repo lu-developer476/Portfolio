@@ -1043,22 +1043,11 @@ html[data-theme="galaxy"] .hud-circle {
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
+/* Oculta el glifo nativo y cualquier sustituto textual: se retiran los labels añadidos. */
 .projects-arrow-carousel .swiper-button-prev::after,
 .projects-arrow-carousel .swiper-button-next::after {
-  font-family: Arial, sans-serif !important;
-  font-size: 0.8rem !important;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.08em;
-  color: currentColor;
-}
-
-.projects-arrow-carousel .swiper-button-prev::after {
-  content: "<-" !important;
-}
-
-.projects-arrow-carousel .swiper-button-next::after {
-  content: "->" !important;
+  content: none !important;
+  display: none !important;
 }
 
 .projects-arrow-carousel .swiper-button-prev:hover,
@@ -1079,11 +1068,6 @@ html:not([data-theme="dark"]) .projects-arrow-carousel .swiper-button-next {
 @media (max-width: 640px) {
   .projects-arrow-carousel {
     padding: 1rem 2.35rem 1.25rem !important;
-  }
-
-  .projects-arrow-carousel .swiper-button-prev::after,
-  .projects-arrow-carousel .swiper-button-next::after {
-    font-size: 0.7rem !important;
   }
 
   .projects-arrow-carousel .swiper-button-prev,
