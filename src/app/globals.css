@@ -1044,10 +1044,22 @@ html[data-theme="galaxy"] .hud-circle {
 
 .projects-arrow-carousel .swiper-button-prev::after,
 .projects-arrow-carousel .swiper-button-next::after {
-  font-size: 0.65rem !important;
-  font-weight: 800;
-  transform: scale(0.5) !important;
-  transform-origin: center;
+  content: "" !important;
+  display: block;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  font-size: 0 !important;
+  line-height: 0;
+}
+
+.projects-arrow-carousel .swiper-button-prev::after {
+  transform: rotate(-135deg) !important;
+}
+
+.projects-arrow-carousel .swiper-button-next::after {
+  transform: rotate(45deg) !important;
 }
 
 .projects-arrow-carousel .swiper-button-prev:hover,
@@ -1358,9 +1370,9 @@ label {
 
   .projects-arrow-carousel .swiper-button-prev::after,
   .projects-arrow-carousel .swiper-button-next::after {
-    font-size: 0.55rem !important;
-    transform: scale(0.45) !important;
-    transform-origin: center;
+    width: 0.36rem;
+    height: 0.36rem;
+    border-width: 1.5px;
   }
 
   .project-preview-viewport {
