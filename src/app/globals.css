@@ -1042,27 +1042,32 @@ html[data-theme="galaxy"] .hud-circle {
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
-/* Flechas geométricas propias: no depender del glifo tipográfico de Swiper. */
+/* Una sola flecha CSS por botón; se anula por completo el pseudo-elemento nativo de Swiper. */
 .projects-arrow-carousel .swiper-button-prev::after,
 .projects-arrow-carousel .swiper-button-next::after {
-  content: "" !important;
-  display: block;
+  content: none !important;
+  display: none !important;
+}
+
+.projects-arrow-carousel .swiper-button-prev::before,
+.projects-arrow-carousel .swiper-button-next::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 0.42rem;
   height: 0.42rem;
   border-top: 1.5px solid currentColor;
   border-right: 1.5px solid currentColor;
-  font-size: 0 !important;
-  line-height: 0;
+  transform-origin: center;
 }
 
-.projects-arrow-carousel .swiper-button-prev::after {
-  transform: rotate(-135deg);
-  margin-left: 0.18rem;
+.projects-arrow-carousel .swiper-button-prev::before {
+  transform: translate(-35%, -50%) rotate(-135deg);
 }
 
-.projects-arrow-carousel .swiper-button-next::after {
-  transform: rotate(45deg);
-  margin-right: 0.18rem;
+.projects-arrow-carousel .swiper-button-next::before {
+  transform: translate(-65%, -50%) rotate(45deg);
 }
 
 .projects-arrow-carousel .swiper-button-prev:hover,
