@@ -1044,8 +1044,10 @@ html[data-theme="galaxy"] .hud-circle {
 
 .projects-arrow-carousel .swiper-button-prev::after,
 .projects-arrow-carousel .swiper-button-next::after {
-  font-size: 0.65rem;
+  font-size: 0.65rem !important;
   font-weight: 800;
+  transform: scale(0.5) !important;
+  transform-origin: center;
 }
 
 .projects-arrow-carousel .swiper-button-prev:hover,
@@ -1356,7 +1358,9 @@ label {
 
   .projects-arrow-carousel .swiper-button-prev::after,
   .projects-arrow-carousel .swiper-button-next::after {
-    font-size: 0.55rem;
+    font-size: 0.55rem !important;
+    transform: scale(0.45) !important;
+    transform-origin: center;
   }
 
   .project-preview-viewport {
