@@ -120,6 +120,21 @@ export default function Navbar() {
                 Full Stack Developer
               </div>
             </Link>
+
+            {/* Menú compacto para Mobile y Tablet */}
+            <button
+              type="button"
+              onClick={() => {
+                setMenuOpen((current) => !current);
+                play();
+              }}
+              onMouseEnter={play}
+              aria-label={language === "es" ? "Abrir selector de idioma y tema" : "Open language and theme selector"}
+              aria-expanded={menuOpen}
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-cyber-gold/70 bg-black/70 text-xl leading-none text-cyber-gold shadow-[0_0_18px_rgba(250,204,21,0.16)] transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen lg:hidden"
+            >
+              ☰
+            </button>
           </div>
 
           {/* DERECHA */}
@@ -147,7 +162,7 @@ export default function Navbar() {
               onMouseEnter={play}
               aria-label={language === "es" ? "Abrir selector de idioma y tema" : "Open language and theme selector"}
               aria-expanded={menuOpen}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-cyber-gold/70 bg-black/70 text-xl leading-none text-cyber-gold shadow-[0_0_18px_rgba(250,204,21,0.16)] transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen"
+              className="hidden h-10 w-10 items-center justify-center rounded-full border border-cyber-gold/70 bg-black/70 text-xl leading-none text-cyber-gold shadow-[0_0_18px_rgba(250,204,21,0.16)] transition hover:border-cyber-neonGreen hover:text-cyber-neonGreen lg:flex"
             >
               ☰
             </button>
