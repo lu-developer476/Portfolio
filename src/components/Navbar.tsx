@@ -93,33 +93,35 @@ export default function Navbar() {
       <header className="sticky top-0 z-40 border-b border-white/10 bg-black/70 backdrop-blur">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-3 px-4 py-4 md:px-6 md:py-5 lg:min-h-[88px]">
 
-          {/* IZQUIERDA */}
-          <div className="flex items-center gap-3 md:gap-4">
+          {/* IDENTIDAD + MENÚ RESPONSIVE */}
+          <div className="flex w-full items-center justify-between gap-3 lg:w-auto lg:justify-start">
+            <div className="flex min-w-0 items-center gap-3 md:gap-4">
 
-            {/* Avatar responsive */}
-            <button
-              onClick={() => setOpen(true)}
-              className="relative h-12 w-12 md:h-16 md:w-16 overflow-hidden rounded-xl border-2 border-cyber-gold/60 bg-black/80 shadow-lg transition duration-300 hover:scale-105 hover:border-cyber-neonGreen cursor-pointer"
-            >
-              <Image
-                src="/profile-new.png"
-                alt="Lucas Montenegro"
-                fill
-                sizes="(max-width: 768px) 48px, 64px"
-                className="object-cover"
-                priority
-              />
-            </button>
+              {/* Avatar responsive */}
+              <button
+                onClick={() => setOpen(true)}
+                className="relative h-12 w-12 md:h-16 md:w-16 shrink-0 overflow-hidden rounded-xl border-2 border-cyber-gold/60 bg-black/80 shadow-lg transition duration-300 hover:scale-105 hover:border-cyber-neonGreen cursor-pointer"
+              >
+                <Image
+                  src="/profile-new.png"
+                  alt="Lucas Montenegro"
+                  fill
+                  sizes="(max-width: 768px) 48px, 64px"
+                  className="object-cover"
+                  priority
+                />
+              </button>
 
-            {/* Nombre + Rol */}
-            <Link href="/" className="shrink-0 leading-tight">
-              <div className="text-sm md:text-base font-semibold whitespace-nowrap">
-                Lucas Montenegro
-              </div>
-              <div className="freelancer-role freelancer-role-cursor text-xs font-mono tracking-wider text-cyber-neonGreen/60">
-                Full Stack Developer
-              </div>
-            </Link>
+              {/* Nombre + Rol */}
+              <Link href="/" className="shrink-0 leading-tight">
+                <div className="text-sm md:text-base font-semibold whitespace-nowrap">
+                  Lucas Montenegro
+                </div>
+                <div className="freelancer-role freelancer-role-cursor text-xs font-mono tracking-wider text-cyber-neonGreen/60">
+                  Full Stack Developer
+                </div>
+              </Link>
+            </div>
 
             {/* Menú compacto para Mobile y Tablet */}
             <button
