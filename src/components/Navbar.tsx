@@ -142,7 +142,7 @@ export default function Navbar() {
           {/* DERECHA */}
           <nav className="relative ml-auto flex items-center justify-end gap-2 md:gap-5">
             <Link
-              href="/about"
+              href="/profile"
               onMouseEnter={play}
               className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold tracking-widest text-cyber-gold transition hover:border-cyber-neonGreen/70 hover:text-cyber-neonGreen md:px-4 md:text-sm"
             >
