@@ -61,7 +61,7 @@ export default function ContactPage() {
 
             <li>
               <a
-                href="https://www.linkedin.com/in/lucas-montenegro-burgos/"
+                href="https://www.linkedin.com/in/l-montenegro/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={play}
