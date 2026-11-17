@@ -1,15 +1,6 @@
-const upcomingProjectTags = ["PRÓXIMAMENTE"];
+import type { Project } from "@/types/project";
 
-export type Project = {
-  slug: string;
-  title: string;
-  year: string;
-  description: string;
-  demo?: string;
-  previewImage?: string;
-  previewAlt?: string;
-  tags?: string[];
-};
+const upcomingProjectTags = ["PRÓXIMAMENTE"];
 
 export const professionalProjects: Project[] = [
   {

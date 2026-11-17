@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { personalProjects, type Project } from "@/config/personalprojects";
+import { personalProjects } from "@/config/personalprojects";
+import type { Project } from "@/types/project";
 import { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";

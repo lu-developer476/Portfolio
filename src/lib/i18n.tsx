@@ -49,7 +49,8 @@ const translations = {
       projectsTitle: "Proyectos desplegados",
       projectsSubtitle: "",
       professionalProjectsTitle: "Profesionales",
-      personalProjectsTitle: "Personales"
+      independentProjectsTitle: "Independientes",
+      originalProjectsTitle: "Originales"
     },
     contact: {
       title: "Contacto",
@@ -156,7 +157,8 @@ const translations = {
       projectsTitle: "Completed work",
       projectsSubtitle: "The result of understanding, creating, adapting, and refining… ready to be explored.",
       professionalProjectsTitle: "Professional",
-      personalProjectsTitle: "Personal"
+      independentProjectsTitle: "Independent Games",
+      originalProjectsTitle: "Originals"
     },
     contact: {
       title: "Contact",

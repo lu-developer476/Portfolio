@@ -4,6 +4,7 @@ import Section from "@/components/Section";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 import DevLabSection from "@/components/DevLabSection";
 import { personalProjects } from "@/config/personalprojects";
+import { independentProjects } from "@/config/independentprojects";
 import { professionalProjects } from "@/config/professionalprojects";
 import {
   AlpineJSIcon,
@@ -280,7 +281,14 @@ export default function AboutPage() {
 
           <div className="space-y-4">
             <h3 className="text-xl font-semibold text-cyber-gold">
-              {t.about.personalProjectsTitle}
+              {t.about.independentProjectsTitle}
+            </h3>
+            <ProjectsCarousel expanded items={independentProjects} />
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-cyber-gold">
+              {t.about.originalProjectsTitle}
             </h3>
             <ProjectsCarousel expanded items={personalProjects} />
           </div>
