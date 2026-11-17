@@ -1,5 +1,7 @@
 import type { Project } from "@/types/project";
 
+const upcomingProjectTags = ["PRÓXIMAMENTE"];
+
 export const independentProjects: Project[] = [
   {
     slug: "tick-tack-toe",
@@ -96,7 +98,7 @@ export const independentProjects: Project[] = [
     description: "Videojuego web desarrollado con Python y Django. Desplegado en Render.",
     tags: ["CSS", "JavaScript", "Python", "Django", "UX/UI", "Render"],
     demo: "https://otter-rescue.onrender.com",
-  },,
+  },
   {
     slug: "coming-soon",
     title: "En proceso…",
