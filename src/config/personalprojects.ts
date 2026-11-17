@@ -43,5 +43,14 @@ export const personalProjects: Project[] = [
     tags: ["HTML", "CSS", "JavaScript", "Python", "Django", "FastAPI", "UX/UI", "Vercel"],
     demo: "https://calcu-len-d.vercel.app/",
   },
+  {
+    slug: "coming-soon",
+    title: "En proceso…",
+    year: "❔",
+    description: "☑️ Nuevos proyectos en fase de desarrollo.",
+    previewImage: "/developer-preview.svg",
+    previewAlt: "Chico codeando de perfil en una computadora de escritorio",
+    tags: upcomingProjectTags
+  },
 
 ];
