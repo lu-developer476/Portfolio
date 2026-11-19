@@ -3,8 +3,16 @@
 import { useLanguage } from "@/lib/i18n";
 
 export default function Footer() {
-  const { t } = useLanguage();
-  const footerParts = t.footer.split(/(Todos los derechos reservados|All rights reserved|React(?:\.js)?|Next\.js|TypeScript|CoffeeScript|Node\.js|Tailwind CSS|UX\/UI (?:Interface|Design)|Firebase|Vercel)/g);
+  const { language } = useLanguage();
+
+  const footerText =
+    language === "es"
+      ? "Todos los derechos reservados - Diseño y Programación por Lucas Montenegro ®"
+      : "All rights reserved - Design and Programming by Lucas Montenegro ®";
+
+  const footerParts = footerText.split(
+    /(Todos los derechos reservados|All rights reserved|Lucas Montenegro)/g
+  );
 
   return (
     <footer className="relative z-10 border-t border-white/10 py-10">
@@ -12,28 +20,43 @@ export default function Footer() {
         <div className="flex flex-wrap items-center justify-center gap-x-1 gap-y-1 break-words">
           <span className="text-cyber-gold">©</span> {new Date().getFullYear()}{" "}
           {footerParts.map((part, index) => {
-          const isHighlightedRights = /^(?:Todos los derechos reservados|All rights reserved)$/.test(part);
-          const isHighlightedTech = /^(?:React(?:\.js)?|Next\.js|TypeScript|CoffeeScript|Node\.js|Tailwind CSS|UX\/UI (?:Interface|Design)|Firebase|Vercel)$/.test(part);
+            const isHighlightedRights =
+              /^(?:Todos los derechos reservados|All rights reserved)$/.test(part);
+            const isAuthorName = part === "Lucas Montenegro";
 
-          return isHighlightedRights ? (
-            <span
-              key={index}
-              className="footer-rights-glow"
-              style={{ animationDelay: `${(index % 7) * 0.13}s` }}
-            >
-              {part}
-            </span>
-          ) : isHighlightedTech ? (
-            <span
-              key={index}
-              className="footer-tech-glow"
-              style={{ animationDelay: `${(index % 7) * 0.13}s` }}
-            >
-              {part}
-            </span>
-          ) : (
-            <span key={index}>{part}</span>
-          );
+            if (isHighlightedRights) {
+              return (
+                <span
+                  key={index}
+                  className="footer-rights-glow"
+                  style={{ animationDelay: `${(index % 7) * 0.13}s` }}
+                >
+                  {part}
+                </span>
+              );
+            }
+
+            if (isAuthorName) {
+              return (
+                <a
+                  key={index}
+                  href="https://www.linkedin.com/in/l-montenegro/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={
+                    language === "es"
+                      ? "Perfil de LinkedIn de Lucas Montenegro"
+                      : "Lucas Montenegro's LinkedIn profile"
+                  }
+                  className="footer-tech-glow rounded-sm transition-[filter] hover:brightness-125 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-[#ffe8a3]"
+                  style={{ animationDelay: `${(index % 7) * 0.13}s` }}
+                >
+                  {part}
+                </a>
+              );
+            }
+
+            return <span key={index}>{part}</span>;
           })}
         </div>
       </div>
