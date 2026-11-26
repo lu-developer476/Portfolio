@@ -1646,3 +1646,16 @@ html:not([data-theme="dark"]) .footer-rights-glow {
     max-width: min(92vw, 108rem);
   }
 }
+
+/* Viewports 4K/8K: expandir el contenido sin dejar que ocupe todo el panel. */
+@media screen and (min-width: 2560px) {
+  .max-w-6xl {
+    max-width: min(90vw, 120rem);
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  .max-w-6xl {
+    max-width: min(88vw, 144rem);
+  }
+}
