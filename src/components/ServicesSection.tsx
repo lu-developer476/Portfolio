@@ -346,7 +346,7 @@ export default function ServicesSection() {
             <div className="mb-3 flex items-start gap-3">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-cyber-gold/30 bg-white/5 text-xl" aria-hidden="true">{service.icon}</span>
               <div className="min-w-0">
-                <h3 className={`font-semibold text-cyber-gold ${index === 3 ? "whitespace-nowrap text-[clamp(0.58rem,3.15vw,1.125rem)] tracking-tight" : "text-lg"}`}>{service.name}</h3>
+                <h3 className={`font-semibold text-cyber-gold ${index === 3 ? "text-[clamp(0.72rem,1.8vw,1rem)] leading-tight tracking-tight" : "text-lg"}`}>{service.name}</h3>
                 <p className="mt-1 text-xl font-bold text-white">{service.price}</p>
                 {usdToArs !== null && getArsEquivalent(service.price, usdToArs, language) && (
                   <p className="mt-1 max-w-full overflow-x-auto whitespace-nowrap text-xs font-semibold text-cyber-neonGreen">

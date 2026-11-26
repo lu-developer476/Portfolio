@@ -1634,3 +1634,15 @@ html:not([data-theme="dark"]) .footer-rights-glow {
     text-shadow: 0 0 3px currentColor, 0 0 8px currentColor;
   }
 }
+
+/* Pantallas grandes y televisores modernos (Full HD, 4K y 8K).
+   Se escala según el ancho del viewport CSS, no según la resolución comercial del panel. */
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: clamp(16px, calc(10.24px + 0.3vw), 28px);
+  }
+
+  .max-w-6xl {
+    max-width: min(92vw, 108rem);
+  }
+}
